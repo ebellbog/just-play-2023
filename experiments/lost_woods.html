@@ -9,7 +9,7 @@
 <title>Banned Together - a story of queer love & erasure</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-BT experiments: Lost Woods
+Banned Together: The Lost Woods
 
 # BITSY VERSION 7.2
 
@@ -60,6 +60,7 @@ ROOM 0
 0,0,o,u,u,u,u,u,u,o,a,a,a,a,o,0
 0,0,0,o,a,a,a,a,o,0,0,0,0,0,0,0
 NAME room 1 - cw
+ITM 2 8,8
 EXT 13,3 2 14,3
 EXT 13,13 2 13,14
 EXT 3,3 2 2,8
@@ -103,6 +104,7 @@ ROOM 2
 0,0,o,a,a,a,a,o,u,u,u,u,u,u,o,0
 0,0,0,0,0,0,0,0,o,a,a,a,a,o,0,0
 NAME room 2 - ccw
+ITM 6 8,8
 EXT 13,3 0 13,2
 EXT 13,13 0 14,13
 EXT 2,9 0 2,3
@@ -1055,12 +1057,25 @@ ITM 5
 NAME book
 COL 2
 
+ITM 6
+0,0,0,0,0,0,0,0
+0,0,0,16,16,16,0,0
+0,16,16,16,16,16,16,16
+0,16,16,16,16,16,16,16
+0,16,12,16,12,16,12,16
+0,16,16,16,16,16,16,16
+0,0,16,16,16,16,16,0
+0,16,0,0,0,0,0,0
+NAME thought 2
+DLG u
+COL 2
+
 DLG 2
 A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
 DLG 3
-A flash of {wvy}memory...{wvy} Their nerdy glasses and undercut had been the {rbw}most charming{rbw} darn thing you'd seen all semester. You'd felt *way* too {shk}embarrassed{shk} even to approach.
+Gosh, why is this library so {shk}labyrinthine{shk}? Every hallway looks IDENTICAL... Let's just find our way up to the next floor before we become {wvy}completely disoriented{wvy}?
 NAME thought dialog
 
 DLG 4
@@ -1224,7 +1239,8 @@ DLG DATA3D
     },
     "ITM_2": {
       "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,0,0,0"
+      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
+      "hidden": true
     },
     "ITM_4": {
       "type": "billboard",
@@ -1233,6 +1249,11 @@ DLG DATA3D
     "ITM_5": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,-0.1,0"
+    },
+    "ITM_6": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
+      "hidden": true
     }
   },
   "stack": {
@@ -1452,8 +1473,12 @@ DLG s
 NAME locked exit 1
 
 DLG t
-You're pretty sure this is the direction you came from... Maybe you should try finding the elevator up to the next floor?
+You're pretty sure this is the door you entered from... Let's try finding the elevator up to the next floor?
 NAME sprite t dialog
+
+DLG u
+There must be some kind of trick to navigating this place...
+NAME thought 2 dialog
 
 VAR a
 42
