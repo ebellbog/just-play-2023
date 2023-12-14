@@ -9,7 +9,7 @@
 <title>Banned Together - a story of queer love & erasure</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-BT experiments: Exterior
+BT scene demos: Campus
 
 # BITSY VERSION 7.2
 
@@ -940,7 +940,35 @@ NAME exit narration 3
 DLG DATA3D
 """
 {
-  "camera": "dungeon crawler",
+  "camera": {
+    "type": "arc",
+    "mode": "perspective",
+    "orthoSize": 16,
+    "fov": 0.9,
+    "minZ": 0.1,
+    "maxZ": 100,
+    "inertia": 0.6,
+    "alpha": -1.5707963267948966,
+    "beta": 1.5707963267948966,
+    "radius": 0.5,
+    "lowerRadiusLimit": 0.5,
+    "upperRadiusLimit": 0.5,
+    "wheelPrecision": 3,
+    "upperBetaLimit": 2.356194490192345,
+    "lowerBetaLimit": 0.3141592653589793,
+    "rotationTweenTime": 250,
+    "rotationTweenFunction": "linear",
+    "target": {
+      "x": 7.5,
+      "y": 0,
+      "z": 7.5
+    },
+    "followAvatar": true,
+    "lockPointer": false,
+    "attachControl": false,
+    "useArrowKeysToControlCameraInsteadOfAvatar": false,
+    "useLeftAndRightToRotateByAngle": 1.5707963267948966
+  },
   "settings": {
     "engineSize": "512x512",
     "canvasSize": "auto",
@@ -991,7 +1019,6 @@ DLG DATA3D
       "type": "floor"
     },
     "SPR_A": {
-      "transform": "0.5,0.5,0.5,0,0,0,0,-0.2,0",
       "hidden": true
     },
     "SPR_b": {
