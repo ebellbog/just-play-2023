@@ -70,8 +70,8 @@ NAME exterior
 
 ROOM 2
 p,p,p,p,a,a,losu,a,losu,a,losu,a,a,p,p,p
-p,p,p,p,losu,a,a,a,a,a,a,a,losu,p,p,p
-p,p,p,p,losu,a,a,a,a,a,a,a,losu,p,p,p
+p,p,p,p,losu,lot4,lot4,lot4,lot4,lot4,lot4,lot4,losu,p,p,p
+p,p,p,p,losu,lot4,lot4,lot4,lot4,lot4,lot4,lot4,losu,p,p,p
 p,p,p,p,a,losu,a,a,11,a,a,losu,a,p,p,p
 p,p,p,p,y,x,x,x,10,x,x,x,z,p,p,p
 p,p,p,p,p,p,p,p,q,p,p,p,p,p,p,p
@@ -132,8 +132,9 @@ ITM 6 2,7
 ITM 6 13,13
 ITM 6 4,11
 ITM 6 12,9
-EXT 8,3 losu 8,14
+EXT 8,3 losu 8,14 FX fade_b
 PAL 1
+RENDER 3D
 
 ROOM 3
 0,0,0,0,a,a,losu,a,losu,a,losu,a,a,0,0,0
@@ -213,9 +214,9 @@ lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,los
 o,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,losw,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 1
-EXT 8,0 losv 8,1
-EXT 8,15 2 8,4
-EXT 14,9 lost-0 4,14 DLG y
+EXT 8,0 losv 8,1 FX fade_w
+EXT 8,15 2 8,4 FX fade_b
+EXT 14,9 lost-0 4,14 FX fade_w DLG y
 PAL 0
 
 ROOM losv
@@ -236,7 +237,7 @@ lost-a,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 2
-EXT 8,0 losw 8,1
+EXT 8,0 losw 8,1 FX fade_w
 PAL 0
 
 ROOM losw
@@ -257,7 +258,7 @@ lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
 o,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 3
-EXT 8,0 losx 8,1
+EXT 8,0 losx 8,1 FX fade_w
 PAL 0
 
 ROOM losx
@@ -279,7 +280,7 @@ o,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 4
 ITM a 8,8
-EXT 8,0 losu 8,1
+EXT 8,0 losu 8,1 FX fade_w
 PAL 0
 
 ROOM lost-0
@@ -1110,6 +1111,19 @@ TIL lot3
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 NAME bookshelf - portal
+WAL true
+COL 1
+
+TIL lot4
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+5,5,5,5,5,5,5,5
+NAME darkness
 WAL true
 COL 1
 
@@ -2056,7 +2070,7 @@ DLG DATA3D
 """
 
 DLG DRAWINGSIZE
-16
+8
 
 DLG b
 """
@@ -2267,6 +2281,21 @@ body {
 	max-width:100vh;
 	margin:auto;
 	display:block;
+}
+
+#transitionMatte {
+	pointer-events: none;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	height: 100%;
+	aspect-ratio: 1 / 1;
+
+	opacity: 0;
+	transition: opacity .3s;
 }
 </style>
 
@@ -7573,17 +7602,36 @@ var transition = new TransitionManager();
 
 function movePlayerThroughExit(ext) {
 	var GoToDest = function() {
-		if (ext.transition_effect != null) {
-			transition.BeginTransition(player().room, player().x, player().y, ext.dest.room, ext.dest.x, ext.dest.y, ext.transition_effect);
-			transition.UpdateTransition(0);
+		function updatePosition() {
+			player().room = ext.dest.room;
+			player().x = ext.dest.x;
+			player().y = ext.dest.y;
+			curRoom = ext.dest.room;
+
+			initRoom(curRoom);
 		}
 
-		player().room = ext.dest.room;
-		player().x = ext.dest.x;
-		player().y = ext.dest.y;
-		curRoom = ext.dest.room;
+		if (ext.transition_effect != null) {
+			const renderMode = curRoomRenderMode();
+			if (renderMode === '2D' || isPlayerEmbeddedInEditor) {
+				transition.BeginTransition(player().room, player().x, player().y, ext.dest.room, ext.dest.x, ext.dest.y, ext.transition_effect);
+				transition.UpdateTransition(0);
+			}
+			if (renderMode === '3D' || isPlayerEmbeddedInEditor) {
+				const effect = ext.transition_effect;
+				if (effect.includes('fade')) {
+					const fadeColor = effect.split('_')[1];
+					b3d.transitionMatte.style.backgroundColor = (fadeColor === 'b') ? 'black' : 'white';
+					b3d.transitionMatte.style.opacity = 1;
+					return setTimeout(() => {
+						b3d.transitionMatte.style.opacity = 0;
+						updatePosition();
+					}, 300);
+				}
+			}
+		}
 
-		initRoom(curRoom);
+		updatePosition();
 	};
 
 	if (ext.dlg != undefined && ext.dlg != null) {
@@ -11431,6 +11479,7 @@ var b3d = {
     sceneCanvas: null,
     textCanvas: null,
     textContext: null,
+    transitionMatte: null,
 
     spriteLastPos: {},
     tweens: {},
@@ -11886,6 +11935,7 @@ b3d.init = function () {
     if (bitsy.isPlayerEmbeddedInEditor) {
         b3d.sceneCanvas = document.getElementById('sceneCanvas');
         b3d.textCanvas = document.getElementById('textCanvas');
+        b3d.transitionMatte = document.getElementById('transitionMatte');
     } else {
         // if not in the editor, do the setup specific for exported game
         var style = `
@@ -11936,6 +11986,10 @@ b3d.init = function () {
         b3d.textCanvas.id = 'textCanvas';
         gameContainer.appendChild(b3d.textCanvas);
         b3d.textContext = b3d.textCanvas.getContext('2d');
+
+        b3d.transitionMatte = document.createElement('div');
+        b3d.transitionMatte.id = 'transitionMatte';
+        gameContainer.appendChild(b3d.transitionMatte);
     }
 
     b3d.engine = new BABYLON.Engine(b3d.sceneCanvas, false);
