@@ -6,7 +6,16 @@
 
 <meta charset="UTF-8">
 
-<title>Banned Together - a story of queer love & erasure</title>
+<title>"""
+Banned Together - a story of queer love & erasure
+{pg}
+Birchwood College
+October 2024
+{pg}
+{shk}bzzt!{shk}
+{pg}
+{shk}bzzt!{shk}
+"""</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
@@ -182,6 +191,7 @@ ITM i 10,10
 EXT 8,3 losu 8,14 FX fade_b DLG 10
 PAL 1
 RENDER 3D
+FOG_END 7
 
 ROOM 3
 a,0,0,0,a,a,losu,a,losu,a,losu,a,a,0,0,0
@@ -353,6 +363,7 @@ EXT 13,3 lost-2 14,3
 EXT 13,13 lost-2 13,14
 EXT 3,3 lost-2 2,8
 PAL 0
+FOG_END 4.5
 
 ROOM lost-2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -378,6 +389,7 @@ EXT 13,13 lost-0 14,13
 EXT 2,9 lost-0 2,3
 EXT 3,3 lost-4 8,2
 PAL 0
+FOG_END 4.5
 
 ROOM lost-4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -402,6 +414,7 @@ EXT 9,2 lost-2 3,2
 EXT 3,3 lost-2 2,8
 EXT 13,13 lost-2 14,8
 PAL 0
+FOG_END 4.5
 
 ROOM lost-5
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -426,6 +439,7 @@ EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
 END b 10,3
 PAL 0
+FOG_END 4.5
 
 ROOM losy
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1284,14 +1298,14 @@ NAME screen
 COL 1
 
 TIL lot7
-0,0,0,0,0,0,0,8,8,8,8,8,8,8,8,8
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,8
 0,0,0,0,0,0,8,8,8,8,8,8,8,8,8,8
-0,0,0,0,0,8,8,8,8,8,8,8,8,8,8,8
 0,0,0,0,8,8,8,8,8,8,8,8,8,8,8,8
 0,0,0,8,8,8,8,8,8,8,8,8,8,8,8,8
 0,0,8,8,8,8,8,8,8,8,8,8,8,8,8,8
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 0,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
-8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
+0,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
@@ -1304,14 +1318,14 @@ NAME cell west
 COL 1
 
 TIL lot8
-8,8,8,8,8,8,8,8,8,0,0,0,0,0,0,0
+8,8,8,8,8,8,8,8,0,0,0,0,0,0,0,0
 8,8,8,8,8,8,8,8,8,8,0,0,0,0,0,0
-8,8,8,8,8,8,8,8,8,8,8,0,0,0,0,0
 8,8,8,8,8,8,8,8,8,8,8,8,0,0,0,0
 8,8,8,8,8,8,8,8,8,8,8,8,8,0,0,0
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,0,0
+8,8,8,8,8,8,8,8,8,8,8,8,8,8,0,0
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,0
-8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
+8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,0
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8
@@ -1642,8 +1656,8 @@ SPR A
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
-18,18,18,16,16,18,18,6
-18,18,18,16,16,18,18,6
+18,18,18,16,16,18,18,18
+18,18,18,16,16,18,18,18
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
@@ -2872,7 +2886,7 @@ DLG DATA3D
     "enableFog": true,
     "fogColor": 0,
     "fogStart": 0,
-    "fogEnd": 4.5,
+    "fogEnd": 16,
     "positionDialogBoxAtTheTop": false,
     "tweenDistance": 1,
     "tweenDuration": 150,
@@ -8842,13 +8856,15 @@ function movePlayerThroughExit(ext) {
 }
 
 function initRoom(roomId) {
+	const roomData = room[roomId];
+
 	// init exit properties
 	for (var i = 0; i < room[roomId].exits.length; i++) {
-		room[roomId].exits[i].property = { locked:false };
+		roomData.exits[i].property = { locked:false };
 	}
 	// init ending properties
 	for (var i = 0; i < room[roomId].endings.length; i++) {
-		room[roomId].endings[i].property = { locked:false };
+		roomData.endings[i].property = { locked:false };
 	}
 
 	const renderMode = getRoomRenderMode(roomId);
@@ -8874,6 +8890,13 @@ function initRoom(roomId) {
 			}
 		}, 0);
 	}
+
+	setTimeout(() => {
+		['fogStart', 'fogEnd'].forEach((prop) => {
+			const val = roomData[prop];
+			b3d.scene[prop] = (typeof val === 'number') ? val : b3d.settings[prop];
+		});
+	}, 0);
 }
 
 function getItemIndex( roomId, x, y ) {
@@ -8993,6 +9016,8 @@ function isSpriteOffstage(id) {
 	return sprite[id].room == null;
 }
 
+const isNumber = (val) => typeof val === 'number';
+
 function parseWorld(file) {
 	spriteStartLocations = {};
 
@@ -9036,13 +9061,13 @@ function parseWorld(file) {
 			//skip blank lines & comments
             i++;
         }
-        else if (getType(curLine) == "PAL") {
+		else if (getType(curLine) == "PAL") {
 			i = parsePalette(lines, i);
 		}
-       else if (getType(curLine) === "ROOM" || getType(curLine) === "SET") { //SET for back compat
+		else if (getType(curLine) === "ROOM" || getType(curLine) === "SET") { //SET for back compat
 			i = parseRoom(lines, i, compatibilityFlags);
 		}
-       else if (getType(curLine) === "TIL") {
+		else if (getType(curLine) === "TIL") {
 			i = parseTile(lines, i);
 		}
 		else if (getType(curLine) === "SPR") {
@@ -9268,8 +9293,15 @@ function serializeWorld(skipFonts) {
 			worldStr += "PAL " + room[id].pal + "\n";
 		}
 		if (room[id].renderMode) {
-			// RENDER MODE (2D vs 3D)
+			/* RENDER MODE (2D vs 3D) */
 			worldStr += `RENDER ${room[id].renderMode}\n`;
+		}
+		/* CUSTOM FOG */
+		if (isNumber(room[id].fogStart)) {
+			worldStr += `FOG_START ${room[id].fogStart}\n`;
+		}
+		if (isNumber(room[id].fogEnd)) {
+			worldStr += `FOG_END ${room[id].fogEnd}\n`;
 		}
 		worldStr += "\n";
 	}
@@ -9575,7 +9607,13 @@ function parseRoom(lines, i, compatibilityFlags) {
 			room[id].pal = getId(lines[i]);
 		}
 		else if (getType(lines[i]) === "RENDER") {
-			room[id].renderMode = lines[i].split(' ')[1];
+			room[id].renderMode = getId(lines[i]);
+		}
+		else if (getType(lines[i]) === "FOG_START") {
+			room[id].fogStart = parseFloat(getId(lines[i])) || null;
+		}
+		else if (getType(lines[i]) === "FOG_END") {
+			room[id].fogEnd = parseFloat(getId(lines[i])) || null;
 		}
 		else if (getType(lines[i]) === "NAME") {
 			var name = lines[i].split(/\s(.+)/)[1];
@@ -13346,8 +13384,10 @@ b3d.applySettings = function () {
     b3d.applyEngineAndCanvasSize();
 
     // apply fog settings
-    b3d.scene.fogStart = b3d.settings.fogStart;
-    b3d.scene.fogEnd = b3d.settings.fogEnd;
+    const roomData = room[curRoom];
+    ['fogStart', 'fogEnd'].forEach((prop) => {
+        b3d.scene[prop] = isNumber(roomData[prop]) ? roomData[prop] : b3d.settings[prop];
+    });
     b3d.scene.fogMode = b3d.settings.enableFog ? BABYLON.Scene.FOGMODE_LINEAR : BABYLON.Scene.FOGMODE_NONE;
 };
 
