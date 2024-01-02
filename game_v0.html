@@ -8,13 +8,7 @@
 
 <title>"""
 Banned Together - a story of queer love & erasure
-{pg}
-Birchwood College
-October 2024
-{pg}
-{shk}bzzt!{shk}
-{pg}
-{shk}bzzt!{shk}
+
 """</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
@@ -5314,6 +5308,12 @@ DLG DATA3D
     "SPR_louu": {
       "transform": "1,1,1,0,0,0,0,-0.09,0"
     },
+    "SPR_louv": {
+      "transform": "1,1,1,0,0,0,0,-0.09,0"
+    },
+    "SPR_louw": {
+      "transform": "1,1,1,0,0,0,0,-0.09,0"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -5381,12 +5381,6 @@ DLG DATA3D
     "ITM_lotm9": {
       "transform": "1,1,1,0,90,0,1,-0.1,0",
       "alpha": 0.6
-    },
-    "SPR_louv": {
-      "transform": "1,1,1,0,0,0,0,-0.09,0"
-    },
-    "SPR_louw": {
-      "transform": "1,1,1,0,0,0,0,-0.09,0"
     }
   },
   "stack": {
@@ -5845,6 +5839,10 @@ body {
 	display:block;
 }
 
+#sceneCanvas {
+	background:#ffffff;
+}
+
 #transitionMatte {
 	pointer-events: none;
 
@@ -6060,7 +6058,7 @@ var TransitionManager = function() {
 	var prevStep = -1; // used to avoid running post-process effect constantly
 
 	this.BeginTransition = function(startRoom,startX,startY,endRoom,endX,endY,effectName) {
-		// console.log("--- START ROOM TRANSITION ---");
+		// console.debug("--- START ROOM TRANSITION ---");
 
 		curEffect = effectName;
 
@@ -6119,7 +6117,7 @@ var TransitionManager = function() {
 		var step = Math.floor(transitionDelta * maxStep);
 
 		if (step != prevStep) {
-			// console.log("step! " + step + " " + transitionDelta);
+			// console.debug("step! " + step + " " + transitionDelta);
 			for (var y = 0; y < effectImage.Height; y++) {
 				for (var x = 0; x < effectImage.Width; x++) {
 					var color = transitionEffects[curEffect].pixelEffectFunc(transitionStart,transitionEnd,x,y,(step / maxStep));
@@ -6758,7 +6756,7 @@ var Interpreter = function() {
 
 	// TODO -- maybe this should return a string instead othe actual script??
 	this.Compile = function(scriptName, scriptStr) {
-		// console.log("COMPILE");
+		// console.debug("COMPILE");
 		var script = parser.Parse(scriptStr, scriptName);
 		env.SetScript(scriptName, script);
 	}
@@ -6774,7 +6772,7 @@ var Interpreter = function() {
 		script.Eval( localEnv, function(result) { OnScriptReturn(localEnv, exitHandler); } );
 	}
 	this.Interpret = function(scriptStr, exitHandler, objectContext) { // Compiles and runs code immediately
-		// console.log("INTERPRET");
+		// console.debug("INTERPRET");
 		var localEnv = new LocalEnvironment(env);
 
 		if (objectContext) {
@@ -6849,7 +6847,7 @@ var Interpreter = function() {
 	function DebugVisualizeScriptTree(scriptTree) {
 		var printVisitor = {
 			Visit : function(node,depth) {
-				console.log("-".repeat(depth) + "- " + node.ToString());
+				console.debug("-".repeat(depth) + "- " + node.ToString());
 			},
 		};
 
@@ -7107,7 +7105,7 @@ var Utils = function() {
 
 /* BUILT-IN FUNCTIONS */ // TODO: better way to encapsulate these?
 function deprecatedFunc(environment,parameters,onReturn) {
-	console.log("BITSY SCRIPT WARNING: Tried to use deprecated function");
+	console.debug("BITSY SCRIPT WARNING: Tried to use deprecated function");
 	onReturn(null);
 }
 
@@ -7123,7 +7121,7 @@ function printFunc(environment, parameters, onReturn) {
 }
 
 function linebreakFunc(environment, parameters, onReturn) {
-	// console.log("LINEBREAK FUNC");
+	// console.debug("LINEBREAK FUNC");
 	environment.GetDialogBuffer().AddLinebreak();
 	environment.GetDialogBuffer().AddScriptReturn(function() { onReturn(null); });
 }
@@ -7208,24 +7206,58 @@ function rainbowFunc(environment,parameters,onReturn) {
 
 // TODO : should the colors use a parameter instead of special names?
 function color1Func(environment,parameters,onReturn) {
+	if (parameters[0]) {
+		const pal = getPal(curPal());
+		const color = pal[0];
+		dialogRenderer.SetArrowColor(color);
+	}
 	addOrRemoveTextEffect(environment,"clr1");
 	onReturn(null);
 }
 
 function color2Func(environment,parameters,onReturn) {
+	if (parameters[0]) {
+		const pal = getPal(curPal());
+		const color = pal[1];
+		dialogRenderer.SetArrowColor(color);
+	}
 	addOrRemoveTextEffect(environment,"clr2");
 	onReturn(null);
 }
 
 function color3Func(environment,parameters,onReturn) {
+	if (parameters[0]) {
+		const pal = getPal(curPal());
+		const color = pal[2];
+		dialogRenderer.SetArrowColor(color);
+	}
 	addOrRemoveTextEffect(environment,"clr3");
 	onReturn(null);
 }
     
 function colorFunc(environment,parameters,onReturn) {
+	if (parameters[1]) {
+		const pal = getPal(curPal());
+		const color = pal[parameters[0]];
+		dialogRenderer.SetArrowColor(color);
+	}
     addOrRemoveTextEffect(environment, "clr", parameters[0]);
 	onReturn(null);
-    }
+}
+
+function bgColorFunc(environment, parameters, onReturn) {
+	const pal = getPal(curPal());
+	const color = pal[parameters[0]];
+	dialogRenderer.SetBgColor(color);
+	onReturn(null);
+}
+
+function borderColorFunc(environment, parameters, onReturn) {
+	const pal = getPal(curPal());
+	const color = pal[parameters[0]];
+	dialogRenderer.SetBorderColor(color);
+	onReturn(null);
+}
 
 function wavyFunc(environment,parameters,onReturn) {
 	addOrRemoveTextEffect(environment,"wvy");
@@ -7255,7 +7287,7 @@ function propertyFunc(environment, parameters, onReturn) {
 		}
 	}
 
-	console.log("PROPERTY! " + propertyName + " " + outValue);
+	console.debug("PROPERTY! " + propertyName + " " + outValue);
 
 	onReturn(outValue);
 }
@@ -7307,9 +7339,112 @@ function exitFunc(environment,parameters,onReturn) {
 	}
 }
 
+function getMusicPlayer(playerId, doLoop) {
+	let player = document.getElementById(playerId);
+	if (!player) {
+		player = document.createElement('audio');
+		player.id = playerId;
+		player.loop = doLoop;
+		player.style.display = 'none';
+		document.querySelector('body').append(player);
+
+		player.addEventListener('pause', (e) => {
+			console.debug('MUSIC PAUSED', e);
+		});
+	}
+	return player;
+}
+function getMusicSrc(parameters) {
+	// support optional local path for exported games
+	const fileName = parameters[0];
+	if (!fileName || fileName === 'stop') return false;
+	if (!isPlayerEmbeddedInEditor) {
+		return `audio/${fileName}`; // depends on game file being stored next to a local audio directory
+	} else if (!baseAudioUrl || ['http', 'www', '//'].some((str) => fileName.includes(str))) {
+		return fileName;
+	} else {
+		return `${baseAudioUrl}${baseAudioUrl.endsWith('/') ? '' : '/'}${fileName}`;
+	}
+}
+
+function musicFunc(environment, parameters, onReturn) {
+	if (isPlayerEmbeddedInEditor && doMuteAudio) return onReturn(null);
+
+	const player1 = getMusicPlayer('music-player-1', true);
+	const player2 = getMusicPlayer('music-player-2', true);
+
+	const src = getMusicSrc(parameters);
+	if (!src) {
+		console.debug('STOPPING MUSIC');
+		player1.pause();
+		player2.pause();
+		return;
+	}
+
+	const crossfadeAudio = () => {
+		if (player1.volume === 0) {
+			player1.pause();
+			player1.id = 'music-player-2';
+			player2.id = 'music-player-1';
+			return;
+		}
+		player1.volume = Math.max(player1.volume - .03, 0);
+		player2.volume = Math.min(player2.volume + .03, 1);
+		setTimeout(crossfadeAudio, 20);
+	}
+	const playMusic = () => {
+		player2.pause();
+
+		if (player1.paused || !player1.currentTime) {
+			player1.src = src;
+			player1.currentTime = 0;
+			player1.volume = 1;
+			player1.play();
+			console.debug('PLAYING MUSIC:', src);
+		} else {
+			player2.src = src;
+			player2.currentTime = 0;
+			player2.volume = 0;
+			player2.play();
+
+			console.debug('CROSSFADING INTO:', src);
+			crossfadeAudio();
+		}
+	}
+	dialogBuffer.OnceOnEnd(playMusic);
+
+	onReturn(null);
+}
+
+function sfxFunc(environment, parameters, onReturn) {
+	if (isPlayerEmbeddedInEditor && doMuteAudio) return onReturn(null);
+
+	const sfxPlayer = getMusicPlayer('sfx-player');
+	const src = getMusicSrc(parameters);
+
+	sfxPlayer.pause();
+	sfxPlayer.currentTime = 0;
+	sfxPlayer.src = src;
+	sfxPlayer.play();
+
+	onReturn(null);
+}
+
+function centerAlignFunc(environment,parameters, onReturn) {
+	dialogRenderer.SetCentered(true, true);
+	onReturn(null);
+}
+
+function paperStyleFunc(environment, parameters, onReturn) {
+	dialogBuffer.SetRowWidth(140);
+	dialogBuffer.SetMaxLines(12);
+	dialogRenderer.SetDialogStyle('paper');
+	onReturn(null);
+}
+
 /* BUILT-IN OPERATORS */
 function setExp(environment,left,right,onReturn) {
-	// console.log("SET " + left.name);
+	// console.debug("SET " + left.name);
 
 	if(left.type != "variable") {
 		// not a variable! return null and hope for the best D:
@@ -7319,16 +7454,16 @@ function setExp(environment,left,right,onReturn) {
 
 	right.Eval(environment,function(rVal) {
 		environment.SetVariable( left.name, rVal );
-		// console.log("VAL " + environment.GetVariable( left.name ) );
+		// console.debug("VAL " + environment.GetVariable( left.name ) );
 		left.Eval(environment,function(lVal) {
 			onReturn( lVal );
 		});
 	});
 }
 function equalExp(environment,left,right,onReturn) {
-	// console.log("EVAL EQUAL");
-	// console.log(left);
-	// console.log(right);
+	// console.debug("EVAL EQUAL");
+	// console.debug(left);
+	// console.debug(right);
 	right.Eval(environment,function(rVal){
 		left.Eval(environment,function(lVal){
 			onReturn( lVal === rVal );
@@ -7408,6 +7543,8 @@ var Environment = function() {
 	functionMap.set("clr2", color2Func);
     functionMap.set("clr3", color3Func);
     functionMap.set("clr", colorFunc);
+    functionMap.set("bgClr", bgColorFunc);
+    functionMap.set("borderClr", borderColorFunc);
 	functionMap.set("wvy", wavyFunc);
 	functionMap.set("shk", shakyFunc);
 	functionMap.set("printSprite", printSpriteFunc);
@@ -7418,6 +7555,10 @@ var Environment = function() {
 	functionMap.set("exit", exitFunc);
 	functionMap.set("pg", pagebreakFunc);
 	functionMap.set("property", propertyFunc);
+	functionMap.set("music", musicFunc);
+	functionMap.set("sfx", sfxFunc);
+	functionMap.set("center", centerAlignFunc);
+	functionMap.set("paper", paperStyleFunc);
 
 	this.HasFunction = function(name) { return functionMap.has(name); };
 	this.EvalFunction = function(name,parameters,onReturn,env) {
@@ -7433,7 +7574,7 @@ var Environment = function() {
 	this.HasVariable = function(name) { return variableMap.has(name); };
 	this.GetVariable = function(name) { return variableMap.get(name); };
 	this.SetVariable = function(name,value,useHandler) {
-		// console.log("SET VARIABLE " + name + " = " + value);
+		// console.debug("SET VARIABLE " + name + " = " + value);
 		if(useHandler === undefined) useHandler = true;
 		variableMap.set(name, value);
 		if(onVariableChangeHandler != null && useHandler){
@@ -7559,7 +7700,7 @@ function leadingWhitespace(depth) {
 	for(var i = 0; i < depth; i++) {
 		str += "  "; // two spaces per indent
 	}
-	// console.log("WHITESPACE " + depth + " ::" + str + "::");
+	// console.debug("WHITESPACE " + depth + " ::" + str + "::");
 	return str;
 }
 
@@ -7597,7 +7738,7 @@ var TreeRelationship = function() {
 
 	this.rootId = null; // for debugging
 	this.GetId = function() {
-		// console.log(this);
+		// console.debug(this);
 		if (this.rootId != null) {
 			return this.rootId;
 		}
@@ -7619,7 +7760,7 @@ var DialogBlockNode = function(doIndentFirstLine) {
 	this.type = "dialog_block";
 
 	this.Eval = function(environment, onReturn) {
-		// console.log("EVAL BLOCK " + this.children.length);
+		// console.debug("EVAL BLOCK " + this.children.length);
 
 		if (isPlayerEmbeddedInEditor && events != undefined && events != null) {
 			events.Raise("script_node_enter", { id: this.GetId() });
@@ -7630,9 +7771,9 @@ var DialogBlockNode = function(doIndentFirstLine) {
 
 		function evalChildren(children, done) {
 			if (i < children.length) {
-				// console.log(">> CHILD " + i);
+				// console.debug(">> CHILD " + i);
 				children[i].Eval(environment, function(val) {
-					// console.log("<< CHILD " + i);
+					// console.debug("<< CHILD " + i);
 					lastVal = val;
 					i++;
 					evalChildren(children,done);
@@ -7709,7 +7850,7 @@ var CodeBlockNode = function() {
 	this.type = "code_block";
 
 	this.Eval = function(environment, onReturn) {
-		// console.log("EVAL BLOCK " + this.children.length);
+		// console.debug("EVAL BLOCK " + this.children.length);
 
 		if (isPlayerEmbeddedInEditor && events != undefined && events != null) {
 			events.Raise("script_node_enter", { id: this.GetId() });
@@ -7720,9 +7861,9 @@ var CodeBlockNode = function() {
 
 		function evalChildren(children, done) {
 			if (i < children.length) {
-				// console.log(">> CHILD " + i);
+				// console.debug(">> CHILD " + i);
 				children[i].Eval(environment, function(val) {
-					// console.log("<< CHILD " + i);
+					// console.debug("<< CHILD " + i);
 					lastVal = val;
 					i++;
 					evalChildren(children,done);
@@ -7748,9 +7889,9 @@ var CodeBlockNode = function() {
 			depth = 0;
 		}
 
-		// console.log("SERIALIZE BLOCK!!!");
-		// console.log(depth);
-		// console.log(doIndentFirstLine);
+		// console.debug("SERIALIZE BLOCK!!!");
+		// console.debug(depth);
+		// console.debug(doIndentFirstLine);
 
 		var str = "{"; // todo: increase scope of Sym?
 
@@ -7949,7 +8090,7 @@ var VarNode = function(name) {
 	this.name = name;
 
 	this.Eval = function(environment,onReturn) {
-		// console.log("EVAL " + this.name + " " + environment.HasVariable(this.name) + " " + environment.GetVariable(this.name));
+		// console.debug("EVAL " + this.name + " " + environment.HasVariable(this.name) + " " + environment.GetVariable(this.name));
 		if( environment.HasVariable(this.name) )
 			onReturn( environment.GetVariable( this.name ) );
 		else
@@ -7974,11 +8115,11 @@ var ExpNode = function(operator, left, right) {
 	this.right = right;
 
 	this.Eval = function(environment,onReturn) {
-		// console.log("EVAL " + this.operator);
+		// console.debug("EVAL " + this.operator);
 		var self = this; // hack to deal with scope
 		environment.EvalOperator( this.operator, this.left, this.right, 
 			function(val){
-				// console.log("EVAL EXP " + self.operator + " " + val);
+				// console.debug("EVAL EXP " + self.operator + " " + val);
 				onReturn(val);
 			} );
 		// NOTE : sadly this pushes a lot of complexity down onto the actual operator methods
@@ -8061,7 +8202,7 @@ var SequenceNode = function(options) {
 
 	var index = 0;
 	this.Eval = function(environment, onReturn) {
-		// console.log("SEQUENCE " + index);
+		// console.debug("SEQUENCE " + index);
 		this.children[index].Eval(environment, onReturn);
 
 		var next = index + 1;
@@ -8079,7 +8220,7 @@ var CycleNode = function(options) {
 
 	var index = 0;
 	this.Eval = function(environment, onReturn) {
-		// console.log("CYCLE " + index);
+		// console.debug("CYCLE " + index);
 		this.children[index].Eval(environment, onReturn);
 
 		var next = index + 1;
@@ -8132,7 +8273,7 @@ var IfNode = function(conditions, results, isSingleLine) {
 
 	var self = this;
 	this.Eval = function(environment, onReturn) {
-		// console.log("EVAL IF");
+		// console.debug("EVAL IF");
 		var i = 0;
 		function TestCondition() {
 			self.children[i].Eval(environment, function(result) {
@@ -8284,8 +8425,8 @@ var Parser = function(env) {
 		rootNode.rootId = rootId;
 		var state = new ParserState(rootNode, scriptStr);
 
-		console.log(scriptStr);
-		console.log(state.Source());
+		console.debug(scriptStr);
+		console.debug(state.Source());
 
 		if (state.MatchAhead(Sym.DialogOpen)) {
 			// multi-line dialog block
@@ -8315,10 +8456,10 @@ var Parser = function(env) {
 		this.Char = function() { return sourceStr[i]; };
 		this.Step = function(n) { if(n===undefined) n=1; i += n; };
 		this.MatchAhead = function(str) {
-			// console.log(str);
+			// console.debug(str);
 			str = "" + str; // hack to turn single chars into strings
-			// console.log(str);
-			// console.log(str.length);
+			// console.debug(str);
+			// console.debug(str.length);
 			for (var j = 0; j < str.length; j++) {
 				if (i + j >= sourceStr.length) {
 					return false;
@@ -8332,12 +8473,12 @@ var Parser = function(env) {
 		this.Peak = function(end) {
 			var str = "";
 			var j = i;
-			// console.log(j);
+			// console.debug(j);
 			while (j < sourceStr.length && end.indexOf(sourceStr[j]) == -1) {
 				str += sourceStr[j];
 				j++;
 			}
-			// console.log("PEAK ::" + str + "::");
+			// console.debug("PEAK ::" + str + "::");
 			return str;
 		}
 		this.ConsumeBlock = function(open, close, includeSymbols) {
@@ -8375,7 +8516,7 @@ var Parser = function(env) {
 			}
 		}
 
-		this.Print = function() { console.log(sourceStr); };
+		this.Print = function() { console.debug(sourceStr); };
 		this.Source = function() { return sourceStr; };
 	};
 
@@ -8631,7 +8772,7 @@ var Parser = function(env) {
 	}
 
 	function IsSequence(str) {
-		// console.log("IsSequence? " + str);
+		// console.debug("IsSequence? " + str);
 		return str === "sequence" || str === "cycle" || str === "shuffle";
 	}
 
@@ -8755,16 +8896,16 @@ var Parser = function(env) {
 	}
 
 	function ParseFunction(state, funcName) {
-		console.log("~~~ PARSE FUNCTION " + funcName);
+		console.debug("~~~ PARSE FUNCTION " + funcName);
 
 		var args = [];
 
 		var curSymbol = "";
 		function OnSymbolEnd() {
 			curSymbol = curSymbol.trim();
-			// console.log("PARAMTER " + curSymbol);
+			// console.debug("PARAMTER " + curSymbol);
 			args.push( StringToValue(curSymbol) );
-			// console.log(args);
+			// console.debug(args);
 			curSymbol = "";
 		}
 
@@ -8779,7 +8920,7 @@ var Parser = function(env) {
 			else if( state.MatchAhead(Sym.String) ) {
 				/* STRING LITERAL */
 				var str = state.ConsumeBlock(Sym.String, Sym.String);
-				// console.log("STRING " + str);
+				// console.debug("STRING " + str);
 				args.push( new LiteralNode(str) );
 				curSymbol = "";
 			}
@@ -8804,7 +8945,7 @@ var Parser = function(env) {
 	function IsValidVariableName(str) {
 		var reg = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
 		var isValid = reg.test(str);
-		// console.log("VALID variable??? " + isValid);
+		// console.debug("VALID variable??? " + isValid);
 		return isValid;
 	}
 
@@ -8818,14 +8959,14 @@ var Parser = function(env) {
 		}
 		else if(valStr[0] === Sym.String) {
 			// STRING!!
-			// console.log("STRING");
+			// console.debug("STRING");
 			var str = "";
 			var i = 1;
 			while (i < valStr.length && valStr[i] != Sym.String) {
 				str += valStr[i];
 				i++;
 			}
-			// console.log(str);
+			// console.debug(str);
 			return new LiteralNode( str );
 		}
 		else if(valStr === "true") {
@@ -8838,12 +8979,12 @@ var Parser = function(env) {
 		}
 		else if( !isNaN(parseFloat(valStr)) ) {
 			// NUMBER!!
-			// console.log("NUMBER!!! " + valStr);
+			// console.debug("NUMBER!!! " + valStr);
 			return new LiteralNode( parseFloat(valStr) );
 		}
 		else if(IsValidVariableName(valStr)) {
 			// VARIABLE!!
-			// console.log("VARIABLE");
+			// console.debug("VARIABLE");
 			return new VarNode(valStr); // TODO : check for valid potential variables
 		}
 		else {
@@ -8984,9 +9125,9 @@ var Parser = function(env) {
 
 	function ParseExpression(state) {
 		var line = state.Source(); // state.Peak( [Sym.Linebreak] ); // TODO : remove the linebreak thing
-		// console.log("EXPRESSION " + line);
+		// console.debug("EXPRESSION " + line);
 		var exp = CreateExpression(line);
-		// console.log(exp);
+		// console.debug(exp);
 		state.curNode.AddChild(exp);
 		state.Step(line.length);
 		return state;
@@ -9074,26 +9215,75 @@ var DialogRenderer = function() {
 	var textboxInfo = {
 		img : null,
 		bgColor: [0, 0, 0],
+		arrowColor: [255, 255, 255],
+		lineCount : 2,
 		width : 104,
-		height : 8+4+2+5, //8 for text, 4 for top-bottom padding, 2 for line padding, 5 for arrow
+		height : 1,
 		top : 12,
 		left : 12,
 		bottom : 12, //for drawing it from the bottom
 		font_scale : 0.5, // we draw font at half-size compared to everything else
 		padding_vert : 2,
 		padding_horz : 4,
+		padding_rows : 0,
 		arrow_height : 5,
 	};
+
+	this.UpdateTextboxHeight = function() {
+		const totalLines = textboxInfo.lineCount + textboxInfo.padding_rows * 2;
+		textboxInfo.height = 
+			(textboxInfo.padding_vert * (totalLines + 1))
+			+ (relativeFontHeight() * totalLines)
+			+ textboxInfo.arrow_height;
+		resetImg();
+		this.ClearCanvas();
+	}
+
+	function resetImg() {
+		textboxInfo.img = context.createImageData(textboxInfo.width*scale, textboxInfo.height*scale);
+	}
 
 	var font = null;
 	this.SetFont = function(f) {
 		font = f;
-		textboxInfo.height = (textboxInfo.padding_vert * 3) + (relativeFontHeight() * 2) + textboxInfo.arrow_height;
-		textboxInfo.img = context.createImageData(textboxInfo.width*scale, textboxInfo.height*scale);
+		this.UpdateTextboxHeight();
 	}
 
-	this.SetBgColor = function(rgbArray) {
+	let defaultBgColor;
+	this.SetBgColor = function(rgbArray, makeDefault) {
+		if (makeDefault) {
+			defaultBgColor = rgbArray;
+		}
 		textboxInfo.bgColor = rgbArray || [0, 0, 0];
+	};
+	this.ResetBgColor = function(useDefault) {
+		if (!useDefault) defaultBgColor = null;
+		this.SetBgColor(defaultBgColor);
+	}
+
+	this.SetArrowColor = function(rgbArray) {
+		textboxInfo.arrowColor = rgbArray || [255, 255, 255];
+	}
+
+	let borderColor;
+	this.SetBorderColor = function(rgbArray) {
+		borderColor = rgbArray;
+		this.SetPaddingRows(borderColor ? .25 : 0);
+	}
+
+	this.SetLineCount = function(lineCount) {
+		textboxInfo.lineCount = Math.max(lineCount, 2);
+		this.UpdateTextboxHeight();
+	}
+
+	this.SetTextboxWidth = function(width) {
+		textboxInfo.width = width || 104;
+		resetImg();
+	}
+
+	this.SetPaddingRows = function(rows) {
+		textboxInfo.padding_rows = rows || 0;
+		this.UpdateTextboxHeight();
 	}
 
 	function textScale() {
@@ -9113,32 +9303,99 @@ var DialogRenderer = function() {
 		context = c;
 	};
 
+	this.ClearCanvas = function() {
+		if (context) {
+			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+		}
+	}
+
+	this.FillCanvas = function(color) {
+		if (context) {
+			context.save();
+			context.fillStyle = color;
+			context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+			context.restore();
+		}
+	}
+
 	this.ClearTextbox = function() {
 		if(context == null) return;
 
 		//create new image none exists
 		if(textboxInfo.img == null)
-			textboxInfo.img = context.createImageData(textboxInfo.width*scale, textboxInfo.height*scale);
+			resetImg();
+
 
 		// fill text box with background color
 		for (let i=0; i<textboxInfo.img.data.length; i+=4)
 		{
 			for (let j = 0; j < 3; j++) {
-				textboxInfo.img.data[i + j] = textboxInfo.bgColor[j];
+				const lightBlueColor = [180, 180, 255];
+				const redColor = [200, 80, 80];
+				const whiteColor = [255, 255, 255];
+
+				const pixelWidth = textboxInfo.width * scale * 4;
+				let pixelColor = textboxInfo.bgColor;
+
+				if (dlgStyle === 'paper') {
+
+					if ((Math.floor(i / pixelWidth) % 24 === 8) && i / pixelWidth > 30) { // don't hard code these values
+						pixelColor = lightBlueColor;
+					} else if (i % pixelWidth === 92 || i % pixelWidth === 108) {
+						pixelColor = redColor;
+					} else {
+						pixelColor = whiteColor;
+					}
+				} else if (borderColor) {
+					if (
+						i < 2 * pixelWidth  || // top border
+						i > textboxInfo.img.data.length - 2 * pixelWidth || // bottom border
+						i % pixelWidth < 8 || // left border
+						i % pixelWidth >= pixelWidth - 8 // right border
+					) pixelColor = borderColor;
+				}
+				textboxInfo.img.data[i + j] = pixelColor[j];
 			}
 			textboxInfo.img.data[i+3]=255;
 		}
 	};
 
-	var isCentered = false;
-	this.SetCentered = function(centered) {
+	var isCentered = false, isManuallyCentered = false;
+	this.SetCentered = function(centered, isManual) {
+		this.ClearCanvas();
 		isCentered = centered;
+		isManuallyCentered = isManual;
 	};
+	this.ResetCentering = function() {
+		if (isManuallyCentered) {
+			isCentered = false;
+			isManuallyCentered = false;
+			this.ClearCanvas();
+		}
+	}
+
+	let dlgStyle;
+	this.SetDialogStyle = function(style) {
+		if (style === 'paper') {
+			this.SetCentered(true, true);
+			this.SetPaddingRows(1);
+			context.canvas.style.backdropFilter = 'blur(8px)';
+		} else {
+			context.canvas.style.backdropFilter = 'none';
+		}
+		dlgStyle = style;
+	}
 
 	this.DrawTextbox = function() {
 		if(context == null) return;
+		if (dlgStyle === 'paper') {
+			this.ClearCanvas();
+			this.FillCanvas("rgba(0, 0, 0, .2)");
+		}
+
+		const leftPlacement = ((width/2) - (textboxInfo.width/2))*scale;
 		if (isCentered) {
-			context.putImageData(textboxInfo.img, textboxInfo.left*scale, ((height/2)-(textboxInfo.height/2))*scale);
+			context.putImageData(textboxInfo.img, leftPlacement, ((height/2)-(textboxInfo.height/2))*scale);
 		}
 		else if (player().y < mapsize/2) {
 			//bottom
@@ -9156,7 +9413,7 @@ var DialogRenderer = function() {
 		0,0,1,0,0
 	];
 	this.DrawNextArrow = function() {
-		// console.log("draw arrow!");
+		// console.debug("draw arrow!");
 		var top = (textboxInfo.height-5) * scale;
 		var left = (textboxInfo.width-(5+4)) * scale;
 		if (textDirection === TextDirection.RightToLeft) { // RTL hack
@@ -9171,9 +9428,9 @@ var DialogRenderer = function() {
 					for (var sy = 0; sy < scale; sy++) {
 						for (var sx = 0; sx < scale; sx++) {
 							var pxl = 4 * ( ((top+(y*scale)+sy) * (textboxInfo.width*scale)) + (left+(x*scale)+sx) );
-							textboxInfo.img.data[pxl+0] = 255;
-							textboxInfo.img.data[pxl+1] = 255;
-							textboxInfo.img.data[pxl+2] = 255;
+							for (let sz = 0; sz < 3; sz++) {
+								textboxInfo.img.data[pxl+sz] = (dlgStyle === 'paper') ? 0 : textboxInfo.arrowColor[sz];
+							}
 							textboxInfo.img.data[pxl+3] = 255;
 						}
 					}
@@ -9184,9 +9441,15 @@ var DialogRenderer = function() {
 
 	var text_scale = 2; //using a different scaling factor for text feels like cheating... but it looks better
 	this.DrawChar = function(char, row, col, leftPos) {
+		if (dlgStyle === 'paper') {
+			char.color.r = 60;
+			char.color.g = 60;
+			char.color.b = 60;
+		}
+
 		char.offset = {
 			x: char.base_offset.x,
-			y: char.base_offset.y
+			y: char.base_offset.y,
 		}; // compute render offset *every* frame
 
 		char.SetPosition(row,col);
@@ -9194,8 +9457,10 @@ var DialogRenderer = function() {
 
         var charData = char.bitmap;
 
-		var top = (4 * scale) + (row * 2 * scale) + (row * font.getHeight() * text_scale) + Math.floor( char.offset.y );
-		var left = (4 * scale) + (leftPos * text_scale) + Math.floor( char.offset.x );
+		var top = (4 * scale) + (row * 2 * scale) + (row * font.getHeight() * text_scale) + Math.floor( char.offset.y )
+			+ 4 * textboxInfo.padding_rows * (relativeFontHeight() + textboxInfo.padding_vert);
+		var left = (4 * scale) + (leftPos * text_scale) + Math.floor( char.offset.x )
+			+ ((dlgStyle === 'paper') ? 30 : 0 );
 
 		var debug_r = Math.random() * 255;
 
@@ -9270,10 +9535,19 @@ var DialogRenderer = function() {
 
 		this.ClearTextbox();
 
+		const curLines = Math.max(buffer.CurPage().length, 2);
+		if (textboxInfo.lineCount !== curLines) this.SetLineCount(curLines);
+
 		buffer.ForEachActiveChar(this.DrawChar);
 
 		if (buffer.CanContinue()) {
-			this.DrawNextArrow();
+			if (buffer.CurCharCount() <= 2 && buffer.CurRowCount() <= 1) {
+				// Automatically continue if page is empty
+				console.debug('SKIPPING BLANK DIALOG');
+				buffer.Continue();
+			} else {
+				this.DrawNextArrow();
+			}
 		}
 
 		this.DrawTextbox();
@@ -9291,7 +9565,13 @@ var DialogRenderer = function() {
 
 	this.Reset = function() {
 		effectTime = 0;
-		textboxInfo.bgColor = [0, 0, 0];
+		this.ResetBgColor();
+		this.SetArrowColor();
+		this.SetLineCount(2);
+		this.SetDialogStyle();
+		this.SetTextboxWidth();
+		this.SetPaddingRows();
+		this.SetBorderColor();
 		// TODO - anything else?
 	}
 
@@ -9306,6 +9586,7 @@ var DialogBuffer = function() {
 	var pageIndex = 0;
 	var rowIndex = 0;
 	var charIndex = 0;
+	var maxLines = 2;
 	var nextCharTimer = 0;
 	var nextCharMaxTime = 50; // in milliseconds
 	var isDialogReadyToContinue = false;
@@ -9316,6 +9597,9 @@ var DialogBuffer = function() {
 
 	this.SetFont = function(f) {
 		font = f;
+	}
+	this.SetMaxLines = function(numLines) {
+		maxLines = numLines;
 	}
 
 	this.CurPage = function() { return buffer[ pageIndex ]; };
@@ -9330,7 +9614,7 @@ var DialogBuffer = function() {
 		for (var i = 0; i < rowCount; i++) {
 			var row = this.CurPage()[i];
 			var charCount = (i == rowIndex) ? charIndex+1 : row.length;
-			// console.log(charCount);
+			// console.debug(charCount);
 
 			var leftPos = 0;
 			if (textDirection === TextDirection.RightToLeft) {
@@ -9343,7 +9627,7 @@ var DialogBuffer = function() {
 					if (textDirection === TextDirection.RightToLeft) {
 						leftPos -= char.spacing;
 					}
-					// console.log(j + " " + leftPos);
+					// console.debug(j + " " + leftPos);
 
 					// handler( char, i /*rowIndex*/, j /*colIndex*/ );
 					handler(char, i /*rowIndex*/, j /*colIndex*/, leftPos)
@@ -9360,7 +9644,8 @@ var DialogBuffer = function() {
 		buffer = [[[]]];
 		pageIndex = 0;
 		rowIndex = 0;
-		charIndex = 0;
+		charIndex = 0
+		maxLines = 2;
 		isDialogReadyToContinue = false;
 
 		afterManualPagebreak = false;
@@ -9370,6 +9655,8 @@ var DialogBuffer = function() {
 		onDialogEndCallbacks = [];
 
 		isActive = false;
+
+		this.SetRowWidth();
 	};
 
 	this.DoNextChar = function() {
@@ -9418,7 +9705,7 @@ var DialogBuffer = function() {
 	};
 
 	this.Skip = function() {
-		console.log("SKIPPP");
+		console.debug("SKIPPP");
 		didPageFinishThisFrame = false;
 		didFlipPageThisFrame = false;
 		// add new characters until you get to the end of the current line of dialog
@@ -9454,11 +9741,19 @@ var DialogBuffer = function() {
 	var afterManualPagebreak = false; // is it bad to track this state like this?
 
 	this.Continue = function() {
-		console.log("CONTINUE");
+		console.debug("CONTINUE");
 
 		// if we used a page break character to continue we need
 		// to run whatever is in the script afterwards! // TODO : make this comment better
 		if (this.CurChar().isPageBreak) {
+			dialogRenderer.SetArrowColor();
+			dialogRenderer.SetDialogStyle();
+			dialogRenderer.ResetCentering();
+			dialogRenderer.SetPaddingRows();
+			dialogRenderer.ResetBgColor(true);
+			dialogRenderer.SetBorderColor();
+			this.SetRowWidth();
+
 			// hacky: always treat a page break as the end of dialog
 			// if there's more dialog later we re-activate the dialog buffer
 			this.EndDialog();
@@ -9467,13 +9762,13 @@ var DialogBuffer = function() {
 			return false;
 		}
 		if (pageIndex + 1 < this.CurPageCount()) {
-			console.log("FLIP PAGE!");
+			console.debug("FLIP PAGE!");
 			//start next page
 			this.FlipPage();
 			return true; /* hasMoreDialog */
 		}
 		else {
-			console.log("END DIALOG!");
+			console.debug("END DIALOG!");
 			//end dialog mode
 			this.EndDialog();
 			return false; /* hasMoreDialog */
@@ -9491,6 +9786,14 @@ var DialogBuffer = function() {
 			onDialogEndCallbacks.push(callback);
 		}
 	}
+	this.OnceOnEnd = function(callback) {
+		let called = false;
+		onDialogEndCallbacks.push(() => {
+			if (called) return;
+			callback();
+			called = true;
+		});
+	}
 
 	this.CanContinue = function() { return isDialogReadyToContinue; };
 
@@ -9504,18 +9807,18 @@ var DialogBuffer = function() {
 		this.row = 0;
 
 		this.SetPosition = function(row,col) {
-			// console.log("SET POS");
-			// console.log(this);
+			// console.debug("SET POS");
+			// console.debug(this);
 			this.row = row;
 			this.col = col;
 		}
 
 		this.ApplyEffects = function(time) {
-			// console.log("APPLY EFFECTS! " + time);
+			// console.debug("APPLY EFFECTS! " + time);
 			for(var i = 0; i < this.effectList.length; i++) {
                 var effectName = this.effectList[i].name;
                 var parameters = this.effectList[i].parameters; //passing undefined or null shouldn't be a problem?
-				// console.log("FX " + effectName);
+				// console.debug("FX " + effectName);
 				TextEffects[ effectName ].DoEffect( this, time, parameters );
 			}
 		}
@@ -9526,7 +9829,7 @@ var DialogBuffer = function() {
 		}
 		this.OnPrint = function() {
 			if (printHandler != null) {
-				// console.log("PRINT HANDLER ---- DIALOG BUFFER");
+				// console.debug("PRINT HANDLER ---- DIALOG BUFFER");
 				printHandler();
 				printHandler = null; // only call handler once (hacky)
 			}
@@ -9560,7 +9863,7 @@ var DialogBuffer = function() {
 		var imageData = renderer.GetImageSource(drawingId)[0];
 		var imageDataFlat = [];
 		for (var i = 0; i < imageData.length; i++) {
-			// console.log(imageData[i]);
+			// console.debug(imageData[i]);
 			imageDataFlat = imageDataFlat.concat(imageData[i]);
 		}
 
@@ -9626,6 +9929,10 @@ var DialogBuffer = function() {
 	}
 
 	var pixelsPerRow = 192; // hard-coded fun times!!!
+	this.SetRowWidth = function(rowWidth) {
+		pixelsPerRow = rowWidth || 192;
+		dialogRenderer.SetTextboxWidth(rowWidth ? rowWidth * .65 : 104); // TODO: more precise calculation
+	}
 
 	this.AddScriptReturn = function(onReturnHandler) {
 		var curPageIndex = buffer.length - 1;
@@ -9641,7 +9948,7 @@ var DialogBuffer = function() {
 	}
 
 	this.AddDrawing = function(drawingId) {
-		// console.log("DRAWING ID " + drawingId);
+		// console.debug("DRAWING ID " + drawingId);
 
 		var curPageIndex = buffer.length - 1;
 		var curRowIndex = buffer[curPageIndex].length - 1;
@@ -9669,7 +9976,7 @@ var DialogBuffer = function() {
 			//stay on same row
 			curRowArr.push(drawingChar);
 		}
-		else if (curRowIndex == 0) {
+		else if (curRowIndex < maxLines - 1) {
 			//start next row
 			buffer[curPageIndex][curRowIndex] = curRowArr;
 			buffer[curPageIndex].push([]);
@@ -9693,7 +10000,7 @@ var DialogBuffer = function() {
 
 	// TODO : convert this into something that takes DialogChar arrays
 	this.AddText = function(textStr) {
-		console.log("ADD TEXT " + textStr);
+		console.debug("ADD TEXT " + textStr);
 
 		//process dialog so it's easier to display
 		var words = textStr.split(" ");
@@ -9735,7 +10042,7 @@ var DialogBuffer = function() {
 				//stay on same row
 				curRowArr = AddWordToCharArray(curRowArr, wordWithPrecedingSpace, activeTextEffects);
 			}
-			else if (curRowIndex == 0) {
+			else if (curRowIndex < maxLines - 1) {
 				//start next row
 				buffer[curPageIndex][curRowIndex] = curRowArr;
 				buffer[curPageIndex].push([]);
@@ -9772,7 +10079,7 @@ var DialogBuffer = function() {
 			var lastChar = lastRow[lastRow.length-1];
 		}
 
-		// console.log(buffer);
+		// console.debug(buffer);
 
 		isActive = true;
 	};
@@ -9780,7 +10087,7 @@ var DialogBuffer = function() {
 	this.AddLinebreak = function() {
 		var lastPage = buffer[buffer.length-1];
 		if (lastPage.length <= 1) {
-			// console.log("LINEBREAK - NEW ROW ");
+			// console.debug("LINEBREAK - NEW ROW ");
 			// add new row
 			lastPage.push([]);
 		}
@@ -9788,7 +10095,7 @@ var DialogBuffer = function() {
 			// add new page
 			buffer.push([[]]);
 		}
-		// console.log(buffer);
+		// console.debug(buffer);
 
 		isActive = true;
 	}
@@ -9828,7 +10135,7 @@ var DialogBuffer = function() {
     }
 	this.RemoveTextEffect = function(name) {
         activeTextEffects.splice(activeTextEffects.findIndex(test => test.name === name), 1);
-        console.log("removed effect")
+        console.debug("removed effect")
 	}
 
 	/* this is a hook for GIF rendering */
@@ -10005,10 +10312,10 @@ var TextEffects = new Map();
 
 var RainbowEffect = function() { // TODO - should it be an object or just a method?
 	this.DoEffect = function(char,time) {
-		// console.log("RAINBOW!!!");
-		// console.log(char);
-		// console.log(char.color);
-		// console.log(char.col);
+		// console.debug("RAINBOW!!!");
+		// console.debug(char);
+		// console.debug(char.color);
+		// console.debug(char.col);
 
 		var h = Math.abs( Math.sin( (time / 600) - (char.col / 8) ) );
 		var rgb = hslToRgb( h, 1, 0.5 );
@@ -10024,7 +10331,7 @@ var ColorEffect = function(index) {
 	this.DoEffect = function(char) {
 		var pal = getPal( curPal() );
 		var color = pal[ parseInt( index ) ];
-		// console.log(color);
+		// console.debug(color);
 		char.color.r = color[0];
 		char.color.g = color[1];
 		char.color.b = color[2];
@@ -10035,7 +10342,7 @@ var ColorEffectV2 = function() {
 	this.DoEffect = function(char,time,index) {
 		var pal = getPal( curPal() );
 		var color = pal[ parseInt( index ) ];
-		// console.log(color);
+		// console.debug(color);
 		char.color.r = color[0];
 		char.color.g = color[1];
 		char.color.b = color[2];
@@ -10099,7 +10406,7 @@ TODO
 
 function Renderer(tilesize, scale) {
 
-console.log("!!!!! NEW RENDERER");
+console.debug("!!!!! NEW RENDERER");
 
 var imageStore = { // TODO : rename to imageCache
 	source: {},
@@ -10141,7 +10448,7 @@ var debugRenderCount = 0;
 // TODO : change image store path from (pal > col > draw) to (draw > pal > col)
 function renderImage(drawing, paletteId) {
 	// debugRenderCount++;
-	// console.log("RENDER COUNT " + debugRenderCount);
+	// console.debug("RENDER COUNT " + debugRenderCount);
 
 	var col = drawing.col;
 	var colStr = "" + col;
@@ -10169,7 +10476,7 @@ function renderImage(drawing, paletteId) {
 }
 
 function imageDataFromImageSource(imageSource, pal, col) {
-	//console.log(imageSource);
+	//console.debug(imageSource);
     var tilesize = imageSource.length;
     var scale = Math.ceil(4 / (tilesize / 8));
 
@@ -10203,7 +10510,7 @@ function imageDataFromImageSource(imageSource, pal, col) {
                     }
                     else { //ch === 0
                         if (px == undefined || px >= colors.length || isNaN(parseInt(px))) {
-                            console.log('passed index out of palette range: ' + px);
+                            console.debug('passed index out of palette range: ' + px);
                             px = 0;
                         }
                         img.data[pxl + 0] = colors[px][0];//r
@@ -10324,12 +10631,18 @@ function getTitle() {
 	return dialog[titleDialogId].src;
 }
 function getTitleSettings() {
-	return dialog[titleDialogId].bgColor;
+	const titleDlg = dialog[titleDialogId];
+	return {
+		bgColor: titleDlg.bgColor,
+		maxLines: titleDlg.maxLines
+	}
 }
-function setTitle(titleSrc, bgColor) {
+function setTitle(titleSrc, bgColor, maxLines) {
 	if (!dialog[titleDialogId]) dialog[titleDialogId] = {name: null};
 	dialog[titleDialogId].src = titleSrc;
+
 	if (bgColor) dialog[titleDialogId].bgColor = bgColor;
+	if (maxLines) dialog[titleDialogId].maxLines = maxLines;
 }
 
 var defaultFontName = "ascii_small";
@@ -10339,6 +10652,10 @@ var TextDirection = {
 	RightToLeft : "RTL"
 };
 var textDirection = TextDirection.LeftToRight;
+
+var baseAudioUrl = null;
+var doMuteAudio = false;
+var doSkipTitle = false;
 
 var names = {
 	room : new Map(),
@@ -10465,7 +10782,7 @@ var renderer = new Renderer(tilesize, scale);
 
 function getGameNameFromURL() {
 	var game = window.location.hash.substring(1);
-	// console.log("game name --- " + game);
+	// console.debug("game name --- " + game);
 	return game;
 }
 
@@ -10558,8 +10875,8 @@ function onready(startWithTitle) {
 
 	update_interval = setInterval(update,16);
 
-	if(startWithTitle) { // used by editor 
-		startNarrating(getTitle(), null, {bgColor: getTitleSettings()});
+	if(startWithTitle && !doSkipTitle) { // used by editor
+		startNarrating(getTitle(), null, getTitleSettings());
 	}
 }
 
@@ -10596,10 +10913,15 @@ function getOffset(evt) {
 }
 
 function stopGame() {
-	console.log("stop GAME!");
+	console.debug("stop GAME!");
 
 	document.removeEventListener('keydown', input.onkeydown);
 	document.removeEventListener('keyup', input.onkeyup);
+
+	document.getElementById('music-player-1')?.pause();
+	document.getElementById('music-player-2')?.pause();
+
+	document.getElementById('textCanvas').style.backdropFilter = 'none';
 
 	if (isPlayerEmbeddedInEditor) {
 		canvas.removeEventListener('touchstart', input.ontouchstart);
@@ -10959,13 +11281,13 @@ var InputManager = function() {
 		for (var key in pressed) {
 			if (pressed[key]) { // only ignore keys that are actually held
 				ignored[key] = true;
-				// console.log("IGNORE -- " + key);
+				// console.debug("IGNORE -- " + key);
 			}
 		}
 	}
 
 	this.onkeydown = function(event) {
-		// console.log("KEYDOWN -- " + event.keyCode);
+		// console.debug("KEYDOWN -- " + event.keyCode);
 
 		tryRestartGame(event);
 
@@ -10997,7 +11319,7 @@ var InputManager = function() {
 	}
 
 	this.onkeyup = function(event) {
-		// console.log("KEYUP -- " + event.keyCode);
+		// console.debug("KEYUP -- " + event.keyCode);
 		pressed[event.keyCode] = false;
 		ignored[event.keyCode] = false;
 	}
@@ -11095,7 +11417,7 @@ var InputManager = function() {
 	}
 
 	this.onblur = function() {
-		// console.log("~~~ BLUR ~~");
+		// console.debug("~~~ BLUR ~~");
 		resetAll();
 	}
 }
@@ -11201,6 +11523,8 @@ function movePlayerThroughExit(ext) {
 		// so I don't have to get the ID and the source str
 		// every time!
 		ext.bgColor = dialog[ext.dlg].bgColor;
+		ext.maxLines = dialog[ext.dlg].maxLines;
+
 		startDialog(
 			dialog[ext.dlg].src,
 			ext.dlg,
@@ -11352,7 +11676,7 @@ function getEnding(roomId,x,y) {
 }
 
 function getTile(x,y) {
-	// console.log(x + " " + y);
+	// console.debug(x + " " + y);
 	var t = getRoom().tilemap[y][x];
 	return t;
 }
@@ -11400,7 +11724,7 @@ function parseWorld(file) {
 	while (i < lines.length) {
 		var curLine = lines[i];
 
-		// console.log(lines[i]);
+		// console.debug(lines[i]);
 
 		if (i == 0) {
 			i = parseTitle(lines, i);
@@ -11463,7 +11787,16 @@ function parseWorld(file) {
 		else if (getType(curLine) === "!") {
 			i = parseFlag(lines, i);
 		}
-        else {
+		else if (getType(curLine) === "AUDIO_URL") {
+			i = parseAudioUrl(lines, i);
+		}
+		else if (getType(curLine) === "MUTE_AUDIO") {
+			i = parseMuteAudio(lines, i);
+		}
+		else if (getType(curLine) === "SKIP_TITLE") {
+			i = parseSkipTitle(lines, i);
+		}
+		else {
 			i++;
 		}
 	}
@@ -11497,7 +11830,7 @@ function parseWorld(file) {
 
 function scriptCompatibility(compatibilityFlags) {
 	if (compatibilityFlags.convertSayToPrint) {
-		console.log("CONVERT SAY TO PRINT!");
+		console.debug("CONVERT SAY TO PRINT!");
 
 		var PrintFunctionVisitor = function() {
 			var didChange = false;
@@ -11538,9 +11871,12 @@ function serializeWorld(skipFonts) {
 	var worldStr = "";
 	/* TITLE */
 	worldStr += getTitle() + "\n";
-	const titleBgColor = getTitleSettings();
+	const {bgColor: titleBgColor, maxLines: titleMaxLines} = getTitleSettings();
 	if (titleBgColor) {
-		worldStr += `BG_COLOR ${JSON.stringify(getTitleSettings())}\n`
+		worldStr += `BG_COLOR ${JSON.stringify(titleBgColor)}\n`
+	}
+	if (titleMaxLines) {
+		worldStr += `MAX_LINES ${titleMaxLines}\n`;
 	}
 	worldStr += "\n";
 
@@ -11563,6 +11899,21 @@ function serializeWorld(skipFonts) {
 	if (textDirection != TextDirection.LeftToRight) {
 		worldStr += "TEXT_DIRECTION " + textDirection + "\n";
 		worldStr += "\n"
+	}
+	/* BASE AUDIO URL */
+	if (baseAudioUrl?.length) {
+		worldStr += `AUDIO_URL ${baseAudioUrl}\n\n`;
+	}
+	/* MUTE AUDIO IN EDITOR */
+	if (doMuteAudio === true) {
+		worldStr += 'MUTE_AUDIO true\n';
+	}
+	/* SKIP TITLE IN EDITOR */
+	if (doSkipTitle === true) {
+		worldStr += 'SKIP_TITLE true\n';
+	}
+	if (doMuteAudio || doSkipTitle) {
+		worldStr += '\n';
 	}
 	/* PALETTE */
 	for (id in palette) {
@@ -11736,8 +12087,11 @@ function serializeWorld(skipFonts) {
 			if (dialog[id].name != null) {
 				worldStr += "NAME " + dialog[id].name + "\n";
 			}
-			if (dialog[id].bgColor != null) {
+			if (dialog[id].bgColor?.length) {
 				worldStr += `BG_COLOR ${JSON.stringify(dialog[id].bgColor)}\n`;
+			}
+			if (isNumber(dialog[id].maxLines) && dialog[id].maxLines !== 2) {
+				worldStr += `MAX_LINES ${dialog[id].maxLines}\n`;
 			}
 			worldStr += "\n";
 		}
@@ -11783,13 +12137,13 @@ function isExitValid(e) {
 
 function placeSprites() {
 	for (id in spriteStartLocations) {
-		//console.log(id);
-		//console.log( spriteStartLocations[id] );
-		//console.log(sprite[id]);
+		//console.debug(id);
+		//console.debug( spriteStartLocations[id] );
+		//console.debug(sprite[id]);
 		sprite[id].room = spriteStartLocations[id].room;
 		sprite[id].x = spriteStartLocations[id].x;
 		sprite[id].y = spriteStartLocations[id].y;
-		//console.log(sprite[id]);
+		//console.debug(sprite[id]);
 	}
 }
 
@@ -11815,7 +12169,11 @@ function parseTitle(lines, i) {
 	i = results.index;
 
 	const bgColor = parseBgColor(lines, i);
-	setTitle(results.script, bgColor);
+	if (bgColor) i++;
+
+	const maxLines = parseMaxLines(lines, i);
+
+	setTitle(results.script, bgColor, maxLines);
 
 	return i + 1;
 }
@@ -11862,7 +12220,7 @@ function parseRoom(lines, i, compatibilityFlags) {
 	}
 
 	while (i < lines.length && lines[i].length > 0) { //look for empty line
-		// console.log(getType(lines[i]));
+		// console.debug(getType(lines[i]));
 		if (getType(lines[i]) === "SPR") {
 			/* NOTE SPRITE START LOCATIONS */
 			var sprId = getId(lines[i]);
@@ -12221,8 +12579,8 @@ function parseItem(lines, i) {
 		name : name
 	};
 
-	// console.log("ITM " + id);
-	// console.log(item[id]);
+	// console.debug("ITM " + id);
+	// console.debug(item[id]);
 
 	return i;
 }
@@ -12315,10 +12673,16 @@ function parseScript(lines, i, backCompatPrefix, compatibilityFlags) {
 }
 
 function parseBgColor(lines, i) {
-	if (lines[i]?.length > 0 && getType(lines[i]) === "BG_COLOR") {
-		const bgColor = JSON.parse(lines[i].split(' ')[1]);
-		i++;
+	if (lines[i]?.length && getType(lines[i]) === "BG_COLOR") {
+		const bgColor = JSON.parse(getId(lines[i]));
 		return bgColor;
+	}
+}
+
+function parseMaxLines(lines, i) {
+	if (lines[i]?.length && getType(lines[i]) === "MAX_LINES") {
+		const maxLines = parseInt(getId(lines[i]));
+		return maxLines;
 	}
 }
 
@@ -12335,7 +12699,16 @@ function parseDialog(lines, i, compatibilityFlags) {
 	}
 
 	const bgColor = parseBgColor(lines, i);
-	if (bgColor) dialog[id].bgColor = bgColor;
+	if (bgColor) {
+		dialog[id].bgColor = bgColor;
+		i++;
+	}
+
+	const maxLines = parseMaxLines(lines, i);
+	if (isNumber(maxLines)) {
+		dialog[id].maxLines = maxLines;
+		i++;
+	}
 
 	return i;
 }
@@ -12394,6 +12767,30 @@ function parseFlag(lines, i) {
 	return i;
 }
 
+function parseAudioUrl(lines, i) {
+	baseAudioUrl = getId(lines[i]);
+	if (isPlayerEmbeddedInEditor) {
+		document.getElementById('baseAudioUrl').value = baseAudioUrl;
+	}
+	return i + 1;
+}
+
+function parseMuteAudio(lines, i) {
+	if (isPlayerEmbeddedInEditor) {
+		doMuteAudio = (getId(lines[i]) === 'true');
+		document.getElementById('muteAudioInEditor').checked = doMuteAudio;
+	}
+	return i + 1;
+}
+
+function parseSkipTitle(lines, i) {
+	if (isPlayerEmbeddedInEditor) {
+		doSkipTitle = (getId(lines[i]) === 'true');
+		document.getElementById('skipTitleInEditor').checked = doSkipTitle;
+	}
+	return i + 1;
+}
+
 function drawTile(img,x,y,context) {
 	if (!context) { //optional pass in context; otherwise, use default
 		context = ctx;
@@ -12419,7 +12816,7 @@ function drawRoom(room,context,frameIndex) { // context & frameIndex are optiona
 
 	// if (room.id != debugLastRoomDrawn) {
 	// 	debugLastRoomDrawn = room.id;
-	// 	console.log("DRAW ROOM " + debugLastRoomDrawn);
+	// 	console.debug("DRAW ROOM " + debugLastRoomDrawn);
 	// }
 
 	var paletteId = "default";
@@ -12443,13 +12840,13 @@ function drawRoom(room,context,frameIndex) { // context & frameIndex are optiona
 		for (j in room.tilemap[i]) {
 			var id = room.tilemap[i][j];
 			if (id != "0") {
-				//console.log(id);
+				//console.debug(id);
 				if (tile[id] == null) { // hack-around to avoid corrupting files (not a solution though!)
 					id = "0";
 					room.tilemap[i][j] = id;
 				}
 				else {
-					// console.log(id);
+					// console.debug(id);
 					drawTile( getTileImage(tile[id],paletteId,frameIndex), j, i, context );
 				}
 			}
@@ -12528,7 +12925,7 @@ var fontManager = new FontManager();
 
 // TODO : is this scriptResult thing being used anywhere???
 function onExitDialog(scriptResult, dialogCallback) {
-	console.log("EXIT DIALOG!");
+	console.debug("EXIT DIALOG!");
 
 	isDialogMode = false;
 
@@ -12557,7 +12954,7 @@ TODO
 - what about a special script block separate from DLG?
 */
 function startNarrating(dialogStr,end,settings) {
-	console.log("NARRATE " + dialogStr);
+	console.debug("NARRATE " + dialogStr);
 
 	if(end === undefined) {
 		end = false;
@@ -12588,10 +12985,10 @@ function startEndingDialog(ending) {
 
 function startItemDialog(itemId, dialogCallback) {
 	var dialogId = item[itemId].dlg;
-	// console.log("START ITEM DIALOG " + dialogId);
+	// console.debug("START ITEM DIALOG " + dialogId);
 	if (dialog[dialogId]) {
-		const {src: dialogStr, bgColor} = dialog[dialogId];
-		startDialog(dialogStr, dialogId, dialogCallback, {bgColor});
+		const {src: dialogStr, bgColor, maxLines} = dialog[dialogId];
+		startDialog(dialogStr, dialogId, dialogCallback, {bgColor, maxLines});
 	}
 	else {
 		dialogCallback();
@@ -12601,17 +12998,17 @@ function startItemDialog(itemId, dialogCallback) {
 function startSpriteDialog(spriteId) {
 	var spr = sprite[spriteId];
 	var dialogId = spr.dlg;
-	// console.log("START SPRITE DIALOG " + dialogId);
+	// console.debug("START SPRITE DIALOG " + dialogId);
 	if (dialog[dialogId]){
-		const {src: dialogStr, bgColor} = dialog[dialogId];
-		startDialog(dialogStr, dialogId, null, {bgColor});
+		const {src: dialogStr, bgColor, maxLines} = dialog[dialogId];
+		startDialog(dialogStr, dialogId, null, {bgColor, maxLines});
 	}
 }
 
 function startDialog(dialogStr, scriptId, dialogCallback, objectContext) {
-	// console.log("START DIALOG ");
+	// console.debug("START DIALOG ");
 	if (dialogStr.length <= 0) {
-		// console.log("ON EXIT DIALOG -- startDialog 1");
+		// console.debug("ON EXIT DIALOG -- startDialog 1");
 		onExitDialog(null, dialogCallback);
 		return;
 	}
@@ -12619,10 +13016,16 @@ function startDialog(dialogStr, scriptId, dialogCallback, objectContext) {
 	isDialogMode = true;
 
 	dialogRenderer.Reset();
-	dialogRenderer.SetCentered(isNarrating /*centered*/);
-	dialogRenderer.SetBgColor(objectContext?.bgColor);
+	dialogRenderer.SetCentered(isNarrating /*centered*/); // ELANA TODO: set from context
+	dialogRenderer.SetBgColor(objectContext?.bgColor, true);
 
 	dialogBuffer.Reset();
+
+	const maxLines = objectContext?.maxLines;
+	if (maxLines) {
+		dialogBuffer.SetMaxLines(maxLines);
+	}
+
 	scriptInterpreter.SetDialogBuffer(dialogBuffer);
 
 	var onScriptEnd = function(scriptResult) {
@@ -16101,7 +16504,7 @@ b3d.serializeDataAsDialog = function () {
         mesh: meshSerialized,
         stack: stackSerialized
     }, null, 2);
-    // console.log(result);
+    // console.debug(result);
     bitsy.dialog['DATA3D'] = {
         src:'"""\n' + result + '\n"""',
         name: null,
@@ -16194,6 +16597,24 @@ b3d.initMeshTemplates = function () {
         meshTemplates['tower' + i] = boxMesh;
     }
     meshTemplates.box = meshTemplates.tower1;
+
+    const tableUVs = [];
+    for (let i = 0; i < 6; i++) {
+        // Set top-facing texture from color in upper left corner of drawing
+        tableUVs.push(i === 4 ? new BABYLON.Vector4(0, 1, 0, 1) : new BABYLON.Vector4(0, 0, 1, 1));
+    }
+    const tableMesh = BABYLON.MeshBuilder.CreateBox('table', {
+        size: 1,
+        height: 1,
+        faceUV: tableUVs,
+        wrap: true,
+    }, b3d.scene);
+
+    tableMesh.doNotSyncBoundingInfo = true;
+    b3d.transformGeometry(tableMesh, BABYLON.Matrix.Scaling(1, .7, 1));
+    b3d.transformGeometry(tableMesh, BABYLON.Matrix.Translation(0, -.55, 0));
+
+    meshTemplates.table = tableMesh;
 
     // floor
     var floorMesh = BABYLON.MeshBuilder.CreatePlane(`floor`, {
@@ -16433,7 +16854,7 @@ b3d.clearCachesMesh = function (drw) {
 };
 
 b3d.update = function () {
-    // console.log("update called");
+    // console.debug("update called");
     b3d.curStack = b3d.stackPosOfRoom[bitsy.curRoom] && b3d.stackPosOfRoom[bitsy.curRoom].stack || null;
     var didChangeScene = b3d.curStack? b3d.curStack !== b3d.lastStack: bitsy.curRoom !== b3d.lastRoom;
     var editorMode = bitsy.isPlayerEmbeddedInEditor && !bitsy.isPlayMode;
