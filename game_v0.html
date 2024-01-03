@@ -26,7 +26,7 @@ October, 2024
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}
+{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -37,7 +37,7 @@ BG_COLOR [0,0,0]
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
 
-SKIP_TITLE true
+MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -262,7 +262,6 @@ ITM 6 2,5
 ITM 6 13,11
 ITM 6 4,9
 ITM 6 12,7
-ITM 2 8,4
 ITM 7 7,12
 ITM 7 9,12
 ITM 7 11,7
@@ -393,6 +392,7 @@ ITM lotm3 1,12
 ITM lotm6 14,14
 EXT 8,15 2 8,2 FX fade_b
 EXT 14,9 lost-0 4,14 FX fade_w DLG y
+EXT 15,11 lot4 1,11 FX fade_b DLG 2c
 PAL 0
 
 ROOM losv
@@ -747,6 +747,7 @@ ITM lotm4 4,14
 ITM wesbenco 3,13
 ITM wesbencr 10,12
 ITM lotm4 8,10
+EXT 0,11 losu 14,11 FX fade_b DLG 29
 PAL 0
 FOG_END 14
 
@@ -2083,6 +2084,7 @@ TIL lou18
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 NAME sconce
+WAL true
 COL 1
 
 TIL lou19
@@ -2377,7 +2379,7 @@ SPR A
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
 16,16,16,18,18,16,16,16
-POS lot4 1,11
+POS losu 8,11
 COL 2
 
 SPR b
@@ -2827,15 +2829,15 @@ SPR lot7
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-16,22,22,16,16,22,22,16,16,22,22,16,16,22,22,16
-22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
-22,16,16,22,22,16,16,22,22,16,16,22,22,16,16,22
-16,16,22,22,16,16,22,22,16,16,22,22,16,16,22,22
+16,36,36,16,16,36,36,16,16,36,36,16,16,36,36,16
+36,36,16,16,36,36,16,16,36,36,16,16,36,36,16,16
+36,16,16,36,36,16,16,36,36,16,16,36,36,16,16,36
+16,16,36,36,16,16,36,36,16,16,36,36,16,16,36,36
 16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16
 16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16
 NAME barrier
-DLG 13
-POS 2 10,2
+DLG 2b
+POS lot4 1,14
 COL 2
 
 SPR lot8
@@ -4850,10 +4852,10 @@ SPR lov9
 4,4,16,21,2,2,21,2,2,21,2,2,2,16,4,4
 4,4,16,16,16,16,16,16,16,16,16,16,16,16,4,4
 4,4,16,21,16,21,21,21,21,21,21,21,21,16,4,4
-4,4,16,16,16,16,16,16,16,16,16,16,16,16,4,4
 4,4,16,21,16,21,21,21,21,21,21,21,21,16,4,4
 4,4,16,16,16,16,16,16,16,16,16,16,16,16,4,4
-4,4,16,16,16,16,16,16,16,16,16,16,16,16,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -4896,6 +4898,7 @@ SPR lova
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+DLG 2a
 POS lot4 1,8
 COL 2
 
@@ -5711,7 +5714,7 @@ DLG 10
 """
 {
   - enteredLibrary == 0 ?
-     Maybe I can get this poem done in time for the protest. I just need to find some inspiration...    {enteredLibrary = 1}
+    MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.      {enteredLibrary = 1}
   - else ?
 
 }
@@ -5724,10 +5727,6 @@ DLG 12
 Dorms are back this way. I'll head back there later. For now, I must remain anti-sleep.
 NAME sprite lot6 dialog
 BG_COLOR [0,0,0]
-
-DLG 13
-I can't believe they're actually going to demolish the library's east wing. Could we handcuff ourselves to something before the bulldozers arrive?
-NAME sprite lot7 dialog
 
 DLG 14
 The English building is supposed to be my home away from home. Doesn't feel like that when they're firing teachers to bankroll more "profitable" majors.
@@ -5829,7 +5828,12 @@ DLG 24
 ^ Elevator
 East Wing >
 < Checkout Desk
-{clr}
+{clr}{pg}{
+  - seen_f1guide == 0 ?
+    Maybe I can get this poem done in time for the protest. I just need to find some inspiration...                     {seen_f1guide = 1}
+  - else ?
+
+}
 """
 NAME sprite lous dialog
 BG_COLOR [0,0,0]
@@ -5890,6 +5894,12 @@ DLG 28
 }
 """
 NAME locked exit 3
+BG_COLOR [0,0,0]
+MAX_LINES NaN
+
+DLG 29
+{sfx "door_open.wav"}
+NAME door sound
 BG_COLOR [0,0,0]
 MAX_LINES NaN
 
@@ -5991,9 +6001,6 @@ DLG DATA3D
     "TIL_lou14": {
       "type": "floor"
     },
-    "TIL_lou18": {
-      "type": "box"
-    },
     "TIL_lou19": {
       "transform": "1,1,1,0,180,180,0.03,-2,0"
     },
@@ -6005,6 +6012,9 @@ DLG DATA3D
     },
     "TIL_lou1i": {
       "transform": "1,1,1,0,0,180,0,-1,0"
+    },
+    "TIL_lou1j": {
+      "type": "floor"
     },
     "SPR_el1": {
       "type": "box"
@@ -6100,7 +6110,7 @@ DLG DATA3D
     },
     "SPR_lot7": {
       "type": "plane",
-      "transform": "1,1,1,0,65,0,-0.4,0,0"
+      "transform": "1,1,1,0,45,0,0,0,0"
     },
     "SPR_lot8": {
       "type": "plane",
@@ -6417,9 +6427,6 @@ DLG DATA3D
     },
     "ITM_wesbencr": {
       "transform": "1,2,1,0,90,0,0,0,0"
-    },
-    "TIL_lou1j": {
-      "type": "floor"
     }
   },
   "stack": {
@@ -6757,8 +6764,8 @@ NAME item h dialog
 
 DLG 1d
 """
-{sfx "laugh.wav"}
 Another monument to an old white guy. You love to see it.
+{sfx "laugh.wav"}
 """
 NAME exterior 4 dialog
 BG_COLOR [0,0,0]
@@ -6949,6 +6956,44 @@ Hmm, this looks like an interesting book. Maybe I should take a look...
 {exit "lot1" 2 12 "fade_w"}
 """
 NAME wrong book dialog
+BG_COLOR [0,0,0]
+MAX_LINES NaN
+
+DLG 2a
+"""
+MacLeod Library East Wing Reclamation Project
+
+Beginning in Fall 2023, this wing will be integrated with the existing library and decommissioned in accordance with the Birchwood Business School Expansion Plan 3.068.
+
+Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{project_seen = 1}
+"""
+NAME sprite lova dialog
+BG_COLOR [0,0,0]
+MAX_LINES 16
+
+DLG 2b
+"""
+{
+  - project_seen == 1 ?
+    Could we maybe handcuff ourselves to something before the bulldozers arrive?
+  - else ?
+    What's with all this construction work?
+}
+"""
+NAME barrier dialog
+BG_COLOR [0,0,0]
+MAX_LINES NaN
+
+DLG 2c
+"""
+{
+  - entered_eastwing == 0 ?
+    This is my favorite part of the library. Zines, manga, graphic novels. It's a queer paradise!     {entered_eastwing = 1}
+  - else ?
+
+}
+"""
+NAME exit narration 4
 BG_COLOR [0,0,0]
 MAX_LINES NaN
 
