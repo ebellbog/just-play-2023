@@ -14,7 +14,7 @@ October, 2024
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}
+{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}
 """</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
@@ -36,8 +36,6 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
-
-MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -116,9 +114,9 @@ NAME cell phone
 255,49,0
 71,0,26
 0,84,23
-15,15,0
+181,181,0
 255,27,153
-88,0,91
+0,0,0
 0,0,0
 237,237,237
 216,150,91
@@ -513,7 +511,7 @@ lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lo
 lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,losw
 lou12,lost-u,lost-u,lost-u,lotm,lotm,lotm,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-a
 lost-a,lost-u,lost-u,lost-u,lotm,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
-lost-a,lost-u,lost-u,lost-u,lotm,0,lou14,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou14,lost-a
+lost-a,lost-u,lost-u,lost-u,lotm,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou14,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,losw,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 1
 ITM lotm9 6,14
@@ -3716,24 +3714,40 @@ POS losx 8,0
 COL 1
 
 SPR A
-16,16,16,16,16,16,16,16
-16,18,16,18,18,16,18,16
-16,16,16,18,18,16,16,16
-16,18,18,16,16,18,18,16
-16,18,18,16,16,18,18,16
-16,16,16,18,18,16,16,16
-16,18,16,18,18,16,18,16
-16,16,16,16,16,16,16,16
+0,0,0,0,0,0,0,23,6,0,0,0,0,0,0,0
+0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
+0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
+0,0,23,6,0,0,0,23,6,0,0,0,6,23,0,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+23,23,23,23,0,0,0,6,6,0,0,0,23,23,23,23
+6,6,6,6,0,0,0,6,6,0,0,0,6,6,6,6
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,0,23,6,0,0,0,23,6,0,0,0,6,23,0,0
+0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
+0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
+0,0,0,0,0,0,0,23,6,0,0,0,0,0,0,0
 >
-16,16,16,18,18,16,16,16
-16,16,16,18,18,16,16,16
-16,16,16,18,18,16,16,16
-18,18,18,16,16,18,18,18
-18,18,18,16,16,18,18,18
-16,16,16,18,18,16,16,16
-16,16,16,18,18,16,16,16
-16,16,16,18,18,16,16,16
-POS lot3 1,3
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
+0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
+0,0,23,6,0,0,0,23,6,0,0,0,6,23,0,0
+0,23,6,0,0,0,0,23,6,0,0,0,0,6,23,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,23,23,23,23,0,0,23,23,0,0,23,23,23,23,0
+0,6,6,6,6,0,0,23,23,0,0,6,6,6,6,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,23,6,0,0,0,0,0,0,0,0,0,0,6,23,0
+0,23,6,0,0,0,0,23,6,0,0,0,0,6,23,0
+0,0,23,6,0,0,0,23,6,0,0,0,6,23,0,0
+0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
+0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+POS losz 7,4
 COL 2
 
 SPR b
@@ -10331,9 +10345,6 @@ DLG DATA3D
     },
     "ITM_wesbencr": {
       "transform": "1,2,1,0,90,0,0,0,0"
-    },
-    "SPR_pbrow6": {
-      "transform": "0.5,0.5,0.5,0,0,0,0,-0.24,0"
     }
   },
   "stack": {
@@ -16116,10 +16127,13 @@ function imageDataFromImageSource(imageSource, pal, col) {
                             console.debug('passed index out of palette range: ' + px);
                             px = 0;
                         }
-                        img.data[pxl + 0] = colors[px][0];//r
-                        img.data[pxl + 1] = colors[px][1];//g
-                        img.data[pxl + 2] = colors[px][2];//b
-                        img.data[pxl + 3] = 255;//a
+
+						if (px > 0) { // treat background color as transparent
+							img.data[pxl + 0] = colors[px][0];//r
+							img.data[pxl + 1] = colors[px][1];//g
+							img.data[pxl + 2] = colors[px][2];//b
+							img.data[pxl + 3] = 255;
+						}
 
                     }
 				}
