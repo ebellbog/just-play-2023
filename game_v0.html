@@ -7,11 +7,8 @@
 <meta charset="UTF-8">
 
 <title>"""
-{bgClr 3}{music "dorm_music2.mp3"}{borderClr 28}
-Banned Together - a story of queer love & erasure
-{clr 28 true}{clr}{pg}Birchwood College
-October, 2024
-{pg}{shk}*bzzt!*{shk}
+{music "dorm_music2.mp3"}{bgClr 3}{borderClr 28}Banned Together - a story of queer love & erasure{clr 28 true}{clr}{pg}Birchwood College
+October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}
@@ -19,11 +16,8 @@ October, 2024
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
-{bgClr 3}{music "dorm_music2.mp3"}{borderClr 28}
-Banned Together - a story of queer love & erasure
-{clr 28 true}{clr}{pg}Birchwood College
-October, 2024
-{pg}{shk}*bzzt!*{shk}
+{music "dorm_music2.mp3"}{bgClr 3}{borderClr 28}Banned Together - a story of queer love & erasure{clr 28 true}{clr}{pg}Birchwood College
+October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}
@@ -10346,10 +10340,10 @@ DLG 10
 """
 {
   - enteredLibrary == 0 ?
-    MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.          {enteredLibrary = 1}
+    MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.    {music "library_open_music.mp3"}    {enteredLibrary = 1}
 }{sfx "door_open.wav"}
 """
-NAME exit narration 1
+NAME enter library from campus
 BG_COLOR [0,0,0]
 
 DLG 12
@@ -10371,9 +10365,9 @@ DLG 16
 {
   - cell >= 5 ?
     {property locked false}    It honestly feels ridiculous to write poetry in the library while the world is disintegrating around us...
-    {music "campus_music.mp3"}    {ambient "[255, 255, 255]"}
+    {music "campus_music2.mp3"}    {ambient "[255, 255, 255]"}
   - else ?
-    {property locked true}        As soon as I finish talking to Jax I'll head to the library...
+    {property locked true}    As soon as I finish talking to Jax I'll head to the library...
 }
 """
 NAME cell to campus exit
@@ -10423,7 +10417,7 @@ What the - someone put a note in the back of this book! {pg}{paper}i knew you'd 
 {replace "downlight" "light (off)" "ceiling"}
 {replace "chair sit" "chair sit genderqueer"}
 {ambient "[0.6, 0.6, 0.8]" true}
-{fog 0 9 "floor 1"}{pg}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
+{fog 0 9 "floor 1"}{music "library_closed_music.mp3"}{pg}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
 """
 NAME exit book 1
 BG_COLOR [0,0,0]
@@ -12250,8 +12244,7 @@ DLG 2p
     {seqLength = seqLength + 1}
 }{
   - seqLength >= 3 ?
-    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                {pg}     I... I think it {shk}actually worked??{shk}
-    {exit "losw" 8 1 "fade_w"}
+    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                    {pg}    {music "library_closed_music.mp3"}    I... I think it {shk}actually worked??{shk}    {exit "losw" 8 1 "fade_w"}
   - else ?
     The elevator won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
 }
@@ -12313,7 +12306,7 @@ DLG 2v
     {
       - deadPhoneSeen == true ?
         {sequence
-          - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}                        {replace "closed elevator" "elevator - fl 1"}
+          - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}            {replace "closed elevator" "elevator - fl 1"}            {pg}            I guess this is as good a time as any to investigate mysterious notes in random books?
           - Phone still isn't charged yet :(
         }
       - else ?
@@ -12332,7 +12325,7 @@ DLG 2x
 """
 {
   - genderqueer_seen == 1 ?
-    Perfect spot.                                        {pg}    Okay, Gender Queer, I hope you're good...    {music}            {exit "lot1" 2 12 "fade_w"}
+    Perfect spot.                                                    {pg}    {music "hyperfocus_music.mp3"}    Okay, Gender Queer, I hope you're good...                                {pg}    {exit "lot1" 2 12 "fade_w"}
 }
 """
 NAME chair sit dialog
@@ -12420,7 +12413,7 @@ BG_COLOR [0,0,0]
 MAX_LINES 16
 
 DLG 3k
-Okay. This is it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend, if you're still with me, let's reunite again at another banished title: {rbw}306.76.{rbw} see you there?{pg}Sometimes I feel so lost in my anger. Books erased. We have to hold onto something. But what? {pg}I'm so sad I missed the protest. I feel like a failure...{pg}{exit "lot3" 8 6 "fade_w"}Where... where did all those books go??{pg}Is this some kind of {shk}punishment?{shk}{pg}Why does everything just keep getting So. Much. {shk}WORSE?!{shk}
+Okay. This is it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend, if you're still with me, let's reunite again at another banished title: {rbw}306.76.{rbw} see you there?{pg}Sometimes I feel so lost in my anger. Books erased. We have to hold onto something. But what? {pg}I'm so sad I missed the protest. I feel like a failure...{music "courtyard_music.mp3"}{pg}{exit "lot3" 8 6 "fade_w"}Where... where did all those books go??{pg}Is this some kind of {shk}punishment?{shk}{pg}Why does everything just keep getting So. Much. {shk}WORSE?!{shk}
 NAME f2 correct dialog
 BG_COLOR [0,0,0]
 
@@ -12448,7 +12441,7 @@ DLG 3p
   - Well that was a bore... And no note from Carson :(    
   - I... don't think I absorbed much of that :( No wonder Carson didn't choose this book!
   - Ugh, why do some books feel like such  {shk}tedious mazes{shk} to navigate? I really hope I find the *right* book next time!
-}{pg}{
+}{music "library_closed_music.mp3"}{pg}{
   - currentFloor == 2 ?
     {exit "floor 2" 8 2 "fade_w"}
   - else ?
@@ -12460,7 +12453,7 @@ BG_COLOR [0,0,0]
 
 DLG 3q
 """
-Hmm, this looks like an interesting book. Maybe I should take a look...{pg}{cycle
+Hmm, this looks like an interesting book. Maybe I should take a look...{music "book_maze_music.mp3"}{pg}{cycle
   - {exit "wrong book 1" 2 3 "fade_w"}
   - {exit "wrong book 2" 2 3 "fade_w"}
   - {exit "wrong book 3" 2 3 "fade_w"}
@@ -14095,20 +14088,25 @@ function getMusicSrc(parameters) {
 function musicFunc(environment, parameters, onReturn) {
 	if (isPlayerEmbeddedInEditor && doMuteAudio) return onReturn(null);
 
-	const MAX_MUSIC_VOLUME = .6;
+	const MAX_MUSIC_VOLUME = .45;
 
 	const player1 = getMusicPlayer('music-player-1', true);
 	const player2 = getMusicPlayer('music-player-2', true);
 
-	const fadeAudio = () => {
+	const fadeOut = () => {
 		if (player1.volume > 0) {
 			player1.volume = Math.max(player1.volume - .01, 0);
-			setTimeout(fadeAudio, 20);
+			setTimeout(fadeOut, 25);
 		} else {
 			player1.pause();
 		}
 	}
-
+	const fadeIn = () => {
+		if (player1.volume < MAX_MUSIC_VOLUME) {
+			player1.volume = Math.min(player1.volume + .01, MAX_MUSIC_VOLUME);
+			setTimeout(fadeIn, 25);
+		}
+	}
 	const crossfadeAudio = () => {
 		if (player1.volume === 0) {
 			player1.pause();
@@ -14118,7 +14116,7 @@ function musicFunc(environment, parameters, onReturn) {
 		}
 		player1.volume = Math.max(player1.volume - .01, 0);
 		player2.volume = Math.min(player2.volume + .01, MAX_MUSIC_VOLUME);
-		setTimeout(crossfadeAudio, 20);
+		setTimeout(crossfadeAudio, 25);
 	}
 
 	const playMusic = () => {
@@ -14127,9 +14125,11 @@ function musicFunc(environment, parameters, onReturn) {
 		if (player1.paused || !player1.currentTime) {
 			player1.src = src;
 			player1.currentTime = 0;
-			player1.volume = MAX_MUSIC_VOLUME;
+			player1.volume = 0;
 			player1.play();
+
 			console.debug('PLAYING MUSIC:', src);
+			fadeIn();
 		} else {
 			player2.src = src;
 			player2.currentTime = 0;
@@ -14147,7 +14147,7 @@ function musicFunc(environment, parameters, onReturn) {
 	} else {
 		console.debug('STOPPING MUSIC');
 		player2.pause();
-		fadeAudio();
+		fadeOut();
 	}
 
 	onReturn(null);
@@ -17847,7 +17847,12 @@ function stopGame() {
 
 	document.getElementById('music-player-1')?.pause();
 	document.getElementById('music-player-2')?.pause();
-	b3d.resetAmbient(); // TODO: find a better place for this?
+
+	 // TODO: find a better place for this?
+	 // (and ideally prevent the need for setTimeout)
+	setTimeout(() => {
+		b3d.resetAmbient();
+	 }, 100);
 
 	document.getElementById('textCanvas').style.backdropFilter = 'none';
 
@@ -24136,12 +24141,14 @@ b3d.meshExtraSetup = function (drawing, mesh, meshConfig) {
 
     let newLight;
     if (drawing.name?.includes("light source")) {
-        newLight = new BABYLON.PointLight("light", new BABYLON.Vector3(mesh.position.x, 0, mesh.position.z), b3d.scene);
+        newLight = new BABYLON.PointLight("light", new BABYLON.Vector3(mesh.position.x, .3, mesh.position.z), b3d.scene);
         newLight.diffuse = new BABYLON.Color3(1, 1, .8);
         newLight.specular = new BABYLON.Color3(.05, .05, .05);
         newLight.intensity = .6;
 
         b3d.lights.push(newLight);
+
+        mesh.material.emissiveColor = new BABYLON.Color3(.5, .5, .5);
 
         b3d.baseMat.unfreeze();
         b3d.baseMat.maxSimultaneousLights = Math.min(b3d.lights.length, 6);
