@@ -654,8 +654,7 @@ ITM lotm1 3,1
 ITM lotm1 2,1
 ITM lotm1 1,1
 EXT 8,15 2 8,2 FX fade_b DLG 29
-EXT 14,9 lost-0 4,14 FX fade_w DLG y
-EXT 15,11 lot4 1,11 FX fade_b DLG 2c
+EXT 14,11 lot4 1,11 FX fade_b DLG 2c
 EXT 8,14 lot8 8,2 FX fade_b DLG 2q
 PAL 0
 
@@ -9108,6 +9107,7 @@ SPR wthrf1
 0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME cart 3 carson done
+DLG 3z
 COL 2
 
 SPR wthrf2
@@ -10556,9 +10556,9 @@ DLG 32
 """
 Oh my God, here it is! {rbw}This Book is Gay by Juno Dawson, 306.76.{rbw}{pg}Wow, library queer, I'm kind of in love with you now.{pg}{paper}you've made it this far. i'm surprised by your resilience. did you finish all boys aren't blue? well, now it's time for a queer sex ed book.{pg}{paper}of course this one's banned.{pg}Who {shk}is{shk} the adorable human writing all these notes?{pg}{paper}there's just one more book to read, and then maybe we'll find each other? head to my favorite place in the library: {rbw}741.5.{rbw}{replace "cart 3 carson" "cart 3 carson done"}{pg}{
   - entered_eastwing == 1 ?
-    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                {pg}                Every time something nice happens, I remember I have to fight.            {exit "lost-0" 4 14 "fade_b"}            It makes me feel so alone...    
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                    {pg}                    Every time something nice happens, I remember I have to fight.                {exit "lost-0" 4 14 "fade_b"}                It makes me feel so alone...    
   - else ?
-    Okay, 741.5? I think that's in the special collection in the East Wing.                {carson_cart_seen = 1}
+    Hmmm, 741.5? I think that's in the special collection in the East Wing.                    {carson_cart_seen = 1}
 }
 """
 NAME cart 3 carson dialog
@@ -12148,7 +12148,7 @@ BG_COLOR [0,0,0]
 
 DLG 2g
 """
-Okay. Don't panic. I have my charger with me. Just gotta plug this thing in and wait...
+Okay. Don't panic. I have my charger with me. Just gotta find somewhere to plug this thing in...
 {deadPhoneSeen = true}
 """
 NAME dead phone
@@ -12244,7 +12244,7 @@ DLG 2p
     {seqLength = seqLength + 1}
 }{
   - seqLength >= 3 ?
-    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                    {pg}    {music "library_closed_music.mp3"}    I... I think it {shk}actually worked??{shk}    {exit "losw" 8 1 "fade_w"}
+    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                                {pg}                            {music "library_closed_music.mp3"}                I... I think it {shk}actually worked??{shk}            {replace "f2 correct" "f2 correct replacement"}                            {f3_done = 1}    {exit "losw" 8 1 "fade_w"}
   - else ?
     The elevator won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
 }
@@ -12520,6 +12520,11 @@ DLG 3y
 }
 """
 NAME courtyard thought
+BG_COLOR [0,0,0]
+
+DLG 3z
+{paper}...head to my favorite place in the library: {rbw}741.5.
+NAME cart 3 carson done dialog
 BG_COLOR [0,0,0]
 
 
