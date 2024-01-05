@@ -815,7 +815,6 @@ ROOM lost-5
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 4
-ITM papyburnitc0 14,3
 EXT 9,14 lost-4 3,14
 EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
@@ -953,7 +952,7 @@ NAME impossible courtyard 1
 ITM pinktritem 4,9
 ITM popeitem 4,6
 ITM magaitem 11,6
-ITM papyburnitem 11,9
+ITM ppb0 11,9
 EXT 1,1 losw 1,8 DLG 3n
 PAL 0
 FOG_START 0
@@ -8998,7 +8997,7 @@ NAME MAGA hat
 DLG 2u
 COL 2
 
-ITM papyburnitem
+ITM ppb0
 0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,17,17,0,0,0,0,0,0,0,0,0,0
@@ -9493,6 +9492,7 @@ ITM wesbencp
 0,0,0,0,36,36,36,36,36,36,36,36,0,0,0,0
 0,0,0,0,36,36,36,36,36,36,36,36,0,0,0,0
 0,0,0,37,37,37,37,37,37,37,37,37,37,37,0,0
+NAME cone
 COL 2
 
 ITM wesbencq
@@ -9553,26 +9553,6 @@ ITM wesbencr1
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME key
-COL 2
-
-ITM wesbencr2
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME blank
 COL 2
 
 DLG 3
@@ -10574,7 +10554,7 @@ DLG DATA3D
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0"
     },
-    "ITM_papyburnitem": {
+    "ITM_ppb0": {
       "type": "billboard",
       "transform": "0.55,0.55,0.55,0,0,0,0,0,0"
     },
@@ -11579,14 +11559,7 @@ BG_COLOR [0,0,0]
 MAX_LINES NaN
 
 DLG 3t
-"""
-{
-  - {item "papyburnitc0"} ?
-    {property locked false}    It worked! Maybe I can find some way to climb down into the East Wing from up here...
-  - else ?
-    {property locked true}    The door to these offices is locked. I guess I shouldn't be surprised.
-}
-"""
+Sorry Nat, you'll need to recreate this dialog! -Elana
 NAME locked exit 4
 BG_COLOR [0,0,0]
 MAX_LINES NaN
