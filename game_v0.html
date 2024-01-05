@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 
 <title>"""
-{bgClr 3}{music "dorm_music.mp3"}{borderClr 28}
+{bgClr 3}{music "dorm_music2.mp3"}{borderClr 28}
 Banned Together - a story of queer love & erasure
-{clr 28 true}{clr}{ambient "[0.5, 0.5, 0.5]"}{pg}Birchwood College
+{clr 28 true}{clr}{pg}Birchwood College
 October, 2024
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
@@ -19,9 +19,9 @@ October, 2024
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
-{bgClr 3}{music "dorm_music.mp3"}{borderClr 28}
+{bgClr 3}{music "dorm_music2.mp3"}{borderClr 28}
 Banned Together - a story of queer love & erasure
-{clr 28 true}{clr}{ambient "[0.5, 0.5, 0.5]"}{pg}Birchwood College
+{clr 28 true}{clr}{pg}Birchwood College
 October, 2024
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
@@ -36,8 +36,6 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
-
-MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -10639,7 +10637,7 @@ DLG DATA3D
     "enableFog": true,
     "fogColor": 0,
     "fogStart": 4,
-    "fogEnd": 18,
+    "fogEnd": 22,
     "positionDialogBoxAtTheTop": false,
     "tweenDistance": 1,
     "tweenDuration": 150,
@@ -17849,7 +17847,7 @@ function stopGame() {
 
 	document.getElementById('music-player-1')?.pause();
 	document.getElementById('music-player-2')?.pause();
-	b3d.scene.ambientColor = new BABYLON.Color3(1, 1, 1); // TODO: find a better place to put this
+	b3d.resetAmbient(); // TODO: find a better place for this?
 
 	document.getElementById('textCanvas').style.backdropFilter = 'none';
 
@@ -22906,7 +22904,7 @@ b3d.init = function () {
 
     b3d.engine = new BABYLON.Engine(b3d.sceneCanvas, false);
     b3d.scene = new BABYLON.Scene(b3d.engine);
-    b3d.scene.ambientColor = new BABYLON.Color3(1, 1, 1);
+    b3d.resetAmbient();
 
     b3d.scene.freezeActiveMeshes();
 
@@ -23029,6 +23027,10 @@ b3d.resetLights = function() {
     b3d.baseMat.freeze();
 
     b3d.resetTextureCache();
+}
+
+b3d.resetAmbient = function() {
+    b3d.scene.ambientColor = new BABYLON.Color3(1, 1, 1);
 }
 
 b3d.reInit3dData = function () {
@@ -23808,6 +23810,9 @@ b3d.update = function () {
     var didChangeScene = b3d.curStack? b3d.curStack !== b3d.lastStack: bitsy.curRoom !== b3d.lastRoom;
     if (didChangeScene) {
         b3d.resetLights();
+        if (!bitsy.isPlayMode) {
+            b3d.resetAmbient();
+        }
     }
 
     // sprite changes
@@ -24141,6 +24146,12 @@ b3d.meshExtraSetup = function (drawing, mesh, meshConfig) {
         b3d.baseMat.unfreeze();
         b3d.baseMat.maxSimultaneousLights = Math.min(b3d.lights.length, 6);
         b3d.baseMat.freeze();
+
+        // If ambient color is full white, lights won't show up, so we dim the scene a bit
+        // (this is a janky solution that could use some future improvements)
+        if (b3d.scene.ambientColor.asArray().every((val) => val === 1)) {
+            b3d.scene.ambientColor = new BABYLON.Color3(.5, .5, .5);
+        }
     }
 
     if (meshConfig.transform) {
