@@ -924,24 +924,24 @@ NAME bedroom items
 PAL 0
 
 ROOM lot1
+0,lotu,lotu,lotu,0,0,0,0,0,0,0,0,0,0,0,0
+lotu,0,0,0,lotw,lotu,lotu,lotu,lotu,lotu,loty,lotv,lotu,lotu,0,0
+lotv,0,0,0,0,0,0,0,0,0,0,0,0,0,lotu,0
+lotu,0,0,0,lotu,lotu,lotz,lotu,lotu,lotu,lotu,lotw,lotu,0,lotw,0
+0,lotx,lotu,lotu,lotv,lotu,lotu,lotz,lotu,lotu,lotu,lotu,lotu,0,lotu,0
+0,0,lotu,0,0,0,0,0,0,0,0,0,lotu,0,lotu,0
+0,0,lotu,0,lotu,lotw,lotu,lotu,lotu,lotu,lotu,0,lotu,0,lotu,0
+0,0,lotx,0,lotu,0,0,0,0,0,lotx,0,lotu,0,lotv,0
+0,0,lotu,0,lotu,0,0,0,0,0,lotu,0,lotu,0,lotu,0
+0,0,lotu,0,loty,0,0,lotu,lotu,lotu,lotu,0,lotu,0,lotu,0
+0,0,lotu,0,lotu,0,0,lou1s,0,0,0,0,loty,0,lotu,0
+0,lou1q,lotu,lou1q,lotu,lotu,lotu,lotu,lotu,lotu,lotv,lotu,lotu,0,lotz,0
+0,lou1q,lotu,lou1q,0,0,0,0,0,0,0,0,0,0,lotu,0
+0,lou1q,0,lotu,lotu,lotw,lotu,lotv,lotu,lotu,lotu,lotu,lotu,lotw,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,lotu,lotu,lotu,lotw,lotu,lotu,lotu,lotu,lotu,loty,lotv,lotu,lotu,lotu,0
-0,lotu,0,0,0,0,0,0,0,0,0,0,0,0,lotu,0
-0,lotu,0,lotu,lotz,lotu,lotu,lotu,lotu,lotu,lotu,lotw,lotu,0,lotw,0
-0,lotu,0,lotu,lotu,lotu,0,0,0,0,0,0,lotu,0,lotu,0
-0,lotu,0,lotu,lotu,lotu,0,lotu,lotv,lotu,lotu,0,lotu,0,lotu,0
-0,lotu,0,lotu,lotu,lotu,0,lotu,lotu,lou1s,lotu,0,lotu,0,lotu,0
-0,lotv,0,lotu,lotu,lotu,0,lotu,lotu,0,lotx,0,lotu,0,lotv,0
-0,lotu,0,lotu,lotu,lotu,0,lotu,lotu,0,lotu,0,lotu,0,lotu,0
-0,lotu,0,lotu,lotu,lotu,0,lotu,lotu,0,lotu,0,lotu,0,lotu,0
-lotu,loty,0,lotx,lotu,lotu,0,lotu,lotu,0,0,0,loty,0,lotu,0
-lotu,lou1q,lou1q,lou1q,lotu,lotu,0,lotu,lotv,lotu,lotu,lotu,lotu,0,lotz,0
-lotu,lou1q,lou1q,lou1q,lotw,lotu,0,0,0,0,0,0,0,0,lotu,0
-lotv,lou1q,lou1q,lou1q,lotu,lotw,lotu,lotu,lotu,lotv,lotu,lotu,lotu,lotw,lotu,0
-lotu,lotu,lotz,lotu,lotu,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME hyperfocus book
-ITM a 9,7
+ITM a 8,10
 PAL 3
 FOG_START 0
 FOG_END 7
@@ -10417,7 +10417,7 @@ What the - someone put a note in the back of this book! {pg}{paper}i knew you'd 
 {replace "downlight" "light (off)" "ceiling"}
 {replace "chair sit" "chair sit genderqueer"}
 {ambient "[0.6, 0.6, 0.8]" true}
-{fog 0 9 "floor 1"}{music "library_closed_music.mp3"}{pg}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
+{fog 0 9 "floor 1"}{music "library_closed_music.mp3"}{pg}{ambient "[0.6, 0.6, 0.8]" true}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
 """
 NAME exit book 1
 BG_COLOR [0,0,0]
@@ -12325,7 +12325,7 @@ DLG 2x
 """
 {
   - genderqueer_seen == 1 ?
-    Perfect spot.                                                    {pg}    {music "hyperfocus_music.mp3"}    Okay, Gender Queer, I hope you're good...                                {pg}    {exit "lot1" 2 12 "fade_w"}
+    Perfect spot.    {pg}    {music "hyperfocus_music.mp3"}    Okay, Gender Queer, I hope you're good...                            {pg}            {exit "lot1" 2 2 "fade_w"}
 }
 """
 NAME chair sit dialog
