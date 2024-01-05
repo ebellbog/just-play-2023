@@ -26,7 +26,7 @@ October, 2024
 {pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}
+{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -36,6 +36,8 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
+
+MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -623,11 +625,11 @@ PAL 0
 
 ROOM losv
 0,o,lost-a,o,lost-a,o,lou15,lou18,0,lou18,lost-a,o,lost-a,o,lost-a,0
-o,losx,lou13,losx,losx,losx,losx,losx,losx,losx,lou13,losx,losx,losx,losx,o
+o,losx,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou18
 lost-a,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,losx,losv,losv,o
 o,losv,losv,losx,losv,losv,losx,losx,losx,losx,losx,losx,losv,losv,losv,lost-a
-lost-a,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
+lost-a,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 o,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,lost-a
 lost-a,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,o
 o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
@@ -636,15 +638,12 @@ o,losv,losv,losv,losv,0,losx,losx,losx,losx,losx,losv,losv,losx,losv,lost-a
 lost-a,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 o,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losx,lost-a
 lost-a,losv,losv,losv,losx,losv,losx,losx,losx,losx,losx,losx,losv,losv,losv,o
-o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou13,lost-a
+o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lou16,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 2
 ITM lotm2 2,1
 ITM lotm2 1,2
 ITM lotm3 1,1
-ITM lotm5 14,14
-ITM lotm6 1,5
-ITM lotm5 10,1
 PAL 0
 FOG_START 0
 FOG_END 9
@@ -797,7 +796,7 @@ ROOM lost-5
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
 0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
-0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losw,losx,losx,losx,losx,o
+0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losx,losx,losx,losx,losx,o
 0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
@@ -811,10 +810,12 @@ ROOM lost-5
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 4
+ITM papyburnitc0 10,3
+ITM papyburnitc0 14,3
 EXT 9,14 lost-4 3,14
 EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
-END b 10,3
+END b 11,3
 PAL 0
 FOG_END 4.5
 
@@ -949,7 +950,7 @@ ITM pinktritem 4,9
 ITM popeitem 4,6
 ITM magaitem 11,6
 ITM papyburnitem 11,9
-EXT 1,1 losw 9,2 DLG 3n
+EXT 1,1 losw 1,8 DLG 3n
 PAL 0
 FOG_START 0
 FOG_END 10
@@ -2626,7 +2627,7 @@ TIL lou1f
 11,11,12,12,11,11,12,12
 11,11,12,12,11,11,12,12
 NAME floor 2 (wall)
-WAL true
+WAL false
 COL 1
 
 TIL lou1g
@@ -3974,7 +3975,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS lost-0 5,14
 COL 2
 
 SPR b
@@ -7118,7 +7119,7 @@ SPR pbrov0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME f1 cart 1
 DLG 31
-POS losu 3,14
+POS losu 1,14
 COL 2
 
 SPR pbrov1
@@ -7162,7 +7163,7 @@ SPR pbrov2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME f1 cart 3
 DLG 31
-POS losu 1,14
+POS losu 3,14
 COL 2
 
 SPR pbrov3
@@ -8585,7 +8586,6 @@ SPR pbrow4
 0,0,0,0,0,0,12,12,12,12,0,0,0,0,0,0
 0,0,0,0,0,0,12,12,12,12,0,0,0,0,0,0
 NAME f3 table
-POS losw 9,1
 COL 2
 
 SPR pbrow5
@@ -8701,6 +8701,64 @@ SPR wthrez
 NAME wrong 1 exit
 DLG 3p
 POS lote 13,11
+COL 2
+
+SPR wthrf0
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+>
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+NAME f2 correct replacement
+DLG 3r
+COL 2
+
+SPR wthrf1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,15,15,15,0,0,0,0,0,15,15,15,0,0,0
+0,0,15,0,15,0,0,0,0,7,15,7,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,14,9,10,0,0,0,0,15,0,15,0,0,0
+0,0,15,14,9,10,0,0,0,0,15,0,15,0,0,0
+0,0,15,14,9,10,17,17,17,0,15,0,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,14,15,14,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,19,19,0,0,0,0,0,15,19,19,0,0,0
+0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME cart 3 carson done
 COL 2
 
 ITM 2
@@ -9625,6 +9683,25 @@ ITM wesbencr
 0,0,31,31,0,0,0,0,0,31,31,0,0,0,0,0
 COL 2
 
+ITM papyburnitc0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,11,11,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,11,11,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,11,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,11,11,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,11,11,11,11,0,0,0,0,0,0
+0,0,0,0,0,0,11,0,0,11,0,0,0,0,0,0
+0,0,0,0,0,0,11,11,11,11,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -9861,7 +9938,14 @@ BG_COLOR [0,0,0]
 MAX_LINES NaN
 
 DLG 32
-Oh my God, here it is! This Book is Gay by Juno Dawson, 306.76. Wow, library queer, I'm kind of in love with you now.{exit "lotc" 2 1}
+"""
+Oh my God, here it is! {rbw}This Book is Gay by Juno Dawson, 306.76.{rbw}{pg}Wow, library queer, I'm kind of in love with you now.{pg}{paper}you've made it this far. i'm surprised by your resilience. did you finish all boys aren't blue? well, now it's time for a queer sex ed book.{pg}{paper}of course this one's banned.{pg}Who {shk}is{shk} the adorable human writing all these notes?{pg}{paper}there's just one more book to read, and then maybe we'll find each other? head to my favorite place in the library: {rbw}741.5.{rbw}{replace "cart 3 carson" "cart 3 carson done"}{pg}{
+  - entered_eastwing == 1 ?
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                {pg}                Every time something nice happens, I remember I have to fight.            {exit "lost-0" 4 14 "fade_b"}            It makes me feel so alone...    
+  - else ?
+    Okay, 741.5? I think that's in the special collection in the East Wing.                {carson_cart_seen = 1}
+}
+"""
 NAME cart 3 carson dialog
 BG_COLOR [0,0,0]
 MAX_LINES NaN
@@ -9996,9 +10080,6 @@ DLG DATA3D
       "transform": "1,1,1,0,180,180,0.03,-2,0"
     },
     "TIL_lou1c": {
-      "type": "floor"
-    },
-    "TIL_lou1f": {
       "type": "floor"
     },
     "TIL_lou1i": {
@@ -10602,6 +10683,12 @@ DLG DATA3D
     "SPR_pbrow5": {
       "type": "box"
     },
+    "SPR_wthrf0": {
+      "type": "box"
+    },
+    "SPR_wthrf1": {
+      "transform": "0.75,0.75,0.75,0,0,0,0,-0.17,0"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -10734,6 +10821,9 @@ DLG DATA3D
     },
     "ITM_wesbencr": {
       "transform": "1,2,1,0,90,0,0,0,0"
+    },
+    "ITM_papyburnitc0": {
+      "type": "billboard"
     }
   },
   "stack": {
@@ -10883,11 +10973,7 @@ DLG DRAWINGSIZE
 16
 
 DLG b
-"""
-You felt more {shk}deeply lost{shk} than you had ever felt before.
 
-But there were {clr3}lumninaries{clr3} in the darkness, and ultimately you found your way through a hard time, thanks to the guidance of {rbw}GAY AUTHORS{rbw}!
-"""
 NAME ending 1
 
 DLG c
@@ -11276,7 +11362,12 @@ MacLeod Library East Wing Reclamation Project
 
 Beginning in Fall 2023, this wing will be integrated with the existing library and decommissioned in accordance with the Birchwood Business School Expansion Plan 3.068.
 
-Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{project_seen = 1}
+Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{project_seen = 1}{pg}{
+  - carson_cart_seen == 1 ?
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}        {pg}        Every time something nice happens, I remember I have to fight.        {exit "lost-0" 4 14 "fade_b"}        It makes me feel so alone...
+  - else ?
+
+}
 """
 NAME sprite lova dialog
 BG_COLOR [0,0,0]
@@ -11485,7 +11576,7 @@ DLG 2v
     {
       - deadPhoneSeen == true ?
         {sequence
-          - Okay, phone is charging. Now what should I do with myself?            {replace "closed elevator" "elevator - fl 1"}
+          - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}                        {replace "closed elevator" "elevator - fl 1"}
           - Phone still isn't charged yet :(
         }
       - else ?
@@ -11596,7 +11687,7 @@ BG_COLOR [0,0,0]
 MAX_LINES 16
 
 DLG 3k
-Aha! This is it: {rbw}920.93.{rbw} {exit "lotb" 1 1}
+Okay. This is it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend, if you're still with me, let's reunite again at another banished title: {rbw}306.76.{rbw} see you there?{pg}Sometimes I feel so lost in my anger. Books erased. We have to hold onto something. But what? {pg}I'm so sad I missed the protest. I feel like a failure...{exit "lot3" 2 2 "fade_b"}
 NAME f2 correct dialog
 BG_COLOR [0,0,0]
 MAX_LINES NaN
@@ -11612,7 +11703,7 @@ BG_COLOR [0,0,0]
 MAX_LINES NaN
 
 DLG 3n
-{paper}This time, find me at {rbw}306.76.{rbw}{replace "f3 table" "book 2 table"}{replace "f2 correct" "f2 correct replacement"}  {f3_done = 1}
+I feel like I'm in a dream...{replace "f2 correct" "f2 correct replacement"}  {f3_done = 1}
 NAME book 2 exit
 BG_COLOR [0,0,0]
 MAX_LINES NaN
@@ -11647,6 +11738,12 @@ Hmm, this looks like an interesting book. Maybe I should take a look...{pg}{cycl
 }
 """
 NAME wrong book entrance
+BG_COLOR [0,0,0]
+MAX_LINES NaN
+
+DLG 3r
+{paper}...let's reunite again at another banished title: {rbw}306.76.{rbw} see you there?
+NAME f2 correct replacement dialog
 BG_COLOR [0,0,0]
 MAX_LINES NaN
 
