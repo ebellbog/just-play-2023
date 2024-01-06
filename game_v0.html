@@ -11,7 +11,7 @@
 October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}
+{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}
 """</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
@@ -463,7 +463,7 @@ NAME courtyard
 
 PAL c
 NAME lost woods
-23,65,49
+23,65,54
 219,219,219
 246,255,93
 122,56,76
@@ -764,7 +764,7 @@ lost-a,lot2,lot2,lost-a,lost-a,lot2,lou1c,lot2,lou1c,lotm,lotm,lotm,lot2,lot2,lo
 o,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
 lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lou1c,lot2,lou1c,lost-a
 0,lost-a,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,0
-0,lost-a,lot2,lot2,lot2,lost-a,lou1c,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,lost-a
+lost-a,lot2,lot2,lot2,lot2,lost-a,lou1c,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,lost-a
 o,lot2,lot2,lost-a,lot2,lost-a,lou1c,lot2,lot2,lot2,lost-a,lot2,lot2,lot2,lot2,0
 lost-a,lou1c,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lot2,lost-a,lost-a,lot2,lou1c,lot2,lot2,lost-a
 o,lou1c,lot2,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lot2,lou1c,lost-a
@@ -788,12 +788,12 @@ ITM lotm8 6,12
 ITM lotm1 6,11
 ITM wesbencl 9,11
 ITM pinktriter 6,7
-ITM pinktrites 10,7
 ITM wesbencl 14,9
 ITM lotm2 12,9
 ITM lotm3 11,9
 ITM wesbencl 8,7
 ITM pinktrites 12,10
+ITM pinktrites 10,7
 EXT 6,2 losx 3,2 FX fade_b
 EXT 4,2 losx 7,2 FX fade_b
 EXT 7,2 losx 5,0 DLG 3t
@@ -1495,6 +1495,30 @@ ROOM loto
 NAME end room test
 PAL 0
 RENDER 2D
+
+ROOM lotp
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME floor 4 - office doors
+ITM pinktritet 13,4
+ITM pinktritet 2,8
+ITM pinktritet 8,13
+ITM pinktriteu 2,11
+PAL 0
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -4894,7 +4918,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS lost-0 8,11
+POS losz 7,4
 COL 2
 
 SPR b
@@ -11296,6 +11320,46 @@ ITM pinktrites
 NAME fruit bowl
 COL 2
 
+ITM pinktritet
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,14,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,5,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+NAME open door - n
+COL 2
+
+ITM pinktriteu
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,0,0,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,14,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,5,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+0,0,0,0,21,11,11,11,11,11,11,11,21,0,0,0
+NAME open door - w
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -12611,6 +12675,12 @@ DLG DATA3D
     "ITM_pinktrites": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0.02,0"
+    },
+    "ITM_pinktritet": {
+      "transform": "1.4,1,1,0,-45,0,-0.26,-2,-0.25"
+    },
+    "ITM_pinktriteu": {
+      "transform": "1.4,1,1,0,-135,0,0.26,-2,-0.25"
     }
   },
   "stack": {
@@ -12706,6 +12776,10 @@ DLG DATA3D
       {
         "id": "lost-1",
         "pos": 1
+      },
+      {
+        "id": "lotp",
+        "pos": 2
       }
     ],
     "f": [
@@ -25030,10 +25104,9 @@ b3d.clearCachesTexture = function (drw) {
     b3d.clearCaches(Object.values(b3d.caches), drw, null, null);
 };
 b3d.resetTextureCache = function(e) {
-    const tileIds = Object.keys(tile);
-    tileIds.forEach((id) => {
-        const curTile = tile[id];
-        b3d.clearCachesTexture(curTile.drw);
+    const entities = [...Object.values(tile), ...Object.values(sprite)];
+    entities.forEach((entity) => {
+        b3d.clearCachesTexture(entity.drw);
     });
 };
 
