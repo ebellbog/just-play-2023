@@ -31,8 +31,6 @@ BG_COLOR [0,0,0]
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
 
-MUTE_AUDIO true
-
 PAL 0
 NAME interior
 0,0,0
@@ -4918,7 +4916,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS losu 12,11
 COL 2
 
 SPR b
@@ -11583,9 +11581,9 @@ DLG 32
 """
 Oh my God, here it is! {rbw}This Book is Gay by Juno Dawson, 306.76.{rbw}{pg}Wow, library queer, I'm kind of in love with you now.{pg}{paper}you've made it this far. i'm surprised by your resilience. did you finish all boys aren't blue? well, now it's time for a queer sex ed book.{pg}{paper}of course this one's banned.{pg}Who {shk}is{shk} the adorable human writing all these notes?{pg}{paper}there's just one more book to read, and then maybe we'll find each other? head to my favorite place in the library: {rbw}741.5.{rbw}{replace "cart 3 carson" "cart 3 carson done"}{pg}{
   - entered_eastwing == 1 ?
-    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                        {pg}    Every time something nice happens, I remember I have to fight.                    {exit "lost-0" 8 14 "fade_w"}    It makes me feel so alone...    
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                                        {pg}    {music "lost_woods_music.mp3"}    Every time something nice happens, I remember I have to fight.                {exit "lost-0" 8 14 "fade_w"}    {pg}    {bgClr 9}    It makes me feel so alone...
   - else ?
-    Hmmm, 741.5? I think that's in the special collection in the East Wing.                        {carson_cart_seen = 1}
+    Hmmm, 741.5? I think that's in the special collection in the East Wing.                                        {carson_cart_seen = 1}
 }
 """
 NAME cart 3 carson dialog
@@ -13286,11 +13284,11 @@ DLG 2a
 Beginning in Fall 2023, this wing will be integrated with the existing library and decommissioned in accordance with the Birchwood Business School Expansion Plan 3.068.
 
 Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{clr}{project_seen = 1}{pg}{
-  - carson_cart_seen == 1 ?
-    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                    {pg}    {music "lost_woods_music.mp3"}    Every time something nice happens, I remember I have to fight.    {exit "lost-0" 8 14 "fade_w"}    It makes me feel so alone...
+  - carson_cart_seen == 0 ?
+    No. Don't tell me the last book is locked {shk}in the library wing{shk}    {shk}they're demolishing to expand the business school?{shk}                                                {pg}            {music "lost_woods_music.mp3"}        Every time something nice happens, I remember I have to fight.                    {exit "lost-0" 8 14 "fade_w"}    {pg}            {bgClr 9}        It makes me feel so alone...
   - else ?
     {sequence
-      - The "cutting edge of industry and commerce." Nice. Because THAT'S what liberal arts colleges are all about!        {pg}        *sigh*        {pg}        Reminds me of when Dad left our family for the milk & honey of Silicon Valley...        {pg}        Fun times, fun feels.
+      - The "cutting edge of industry and commerce." Nice. Because THAT'S what liberal arts colleges are all about!                                                                {pg}                                                                *sigh*                                                                {pg}                                                                Reminds me of when Dad left our family for the milk & honey of Silicon Valley...                                                                {pg}                                                                Fun times, fun feels.
       - 
     }
 }
@@ -13779,7 +13777,7 @@ NAME sign 1-S dialog
 MAX_LINES 4
 
 DLG 4f
-{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around?
+{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}{music "library_closed_music.mp3"}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around?
 NAME lost woods finale dialog
 BG_COLOR [0,0,0]
 
