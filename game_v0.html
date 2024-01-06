@@ -11,7 +11,7 @@
 October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}
+{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}
 """</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
@@ -20,7 +20,7 @@ October, 2024{pg}{shk}*bzzt!*{shk}
 October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{seen_f1guide = 0}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}
+{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -30,6 +30,8 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
+
+MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -459,6 +461,50 @@ NAME courtyard
 199,143,118
 211,211,211
 
+PAL c
+NAME lost woods
+23,65,49
+219,219,219
+246,255,93
+122,56,76
+221,206,183
+0,0,0
+112,88,67
+127,80,124
+118,151,166
+20,104,24
+201,109,65
+147,147,147
+193,193,193
+126,22,15
+234,207,91
+101,108,148
+255,255,255
+163,56,1
+174,95,255
+47,245,255
+123,115,100
+80,79,73
+131,124,106
+221,206,183
+245,169,184
+94,154,138
+36,81,70
+91,206,250
+255,16,240
+51,0,53
+100,255,230
+53,126,199
+255,151,86
+187,202,147
+255,167,136
+181,169,150
+248,116,49
+9,8,7
+221,0,0
+199,143,118
+211,211,211
+
 ROOM 2
 losu,p,p,p,losu,lot4,lot4,lot4,lot4,lot4,lot4,lot4,losu,a,a,a
 a,p,p,p,a,losu,a,a,11,a,a,losu,a,p,p,p
@@ -619,7 +665,7 @@ lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lo
 0,lost-12,lost-12,lost-12,lost-12,lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
 lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lot3
 0,lost-12,lost-12,lost-12,lost-12,lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,lost-a
-lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,losw
+lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou3v
 lou12,lost-u,lost-u,lost-u,lotm,lotm,lotm,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-a
 lost-a,lost-u,lost-u,lost-u,lotm,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
 lost-a,lost-u,lost-u,lost-u,lotm,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou14,lost-a
@@ -655,7 +701,7 @@ ITM lotm1 3,1
 ITM lotm1 2,1
 ITM lotm1 1,1
 EXT 8,15 2 8,2 FX fade_b DLG 29
-EXT 14,11 lot4 1,11 FX fade_b DLG 2c
+EXT 15,11 lot4 1,11 FX fade_b DLG 2c
 EXT 8,14 lot8 8,2 FX fade_b DLG 2q
 PAL 0
 
@@ -707,50 +753,53 @@ FOG_START 0
 FOG_END 9
 
 ROOM losx
-0,o,lost-a,o,lost-a,lost-a,lost-a,lost-a,0,lost-a,lost-a,lost-a,lost-a,o,lost-a,0
-lost-a,lot2,lou1c,lost-a,lot2,lou1c,lost-a,lou1c,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,o
-o,lot2,lou1c,lost-a,lot2,lot2,lou1a,lot2,lot2,lot2,lost-a,lot2,lot2,lot2,lot2,lost-a
-lost-a,lot2,lot2,lot2,lot2,lot2,lost-a,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,o
-o,lou1c,lot2,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lost-a
-lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
-o,lot2,lot2,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lou12,lost-a,lou15,lost-a,lost-a,lot2,lost-a
-lost-a,lot2,lot2,lost-a,lost-a,lotr,lotr,lotr,lot2,lotm,lotm,lotm,lou1c,lot2,lot2,o
-o,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lost-a
-lost-a,lou1c,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lou1c,lot2,lot2,lou1c,lou1c,o
-o,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a
-lost-a,lot2,lot2,lot2,lot2,lost-a,lot2,lou1c,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,o
-o,lost-a,lot2,lost-a,lot2,lost-a,lot2,lou1c,lot2,lot2,lost-a,lot2,lot2,lot2,lot2,0
-lost-a,lou1c,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lot2,lost-a,lost-a,lot2,lou1c,lot2,lot2,o
+0,lost-a,o,lost-a,0,0,0,lost-a,0,lost-a,lost-a,lost-a,o,lost-a,lost-a,0
+lost-a,lotr,lot2,lou1c,lost-a,lost-a,lost-a,lou1c,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,lost-a
+lost-a,lotr,lot2,lot2,lou3w,lou1b,lou1a,lot2,lot2,lot2,lost-a,lou1c,lou1c,lot2,lot2,o
+o,lot2,lot2,lot2,lost-a,lost-a,lost-a,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,lost-a
+lost-a,lotm,lot2,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,lot2,lost-a,0
+0,lost-a,lou12,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
+lost-a,lou1c,lou1c,lost-a,lost-a,lost-a,lost-a,lou15,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a
+lost-a,lot2,lot2,lost-a,lost-a,lot2,lou1c,lot2,lou1c,lotm,lotm,lotm,lot2,lot2,lot2,lost-a
+o,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
+lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lou1c,lot2,lou1c,lost-a
+0,lost-a,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,0
+0,lost-a,lot2,lot2,lot2,lost-a,lou1c,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,lot2,lost-a
+o,lot2,lot2,lost-a,lot2,lost-a,lou1c,lot2,lot2,lot2,lost-a,lot2,lot2,lot2,lot2,0
+lost-a,lou1c,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lot2,lost-a,lost-a,lot2,lou1c,lot2,lot2,lost-a
 o,lou1c,lot2,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lot2,lou1c,lost-a
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 4
-ITM lotm2 9,1
 ITM lotm2 9,3
-ITM lotm2 5,1
-ITM lotm1 2,1
 ITM lotm1 11,2
-ITM lotm1 7,11
-ITM lotm8 2,2
 ITM lotm8 12,2
-ITM lotm8 7,12
 ITM wesbencl 7,1
-ITM lotm1 3,6
 ITM lotm8 2,6
-ITM lotm1 14,9
-ITM lotm8 13,9
 ITM lotm1 1,14
 ITM lotm8 1,13
-ITM 5 7,7
-ITM lotm2 8,9
-ITM lotm3 9,9
 ITM lotm2 10,9
-ITM wesbencl 1,4
-ITM wesbencl 12,7
-ITM wesbencl 9,11
-ITM wesbencl 1,9
 ITM wesbencp 12,14
 ITM wesbencp 12,13
-EXT 7,2 losx 5,2 DLG 3t
+ITM lotm1 1,6
+ITM 5 1,4
+ITM wesbencl 3,1
+ITM lotm2 9,1
+ITM lotm8 6,12
+ITM lotm1 6,11
+ITM wesbencl 9,11
+ITM pinktriter 6,7
+ITM pinktrites 10,7
+ITM wesbencl 14,9
+ITM lotm2 12,9
+ITM lotm3 11,9
+ITM wesbencl 8,7
+ITM pinktrites 12,10
+EXT 6,2 losx 3,2 FX fade_b
+EXT 4,2 losx 7,2 FX fade_b
+EXT 7,2 losx 5,0 DLG 3t
+EXT 7,2 losx 0,15
+EXT 7,2 losx 0,15
+EXT 7,2 lost-0 13,13 DLG 3t
 PAL 0
 FOG_START 0
 FOG_END 9
@@ -766,19 +815,21 @@ ROOM lost-0
 0,lost-12,losx,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,o,0
 0,o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 0,0,o,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,losx,lost-12
-0,0,0,0,0,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
-0,0,0,0,0,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
-0,0,0,0,0,0,0,lost-a,losx,lost-a,lost-12,lost-12,lost-12,lost-12,losx,lost-12
-0,0,0,lost-a,lost-a,lost-a,lost-a,lost-a,losx,lost-a,losx,losx,losx,losx,losx,o
-0,0,lot3,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
-0,0,0,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,0,0,0,0,0,0,0
+0,0,lost-12,losx,lost-12,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
+0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12
+0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12
+0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losx,losx,losx,losx,losx,o
+0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
+0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
 NAME lost woods - 1
-ITM 8 8,8
 EXT 13,3 lost-2 14,3
 EXT 13,13 lost-2 13,14
 EXT 3,3 lost-2 2,8
-PAL 0
-FOG_END 4.5
+EXT 3,13 lost-2 8,14
+EXT 8,8 lost-0 0,15 DLG 4g
+PAL c
+FOG_START 0
+FOG_END 4
 
 ROOM lost-2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -798,13 +849,14 @@ ROOM lost-2
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 2
-ITM 9 8,8
 EXT 13,3 lost-0 13,2
 EXT 13,13 lost-0 14,13
 EXT 2,9 lost-0 2,3
 EXT 3,3 lost-4 8,2
-PAL 0
-FOG_END 4.5
+EXT 8,8 lost-2 0,15 DLG 4i
+PAL c
+FOG_START 0
+FOG_END 4
 
 ROOM lost-4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -828,15 +880,16 @@ EXT 3,13 lost-5 8,14
 EXT 9,2 lost-2 3,2
 EXT 3,3 lost-2 2,8
 EXT 13,13 lost-2 14,8
-PAL 0
-FOG_END 4.5
+PAL c
+FOG_START 0
+FOG_END 4
 
 ROOM lost-5
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
-0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
-0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losx,losx,losx,losx,losx,o
-0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12
+0,0,o,losx,losx,losx,losx,losx,losx,o,0,lost-a,lost-12,lost-12,o,0
+0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,lost-a,losx,losx,losx,losx,o
+0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,lost-a,lost-12,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
 0,0,o,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,losx,lost-12
@@ -849,13 +902,14 @@ ROOM lost-5
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 4
-ITM wesbencr1 14,3
+ITM wesbencr1 8,8
+ITM pinktriteq 12,3
 EXT 9,14 lost-4 3,14
 EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
-END b 11,3
-PAL 0
-FOG_END 4.5
+PAL c
+FOG_START 0
+FOG_END 4
 
 ROOM losy
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -866,12 +920,12 @@ ROOM losy
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,loti,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lotc,lotc,lotc,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,loti,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lotd,lotd,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (dorm)
@@ -899,7 +953,7 @@ ROOM losz
 NAME bedroom
 ITM wesbencm 6,5
 ITM lotm8 7,5
-EXT 6,2 losy 5,3 DLG 1g
+EXT 6,2 losy 5,3 FX fade_b DLG 1g
 PAL 0
 RENDER 3D
 
@@ -1011,7 +1065,7 @@ lou01,lou18,lou01,lou01,lou01,lou18,lou01,lou01,lou01,lou01,lou01,lou01,0,0,0,0
 lou01,lost-u,lou14,lou14,lost-u,lost-u,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
 lou01,lost-u,lost-u,lou14,lost-u,lost-u,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
 lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1j,lou1g,lou1g,lou01,0,0,0,0
-losw,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
+lou3v,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
 lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,lou01,0,0,0,0
 lou01,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
 lou01,lost-u,lost-u,lou14,lou14,lou14,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
@@ -1157,7 +1211,6 @@ lou26,lou24,lou28,lou29,lou2a,lou2a,lou2a,lou2f,lou2p,lou2a,lou2a,lou2a,lou2m,lo
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME book interior - this book is gay
-EXT 12,11 lost-0 4,14
 PAL 6
 RENDER 2D
 
@@ -1396,7 +1449,7 @@ ROOM lotm
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (charged jax)
-EXT 4,2 lotl 6,2 FX fade_w
+EXT 4,2 lotl 6,2
 PAL 2
 RENDER 2D
 
@@ -2307,11 +2360,11 @@ NAME text tail gray
 COL 1
 
 TIL loti
-16,16,16,16,16,22,22,22,22,22,22,16,16,16,16,16
-16,16,16,16,16,22,22,22,22,22,22,16,16,16,16,16
-16,16,16,16,16,16,22,22,22,22,22,16,16,16,16,16
-16,16,16,16,16,16,22,22,22,22,22,22,16,16,16,16
-16,16,16,16,16,16,16,22,22,22,22,22,22,16,16,16
+16,16,16,16,16,22,16,16,16,16,22,16,16,16,16,16
+16,16,16,16,16,22,16,16,16,16,22,16,16,16,16,16
+16,16,16,16,16,16,22,16,16,16,22,16,16,16,16,16
+16,16,16,16,16,16,22,16,16,16,16,22,16,16,16,16
+16,16,16,16,16,16,16,22,22,16,16,16,22,16,16,16
 16,16,16,16,16,16,16,16,16,22,22,22,22,22,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
@@ -2323,7 +2376,7 @@ TIL loti
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-NAME text tail green
+NAME text tail green (outline)
 COL 1
 
 TIL lotk
@@ -2797,7 +2850,7 @@ TIL lou1a
 4,4,4,4,21,11,11,11,11,11,11,11,21,4,4,4
 6,6,6,6,21,11,11,11,11,11,11,11,21,6,6,6
 6,6,6,6,21,11,11,11,11,11,11,11,21,6,6,6
-NAME office door
+NAME office door (locked)
 WAL true
 COL 1
 
@@ -4580,6 +4633,68 @@ TIL lou3t
 16,16,22,22,16,16,22,22,16,16,22,22,16,16,22,22
 COL 1
 
+TIL lou3u
+16,16,16,16,16,22,22,22,22,22,22,16,16,16,16,16
+16,16,16,16,16,22,22,22,22,22,22,16,16,16,16,16
+16,16,16,16,16,16,22,22,22,22,22,16,16,16,16,16
+16,16,16,16,16,16,22,22,22,22,22,22,16,16,16,16
+16,16,16,16,16,16,16,22,22,22,22,22,22,16,16,16
+16,16,16,16,16,16,16,16,16,22,22,22,22,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+NAME text tail green
+COL 1
+
+TIL lou3v
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,21,21,21,21,21,21,21,21,21,21,21,21,21,21,4
+4,21,20,20,20,20,20,21,21,20,20,20,20,20,21,4
+4,5,20,20,20,20,20,21,21,20,20,20,20,20,5,4
+4,5,20,20,20,20,20,21,21,20,20,20,20,20,5,4
+4,21,20,20,20,20,20,21,21,20,20,20,20,20,21,4
+4,21,20,20,20,20,20,21,21,20,20,20,20,20,21,4
+4,21,20,20,20,20,20,21,21,20,20,20,20,20,21,4
+4,21,20,20,20,14,14,21,21,14,14,20,20,20,21,4
+4,21,20,20,20,14,14,21,21,14,14,20,20,20,21,4
+4,21,20,20,20,14,14,21,21,14,14,20,20,20,21,4
+4,5,20,20,20,20,20,21,21,20,20,20,20,20,5,4
+4,5,20,20,20,20,20,21,21,20,20,20,20,20,5,4
+4,21,20,20,20,20,20,21,21,20,20,20,20,20,21,4
+6,21,20,20,20,20,20,21,21,20,20,20,20,20,21,6
+6,21,20,20,20,20,20,21,21,20,20,20,20,20,21,6
+NAME door to east wing
+WAL false
+COL 1
+
+TIL lou3w
+4,4,4,4,4,4,4,4,4,4,4,4,4,23,23,23
+23,23,23,23,21,21,21,21,21,21,21,21,21,23,23,23
+23,23,23,23,21,11,11,11,11,11,11,11,21,23,23,4
+23,23,23,23,21,11,11,11,11,11,11,11,21,23,23,23
+23,23,23,23,21,11,11,11,11,11,11,11,21,23,23,23
+4,4,4,4,21,11,15,15,11,11,11,11,21,23,23,23
+4,4,4,4,21,11,15,15,11,11,11,11,21,23,23,23
+4,4,4,4,21,11,15,15,11,11,11,11,21,23,23,23
+4,4,4,4,21,11,11,11,11,11,11,11,21,23,4,4
+4,4,4,4,21,11,11,11,11,11,14,11,21,4,4,4
+4,4,4,4,21,11,11,11,11,11,5,11,21,4,4,4
+4,4,4,4,21,11,11,11,11,11,11,11,21,4,4,4
+4,4,4,4,21,11,11,11,11,11,11,11,21,4,4,4
+4,4,4,4,21,11,11,11,11,11,11,11,21,4,4,4
+6,6,6,6,21,11,11,11,11,11,11,11,21,6,6,6
+6,6,6,6,21,11,11,11,11,11,11,11,21,6,6,6
+NAME office door (open)
+WAL false
+COL 1
+
 SPR wthrex
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
@@ -4884,7 +4999,7 @@ SPR lost-f
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME sign 1-S
-DLG e
+DLG 4e
 POS lost-0 7,9
 COL 2
 
@@ -4906,7 +5021,7 @@ SPR lost-g
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME sign 1-W
-DLG f
+DLG 4d
 POS lost-0 7,7
 COL 2
 
@@ -5193,7 +5308,6 @@ SPR lost-t
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME no entry
 DLG t
-POS lost-0 3,14
 COL 2
 
 SPR lot6
@@ -9976,14 +10090,14 @@ COL 2
 
 SPR wthrfo
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,21,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,21,16,16
-16,16,16,21,21,21,21,21,21,21,21,16,21,16,16,16
-16,16,16,21,16,16,16,16,16,16,16,21,16,16,16,16
-16,16,16,21,16,16,16,16,16,16,21,16,21,16,16,16
-16,16,16,21,16,16,16,16,16,21,16,16,21,16,16,16
-16,16,16,21,16,16,16,16,21,16,16,16,21,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,21,21,21,16
+16,16,16,21,21,21,21,21,21,21,16,21,21,21,16,16
+16,16,16,21,16,16,16,16,16,16,21,21,21,16,16,16
+16,16,16,21,16,16,16,16,16,21,21,21,16,16,16,16
+16,16,16,21,16,16,16,16,16,21,21,16,21,16,16,16
 16,16,16,21,16,16,16,21,16,16,16,16,21,16,16,16
+16,16,16,21,16,16,16,21,21,16,16,16,21,16,16,16
 16,16,16,21,16,16,16,16,16,16,16,16,21,16,16,16
 16,16,16,21,16,16,16,16,16,16,16,16,21,16,16,16
 16,16,16,21,16,16,16,16,16,16,16,16,21,16,16,16
@@ -10253,6 +10367,49 @@ SPR wthrfx
 NAME text deactivated
 COL 2
 
+SPR wthrfy
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+4,5,12,12,15,15,12,11,11,12,15,15,12,12,5,4
+4,5,12,12,15,15,12,11,11,12,15,15,12,12,16,4
+4,5,12,12,15,15,12,11,11,12,15,15,12,12,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,16,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,16,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,16,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+4,5,12,12,12,12,12,11,11,12,12,12,12,12,5,4
+6,5,12,12,12,12,12,11,11,12,12,12,12,12,5,6
+6,5,12,12,12,12,12,11,11,12,12,12,12,12,5,6
+NAME elevator (lost woods)
+DLG 27
+POS lost-5 10,3
+COL 2
+
+SPR wthrfz
+12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,11,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
+NAME fridge
+POS losx 5,7
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -10354,19 +10511,6 @@ ITM 8
 0,16,0,0,0,0,0,0
 NAME thought 2
 DLG v
-COL 2
-
-ITM 9
-0,0,0,0,0,0,0,0
-0,0,0,16,16,16,0,0
-0,16,16,16,16,16,16,16
-0,16,16,16,16,16,16,16
-0,16,12,16,12,16,12,16
-0,16,16,16,16,16,16,16
-0,0,16,16,16,16,16,0
-0,16,0,0,0,0,0,0
-NAME thought 3
-DLG w
 COL 2
 
 ITM pinktritem
@@ -10988,22 +11132,22 @@ NAME ladder
 COL 2
 
 ITM wesbencr1
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,21,21,21,0,0,0,0
+0,0,0,0,0,0,21,0,0,0,0,0,21,0,0,0
+0,0,0,0,0,21,0,0,0,0,0,0,21,0,0,0
+0,0,0,0,0,21,0,0,0,0,0,0,21,0,0,0
+0,0,0,0,0,21,0,0,0,0,0,0,21,0,0,0
+0,0,0,0,0,21,0,0,0,0,21,21,0,0,0,0
+0,0,0,0,0,0,21,0,21,21,0,0,0,0,0,0
+0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+0,0,0,0,0,16,16,12,16,16,16,0,0,0,0,0
 0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
 0,0,0,0,0,16,17,16,17,17,16,0,0,0,0,0
-0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
 0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
 0,0,0,0,0,16,16,37,16,37,16,0,0,0,0,0
 0,0,0,0,0,16,37,16,37,16,16,0,0,0,0,0
 0,0,0,0,0,16,37,16,37,16,16,0,0,0,0,0
 0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME key
 DLG 3s
 COL 2
@@ -11059,6 +11203,59 @@ ITM pinktritep
 0,16,0,0,0,0,0,0
 NAME courtyard thought
 DLG 3y
+COL 2
+
+ITM pinktriteq
+0,0,0,0,0,0,0,0
+0,0,0,16,16,16,0,0
+0,16,16,16,16,16,16,16
+0,16,16,16,16,16,16,16
+0,16,12,16,12,16,12,16
+0,16,16,16,16,16,16,16
+0,0,16,16,16,16,16,0
+0,16,0,0,0,0,0,0
+NAME lost woods finale
+DLG 4f
+COL 2
+
+ITM pinktriter
+31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
+31,27,27,27,27,27,27,27,27,27,27,27,27,27,27,31
+31,19,19,19,19,19,19,19,19,19,19,19,19,19,19,31
+31,27,27,27,27,27,27,27,27,27,27,27,27,27,27,31
+31,19,19,19,19,19,19,19,19,19,19,19,19,19,19,31
+31,27,27,27,27,27,27,27,27,27,27,27,27,27,27,31
+31,19,19,19,19,19,19,19,19,19,19,19,19,19,19,31
+31,27,27,27,27,27,27,27,27,27,27,27,27,27,27,31
+31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
+35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35
+35,23,23,23,23,23,23,23,23,23,23,23,23,23,23,35
+35,23,23,23,23,23,23,23,23,23,23,23,23,23,23,35
+35,23,23,23,23,23,23,23,23,23,23,23,23,23,23,35
+35,23,23,23,23,23,23,23,23,23,23,23,23,23,23,35
+35,23,23,23,23,23,23,23,23,23,23,23,23,23,23,35
+35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35
+NAME water cooler
+COL 2
+
+ITM pinktrites
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,14,14,0,0,0,0,0,0,0,9,9,0,0,0,0
+0,14,14,14,0,0,0,0,0,38,38,0,0,0,0,0
+0,0,14,14,14,14,0,0,38,38,38,38,0,0,0,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,40,40,40,40,40,40,40,40,40,40,40,40,40,40,0
+0,0,16,16,16,16,16,16,16,16,16,16,16,16,0,0
+0,0,0,16,16,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME fruit bowl
 COL 2
 
 DLG 3
@@ -11131,9 +11328,9 @@ DLG 20
 """
 {
   - f3_done == 1 ?
-    That's weird. The book should be here, but it's missing.                {pg}    Was it {shk}banned{shk} from MacLeod Library?                {pg}                Either that, or someone checked it out. My only hope is that it's on a return cart somewhere waiting to be reshelved...        {replace "f1 cart 3" "cart 3 carson"}         
+    That's weird. The book should be here, but it's missing.                        {pg}    Was it {shk}banned{shk} from MacLeod Library?                        {pg}    Either that, or someone checked it out. My only hope is that it's on a return cart somewhere waiting to be reshelved...                {replace "f1 cart 3" "cart 3 carson"}                 
   - else ?
-    Hmm, this looks like an interesting book. Maybe I should take a look...
+    Hmm, this looks like an interesting book. Maybe I should take a look...        {pg}    {exit "wrong book 2" 2 3 "fade_w"}
 }
 """
 NAME f1 correct dialog
@@ -11143,11 +11340,8 @@ DLG 21
 """
 What the - someone put a note in the back of this book! {pg}{paper}i knew you'd find me! sorry for being so weird. i wanted someone to remember me. to remember this. before everything changes. before everything that matters is gone...{pg}{paper}if you know what it feels like to be erased, let's remember together. that way, at least two of us won't forget.{pg}{paper}come find me again at {rbw}920.93.{rbw}{pg}Oh man, what time is it?
 {pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
-{exit "losu" 13 2 "fade_w"}{libraryClosed = true}{replace "double door - interior" "door wall" "floor 1"}
-{replace "downlight" "light (off)" "ceiling"}
-{replace "chair sit" "chair sit genderqueer"}
-{ambient "[0.6, 0.6, 0.8]" true}
-{fog 0 9 "floor 1"}{music "library_closed_music.mp3"}{pg}{ambient "[0.6, 0.6, 0.8]" true}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
+{exit "losu" 13 2 "fade_w"}{libraryClosed = true}{ambient "[0.5, 0.5, 0.8]" true}{replace "double door - interior" "door wall" "floor 1"}{replace "downlight" "light (off)" "ceiling"}{replace "downlight" "light (off)" "east wing (ceiling)"}{replace "chair sit" "chair sit genderqueer"}
+{fog 0 9 "floor 1"}{fog 0 9 "east wing"}{music "library_closed_music.mp3"}{pg}{ambient "[0.5, 0.5, 0.8]" true}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
 """
 NAME exit book 1
 BG_COLOR [0,0,0]
@@ -11187,13 +11381,14 @@ DLG 24
 East Wing >
 < Checkout Desk
 {clr}{pg}{
-  - seen_f1guide == 0 ?
-    Maybe I can get this poem done in time for the protest. I just need to find some inspiration...                     {seen_f1guide = 1}
-  - else ?
-
+  - libraryClosed == false ?
+    {sequence
+      - Maybe I can get this poem done in time for the protest. I just need to find some inspiration...
+      - 
+    }
 }
 """
-NAME sprite lous dialog
+NAME f1 guide
 BG_COLOR [0,0,0]
 MAX_LINES 4
 
@@ -11286,9 +11481,9 @@ DLG 32
 """
 Oh my God, here it is! {rbw}This Book is Gay by Juno Dawson, 306.76.{rbw}{pg}Wow, library queer, I'm kind of in love with you now.{pg}{paper}you've made it this far. i'm surprised by your resilience. did you finish all boys aren't blue? well, now it's time for a queer sex ed book.{pg}{paper}of course this one's banned.{pg}Who {shk}is{shk} the adorable human writing all these notes?{pg}{paper}there's just one more book to read, and then maybe we'll find each other? head to my favorite place in the library: {rbw}741.5.{rbw}{replace "cart 3 carson" "cart 3 carson done"}{pg}{
   - entered_eastwing == 1 ?
-    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                    {pg}                    Every time something nice happens, I remember I have to fight.                {exit "lost-0" 4 14 "fade_b"}                It makes me feel so alone...    
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                        {pg}    Every time something nice happens, I remember I have to fight.                    {exit "lost-0" 8 14 "fade_w"}    It makes me feel so alone...    
   - else ?
-    Hmmm, 741.5? I think that's in the special collection in the East Wing.                    {carson_cart_seen = 1}
+    Hmmm, 741.5? I think that's in the special collection in the East Wing.                        {carson_cart_seen = 1}
 }
 """
 NAME cart 3 carson dialog
@@ -11371,7 +11566,7 @@ BG_COLOR [0,0,0]
 DLG 47
 """
 Is it {wvy}weird{wvy} to text someone whose phone number you found on a note hidden in a banned book?
-{exit "lotn" 6 2 "fade_w"}The question is...what do I say?
+{exit "lotn" 6 2}The question is...what do I say?
 """
 NAME new text dialog
 BG_COLOR [0,0,0]
@@ -11637,6 +11832,12 @@ DLG DATA3D
     },
     "TIL_lou3j": {
       "type": "floor"
+    },
+    "TIL_lou3v": {
+      "type": "box"
+    },
+    "TIL_lou3w": {
+      "type": "box"
     },
     "SPR_outl": {
       "type": "box"
@@ -12207,6 +12408,13 @@ DLG DATA3D
       "type": "table",
       "transform": "0.4,1,0.4,0,0,0,0,0.2,0"
     },
+    "SPR_wthrfy": {
+      "type": "box"
+    },
+    "SPR_wthrfz": {
+      "type": "table",
+      "transform": "0.6,1.2,0.6,0,0,0,0,0.6,0"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -12225,11 +12433,6 @@ DLG DATA3D
       "transform": "1,1.1,1,0,0,0,0,0,0"
     },
     "ITM_8": {
-      "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
-      "hidden": true
-    },
-    "ITM_9": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
@@ -12340,6 +12543,10 @@ DLG DATA3D
     "ITM_wesbencr": {
       "transform": "1,2,1,0,90,0,0,0,0"
     },
+    "ITM_wesbencr1": {
+      "type": "billboard",
+      "transform": "0.4,0.4,0.4,0,0,0,0,0,0"
+    },
     "ITM_pinktriten": {
       "type": "box"
     },
@@ -12350,6 +12557,19 @@ DLG DATA3D
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
+    },
+    "ITM_pinktriteq": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
+      "hidden": true
+    },
+    "ITM_pinktriter": {
+      "type": "table",
+      "transform": "0.3,1,0.3,0,0,0,-0.2,0.4,0"
+    },
+    "ITM_pinktrites": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,0.02,0"
     }
   },
   "stack": {
@@ -12546,135 +12766,159 @@ DLG DATA3D
 DLG DRAWINGSIZE
 16
 
-DLG b
-
-NAME ending 1
-
 DLG c
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Emily Dickinson
 - Federico Garcia Lorca 
 - Virginia Woolf
 """
-NAME sign 1-N
+NAME sign 1-N dialog
+MAX_LINES 4
 
 DLG d
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Langston Hughes
 - Audre Lorde
 - Oscar Wilde
 """
 NAME sign 1-E dialog
+MAX_LINES 4
 
 DLG g
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - James Baldwin
 - Toni Morrison
 - Walt Whitman
 """
 NAME sign 2-N dialog
+MAX_LINES 4
 
 DLG h
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Anne Frank
 - Arthur Conan Doyle
 - Edgar Allan Poe
 """
 NAME sign 2-E dialog
+MAX_LINES 4
 
 DLG i
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Pearl S. Buck
 - Frank Herbert
 - Arthur Miller
 """
 NAME sign 2-S dialog
+MAX_LINES 4
 
 DLG j
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Agatha Christie
 - Aldous Huxley
 - Haruki Murakami
 """
 NAME sign 2-W dialog
+MAX_LINES 4
 
 DLG k
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Elif Batuman
 - Alice Walker
 - Tennessee Williams
 """
 NAME sign 3-S dialog
+MAX_LINES 4
 
 DLG l
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Margaret Atwood
 - Stephen King
 - Kurt Vonnegut
 """
 NAME sign 3-N dialog
+MAX_LINES 4
 
 DLG m
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Samuel Beckett
 - Joyce Carol Oates
 - Robert Louis Stevenson
 """
 NAME sign 3-E dialog
+MAX_LINES 4
 
 DLG n
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Nathaniel Hawthorne
 - P.D. James
 - Jack London
 """
 NAME sign 3-W dialog
+MAX_LINES 4
 
 DLG o
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - C. S. Lewis
 - James Patterson
 - Beatrix Potter
 """
 NAME sign 4-N dialog
+MAX_LINES 4
 
 DLG p
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Leslie Feinberg
 - Roxane Gay
 - Carmen Maria Machado
 """
 NAME sign 4-E dialog
+MAX_LINES 4
 
 DLG q
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - K. A. Applegate
 - Madeleine L'Engle
 - J. R. R. Tolkien
 """
 NAME sign 4-S dialog
+MAX_LINES 4
 
 DLG r
 """
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
 - Isaac Asimov
 - Ta-Nehisi Coates
 - Ayn Rand
 """
 NAME sign 4-W dialog
+MAX_LINES 4
 
 DLG t
 You're pretty sure this is the secret passageway you entered through... Let's keep looking for a different way out?
@@ -12688,10 +12932,7 @@ NAME thought 2 dialog
 DLG v
 Gosh, why is this library so {shk}labyrinthine{shk}? Every hallway looks IDENTICAL... Let's just find our way up to the next floor before we become {wvy}completely disoriented{wvy}?
 NAME thought 2 dialog 1
-
-DLG w
-There must be some kind of trick to navigating this place... Are there authors I can turn to for guidance?
-NAME thought 3 dialog
+BG_COLOR [0,0,0]
 
 DLG y
 """
@@ -12731,11 +12972,8 @@ Dorms are back this way. But for now, I must be anti-sleep!
 NAME item h dialog
 
 DLG 1d
-"""
 Another monument to an old white guy. You love to see it.
-{sfx "laugh.wav"}
-"""
-NAME exterior 4 dialog
+NAME white guy
 BG_COLOR [0,0,0]
 
 DLG 1e
@@ -12746,15 +12984,15 @@ DLG 1g
 """
 {
   - carson_texted == 0 ?
-
+    What a mess! Finally, {wvy}here's{wvy} my phone.
   - else ?
     {end}    {
       - end_dialog == 1 ?
-        {paper}                                                                                i can't believe you texted me! you read me right, too. i love book recommendations. maybe we could meet up sometime to talk about our favorite authors <3
+        {paper}                                                                                        i can't believe you texted me! you read me right, too. i love book recommendations. maybe we could meet up sometime to talk about our favorite authors <3
       - end_dialog == 2 ?
-        {paper}                                                                                i can't believe you texted me! you sound like an incredible activist. i'd love to help <3
+        {paper}                                                                                        i can't believe you texted me! you sound like an incredible activist. i'd love to help <3
       - end_dialog == 3 ?
-        {paper}                                                                                i can't believe you texted me! and yeah. i love bubble tea. my favorite flavor is taro, what's yorus? <3
+        {paper}                                                                                        i can't believe you texted me! and yeah. i love bubble tea. my favorite flavor is taro, what's yorus? <3
       - else ?
 
     }    {pg}    {rbw}{wvy}A game by Elana Bell Bogdan and Nat Mesnard{wvy}{rbw}
@@ -12928,18 +13166,21 @@ BG_COLOR [0,0,0]
 
 DLG 2a
 """
-MacLeod Library East Wing Reclamation Project
+{borderClr 10}{bgClr 14}{center}{clr 6 true}MacLeod Library East Wing Reclamation Project
 
 Beginning in Fall 2023, this wing will be integrated with the existing library and decommissioned in accordance with the Birchwood Business School Expansion Plan 3.068.
 
-Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{project_seen = 1}{pg}{
+Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{clr}{project_seen = 1}{pg}{
   - carson_cart_seen == 1 ?
-    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}        {pg}        Every time something nice happens, I remember I have to fight.        {exit "lost-0" 4 14 "fade_b"}        It makes me feel so alone...
+    No. Don't tell me the last book is locked {shk}in the library wing they're demolishing to expand the business school?{shk}                    {pg}    {music "lost_woods_music.mp3"}    Every time something nice happens, I remember I have to fight.    {exit "lost-0" 8 14 "fade_w"}    It makes me feel so alone...
   - else ?
-
+    {sequence
+      - The "cutting edge of industry and commerce." Nice. Because THAT'S what liberal arts colleges are all about!        {pg}        *sigh*        {pg}        Reminds me of when Dad left our family for the milk & honey of Silicon Valley...        {pg}        Fun times, fun feels.
+      - 
+    }
 }
 """
-NAME sprite lova dialog
+NAME east wing reclamation
 BG_COLOR [0,0,0]
 MAX_LINES 16
 
@@ -12962,7 +13203,7 @@ DLG 2c
     This is my favorite part of the library. Zines, manga, graphic novels. It's a queer paradise!         {entered_eastwing = 1}
 }{sfx "door_open.wav"}
 """
-NAME exit narration 4
+NAME entering east wing
 BG_COLOR [0,0,0]
 
 DLG 2g
@@ -12971,7 +13212,7 @@ Okay. Don't panic. I have my charger with me. Just gotta find somewhere to plug 
 {deadPhoneSeen = true}
 """
 NAME dead phone
-BG_COLOR [0,0,0]
+BG_COLOR [64,64,64]
 
 DLG 2i
 
@@ -13294,20 +13535,29 @@ NAME f2 correct replacement dialog
 BG_COLOR [0,0,0]
 
 DLG 3s
-Hmm, a keycard?{pg}I probably shouldn't be messing around with library property, but maybe this'll help me out.{exit "losx" 8 2 "fade_b"}
+"""
+{replace "office door (locked)" "office door (open)" "floor 4"}
+Huh, a {clr 2}keycard{clr}?{pg}I probably shouldn't be messing around with library property, but maybe this'll help me out.{pg}Now I just need to find my way out of... {pg}{wvy}...whatever this place is...{wvy}{pg}I must be close by now, right? Time to trust my gut??
+"""
 NAME key dialog
 BG_COLOR [0,0,0]
 
 DLG 3t
 """
-{
+{property locked true}{
   - {item "key"} == 1 ?
-    The key worked! Maybe I can find a way to climb down into the East Wing from here...
+    {sequence
+      - The key worked! Maybe I can find a way to climb down into the East Wing from here...
+      - 
+    }
   - else ?
-    The offices up here are locked. I guess I shouldn't be surprised...
+    {sequence
+      - The offices up here are locked. I guess I shouldn't be surprised...
+      - 
+    }
 }
 """
-NAME locked exit 4
+NAME floor 4 entrance
 BG_COLOR [0,0,0]
 
 DLG 3u
@@ -13383,6 +13633,65 @@ Which text should I send?(1-3):{input "textCarson"}{pg}{
 }
 """
 NAME send text dialog
+BG_COLOR [0,0,0]
+
+DLG 4d
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+Featured authors:
+- Hans Christian Andersen
+- Marcel Proust
+- William Shakespeare
+"""
+NAME sign 1-W dialog
+MAX_LINES 4
+
+DLG 4e
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+Featured authors:
+- F. Scott Fitzgerald
+- Ernest Hemingway
+- George Orwell
+"""
+NAME sign 1-S dialog
+MAX_LINES 4
+
+DLG 4f
+{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around?
+NAME lost woods finale dialog
+BG_COLOR [0,0,0]
+
+DLG 4g
+"""
+{property locked true}{
+  - lostWoodsCircles > 50 ?
+    {sequence
+      - There must be some kind of trick to navigating this place... Are there {rbw}authors{rbw} I can turn to for guidance?
+      - 
+    }
+  - lostWoodsCircles > 0 ?
+    {sequence
+      - Why is this library so {shk}labyrinthine{shk}? Every hallway looks IDENTICAL... I have GOT to find my way out before I become {wvy}COMPLETELY DISORIENTED{wvy}.
+      - 
+    }
+  - else ?
+    {sequence
+      - Oh gosh, what new hell is this...                        {ambient "[0.5, 0.5, 0.8]"}
+      - 
+    }
+}
+"""
+NAME lost woods thoughts
+BG_COLOR [0,0,0]
+
+DLG 4h
+You walk through the doorway
+NAME exit narration 7
+
+DLG 4i
+{property locked true}{lostWoodsCircles = lostWoodsCircles + 1}
+NAME lost circles counter
 BG_COLOR [0,0,0]
 
 
@@ -13720,8 +14029,13 @@ var TransitionManager = function() {
 			b3d.transitionMatte.style.backgroundColor = (fadeColor === 'b') ? 'black' : 'white';
 			b3d.transitionMatte.style.opacity = 1;
 			return setTimeout(() => {
-				b3d.transitionMatte.style.opacity = 0;
-				if (callback) callback();
+				if (callback) {
+					callback();
+					// build in a little extra time for callback to complete
+					setTimeout(() => b3d.transitionMatte.style.opacity = 0, 100);
+				} else {
+					b3d.transitionMatte.style.opacity = 0;
+				}
 			}, 500);
 		}
 	}
@@ -14951,7 +15265,7 @@ function getMusicSrc(parameters) {
 function musicFunc(environment, parameters, onReturn) {
 	if (isPlayerEmbeddedInEditor && doMuteAudio) return onReturn(null);
 
-	const MAX_MUSIC_VOLUME = .45;
+	const MAX_MUSIC_VOLUME = .4;
 
 	const player1 = getMusicPlayer('music-player-1', true);
 	const player2 = getMusicPlayer('music-player-2', true);
@@ -24678,7 +24992,7 @@ b3d.update = function () {
     var didChangeScene = b3d.curStack? b3d.curStack !== b3d.lastStack: bitsy.curRoom !== b3d.lastRoom;
     if (didChangeScene) {
         b3d.resetLights();
-        if (!bitsy.isPlayMode) {
+        if (editorMode) {
             b3d.resetAmbient();
         }
     }
