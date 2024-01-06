@@ -20,7 +20,7 @@ October, 2024{pg}{shk}*bzzt!*{shk}
 October, 2024{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}
+{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -1062,11 +1062,11 @@ ROOM lot4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 lou01,lou18,lou01,lou01,lou01,lou18,lou01,lou01,lou01,lou01,lou01,lou01,0,0,0,0
-lou01,lost-u,lou14,lou14,lost-u,lost-u,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
-lou01,lost-u,lost-u,lou14,lost-u,lost-u,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
+lou01,lost-u,lou14,lou14,lou14,lou14,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
+lou01,lost-u,lost-u,lou14,lou14,lou14,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
 lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1j,lou1g,lou1g,lou01,0,0,0,0
 lou3v,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
-lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,lou01,0,0,0,0
+lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1j,lou01,0,0,0,0
 lou01,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
 lou01,lost-u,lost-u,lou14,lou14,lou14,losv,lou1g,losv,lou1g,losv,lou01,0,0,0,0
 lou01,0,o,lou01,lou01,lou01,lou01,o,lou01,o,lou01,lou01,0,0,0,0
@@ -4894,7 +4894,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS lot4 7,12
 COL 2
 
 SPR b
@@ -7320,7 +7320,7 @@ SPR lov7
 23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
 23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
-NAME east wing
+NAME east wing book
 DLG 3x
 POS lot4 6,14
 COL 2
@@ -10410,6 +10410,44 @@ NAME fridge
 POS losx 5,7
 COL 2
 
+SPR wthrg0
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+>
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+NAME east wing book replacement
+DLG 4j
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -11087,7 +11125,7 @@ ITM wesbencp
 0,0,0,0,36,36,36,36,36,36,36,36,0,0,0,0
 0,0,0,0,36,36,36,36,36,36,36,36,0,0,0,0
 0,0,0,0,36,36,36,36,36,36,36,36,0,0,0,0
-0,0,0,37,37,37,37,37,37,37,37,37,37,37,0,0
+0,0,0,37,37,37,37,37,37,37,37,37,37,0,0,0
 NAME cone
 COL 2
 
@@ -12415,6 +12453,9 @@ DLG DATA3D
       "type": "table",
       "transform": "0.6,1.2,0.6,0,0,0,0,0.6,0"
     },
+    "SPR_wthrg0": {
+      "type": "box"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -13572,9 +13613,14 @@ BG_COLOR [0,0,0]
 
 DLG 3w
 """
-{sequence
-  - If I'm careful, I think I can use this to climb over the barrier. I should probably make sure I'm completely done in here first though, because if I miss something, I'll have to go back in the long way...
-  - Let's go!     {exit "lot4" 2 14}    {eastwing_done = 1}
+{
+  - eastwingbook_read == 1 ?
+    {sequence
+      - If I'm careful, I think I can use this to climb over the barrier. I should probably make sure I'm completely done in here first though, because if I miss something, I'll have to go back in the long way...
+      - Let's go!                                                                                 {exit "lot4" 2 14}        {pg}                                                                      I wonder if my phone is charged yet?                                                                            {eastwing_done = 1}
+    }
+  - else ?
+    This looks like an easy way out once I've searched for the note...
 }
 """
 NAME slanted table dialog
@@ -13589,6 +13635,7 @@ you're sort of doing what i used to do, before i had to go away.{pg}{paper}but m
 555-3465
 
 -Carson
+{replace "east wing book" "east wing book replacement"}    {eastwingbook_read = 1}
 """
 NAME east wing dialog
 BG_COLOR [0,0,0]
@@ -13693,6 +13740,16 @@ DLG 4i
 {property locked true}{lostWoodsCircles = lostWoodsCircles + 1}
 NAME lost circles counter
 BG_COLOR [0,0,0]
+
+DLG 4j
+"""
+{paper}text me. you know, if you want.
+
+555-3465
+
+-Carson
+"""
+NAME east wing book replacement dialog
 
 
 </script>
