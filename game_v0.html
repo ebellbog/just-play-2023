@@ -16212,7 +16212,7 @@ BG_COLOR [0,0,0]
 
 DLG 2p
 """
-{property locked true}{seqLength = 3}{
+{property locked true}{seqLength = 0}{
   - pedC > pedA ?
     {seqLength = seqLength + 1}
 }{
@@ -16223,7 +16223,7 @@ DLG 2p
     {seqLength = seqLength + 1}
 }{
   - seqLength >= 3 ?
-    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                                {pg}                            {music "library_closed_music2.mp3"}                I... I think it {shk}actually worked??{shk}            {replace "f2 correct" "f2 correct replacement"}                            {f3_done = 1}    {exit "losw" 8 1 "fade_w"}
+    Please, oh please... I've learned my history, now let me get back to {rbw}fighting for the future?{rbw}                                                                    {pg}                                    {music "library_closed_music2.mp3"}                    I... I think it {shk}actually worked??{shk}                {replace "f2 correct" "f2 correct replacement"}                                    {f3_done = 1}            {exit "losw" 8 1 "fade_w"}
   - else ?
     The elevator won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
 }
