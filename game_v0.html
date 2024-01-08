@@ -6031,7 +6031,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS lotn 6,2
 ITM b 1
 COL 2
 
@@ -16756,7 +16756,7 @@ DLG 3t
 {property locked true}{
   - {item "key"} == 1 ?
     {sequence
-      - The key worked! Maybe I can find a way to climb down into the East Wing from here...
+      - The keycard worked! Maybe I can find a way to climb down into the East Wing from here...
       - 
     }
   - else ?
@@ -16831,13 +16831,13 @@ DLG 4c
 Which text should I send?(1-3):{input "textCarson"}{pg}{
   - textCarson == 1 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"}                                                                                                                                                                  {carson_texted = 1}    {end_dialog = 1}    {exit "lotr" 6 2 "fade_w"}
+    {replace "new text" "text deactivated"}                                                                                                                                                                          {carson_texted = 1}            {end_dialog = 1}            {exit "lotr" 6 2 "fade_w"}
   - textCarson == 2 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"}                                                                                                                         {carson_texted = 1}                                            {end_dialog = 1}            {exit "lotr" 6 2 "fade_w"}                        
+    {replace "new text" "text deactivated"}                                                                                                                                 {carson_texted = 1}                                                    {end_dialog = 2}                    {exit "lotr" 6 2 "fade_w"}                            
   - textCarson == 3 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"}                                                                                                                         {carson_texted = 1}                                            {end_dialog = 1}            {exit "lotr" 6 2 "fade_w"}                        
+    {replace "new text" "text deactivated"}                                                                                                                                 {carson_texted = 1}                                                    {end_dialog = 3}                    {exit "lotr" 6 2 "fade_w"}                            
   - else ?
     How do I want to play this?
 }
@@ -16868,7 +16868,7 @@ NAME sign 1-S dialog
 MAX_LINES 4
 
 DLG 4f
-{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}{music "exit_woods_music.mp3"}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around?
+{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}{music "exit_woods_music.mp3"}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around? There has to be another way to access the East Wing...
 NAME lost woods finale dialog
 BG_COLOR [0,0,0]
 
