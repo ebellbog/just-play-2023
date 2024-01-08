@@ -31,8 +31,6 @@ BG_COLOR [0,0,0]
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
 
-MUTE_AUDIO true
-
 PAL 0
 NAME interior
 0,0,0
@@ -12598,6 +12596,45 @@ DLG 5i
 POS losz 8,5
 COL 2
 
+SPR wthrgy
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+>
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+NAME ruby end
+DLG 5j
+POS lotw 10,6
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -14463,8 +14500,9 @@ NAME back button dialog
 BG_COLOR [0,0,0]
 
 DLG 49
-I could say, "hey there! I read all the books. now I have a reading recommendation for you...
+I could say something about Carson's situation. Solidarity. You matter. That kind of thing.
 NAME text carson 1 dialog
+BG_COLOR [0,0,0]
 
 DLG 50
 """
@@ -16819,12 +16857,14 @@ NAME cart 3 carson done dialog
 BG_COLOR [0,0,0]
 
 DLG 4a
-I could say, "hey, wanna join me on campus for a die-in?"
+I could say something about standing up and fighting together. Carson and I will not be erased!
 NAME text carson 2 dialog
+BG_COLOR [0,0,0]
 
 DLG 4b
-I could say, "want to meet for bubble tea sometime?"
+I could be cute and flirty. Not gonna lie, it was weird, but I'm kinda in love.
 NAME text carson 3 dialog
+BG_COLOR [0,0,0]
 
 DLG 4c
 """
@@ -17121,11 +17161,11 @@ DLG 5h
 """
 {
   - end_dialog == 1 ?
-                     {bgClr 23}                {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? yes i'm not at Birchwood anymore but i miss it so bad. and folx like you, e.g. someone who would *actually do a banned book scavenger hunt in the library* are why!! yes let's talk? you sound awesome. btw, did you read the books? ;-){clr}
+                             {bgClr 23}                        {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? yes i'm not at Birchwood anymore but i miss it so bad. and folx like you, e.g. someone who would *actually do a banned book scavenger hunt in the library* are why!! yes let's talk? you sound awesome. btw, did you read the books? ;-){clr}
   - end_dialog == 2 ?
-    {bgClr 23}                {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? you sound relentless and when you get to know me, you'll learn i mean that as a compliment. i think i could be up for taking action together! i'm sure you already figured out i'm kind of an introvert, but we gotta be the change, right? and to be real with you, getting this text sparks that flame for me in a big way. ;-) just let me know when, and where.{clr}
+    {bgClr 23}                        {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? you sound relentless and when you get to know me, you'll learn i mean that as a compliment. i think i could be up for taking action together! i'm sure you already figured out i'm kind of an introvert, but we gotta be the change, right? and to be real with you, getting this text sparks that flame for me in a big way. ;-) just let me know when, and where.{clr}
   - end_dialog == 3 ?
-    {bgClr 23}                {clr 6}library queer! i love it. thanks for texting me, ruby. i can't believe you actually did my weird little scavenger hunt? and let's be honest... anyone who would think of *that* as a first date is someone i'd like to meet. if you're serious about that book club idea, i'm game. coffee? bubble tea? tell me your drink of choice, and we'll write that epilogue, maybe...{clr} 
+    {bgClr 23}                        {clr 6}library queer! i love it. thanks for texting me, ruby. i can't believe you actually did my weird little scavenger hunt? and let's be honest... anyone who would think of *that* as a first date is someone i'd like to meet. if you're serious about that book club idea, i'm game. coffee? bubble tea? tell me your drink of choice, and we'll write that epilogue, maybe...{clr} 
   - else ?
 
 }{pg}I think I know the poem I want to write now...{pg}{end}{center}A game by Elana Bell Bogdan and Nat Mesnard
@@ -17137,6 +17177,22 @@ MAX_LINES 16
 DLG 5i
 I love this picture of me and mom. She's so fierce.
 NAME sprite wthrgx dialog
+
+DLG 5j
+"""
+{
+  - end_dialog == 1 ?
+                                 {bgClr 22}                            {clr 6}hey Carson… i hope it’s ok to text late at night. I know you’re back home with your family now and have no idea who i am. but… ok, so i found your scavenger hunt, and i just wanna say how fucked up it is that you lost your work-study job and had to drop out of school. i’m always so distracted with fighting for injustice in the world outside, but… how can we fight the fight if our own school won’t ensure financial access for everyone here? basically… you matter, your story matters, and i’m here for you. let’s talk?{clr}
+  - end_dialog == 2 ?
+    {bgClr 22}                            {clr 6}holy heck that scavenger hunt was amaaaazing! i’m Ruby and you just turned a very weird night into… a fierce lesson about censorship and erasure. I was supposed to attend that protest on campus tonight, but i was, um, a little bit locked inside the library. wanna be comrades and go to the next one together??{clr}
+  - end_dialog == 3 ?
+    {bgClr 22}                            {clr 6}hi library queer 😉 that’s what I’ve been calling you in my head lol. i know we’ve never met, but… well, i got locked into the library like a dummy and feel like i’ve been on the most amazing first date with your treasure hunt this entire night. so, um… yeah, would you ever want to meet… irl? start a two-person book club for banned books haha? you’re great… Carson… and i want an epilogue to the story of tonight.{clr} 
+  - else ?
+
+}
+"""
+NAME sprite wthrgy dialog
+BG_COLOR [0,0,0]
 
 
 </script>
