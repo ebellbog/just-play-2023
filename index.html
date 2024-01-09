@@ -16150,7 +16150,7 @@ DLG DATA3D
     },
     "SPR_lout": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.2,-0.16,0"
     },
     "SPR_louu": {
       "transform": "1,1,1,0,0,0,0,-0.09,0"
@@ -17644,7 +17644,7 @@ MAX_LINES 3
 DLG 2o
 """
 {
-    - courtyardItemsCollected == 4 ?
+  - courtyardItemsCollected == 4 ?
     Wow, now that I've collected all those symbols, these pedestals make a lot more sense! But pushing a single button still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
@@ -17656,14 +17656,14 @@ DLG 2o
     {sequence
       - Oh look, this pedestal seems connected to the burning papyrus scroll I found!
       - I press the button, but nothing happens... {pg} Maybe I should look for more missing items first?
-      }
-    - pedCount == 0 ?
+    }
+  - pedCount == 0 ?
     Huh, this stone pedestal looks like it's missing something that used to sit on top of it... {pg} It also has a glowing {clr 38}red button{clr} on the side.
-    - pedCount == 1 ?
-      I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+  - pedCount == 1 ?
+    I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
   - pedCount == 2 ?
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
-    - else ?
+  - else ?
     {wvy}Boop!{wvy} I stubbornly press the button on the pedestal.
 }{pedD = pedCount}{pedCount = pedCount + 1}
 """
