@@ -13503,6 +13503,65 @@ DLG 5j
 POS lotr 10,6
 COL 2
 
+SPR wthrh8
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,16,16,16,16,4,16,16,22,4,4,4,4,4,4
+4,4,16,4,4,16,16,16,16,22,4,4,4,4,4,4
+18,18,18,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,22,11,22,4,4,4,4,4,4
+18,38,12,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,4,4,4,4,4,4,4,4,4
+18,5,5,18,6,6,6,6,6,6,6,6,6,6,6,6
+18,18,18,18,6,6,6,6,6,6,6,6,6,6,6,6
+>
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,16,16,16,16,4,16,16,22,4,4,4,4,4,4
+4,4,16,4,4,16,16,16,16,22,4,4,4,4,4,4
+18,18,18,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,22,11,22,4,4,4,4,4,4
+18,12,12,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,4,4,4,4,4,4,4,4,4
+18,5,5,18,6,6,6,6,6,6,6,6,6,6,6,6
+18,18,18,18,6,6,6,6,6,6,6,6,6,6,6,6
+NAME outlet charging
+DLG 5y
+COL 2
+
+SPR wthrh9
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,16,16,16,16,4,16,16,22,4,4,4,4,4,4
+4,4,16,4,4,16,16,16,16,22,4,4,4,4,4,4
+18,18,18,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,22,11,22,4,4,4,4,4,4
+18,44,44,18,4,4,4,22,22,22,4,4,4,4,4,4
+18,5,5,18,4,4,4,4,4,4,4,4,4,4,4,4
+18,5,5,18,6,6,6,6,6,6,6,6,6,6,6,6
+18,18,18,18,6,6,6,6,6,6,6,6,6,6,6,6
+NAME outlet charged
+DLG 5z
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -16567,6 +16626,12 @@ DLG DATA3D
     "SPR_wthrh6": {
       "transform": "0.5,0.5,0.5,0,0,0,0,-0.25,0"
     },
+    "SPR_wthrh8": {
+      "type": "box"
+    },
+    "SPR_wthrh9": {
+      "type": "box"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -17501,6 +17566,8 @@ MAX_LINES 16
 DLG 2b
 """
 {
+  - eastwing_done == 1 ?
+     
   - project_seen == 1 ?
     Could we maybe handcuff ourselves to something before the bulldozers arrive?
   - else ?
@@ -17556,11 +17623,11 @@ DLG 2l
 """
 {
   - courtyardItemsCollected == 4 ?
-    Wow, now that I've collected all those symbols, these pedestals make a lot more sense! But pushing a single button still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
+    Wow, now that I've collected all the symbols, these pedestals make a lot more sense! But pushing a single button still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}Once I think I have it right, I should probably go check the elevator again...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
+    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected >= 7 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "pink triangle"} == 1 ?
@@ -17575,7 +17642,7 @@ DLG 2l
   - pedCount == 2 ?
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the pedestal.
+    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
 }{pedA = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal A dlg
@@ -17590,7 +17657,7 @@ DLG 2m
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}Once I think I have it right, I should probably go check the elevator again...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
+    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected >= 7 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "pope hat"} == 1 ?
@@ -17605,7 +17672,7 @@ DLG 2m
   - pedCount == 2 ?
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the pedestal.
+    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
 }{pedB = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal B dlg
@@ -17620,7 +17687,7 @@ DLG 2n
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}Once I think I have it right, I should probably go check the elevator again...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
+    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected >= 7 ?
     {wvy}Boop!{wvy} I press the button. 
   - {item "MAGA hat"} == 1 ?
@@ -17635,7 +17702,7 @@ DLG 2n
   - pedCount == 2 ?
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the pedestal.
+    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
 }{pedC = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal C dlg
@@ -17650,7 +17717,7 @@ DLG 2o
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}Once I think I have it right, I should probably go check the elevator again...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
+    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected >= 7 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "papyrus burning"} == 1 ?
@@ -17665,7 +17732,7 @@ DLG 2o
   - pedCount == 2 ?
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the pedestal.
+    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
 }{pedD = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal D dlg
@@ -17689,7 +17756,7 @@ DLG 2p
     {pg} Now kindly just let me get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} I... I think it {shk}actually worked??{shk} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"}
   - courtyardItemsCollected >= 4 ?
     {sequence
-      - Hm, I'm pretty sure I've found everything I need to escape from here, but... The stony silence of this cruel elevator is telling me I still need to demonstrate what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
+      - Hm, I'm pretty sure I've found everything I need to escape from here, but... The stony silence of this cruel elevator is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
       - Nothing... Maybe I still just need to press those pedestal buttons in the right order?
     }
   - else ?
@@ -17748,25 +17815,11 @@ BG_COLOR [0,0,0]
 DLG 2v
 """
 {
-  - libraryClosed == false ?
-    The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
+  - deadPhoneSeen == true ?
+    {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}
+    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time to get my nerd on and do some {wvy}library math!{wvy}
   - else ?
-    {
-      - deadPhoneSeen == true ?
-        {
-          - eastwing_done == 0 ?
-            {sequence
-              - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time to get my nerd on and do some {wvy}library math!{wvy}
-              - Phone still isn't charged yet :(
-            }
-          - else ?
-            {sequence
-              - Hell yeah. My phone is finally charged! {exit "lotl" 6 2}
-            }
-        }
-      - else ?
-        This cozy nook is looking a little less cozy in the dark... alone... trapped... You know what? Let's get a move on.
-    }
+    The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
 }
 """
 NAME outlet dialog
@@ -17965,9 +18018,9 @@ BG_COLOR [0,0,0]
 
 DLG 3r
 """
-{paper}(computers on the 1st floor - rows of bookshelves on the 2nd floor) x 100
-+
-first digit of the sex number
+{paper}to find this call number, take the year MacLeod Library was built, and divide it by 2.
+
+then subtract 650. 
 
 see you there?
 """
@@ -18016,7 +18069,7 @@ DLG 3w
   - eastwingbook_read == 1 ?
     {sequence
       - If I'm careful, I think I can use this to climb over the barrier... Am I ready to return home from this wild odyssey?
-      - Let's go! {exit "lot4" 2 14 "fade_b"} {pg} I wonder if my phone is charged yet? {eastwing_done = 1}
+      - Let's go! {exit "lot4" 2 14 "fade_b"} {pg} I wonder if my phone is charged yet? {replace "outlet charging" "outlet charged" "floor 1"} {eastwing_done = 1}
     }
   - else ?
     This looks like an easy way out once I've searched for the note...
@@ -18527,6 +18580,15 @@ BG_COLOR [0,0,0]
 DLG 5x
 {bgClr 0}{clr 41 true}sometimes a community is already there for you, just out of sight, and it's about opening yourself up to it{fog 5 16 "queer community 2"}
 NAME community thought 6 dialog
+BG_COLOR [0,0,0]
+
+DLG 5y
+Phone still isn't charged yet :(
+NAME outlet charging dialog
+
+DLG 5z
+Hell yeah. My phone is finally charged!{pg}{exit "phone (charged)" 6 2 "fade_b"}
+NAME outlet charged dialog
 BG_COLOR [0,0,0]
 
 
