@@ -6,13 +6,7 @@
 
 <meta charset="UTF-8">
 
-<title>"""
-{music "dorm_music2.mp3"}{bgClr 3}{borderClr 28}Banned Together - a story of queer love & erasure{clr 28 true}{clr}{pg}Birchwood College
-October, 2024{pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}
-{pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}
-"""</title>
+<title>Banned Together</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
@@ -30,6 +24,8 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
+
+MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -1062,7 +1058,7 @@ ROOM losz
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,lost-a,o,lotp,o,lost-a,0,0,0,0,0,0
 0,0,0,0,0,lost-a,h,lotl,lotl,lost-a,0,0,0,0,0,0
-0,0,0,0,0,lost-a,h,h,h,lost-a,0,0,0,0,0,0
+0,0,0,0,0,0,h,h,h,lost-a,0,0,0,0,0,0
 0,0,0,0,0,lotq,lou1f,h,h,lost-a,0,0,0,0,0,0
 0,0,0,0,0,lots,lou1f,lou1f,lotr,lost-a,0,0,0,0,0,0
 0,0,0,0,0,lost-a,lost-a,lost-a,lost-a,lost-a,0,0,0,0,0,0
@@ -2906,22 +2902,22 @@ WAL true
 COL 1
 
 TIL lotv
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0
-0,1,1,0,1,0,0,1,1,0,1,0,0,1,1,0
-0,1,1,0,0,0,0,0,1,1,1,1,0,1,1,0
-0,1,1,0,0,1,0,0,0,0,0,1,0,1,1,0
-0,1,1,0,1,1,0,1,0,0,0,0,0,1,1,0
-0,1,1,0,1,0,0,0,1,0,0,1,0,1,1,0
-0,1,1,0,0,1,0,0,0,1,0,1,0,1,1,0
-0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0
-0,1,1,0,1,1,0,1,1,1,0,1,0,1,1,0
-0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0
-0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,0,6,0,0,0,0,0,0,0,0,6,0,6,0,0
+0,6,0,0,0,0,0,0,0,0,6,0,6,0,6,0
+0,0,0,6,0,6,0,6,0,0,0,0,0,0,0,0
+0,0,0,6,0,0,6,0,0,0,6,6,6,0,0,0
+0,0,6,0,6,0,0,0,0,6,0,0,0,6,0,0
+0,0,6,0,6,0,0,0,6,0,0,0,0,0,6,0
+0,6,0,0,0,6,0,0,6,0,0,0,0,0,6,0
+0,6,0,0,0,6,6,6,6,6,6,0,0,0,6,0
+6,0,0,0,0,0,6,0,0,0,6,0,0,0,6,0
+6,6,6,6,6,6,6,0,0,0,6,0,0,6,0,0
+0,0,0,0,6,0,0,0,0,0,6,6,6,0,0,0
+0,6,0,0,6,0,0,0,0,0,6,0,0,0,0,0
+6,0,6,0,6,0,0,0,0,0,6,0,0,6,0,6
+0,0,0,0,6,6,6,6,6,6,6,0,6,0,6,0
+0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,6,0,6,0,0,0,0,0,0,0,0,0,0,0,0
 WAL true
 COL 1
 
@@ -5520,7 +5516,7 @@ TIL lou4i
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
-4,4,4,4,31,16,16,31,11,11,31,4,4,4,4,4
+4,4,4,4,31,16,16,5,11,11,31,4,4,4,4,4
 4,4,4,4,31,16,17,16,16,16,31,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
@@ -5537,7 +5533,7 @@ TIL lou4i
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
-4,4,4,4,31,17,17,31,11,11,31,4,4,4,4,4
+4,4,4,4,31,17,17,5,11,11,31,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
@@ -5596,7 +5592,7 @@ TIL lou4k
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,31,16,16,16,17,16,31,4,4,4,4,4
-4,4,4,4,31,11,11,31,16,16,31,4,4,4,4,4
+4,4,4,4,31,11,11,5,16,16,31,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
@@ -5613,7 +5609,7 @@ TIL lou4k
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
-4,4,4,4,31,11,11,31,17,17,31,4,4,4,4,4
+4,4,4,4,31,11,11,5,17,17,31,4,4,4,4,4
 4,4,4,4,31,16,16,16,16,16,31,4,4,4,4,4
 4,4,4,4,4,31,16,16,16,31,4,4,4,4,4,4
 4,4,4,4,4,4,31,31,31,4,4,4,4,4,4,4
@@ -13032,6 +13028,23 @@ SPR wthrgz
 0,0,42,22,22,22,22,22,22,22,22,22,42,22,42,0
 0,0,42,22,22,22,22,22,22,22,22,22,42,42,0,0
 0,0,42,42,42,42,42,42,42,42,42,42,42,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,42,42,42,42,42,42,42,42,42,42,0,0,0
+0,0,42,42,42,42,42,41,41,42,42,42,42,42,0,0
+0,0,42,6,6,6,6,6,6,6,6,6,6,42,0,0
+0,0,0,42,6,6,6,6,6,6,6,6,6,6,42,0
+0,0,0,0,42,6,6,6,6,6,6,6,6,6,42,0
+0,0,0,0,42,42,42,42,42,42,42,42,42,42,42,0
+0,0,0,42,37,37,37,37,37,37,37,37,37,42,42,0
+0,0,42,37,37,37,37,37,37,37,37,37,42,22,42,0
+0,0,42,42,42,42,41,41,42,42,42,42,42,22,42,0
+0,0,42,22,22,22,22,22,22,22,22,22,42,22,42,0
+0,0,42,22,22,22,22,22,22,22,22,22,42,22,42,0
+0,0,42,22,22,22,22,22,22,22,22,22,42,22,42,0
+0,0,42,22,22,22,22,22,22,22,22,22,42,42,0,0
+0,0,42,42,42,42,42,42,42,42,42,42,42,0,0,0
 NAME chest sprite
 DLG 5l
 POS lotk 6,8
@@ -14840,9 +14853,9 @@ DLG 20
 """
 {
   - f3_done == 1 ?
-    That's weird. The book should be here, but it's missing.                                                    {pg}                                Was it {shk}banned{shk} from MacLeod Library?                    {pg}                     ...                    {pg}                     Okay, maybe I'm being a little dramatic.                                                    {pg}                                Someone could have checked it out, I guess. My only hope is that the book is on a return cart somewhere waiting to be reshelved...                                            {replace "f1 cart 3" "cart 3 carson"}                                                         {f2book_seen = 1}
+    That's weird. The book should be here, but it's missing. {pg} Was it {shk}banned{shk} from MacLeod Library? {pg} ... {pg} Okay, maybe I'm being a little dramatic. {pg} Someone could have checked it out, I guess. My only hope is that the book is on a return cart somewhere waiting to be reshelved... {replace "f1 cart 3" "cart 3 carson"} {f2book_seen = 1}
   - else ?
-    Hmm, this looks like an interesting book. Maybe I should take a look...                                    {pg}                                                            {exit "wrong book 2" 2 3 "fade_w"}                                                    {pg}
+    Hmm, this looks like an interesting book. Maybe I should take a look... {music "book_maze_music.mp3"} {pg} {exit "wrong book 2" 2 3 "fade_w"}
 }
 """
 NAME f1 correct dialog
@@ -14852,9 +14865,9 @@ DLG 21
 """
 What the - someone put a note in the back of this book! {pg}{paper}i knew you'd find me! sorry for being so weird. i wanted someone to remember me. to remember this. before everything changes. before everything that matters is gone...{pg}{paper}if you know what it feels like to be erased, let's remember together. that way, at least two of us won't forget.{pg}{paper}come find me again in another banned book. which book, you ask? 
 
-well, it's time to do some math!{pg}{paper}add the number of stripes on the gay pride flag (the "traditional" one) to the number of stripes on the bi flag. then multiply all that times 100. 
+well, it's time to do some math!{pg}{paper}add the number of stripes on the gay pride flag (the common one) to the number of stripes on the bi flag. then multiply all that times 100. 
 
-now just add 20 to the result, and you're there.{pg}Oh, so they're a nerd! Nice.{pg}Hang on, I totally just got nerd-sniped. What time is it??
+now just add 20 to the result, and you've got yourself a dewey decimal!{pg}Oh, so they're a nerd! Nice.{pg}Hang on, I totally just got nerd-sniped. What time is it??
 {pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
 {exit "losu" 13 2 "fade_w"}{libraryClosed = true}{ambient "[0.6, 0.6, 0.9]"}{replace "double door - interior" "door wall" "floor 1"}{replace "downlight" "light (off)" "ceiling"}{replace "downlight" "light (off)" "east wing (ceiling)"}{replace "chair sit" "chair sit genderqueer"}
 {fog 0 9 "floor 1"}{fog 0 9 "east wing"}{music "library_closed_music2.mp3"}{pg}{ambient "[0.6, 0.6, 0.9]"}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
@@ -15155,7 +15168,7 @@ NAME burned pile dialog
 BG_COLOR [0,0,0]
 
 DLG 53
-In my History of Oppression first-year seminar, I learned that the {clr 17}swastika {clr}and the {clr 18}sauvastika{clr} are ancient and deeply rooted in Hinduism.{pg}Queers love to reclaim the words and symbols that were used to hurt us! But the Nazis subverted the meaning of older symbols, too...{pg}Can we really trust that the arc of the moral universe will continue bending toward justice?{pg}Or will some Neo-Nazis just come screw it up and rewrite our lives and language again?
+Oh no...{pg}That's... a lot.{pg}College campuses definitely don't need any more of these graffitied on the walls!{pg}The thing is, in my History of Oppression first-year seminar, I learned that the {clr 17}swastika {clr}and the {clr 18}sauvastika{clr} are actually ancient and deeply rooted in Hinduism.{pg}Queers love to reclaim the words and symbols that were used to hurt us! But the Nazis subverted the meaning of older symbols, too...{pg}Can we really trust that the "arc of the moral universe" will continue "bending toward justice"?{pg}Or will some Neo-Nazis just come screw it up and rewrite our lives and language again?
 NAME wall with swastika dialog
 BG_COLOR [0,0,0]
 MAX_LINES 5
@@ -15630,7 +15643,7 @@ DLG DATA3D
     },
     "SPR_lotl": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_lotm": {
       "type": "plane",
@@ -15638,15 +15651,15 @@ DLG DATA3D
     },
     "SPR_lotq": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.14,-0.16,0"
     },
     "SPR_lotr": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_loty": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_lotz": {
       "type": "plane",
@@ -15654,22 +15667,22 @@ DLG DATA3D
     },
     "SPR_lou0": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_lou1": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_lou2": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_lou3": {
       "type": "box"
     },
     "SPR_lou4": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_lou5": {
       "type": "plane",
@@ -15677,27 +15690,27 @@ DLG DATA3D
     },
     "SPR_lou6": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.14,-0.16,0"
     },
     "SPR_lou7": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_lou8": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_lou9": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_loua": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_loub": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_louc": {
       "type": "box"
@@ -15861,7 +15874,7 @@ DLG DATA3D
     },
     "SPR_pbrov4": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrov5": {
       "type": "plane",
@@ -15869,27 +15882,27 @@ DLG DATA3D
     },
     "SPR_pbrov6": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrov7": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrov8": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrov9": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrova": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,0.15,-0.16,0"
     },
     "SPR_pbrovb": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovc": {
       "type": "plane",
@@ -15897,31 +15910,31 @@ DLG DATA3D
     },
     "SPR_pbrovd": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrove": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovg": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovh": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovi": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovj": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovk": {
       "type": "plane",
-      "transform": "0.75,0.75,0.75,0,90,0,0,-0.16,0"
+      "transform": "0.75,0.75,0.75,0,90,0,-0.15,-0.16,0"
     },
     "SPR_pbrovl": {
       "type": "plane",
@@ -16146,7 +16159,8 @@ DLG DATA3D
       "transform": "0.7,0.6,0.7,0,0,0,0,-0.2,0"
     },
     "SPR_wthrh0": {
-      "type": "box"
+      "type": "box",
+      "transparency": false
     },
     "SPR_wthrh1": {
       "transform": "0.75,0.75,0.75,0,0,0,0,-0.2,0"
@@ -17177,19 +17191,20 @@ BG_COLOR [0,0,0]
 
 DLG 2o
 """
-- courtyardItemsCollected == 4 ?
-{wvy}Boop!{wvy} I press the button. {clr 2}There must be some kind of sequence to this...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-- courtyardItemsCollected >= 5 ?
-{wvy}Boop!{wvy} I press the button.{sequence
-  - I guess, once I've pressed all four pedestals in the right order, I should probably try the elevator again?
-  - 
-}
-- pedCount == 0 ?
-Huh, this stone pedestal has some kind of flashing button on it...
-- pedCount == 1 ?
-I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
-- else ?
-{wvy}Boop!{wvy} I press the button on the pedestal.
+{
+    - courtyardItemsCollected == 4 ?
+      {wvy}Boop!{wvy} I press the button. {clr 2}There must be some kind of sequence to this...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
+    - courtyardItemsCollected >= 5 ?
+      {wvy}Boop!{wvy} I press the button.{sequence
+        - I guess, once I've pressed all four pedestals in the right order, I should probably try the elevator again?
+        - 
+      }
+    - pedCount == 0 ?
+      Huh, this stone pedestal has some kind of flashing button on it...
+    - pedCount == 1 ?
+      I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+    - else ?
+      {wvy}Boop!{wvy} I press the button on the pedestal.
 }{pedD = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal D dlg
@@ -17240,7 +17255,7 @@ BG_COLOR [0,0,0]
 DLG 2s
 """
 {center}{bgClr 31}Trebek, I'll take "Cultural Destruction" for $200?{pg}{center}{bgClr 31}Ooh, I got this one - what are the burning scrolls of Alexandria?
-{replace "papyrus outline" "papyrus burning" "courtyard items"}{pg}Alexandria - the city whose library was so famous it became synonymous with city itself. One of the first tales of mass cultural destruction most Western kids learn.{pg}...whiiich, come to think of it, probably means it's a myth.{courtyardItemsCollected = courtyardItemsCollected + 1}
+{replace "papyrus outline" "papyrus burning" "courtyard items"}{pg}Alexandria - the city whose library was so famous it became synonymous with the city itself. One of the first tales of mass cultural destruction most Western kids learn.{pg}...whiiich, come to think of it, probably means it's a myth.{pg}Anyway, better grab this for my "research" (ie trying to get the heck out of here)?{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME papyrus burning dialog
 BG_COLOR [0,0,0]
@@ -17257,7 +17272,7 @@ BG_COLOR [0,0,0]
 DLG 2u
 """
 Geez, who left a MAGA hat lying in the library? It's scary seeing these guys come back out of the woodwork, with the election coming up so soon...
-{replace "MAGA outline" "MAGA hat" "courtyard items"}{courtyardItemsCollected = courtyardItemsCollected + 1}
+{replace "MAGA outline" "MAGA hat" "courtyard items"}{pg}Might as well take it with me to {wvy}clean up the trash.{wvy}{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME MAGA hat dialog
 BG_COLOR [0,0,0]
@@ -17305,9 +17320,9 @@ BG_COLOR [0,0,0]
 
 DLG 2y
 """
-{paper}add the number of stripes on the gay pride flag (the "traditional" one) to the number of stripes on the bi flag. then multiply all that times 100. 
+{paper}add the number of stripes on the gay pride flag (the common one) to the number of stripes on the bi flag. then multiply all that times 100. 
 
-now just add 20 to the result, and you're there.
+now just add 20 to the result, and you've got yourself a dewey decimal!
 """
 NAME chair sit genderqueer dialog
 BG_COLOR [0,0,0]
@@ -17547,7 +17562,7 @@ BG_COLOR [0,0,0]
 DLG 3y
 """
 {sequence
-  - What the... Well THAT'S new. 
+  - What the... Well THAT floor plan is new. {pg} Am I... Am I just {wvy}imagining {wvy}all of this? {pg} What's the shitty version of a mind palace lol? {pg} A mind... {shk}dungeon?{shk}
   - 
 }
 """
@@ -17747,7 +17762,8 @@ Favorite Book: 1Q84 by Haruki Murakami
 
 Carson Gaines
 she/they
-Favorite Book: Parable of the Sower by Octavia Butler{sequence
+Favorite Book: Parable of the Sower by Octavia Butler
+{clr}{pg}{sequence
   - Yikes, of all the signs to leave lying on the ground... The work-study staff deserve more respect!
   - 
 }
@@ -17867,11 +17883,11 @@ DLG 5h
 """
 {
   - end_dialog == 1 ?
-                             {bgClr 23}                        {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? yes i'm not at Birchwood anymore but i miss it so bad. and folx like you, e.g. someone who would *actually do a banned book scavenger hunt in the library* are why!! yes let's talk? you sound awesome. btw, did you read the books? ;-){clr}
+    {bgClr 23} {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? yes i'm not at Birchwood anymore but i miss it so bad. and folx like you, e.g. someone who would *actually do a banned book scavenger hunt in the library* are why!! yes let's talk? you sound awesome. btw, did you read the books? ;){clr}
   - end_dialog == 2 ?
-    {bgClr 23}                        {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? you sound relentless and when you get to know me, you'll learn i mean that as a compliment. i think i could be up for taking action together! i'm sure you already figured out i'm kind of an introvert, but we gotta be the change, right? and to be real with you, getting this text sparks that flame for me in a big way. ;-) just let me know when, and where.{clr}
+    {bgClr 23} {clr 6}hey ruby, wow... i can't believe you actually did my weird little scavenger hunt? you sound relentless and when you get to know me, you'll learn i mean that as a compliment. i think i could be up for taking action together! i'm sure you already figured out i'm kind of an introvert, but we gotta be the change, right? and to be real with you, getting this text sparks that flame for me in a big way. ;) just let me know when and where.{clr}
   - end_dialog == 3 ?
-    {bgClr 23}                        {clr 6}library queer! i love it. thanks for texting me, ruby. i can't believe you actually did my weird little scavenger hunt? and let's be honest... anyone who would think of *that* as a first date is someone i'd like to meet. if you're serious about that book club idea, i'm game. coffee? bubble tea? tell me your drink of choice, and we'll write that epilogue, maybe...{clr} 
+    {bgClr 23} {clr 6}library queer! i love it. thanks for texting me, ruby. i can't believe you actually did my weird little scavenger hunt? and let's be honest... anyone who would think of *that* as a first date is someone i'd like to meet. if you're serious about that book club idea, i'm game. coffee? bubble tea? tell me your drink of choice, and we'll write that epilogue, maybe...{clr} 
   - else ?
 
 }{pg}I think I know the poem I want to write now...{pg}{end}{center}A game by Elana Bell Bogdan and Nat Mesnard
@@ -17888,11 +17904,14 @@ DLG 5j
 """
 {
   - end_dialog == 1 ?
-                                 {bgClr 22}                            {clr 6}hey Carson… i hope it’s ok to text late at night. I know you’re back home with your family now and have no idea who i am. but… ok, so i found your scavenger hunt, and i just wanna say how fucked up it is that you lost your work-study job and had to drop out of school. i’m always so distracted with fighting for injustice in the world outside, but… how can we fight the fight if our own school won’t ensure financial access for everyone here? basically… you matter, your story matters, and i’m here for you. let’s talk?{clr}
+    {bgClr 22} {clr 6 true}
+hey Carson... i hope it's ok to text late at night. I know you're back home with your family now and have no idea who i am. but... ok, so i found your scavenger hunt, and i just wanna say how fucked up it is that you lost your work-study job and had to drop out of school. i'm always so distracted with fighting for injustice in the world outside, but... how can we fight the fight if our own school won't ensure financial access for everyone here? basically... you matter, your story matters, and i'm here for you. let's talk?{clr}
   - end_dialog == 2 ?
-    {bgClr 22}                            {clr 6}holy heck that scavenger hunt was amaaaazing! i’m Ruby and you just turned a very weird night into… a fierce lesson about censorship and erasure. I was supposed to attend that protest on campus tonight, but i was, um, a little bit locked inside the library. wanna be comrades and go to the next one together??{clr}
+    {bgClr 22} {clr 6 true}
+holy heck that scavenger hunt was amaaaazing! i'm Ruby and you just turned a very weird night into... a fierce lesson about censorship and erasure. i was supposed to attend that protest on campus tonight, but i was, um, a little bit locked inside the library. wanna be comrades and go to the next one together??{clr}
   - end_dialog == 3 ?
-    {bgClr 22}                            {clr 6}hi library queer 😉 that’s what I’ve been calling you in my head lol. i know we’ve never met, but… well, i got locked into the library like a dummy and feel like i’ve been on the most amazing first date with your treasure hunt this entire night. so, um… yeah, would you ever want to meet… irl? start a two-person book club for banned books haha? you’re great… Carson… and i want an epilogue to the story of tonight.{clr} 
+    {bgClr 22} {clr 6 true}
+hi library queer ;) that's what I've been calling you in my head lol. i know we've never met, but... well, i got locked into the library like a dummy and feel like i've been on the most amazing first date with your treasure hunt this entire night. so, um... yeah, would you ever want to meet... irl? start a two-person book club for banned books haha? you're great... Carson... and i want an epilogue to the story of tonight.{clr} 
   - else ?
 
 }
@@ -17924,7 +17943,7 @@ MAX_LINES 5
 DLG 5m
 """
 {sequence
-  - I... Did... {pg} {shk}WHERE DID ALL THIS STUFF COME FROM?{shk} {pg} Isn't that where I just came from? Am I {wvy}losing my mind,{wvy} or did this ENTIRE SPACE just change? {pg} {clr 11}(Maybe both?){clr}
+  - I... Did... {pg} {shk}WHERE DOES ALL THIS NEW STUFF KEEP COMING FROM?{shk} {pg} Isn't that where I just came from? Am I {wvy}losing my mind,{wvy} or did this ENTIRE SPACE just change? {pg} {clr 11}(Maybe both?){clr}
   - 
 }
 """
@@ -17934,7 +17953,7 @@ BG_COLOR [0,0,0]
 DLG 5n
 """
 {sequence
-  - Gotta love this ambiguous hourglass sign... Sooo {clr 11}(not){clr} helpful! {pg} {clr 11}(also, is that hourglass emptying or... filling back up?){clr}
+  - Gotta love this ambiguous hourglass sign... {pg} Sooo (not) helpful! {pg} {clr 11}(also, is that hourglass emptying or... filling back up?){clr}
   - 
 }
 """
