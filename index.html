@@ -15492,8 +15492,9 @@ poem done yet?
 NAME sprite wthrfm dialog
 
 DLG 45
-it's almost over. we made a difference, i think. it wasn't the same without you, though. hope everything is ok...
+it's almost over. we might have even made a difference?{pg}it was a start, at least. {pg}but it wasn't the same without you. hope everything is ok...
 NAME jax endgame 3 dialog
+BG_COLOR [0,0,0]
 
 DLG 46
 
@@ -17722,7 +17723,7 @@ BG_COLOR [0,0,0]
 DLG 2s
 """
 {center}{bgClr 31}Trebek, I'll take "Cultural Destruction" for $200?{pg}{center}{bgClr 31}Ooh, I got this one - what are the burning scrolls of Alexandria?
-{replace "papyrus outline" "papyrus burning" "courtyard items"}{pg}Alexandria - the city whose library was so famous it became synonymous with the city itself. One of the first tales of mass cultural destruction most Western kids learn.{pg}...whiiich, come to think of it, probably means it's a myth.{pg}Anyway, better grab this for my "research" (ie trying to get the heck out of here)?{courtyardItemsCollected = courtyardItemsCollected + 1}
+{replace "papyrus outline" "papyrus burning" "courtyard items"}{pg}Alexandria - the city whose library was so famous it became synonymous with the city itself. One of the first tales of mass cultural destruction most Western kids learn.{pg}...whiiich, come to think of it, should have tipped me off it was a myth.{pg}Anyway, better grab this for my "research" (ie trying to get the heck out of here)?{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME papyrus burning dialog
 BG_COLOR [0,0,0]
@@ -17755,7 +17756,7 @@ DLG 2v
         {
           - eastwing_done == 0 ?
             {sequence
-              - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time to get my nerd on and do some library math!
+              - Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time to get my nerd on and do some {wvy}library math!{wvy}
               - Phone still isn't charged yet :(
             }
           - else ?
@@ -18000,12 +18001,12 @@ NAME floor 4 entrance
 BG_COLOR [0,0,0]
 
 DLG 3u
-Let's do some {rbw}crimes...{rbw}{exit "loth" 5 9 "fade_b"}
+East Wing, here we come! Let's do some {rbw}crimes...{rbw}{pg}{exit "loth" 5 9 "fade_b"}Wow, I gotta admit: I always kinda wanted to sneak onto the roof of some campus building!
 NAME 4th floor ladder dialog
 BG_COLOR [0,0,0]
 
 DLG 3v
-I can't believe I'm doing this...{exit "lot4" 9 12 "fade_b"}
+I can't believe I'm actually doing this...{exit "lot4" 9 12 "fade_b"}
 NAME east wing entry ladder dialog
 BG_COLOR [0,0,0]
 
@@ -18421,7 +18422,12 @@ MAX_LINES 16
 
 DLG 5l
 """
-Shoot, that's right... The fire wasn't the problem, was it. Julius Caesar actually burned the place by accident.{pg}{wvy}Oops!{wvy} lol {pg}He had other agenda; THIS part was just pure careleness. 
+{
+  - {item "papyrus burning"} == 1 ?
+
+  - else ?
+    Those papyrus scrolls... The fire... This place must be Alexandria? {pg} But the empty coffer here is new to me... Did they get robbed or something lol?
+}{pg}Shoot, that's right... The fire wasn't ever the problem, was it. Julius Caesar actually burned the place by accident!{pg}{clr 11}{wvy}oops!{wvy} lol {clr}{pg}He had other agenda; THIS part was just pure careleness. 
 {pg}And that's the thing. The Library of Alexandria fell not because of any one, willful act of destruction, but because... {pg}Idk, people basically stopped caring enough to fix it.
 {pg}Society moved on, and time (and the violent chaos of "progress") took its toll.
 {pg}Damn that feels {wvy}awfully familiar{wvy} right about now...
@@ -18433,7 +18439,7 @@ MAX_LINES 5
 DLG 5m
 """
 {sequence
-  - I... Did... {pg} {shk}WHERE DOES ALL THIS NEW STUFF KEEP COMING FROM?{shk} {pg} Isn't that where I just came from? Am I {wvy}losing my mind,{wvy} or did this ENTIRE SPACE just change? {pg} {clr 11}(Maybe both?){clr}
+  - I... What... {pg} Isn't that the central courtyard I just came from? {pg} So... why does {shk}nothing{shk}look familiar? {pg} Seriously, {shk}WHERE AM I?{shk} {pg} {clr 11}(or... when?){clr}
   - 
 }
 """
