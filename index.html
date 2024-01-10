@@ -1119,6 +1119,7 @@ lotu,0,0,0,lotu,lotu,lotz,lotu,lotu,lotu,lotu,lotw,lotu,lou51,lotw,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME hyperfocus book
 ITM a 8,10
+ITM pinktritfy 9,2
 PAL 3
 FOG_START 0
 FOG_END 7
@@ -15396,6 +15397,19 @@ NAME community thought 6
 DLG 5x
 COL 2
 
+ITM pinktritfy
+0,0,0,0,0,0,0,0
+0,0,0,16,16,16,0,0
+0,16,16,16,16,16,16,16
+0,16,16,16,16,16,16,16
+0,16,12,16,12,16,12,16
+0,16,16,16,16,16,16,16
+0,0,16,16,16,16,16,0
+0,16,0,0,0,0,0,0
+NAME hyperfocus thought
+DLG 65
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -15860,6 +15874,11 @@ BG_COLOR [0,0,0]
 DLG 64
 The book cart is empty, probably waiting to be brought back downstairs.
 NAME empty cart dialog
+
+DLG 65
+{bgClr 0}{clr 9 true}omg this book is off to an {rbw}incredible{rbw} start already!{clr}
+NAME hyperfocus thought dialog
+BG_COLOR [0,0,0]
 
 DLG DATA3D
 """
@@ -17166,6 +17185,11 @@ DLG DATA3D
       "hidden": true
     },
     "ITM_pinktritfx": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
+      "hidden": true
+    },
+    "ITM_pinktritfy": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
