@@ -817,10 +817,10 @@ PAL 0
 
 ROOM losv
 0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lou15,o,lost-a,o,lost-a,0
-o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
+o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
 lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losx,losv,0
-0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
+0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou12
 0,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
 0,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
 lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
@@ -830,7 +830,7 @@ o,losx,losx,lou13,lou13,losx,losx,losx,lotm,losx,losx,losv,losx,losv,losv,0
 lost-a,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
 0,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losv,losv,0
 0,losv,losv,losv,losx,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
-o,lou13,losx,losx,losx,losx,losx,losx,losx,lou13,losx,losx,losx,losx,losx,lost-a
+o,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 2
 ITM lotm2 2,1
@@ -840,7 +840,6 @@ ITM pinktritf5 1,2
 ITM pinktritfg 4,5
 ITM pinktritf1 4,8
 ITM pinktritf2 3,8
-ITM lotm4 9,14
 ITM pinktritf4 3,5
 PAL 0
 FOG_START 0
@@ -7965,7 +7964,7 @@ SPR loui
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 2d
 DLG 3q
-POS losv 4,9
+POS losv 2,9
 COL 2
 
 SPR louj
@@ -13708,6 +13707,28 @@ DLG 63
 POS losv 0,5
 COL 2
 
+SPR wthrhf
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,15,15,15,0,0,0,0,0,15,15,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,0,15,0,0,0,0,0,15,0,15,0,0,0
+0,0,15,15,15,15,15,15,15,15,15,15,15,0,0,0
+0,0,15,19,19,0,0,0,0,0,15,19,19,0,0,0
+0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME empty cart
+DLG 64
+POS losv 9,14
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -15458,7 +15479,7 @@ DLG 21
 What the - someone put a note in the back of this book! {pg}{paper}i knew you'd find me! sorry for being so weird. i wanted someone to remember me. to remember this. before everything changes. before everything that matters is gone...{pg}{paper}if you know what it feels like to be erased, let's remember together. that way, at least two of us won't forget.{pg}{paper}come find me again in another banned book. which book, you ask? 
 
 well, it's time for some trivia!
-{pg}{paper}in what year was this library founded? 
+{pg}{paper}in what year was this library built? 
 
 take the last three digits, and you've got yourself a dewey decimal!{pg}Oh, so they're a trivia nerd! Nice.{pg}Hang on, I totally just got nerd-sniped. What time is it??{pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
 {exit "losu" 13 3 "fade_w"}{libraryClosed = true}{ambient "[0.6, 0.6, 0.9]"}{replace "double door - interior" "door wall" "floor 1"}{replace "downlight" "light (off)" "ceiling"}{replace "downlight" "light (off)" "east wing (ceiling)"}{replace "chair sit" "chair sit genderqueer"}
@@ -15835,6 +15856,10 @@ The nonbinary flag and the trans flag.{pg}{sequence
 """
 NAME flag wall sprite 2 dialog
 BG_COLOR [0,0,0]
+
+DLG 64
+The book cart is empty, probably waiting to be brought back downstairs.
+NAME empty cart dialog
 
 DLG DATA3D
 """
@@ -16832,6 +16857,9 @@ DLG DATA3D
     "SPR_wthrhe": {
       "type": "box",
       "transparency": false
+    },
+    "SPR_wthrhf": {
+      "transform": "0.75,0.75,0.75,0,0,0,0,-0.17,0"
     },
     "ITM_2": {
       "type": "billboard",
@@ -18018,7 +18046,7 @@ DLG 2v
 {
   - deadPhoneSeen == true ?
     {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}
-    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time for some sleuthing: let's figure out when this library was founded!
+    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time for some sleuthing: let's figure out when this library was built!
   - else ?
     The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
 }
@@ -18044,7 +18072,7 @@ BG_COLOR [0,0,0]
 
 DLG 2y
 """
-{paper}in what year was this library founded? 
+{paper}in what year was this library built? 
 
 take the last three digits, and you've got yourself a dewey decimal!
 """
