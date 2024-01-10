@@ -15460,8 +15460,7 @@ What the - someone put a note in the back of this book! {pg}{paper}i knew you'd 
 well, it's time for some trivia!
 {pg}{paper}in what year was this library founded? 
 
-take the last three digits, and you've got yourself a dewey decimal!{pg}Oh, so they're a trivia nerd! Nice.{pg}Hang on, I totally just got nerd-sniped myself. What time is it??
-{pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
+take the last three digits, and you've got yourself a dewey decimal!{pg}Oh, so they're a trivia nerd! Nice.{pg}Hang on, I totally just got nerd-sniped. What time is it??{pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
 {exit "losu" 13 3 "fade_w"}{libraryClosed = true}{ambient "[0.6, 0.6, 0.9]"}{replace "double door - interior" "door wall" "floor 1"}{replace "downlight" "light (off)" "ceiling"}{replace "downlight" "light (off)" "east wing (ceiling)"}{replace "chair sit" "chair sit genderqueer"}
 {fog 0 9 "floor 1"}{fog 0 9 "east wing"}{music "library_closed_music2.mp3"}{pg}{ambient "[0.6, 0.6, 0.9]"}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
 """
@@ -15529,13 +15528,13 @@ DLG 26
 """
 {
   - libraryClosed == true ?
-    {paper}    come find me again at at {rbw}920.93.{rbw}
+    {paper} come find me again at at {rbw}920.93.{rbw}
   - else ?
     {
       - bannedbooks_seen == 0 ?
-        Oh, I see. It's Banned Books Week. Man, the College can be so hypocritical sometimes! Featuring "incendiary" titles while they're stabbing the Arts & Humanities in the back.                                                                                {bannedbooks_seen = 1}
-    }                                {pg}    Oh, look, {clr 1}Gender Queer by Maia Kobabe.{clr} It says here this was the number one most banned book last year!
-    {pg}    {replace "genderqueer" "no genderqueer"}        Maybe this'll help me write a poem? Just gotta find a comfortable place to sit...                        {genderqueer_seen = 1}
+        Oh, I see. It's Banned Books Week. Man, the College can be so hypocritical sometimes! Featuring "incendiary" titles while they're stabbing the Arts & Humanities in the back. {bannedbooks_seen = 1}
+    } {pg} Oh, look, {clr 1}Gender Queer by Maia Kobabe.{clr} It says here this was the number one most banned book last year!
+    {pg} {replace "genderqueer" "no genderqueer"} Maybe this'll help me write a poem? Just gotta find a comfortable place to sit... {genderqueer_seen = 1}
 }
 """
 NAME genderqueer
@@ -18064,6 +18063,8 @@ DLG 2z
     }
   - else ?
     {
+      - genderqueer_seen == 1 ?
+         My favorite reading nook is here on the ground floor!
       - entered_eastwing == 1 ?
         I'm sure I can find some inspiration for my poem on this floor...
       - else ?
