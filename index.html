@@ -72,6 +72,8 @@ NAME interior
 18,0,66
 46,200,255
 145,255,12
+12,203,2
+214,2,112
 
 PAL 1
 NAME exterior
@@ -766,7 +768,7 @@ PAL 0
 ROOM losu
 0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lost-a,o,lou18,o,lou18,0
 lost-a,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-12,lou14,lou14,lou14,lou14,lou18
-o,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-12,lou14,lost-u,lost-u,lou14,o
+o,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-12,lost-u,lost-u,lost-u,lou14,o
 lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou18
 lou18,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
 lost-a,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12
@@ -786,7 +788,6 @@ ITM lotm9 6,13
 ITM lotm9 6,12
 ITM lotm2 13,1
 ITM lotm2 11,1
-ITM lotm2 11,2
 ITM lotm8 1,2
 ITM lotm8 2,2
 ITM lotm8 3,2
@@ -820,9 +821,9 @@ o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losx,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
-lost-a,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
-lou18,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
-lou18,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
+0,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
+0,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
+lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 o,losx,losx,lou13,lou13,losx,losx,losx,lotm,losx,losx,losv,losx,losv,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
 0,losv,losv,losv,losv,0,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
@@ -6121,6 +6122,27 @@ TIL lou52
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME left arrow floor
 WAL false
+COL 1
+
+TIL lou53
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,38,38,38,38,38,38,4,4,28,28,28,28,28,28,4
+4,32,32,32,32,32,32,4,4,28,28,28,28,28,28,4
+4,2,2,2,2,2,2,4,4,18,18,18,18,18,18,4
+4,45,45,45,45,45,45,4,4,18,18,18,18,18,18,4
+4,31,31,31,31,31,31,4,4,31,31,31,31,31,31,4
+4,18,18,18,18,18,18,4,4,31,31,31,31,31,31,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME flag wall
+WAL true
 COL 1
 
 SPR wthrex
@@ -13019,7 +13041,6 @@ SPR wthrgs
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 DLG 5b
-POS losv 1,6
 COL 2
 
 SPR wthrgt
@@ -13602,6 +13623,89 @@ SPR wthrhb
 NAME another cart 2
 DLG 31
 POS losu 14,14
+COL 2
+
+SPR wthrhc
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,22,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,11,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,11,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,22,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,11,14,14,14,10,0
+0,10,14,14,14,14,11,14,14,11,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,11,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+NAME f1 guide flipped
+DLG 61
+POS losu 8,9
+COL 2
+
+SPR wthrhd
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,38,38,38,38,38,38,4,4,4,4,4,4,4,4,4
+4,32,32,32,32,32,32,4,4,4,4,4,4,4,4,4
+4,2,2,2,2,2,2,4,4,4,4,4,4,4,4,4
+4,45,45,45,45,45,45,4,4,4,4,4,4,4,4,4
+4,31,31,31,31,31,31,4,4,46,46,46,46,46,46,4
+4,18,18,18,18,18,18,4,4,46,46,46,46,46,46,4
+4,4,4,4,4,4,4,4,4,18,18,18,18,18,18,4
+4,4,4,4,4,4,4,4,4,31,31,31,31,31,31,4
+4,4,4,4,4,4,4,4,4,31,31,31,31,31,31,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME flag wall sprite
+DLG 62
+POS losv 0,6
+COL 2
+
+SPR wthrhe
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,2,2,2,2,2,2,4,4,4,4,4,4,4,4,4
+4,16,16,16,16,16,16,4,4,4,4,4,4,4,4,4
+4,18,18,18,18,18,18,4,4,27,27,27,27,27,27,4
+4,5,5,5,5,5,5,4,4,24,24,24,24,24,24,4
+4,4,4,4,4,4,4,4,4,16,16,16,16,16,16,4
+4,4,4,4,4,4,4,4,4,24,24,24,24,24,24,4
+4,4,4,4,4,4,4,4,4,27,27,27,27,27,27,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME flag wall sprite 2
+DLG 63
+POS losv 0,5
 COL 2
 
 ITM 2
@@ -15353,9 +15457,10 @@ DLG 21
 """
 What the - someone put a note in the back of this book! {pg}{paper}i knew you'd find me! sorry for being so weird. i wanted someone to remember me. to remember this. before everything changes. before everything that matters is gone...{pg}{paper}if you know what it feels like to be erased, let's remember together. that way, at least two of us won't forget.{pg}{paper}come find me again in another banned book. which book, you ask? 
 
-well, it's time to do some math!{pg}{paper}add the number of stripes on the gay pride flag (the common one) to the number of stripes on the bi flag. then multiply all that times 100. 
+well, it's time for some trivia!
+{pg}{paper}in what year was this library founded? 
 
-now just add 20 to the result, and you've got yourself a dewey decimal!{pg}Oh, so they're a nerd! Nice.{pg}Hang on, I totally just got nerd-sniped. What time is it??
+take the last three digits, and you've got yourself a dewey decimal!{pg}Oh, so they're a trivia nerd! Nice.{pg}Hang on, I totally just got nerd-sniped myself. What time is it??
 {pg}{center}{bgClr 13}{shk}THE LIBRARY IS NOW CLOSED.{shk}
 {exit "losu" 13 3 "fade_w"}{libraryClosed = true}{ambient "[0.6, 0.6, 0.9]"}{replace "double door - interior" "door wall" "floor 1"}{replace "downlight" "light (off)" "ceiling"}{replace "downlight" "light (off)" "east wing (ceiling)"}{replace "chair sit" "chair sit genderqueer"}
 {fog 0 9 "floor 1"}{fog 0 9 "east wing"}{music "library_closed_music2.mp3"}{pg}{ambient "[0.6, 0.6, 0.9]"}Well, shoot. How did I let this happen? I have zero patience for some books, then get {wvy}completely lost{wvy} in others. {shk}Why{shk} does my brain work this way?{pg}...{pg}I'm not locked in... am I?
@@ -15657,7 +15762,7 @@ NAME burned pile dialog
 BG_COLOR [0,0,0]
 
 DLG 53
-Oh no...{pg}That's... a lot.{pg}College campuses definitely don't need any more of these graffitied on the walls!{pg}The thing is, in my History of Oppression first-year seminar, I learned that the {clr 17}swastika {clr}and the {clr 18}sauvastika{clr} are actually ancient and deeply rooted in Hinduism.{pg}Queers love to reclaim the words and symbols that were used to hurt us! But the Nazis subverted the meaning of older symbols, too...{pg}Can we really trust that the "arc of the moral universe" will continue "bending toward justice"?{pg}Or will some Neo-Nazis just come screw it up and rewrite our lives and language again?
+Oh no...{pg}That's... a lot.{pg}College campuses definitely don't need any more of these graffitied on the walls!{pg}The thing is, in my Semiotics of Oppression first-year seminar, I learned that the {clr 17}swastika {clr}and the {clr 18}sauvastika{clr} are actually ancient and deeply rooted in Hinduism.{pg}Queers love to reclaim the words and symbols that were used to hurt us! But the Nazis subverted the meaning of older symbols, too...{pg}Can we really trust that the "arc of the moral universe" will continue "bending toward justice"?{pg}Or will some Neo-Nazis just come screw it up and rewrite our lives and language again?
 NAME wall with swastika dialog
 BG_COLOR [0,0,0]
 MAX_LINES 7
@@ -15698,6 +15803,39 @@ BG_COLOR [0,0,0]
 DLG 60
 
 NAME another cart 2 dialog
+
+DLG 61
+"""
+{borderClr 10}{bgClr 14}{center}{clr 6 true}
+^ Exit
+Checkout Desk >
+< East Wing
+{clr}
+"""
+NAME f1 guide flipped dialog
+BG_COLOR [0,0,0]
+MAX_LINES 3
+
+DLG 62
+"""
+The gay pride flag next to the bi flag.{pg}{sequence
+  - Personally, I'll stick with {wvy}"queer as in f*** you"{wvy} as my label.
+  - 
+}
+"""
+NAME flag wall sprite dialog
+BG_COLOR [0,0,0]
+MAX_LINES 3
+
+DLG 63
+"""
+The nonbinary flag and the trans flag.{pg}{sequence
+  - These I dig. Just wish they didn't need to be part of a "special" exhibit to get hung in the school library!
+  - 
+}
+"""
+NAME flag wall sprite 2 dialog
+BG_COLOR [0,0,0]
 
 DLG DATA3D
 """
@@ -16252,7 +16390,7 @@ DLG DATA3D
     },
     "SPR_lous": {
       "type": "plane",
-      "transform": "1,1,1,0,0,0,0,-0.16,0"
+      "transform": "1,1,1,0,0,0,0,-0.16,0.495"
     },
     "SPR_lout": {
       "type": "plane",
@@ -16683,6 +16821,18 @@ DLG DATA3D
     },
     "SPR_wthrhb": {
       "transform": "0.75,0.75,0.75,0,0,0,0,-0.17,0"
+    },
+    "SPR_wthrhc": {
+      "type": "plane",
+      "transform": "1,1,1,0,0,0,0,-0.16,-0.495"
+    },
+    "SPR_wthrhd": {
+      "type": "box",
+      "transparency": false
+    },
+    "SPR_wthrhe": {
+      "type": "box",
+      "transparency": false
     },
     "ITM_2": {
       "type": "billboard",
@@ -17805,7 +17955,7 @@ DLG 2p
 }{
   - seqLength >= 3 ?
     Please, oh please... I've learned my history, I get that we're doomed to keep repeating ourselves if we don't... {pg} {wvy}...sigh...{wvy} {pg} Keep the memory alive with silly events like Banned Books Week.
-    {pg} Now kindly just let me get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} I... I think it {shk}actually worked??{shk} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"}
+    {pg} Now kindly just let me get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} I... I think it {shk}actually worked??{shk} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"} {pg} Gosh, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that scavenger hunt now? {pg} Dewey decimals and stripes on flags, or something like that?
   - courtyardItemsCollected >= 4 ?
     {sequence
       - Hm, I'm pretty sure I've found everything I need to escape from here, but... The stony silence of this cruel elevator is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
@@ -17869,7 +18019,7 @@ DLG 2v
 {
   - deadPhoneSeen == true ?
     {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}
-    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time to get my nerd on and do some {wvy}library math!{wvy}
+    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time for some sleuthing: let's figure out when this library was founded!
   - else ?
     The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
 }
@@ -17895,9 +18045,9 @@ BG_COLOR [0,0,0]
 
 DLG 2y
 """
-{paper}add the number of stripes on the gay pride flag (the common one) to the number of stripes on the bi flag. then multiply all that times 100. 
+{paper}in what year was this library founded? 
 
-now just add 20 to the result, and you've got yourself a dewey decimal!
+take the last three digits, and you've got yourself a dewey decimal!
 """
 NAME chair sit genderqueer dialog
 BG_COLOR [0,0,0]
@@ -18014,11 +18164,15 @@ MAX_LINES 16
 
 DLG 3k
 """
-Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend (can i call you that?) if you're still with me, and down to solve another puzzle to prove it, let's reunite again at another banished title...{pg}{paper}to find this call number, take the year MacLeod Library was built, and divide it by 2.
+Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend (can i call you that?) if you're still with me, and down for another little trivia puzzle to prove it, let's reunite again at a different banished title...{pg}{paper}
+the first digit of this dewey decimal is the number of stripes on the bi flag.
 
-then subtract 650. 
+the second digit is the number of people I've dated. (sorry, that was an inside joke between me & my shy self. it's 0.)
+{pg}{paper}
 
-see you there?{pg}I want to solve this puzzle. I do.{pg}But sometimes I just feel so lost in my anger. Books erased. We have to find something to hold onto. But what? {pg}I'm so sad I missed the protest. I feel like a failure...{music "courtyard_music.mp3"}{pg}{exit "lot3" 8 6 "fade_w"}Wait, where... where did all those books go??{pg}Is this some kind of {shk}punishment?{shk}{pg}Why does everything just keep getting So. Much. {shk}WORSE?!{shk}
+the third and final digit is the number of stripes on the gay pride flag (the common one - there are so many variants lol).
+
+see you there?{pg}I want to solve this cute puzzle. I do.{pg}But sometimes I just feel so lost in my anger. Books erased. We have to find something to hold onto. But what? {pg}I'm so sad I missed the protest. I feel like a failure...{music "courtyard_music.mp3"}{pg}{exit "lot3" 8 6 "fade_w"}Wait, where... where did all those books go??{pg}Is this some kind of {shk}punishment?{shk}{pg}Why does everything just keep getting So. Much. {shk}WORSE?!{shk}
 """
 NAME f2 correct dialog
 BG_COLOR [0,0,0]
@@ -18070,9 +18224,10 @@ BG_COLOR [0,0,0]
 
 DLG 3r
 """
-{paper}to find this call number, take the year MacLeod Library was built, and divide it by 2.
+{paper}
+the first digit of this dewey decimal is the number of stripes on the bi flag.
 
-then subtract 650. 
+the second digit is the number of people I've dated. (sorry, that was an inside joke between me & my shy self. it's 0.){pg}{paper}the third and final digit is the number of stripes on the gay pride flag (the common one - there are so many variants lol).
 
 see you there?
 """
@@ -18432,9 +18587,13 @@ NAME water cooler dialog
 BG_COLOR [0,0,0]
 
 DLG 5a
-{center}{bgClr 16}{clr 5 true}Book Release! Signs & Symbols: How Identities Are Designed by Dr. Andrea Goodman, Birchwood College Distinguished Professor of Library Science{clr}{pg}Dr. Goodman is awesome. I should take another class with her before I graduate...
+"""
+{center}{bgClr 16}{clr 5 true}Let Your Flag Fly: The Optics of Identity -
+An exhibit curated by Dr. Andrea Goodman, Birchwood College Distinguished Professor of Library Science{clr}{pg}This "exhibit" feels hokey, but Dr. Goodman is iconic.{pg}I should take another class with her before I graduate...
+"""
 NAME sprite wthrgr dialog
 BG_COLOR [0,0,0]
+MAX_LINES 6
 
 DLG 5b
 Huh! I wonder what this book's about?{exit "lotv" 2 3 "fade_w"}
@@ -18446,7 +18605,7 @@ DLG 5c
 NAME flag book exit dialog
 
 DLG 5d
-{bgClr 14}{borderClr 10}{center}{clr 10 true}A History of MacLeod Library{clr}{pg}{clr 10 true}{bgClr 14}{borderClr 10}Founded by John James MacLeod, Birchwood College has long been an enclave of liberal thought and supported some of our nation's great thinkers and poets early in their careers. MacLeod Library and its revolutionary periodical archive was built only two years later, in 1912...{clr} 
+{bgClr 14}{borderClr 10}{center}{clr 10 true}A History of MacLeod Library{clr}{pg}{clr 10 true}{bgClr 14}{borderClr 10}Founded by John James MacLeod, Birchwood College has long been an enclave of liberal thought and supported some of our nation's great thinkers and poets early in their careers. MacLeod Library and its revolutionary periodical archive was built just three years later, in 1920...{clr} 
 NAME library history dialog
 BG_COLOR [0,0,0]
 MAX_LINES 16
