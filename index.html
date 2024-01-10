@@ -15741,8 +15741,8 @@ DLG 48
   - carson_texted == 0 ?
     I kinda want to text Carson before I do anything else...
   - else ?
-    Now it's time to text Jax and tell them to call campus security and {shk}get me out of here!{shk}                                            {pg}                                    {exit "2" 8 5 "fade_b"}        It has been a {wvy}very weird{wvy} night.                    {pg}            For the love of all that is holy, {shk}I am finally out of there.{shk} Now, time to get some sleep...            {pg}            {ambient "[0.5, 0.5, 0.5]"}    {replace "desk 1" "desk phone"}                                                 {exit "losz" 7 4 "fade_b"}            {pg}                                                    {shk}*bzzt!*{shk}
-    {sfx "phone_buzz.wav"}                                                                                                    {pg}                                                    {shk}*bzzt!*{shk}
+    Now it's time to text Jax and tell them to call public safety and {shk}get me out of here!{shk} {pg} {exit "2" 8 5 "fade_b"} It has been a {wvy}very weird{wvy} night. {pg} For the love of all that is holy, {shk}I am finally out of there.{shk} Now, time to get some sleep... {pg} {ambient "[0.5, 0.5, 0.5]"} {replace "desk 1" "desk phone"} {exit "losz" 7 4 "fade_b"} {pg} {shk}*bzzt!*{shk}
+    {sfx "phone_buzz.wav"} {pg} {shk}*bzzt!*{shk}
     {sfx "phone_buzz.wav"}
 }
 """
@@ -17778,7 +17778,10 @@ Beginning in Fall 2023, this wing will be integrated with the existing library a
 
 Due to the College's limited land holdings, architecture will be reimagined as needed to accommodate the College's bright future at the cutting edge of industry and commerce.{clr}{project_seen = 1}{pg}{
   - {item "key"} == 1 ?
-     
+    {sequence
+      - East Wing, the end of your story hasn't been written yet... I won't give up.
+      - 
+    }
   - carson_cart_seen == 1 ?
     No. Don't tell me the last book is locked {shk}in the library wing{shk} {shk}they're demolishing to expand the business school?{shk} {pg} {music "lost_woods_music.mp3"} Every time something nice happens, I remember I have to fight. {pg} {bgClr 9} It makes me feel so alone... {exit "lost-0" 8 13 "fade_w"}
   - else ?
@@ -18001,7 +18004,13 @@ DLG 2q
   - libraryClosed == true ?
     {
       - deadPhoneSeen == false ?
-        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk}                        {pg}        Well, I'll just text Jax and have them call public safety...        {property locked false}
+        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk} {pg} Well, I'll just text Jax and have them call public safety... {property locked false}
+      - eastwing_done == 1 ?
+         Still locked, but freedom is just a text message away!
+      - {item "key"} == 1 ?
+         Hm, it seems like this keycard won't work on the outer doors...
+      - else ?
+         Still... very locked :(
     }
 }
 """
