@@ -15613,7 +15613,7 @@ BG_COLOR [0,0,0]
 
 DLG 27
 """
-Where to?
+{showLockedMsg = true}Where to?
 Floor # (1-4):{input "nextFloor"}{pg}{
   - nextFloor == currentFloor ?
     Pretty sure I'm already on that floor?
@@ -15731,8 +15731,9 @@ NAME sprite pbrova dialog
 BG_COLOR [0,0,0]
 
 DLG 40
-ruby, where are you?!
+{clr 7 true}ruby, where are you?!
 NAME sprite wthrfl dialog
+BG_COLOR [216,216,216]
 
 DLG 41
 Damn, Jax has been texting me all evening...{exit "lotm" 6 2 "fade_w"}
@@ -15764,13 +15765,14 @@ NAME locked exit 5
 BG_COLOR [0,0,0]
 
 DLG 44
-poem done yet?
+{clr 7 true}poem done yet?
 NAME sprite wthrfm dialog
+BG_COLOR [216,216,216]
 
 DLG 45
-it's almost over. we might have even made a difference?{pg}it was a start, at least. {pg}but it wasn't the same without you. hope everything is ok...
+{clr 7 true}it's almost over. we might have even made a difference?{clr}{pg}{clr 7 true}it was a start, at least.{clr}{pg}{clr 7 true}but it wasn't the same without you. hope everything is ok...{clr}
 NAME jax endgame 3 dialog
-BG_COLOR [0,0,0]
+BG_COLOR [216,216,216]
 
 DLG 46
 
@@ -17653,7 +17655,7 @@ BG_COLOR [140,140,140]
 
 DLG 1a
 """
-{clr 7 true}i'll try to make it!{clr}
+{clr 7 true}i'm sorry, jax... i'll try to make it!{clr}
 {cell = cell + 1}
 """
 NAME cell ruby 2 dialog
@@ -17684,7 +17686,7 @@ DLG 1g
 """
 {
   - carson_texted == 0 ?
-    Finally, {wvy}here's{wvy} my phone! {pg} ...underneath the dirty laundry. {clr 11}{wvy}Classic Ruby.{wvy}{clr}
+    Finally, {wvy}here's{wvy} my phone! {pg} ...underneath my dirty laundry. {clr 11}{wvy}Classic me.{wvy}{clr}
   - else ?
     {property locked true}
 }
@@ -17903,7 +17905,7 @@ DLG 2c
 {
   - entered_eastwing == 0 ?
     This is my favorite part of the library. Zines, manga, graphic novels. It's a queer paradise! {entered_eastwing = 1}
-}{sfx "door_open.wav"}{
+}{sfx "door_open.wav"}{showLockedMsg = true}{
   - libraryClosed == false ?
     {music "east_wing_music.mp3"} {pg}
 }
@@ -18093,13 +18095,21 @@ DLG 2q
   - libraryClosed == true ?
     {
       - deadPhoneSeen == false ?
-        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk} {pg} Well, I'll just text Jax and have them call public safety... {property locked false}
+        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk} {pg} Well, I'll just text Jax and have them call public safety... 
+        {showLockedMsg = false} {property locked false}
       - eastwing_done == 1 ?
-         Still locked, but freedom is just a text message away!
+        {sequence
+          - Still locked, but freedom is just a text message away!
+          - 
+        }
       - {item "key"} == 1 ?
-         Hm, it seems like this keycard won't work on the outer doors...
-      - else ?
+        {sequence
+          - Hm, it seems like this keycard won't work on the outer doors...
+          - 
+        }
+      - showLockedMsg == true ?
          Still... very locked :(
+        {showLockedMsg = false}
     }
 }
 """
@@ -18172,7 +18182,7 @@ DLG 2y
 """
 {paper}in what year was this library built? 
 
-take the last three digits, and you've got yourself a dewey decimal!{pg}Ok, I think I've seen an informational plaque on one of the upper floors, maybe...
+take the last three digits, and you've got yourself a dewey decimal!{pg}Ok, I think I've seen an historical marker on one of the upper floors, maybe...
 """
 NAME chair sit genderqueer dialog
 BG_COLOR [0,0,0]
