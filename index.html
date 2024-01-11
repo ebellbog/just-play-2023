@@ -1193,7 +1193,7 @@ lou01,lost-u,lou14,lou14,lou14,lou14,lou36,lou1g,losv,lou1g,lou36,lou01,0,0,0,0
 lou01,lost-u,lost-u,lou14,lou14,lou14,lou36,lou1g,lou36,lou1g,losv,lou01,0,0,0,0
 lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1j,lou1g,lou1g,lou01,0,0,0,0
 lou3v,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
-lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1j,lou01,0,0,0,0
+lou18,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,lou01,0,0,0,0
 lou01,lost-u,lost-u,lou14,lost-u,lost-u,lou1g,lou1g,lou1g,lou1g,lou1g,o,0,0,0,0
 lou01,lost-u,lost-u,lou14,lou14,lou14,lou36,lou1g,losv,lou1g,lou36,lou01,0,0,0,0
 lou01,0,o,lou01,lou01,lou01,lou01,o,lou01,o,lou01,lou01,0,0,0,0
@@ -1210,7 +1210,6 @@ ITM lotm2 5,9
 ITM lotm2 4,8
 ITM wesbencp 4,9
 ITM wesbenco 3,13
-ITM wesbencr 10,12
 ITM lotm4 8,10
 EXT 0,11 losu 14,11 FX fade_b DLG 5q
 PAL 0
@@ -13732,6 +13731,28 @@ DLG 64
 POS losv 9,14
 COL 2
 
+SPR wthrhg
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,31,31,31,31,31,31,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+0,0,0,31,31,0,0,0,0,0,0,31,31,0,0,0
+NAME East Wing interior ladder
+DLG 67
+POS lot4 10,12
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -15900,6 +15921,18 @@ Maia Kobabe telling it like it is. I am {rbw}SO HERE{rbw} for it!
 NAME hyperfocus thought 2 dialog
 BG_COLOR [0,0,0]
 
+DLG 67
+"""
+{
+  - eastwingbook_read == 1 ?
+    There's gotta be an easier way out of here, without climbing all the way back up to the 4th floor...
+  - else ?
+    No turning back now - time to find that note!
+}
+"""
+NAME East Wing interior ladder dialog
+BG_COLOR [0,0,0]
+
 DLG DATA3D
 """
 {
@@ -16902,6 +16935,10 @@ DLG DATA3D
     },
     "SPR_wthrhf": {
       "transform": "0.75,0.75,0.75,0,0,0,0,-0.17,0"
+    },
+    "SPR_wthrhg": {
+      "type": "plane",
+      "transform": "1,2,1,0,90,0,0,0.1,0"
     },
     "ITM_2": {
       "type": "billboard",
@@ -18356,7 +18393,10 @@ NAME 4th floor ladder dialog
 BG_COLOR [0,0,0]
 
 DLG 3v
-I can't believe I'm actually doing this...{exit "lot4" 9 12 "fade_b"}
+"""
+I can't believe I'm really doing this...
+{pg}{exit "lot4" 9 12 "fade_b"}Holy heck, I actually made it!
+"""
 NAME east wing entry ladder dialog
 BG_COLOR [0,0,0]
 
