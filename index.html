@@ -14,7 +14,7 @@
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}
 """
 BG_COLOR [0,0,0]
 
@@ -140,6 +140,7 @@ NAME cell phone
 250,147,4
 40,231,197
 168,168,168
+110,110,110
 
 PAL 3
 NAME book interior
@@ -856,7 +857,7 @@ lost-a,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
 0,losv,losv,losv,lot1,losv,lot1,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,0
 o,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lotm,lot1,lot1,lot1,lou1x,lou1x,lou1x,lost-a
 0,0,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou18
-0,losv,lot1,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,0
+0,losv,lot1,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a
 lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lou1x,lou1x,lost-a
 0,losv,losv,losv,lot1,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,losv,0
 0,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,losv,losv,lot1,losv,0
@@ -917,8 +918,8 @@ ITM wesbencp 13,14
 ITM pinktritfa 14,11
 ITM wesbencl 8,7
 ITM pinktritfq 1,6
-EXT 6,2 losx 3,2 FX fade_b
-EXT 4,2 losx 7,2 FX fade_b
+EXT 6,2 losx 3,2 FX fade_b DLG 29
+EXT 4,2 losx 7,2 FX fade_b DLG 29
 EXT 7,2 losx 5,0 DLG 3t
 EXT 7,2 losx 0,15
 EXT 7,2 losx 0,15
@@ -1477,13 +1478,13 @@ lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,l
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,b,b,b,b,b,b,b,b,lost-a,lost-a,lou1d,lost-a
 lost-a,lou1d,lou4h,lost-a,b,b,lou4d,lou4d,lou4d,lou4d,b,b,lost-a,lou4i,lou1d,lost-a
-o,lou1d,lost-a,lost-a,b,lou4d,b,b,b,lou4d,lou4d,b,lost-a,lost-a,lou1d,o
-lost-a,lou1d,lou1d,lou3j,b,lou4d,b,lou4d,lou4d,b,b,b,lou1d,lou1d,lou1d,lost-a
-lost-a,lou1d,lou1d,lou3j,b,lou4d,b,lou4d,lou4d,b,lou4d,b,lou1d,lou1d,lou1d,lost-a
-o,lou1d,lost-a,lost-a,b,lou4d,b,b,b,b,lou4d,b,lost-a,lost-a,lou1d,o
+o,lou1d,lost-a,lost-a,b,lou4d,lou57,lou55,lou5a,lou4d,lou4d,b,lost-a,lost-a,lou1d,o
+lost-a,lou1d,lou1d,lou3j,b,lou4d,lou56,lou4d,lou4d,lou57,lou55,lou55,lou1d,lou1d,lou1d,lost-a
+lost-a,lou1d,lou1d,lou3j,b,lou4d,lou56,lou4d,lou4d,lou56,lou4d,b,lou1d,lou1d,lou1d,lost-a
+o,lou1d,lost-a,lost-a,b,lou4d,lou58,lou55,lou55,lou59,lou4d,b,lost-a,lost-a,lou1d,o
 lost-a,lou1d,lou4h,lost-a,b,b,lou4d,lou4d,lou4d,lou4d,b,b,lost-a,lou4i,lou1d,lost-a
 lost-a,lou1d,lost-a,lost-a,b,b,b,b,b,b,b,b,lost-a,lost-a,lou1d,lost-a
-o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
+o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,0,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4j,lost-a,lou1d,lou1d,lost-a,lou4j,lost-a,lost-a,lost-a,lou1d,lost-a
 lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lost-a
 0,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,lost-a,0
@@ -1620,7 +1621,7 @@ ROOM lotm
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (charged jax)
-EXT 4,2 lotl 6,2
+EXT 4,2 lotl 6,2 DLG 68
 PAL 2
 RENDER 2D
 
@@ -2769,12 +2770,12 @@ NAME text tail gray
 COL 1
 
 TIL loti
-16,16,16,16,16,22,16,16,16,16,22,16,16,16,16,16
-16,16,16,16,16,22,16,16,16,16,22,16,16,16,16,16
-16,16,16,16,16,16,22,16,16,16,22,16,16,16,16,16
-16,16,16,16,16,16,22,16,16,16,16,22,16,16,16,16
-16,16,16,16,16,16,16,22,22,16,16,16,22,16,16,16
-16,16,16,16,16,16,16,16,16,22,22,22,22,22,16,16
+16,16,16,22,16,16,16,16,22,16,16,16,16,16,16,16
+16,16,16,22,16,16,16,16,22,16,16,16,16,16,16,16
+16,16,16,16,22,16,16,16,22,16,16,16,16,16,16,16
+16,16,16,16,22,16,16,16,16,22,16,16,16,16,16,16
+16,16,16,16,16,22,22,16,16,16,22,16,16,16,16,16
+16,16,16,16,16,16,16,22,22,22,22,22,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
@@ -4935,12 +4936,12 @@ TIL lou3p
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,16,16,16,16,16,16,7,16,16,16,16,16,16,16
-16,16,7,7,16,16,16,7,7,7,16,16,16,16,16,16
-16,16,7,7,7,16,7,7,7,7,7,7,7,7,7,16
-7,16,7,16,7,7,7,7,7,7,7,7,7,7,7,7
-16,7,7,16,16,16,16,16,16,16,16,16,16,7,7,16
-16,7,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,30,16,16,16,16,16,16,16
+16,16,30,30,16,16,16,30,30,30,16,30,16,16,16,16
+16,16,30,30,30,16,30,30,30,30,30,30,30,30,30,16
+30,16,30,16,30,30,30,16,30,16,30,30,16,30,30,30
+16,30,30,16,16,16,16,16,16,16,16,16,16,30,16,16
+16,30,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
@@ -5026,22 +5027,22 @@ NAME green text outline middle
 COL 1
 
 TIL lou3t
-16,16,22,22,16,16,22,22,16,16,22,22,16,16,22,22
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
-16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,22
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,22,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
-16,16,22,22,16,16,22,22,16,16,22,22,16,16,22,22
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
 COL 1
 
 TIL lou3u
@@ -6144,6 +6145,126 @@ TIL lou53
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 NAME flag wall
 WAL true
+COL 1
+
+TIL lou55
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+NAME small checkered 2
+COL 1
+
+TIL lou56
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+NAME checkered vertical border
+COL 1
+
+TIL lou57
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+NAME checkered top left
+COL 1
+
+TIL lou58
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,16
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,16,16,16,5,5,5,5,16,16,16,16,5,5,5,5
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+NAME checkered bottom left
+COL 1
+
+TIL lou59
+13,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+NAME checkered bottom right
+COL 1
+
+TIL lou5a
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+5,5,5,5,16,16,16,16,5,5,5,5,16,16,16,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+16,16,16,16,5,5,5,5,16,16,16,16,5,5,5,13
+13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
+NAME checkered end
 COL 1
 
 SPR wthrex
@@ -15736,7 +15857,7 @@ NAME sprite wthrfl dialog
 BG_COLOR [216,216,216]
 
 DLG 41
-Damn, Jax has been texting me all evening...{exit "lotm" 6 2 "fade_w"}
+Damn, Jax has been texting me all evening...{exit "lotm" 6 2}
 NAME sprite wthrfk dialog
 BG_COLOR [0,0,0]
 
@@ -15793,7 +15914,7 @@ DLG 48
   - carson_texted == 0 ?
     I kinda want to text Carson before I do anything else...
   - else ?
-    Now it's time to text Jax and tell them to call public safety and {shk}get me out of here!{shk} {pg} {exit "2" 8 5 "fade_b"} It has been a {wvy}very weird{wvy} night. {pg} For the love of all that is holy, {shk}I am finally out of there.{shk} Now, time to get some sleep... {pg} {ambient "[0.5, 0.5, 0.5]"} {replace "desk 1" "desk phone"} {exit "losz" 7 4 "fade_b"} {pg} {shk}*bzzt!*{shk}
+    Now it's time to call public safety and {shk}GTFO!{shk} {pg} {exit "2" 8 5 "fade_b"} It has been a {wvy}very weird{wvy} night. {pg} For the love of all that is holy, {shk}I am finally out of there.{shk} Now, time to get some sleep... {pg} {ambient "[0.5, 0.5, 0.5]"} {replace "desk 1" "desk phone"} {exit "losz" 7 4 "fade_b"} {pg} {shk}*bzzt!*{shk}
     {sfx "phone_buzz.wav"} {pg} {shk}*bzzt!*{shk}
     {sfx "phone_buzz.wav"}
 }
@@ -15902,7 +16023,7 @@ MAX_LINES 3
 DLG 63
 """
 The nonbinary flag and the trans flag.{pg}{sequence
-  - These I dig. Just wish they didn't need to be part of a "special" exhibit to get hung in the school library!
+  - These I dig. Just wish they didn't need to be part of a "special exhibit" to get hung in the school library!
   - 
 }
 """
@@ -15934,6 +16055,10 @@ DLG 67
 """
 NAME East Wing interior ladder dialog
 BG_COLOR [0,0,0]
+
+DLG 68
+Poor Jax... I hate making them worry :( {pg} I'll have to let them know I'm ok as soon as I get out of here!
+NAME exit narration 8
 
 DLG DATA3D
 """
@@ -18095,7 +18220,7 @@ DLG 2q
   - libraryClosed == true ?
     {
       - deadPhoneSeen == false ?
-        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk} {pg} Well, I'll just text Jax and have them call public safety... 
+        Seriously, is there no way they could figure out how to avoid {wvy}locking distractable students{wvy} into the library for the {shk}whole dang night??{shk} {pg} Well, I'll text Jax to let them know what happened, then give public safety a call... 
         {showLockedMsg = false} {property locked false}
       - eastwing_done == 1 ?
         {sequence
@@ -18153,8 +18278,7 @@ DLG 2v
 """
 {
   - deadPhoneSeen == true ?
-    {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy}
-    {replace "closed elevator" "elevator - fl 1"} {pg} I guess this is as good a time as any to investigate mysterious notes in banned books? {pg} Time for some sleuthing: let's figure out when this library was built!
+    {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {pg} Option 1: Write my damn poem. But we all know my brain is... {wvy}unlikely...{wvy} to do that right now. {pg} Option 2: Keep chasing down strange notes in banned books?? {pg} ... {pg} Yep, that's settled: time for some sleuthing! {pg} Now let's figure out when this library was built... {pg} Pretty sure I've seen a historical marker on one of the upper floors? {replace "closed elevator" "elevator - fl 1"} {phoneCharging = true}
   - else ?
     The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
 }
@@ -18182,7 +18306,16 @@ DLG 2y
 """
 {paper}in what year was this library built? 
 
-take the last three digits, and you've got yourself a dewey decimal!{pg}Ok, I think I've seen a historical marker on one of the upper floors, maybe...
+take the last three digits, and you've got yourself a dewey decimal!{pg}{
+  - phoneCharging == true ?
+    {
+      - historicalMarkerSeen == false ?
+        {
+          - courtyardItemsCollected == 0 ?
+            Right then, I guess I'll go look for that historical marker upstairs?
+        }
+    }
+}
 """
 NAME chair sit genderqueer dialog
 BG_COLOR [0,0,0]
@@ -18464,13 +18597,13 @@ DLG 4c
 Which text should I send? (1-3):{input "textCarson"}{pg}{
   - textCarson == 1 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 1} {exit "lotr" 6 2 "fade_w"}
+    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 1} {exit "lotr" 6 2}
   - textCarson == 2 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 2} {exit "lotr" 6 2 "fade_w"} 
+    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 2} {exit "lotr" 6 2}
   - textCarson == 3 ?
     Ok, here we go! I wonder if they'll reply...
-    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 3} {exit "lotr" 6 2 "fade_w"} 
+    {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 3} {exit "lotr" 6 2}
   - else ?
     How do I want to play this?
 }
@@ -18555,7 +18688,7 @@ DLG 4k
 
 -Carson
 {replace "east wing book" "east wing book replacement"}{pg}{bgClr 0}{clr 41 true}I want to open myself up{music "end_music.mp3"}{clr}{pg}{exit "lot4" 7 14 "fade_w"}{ambient "[0.6, 0.6, 0.9]"}
-...and I want to meet this library queer. I wish I could thank them somehow.
+...and I want to meet this library queer - Carson. I wish I could thank them somehow.
 """
 NAME final note dialog
 BG_COLOR [0,0,0]
@@ -18745,7 +18878,7 @@ DLG 5c
 NAME flag book exit dialog
 
 DLG 5d
-{bgClr 14}{borderClr 10}{center}{clr 10 true}A History of MacLeod Library{clr}{pg}{clr 10 true}{bgClr 14}{borderClr 10}Founded by John James MacLeod, Birchwood College has long been an enclave of liberal thought and supported some of our nation's great thinkers and poets early in their careers. MacLeod Library and its revolutionary periodical archive was built just three years later, in 1920...{clr} 
+{bgClr 14}{borderClr 10}{center}{clr 10 true}A History of MacLeod Library{clr}{pg}{clr 10 true}{bgClr 14}{borderClr 10}Founded by John James MacLeod, Birchwood College has long been an enclave of liberal thought and supported some of our nation's great thinkers and poets early in their careers. MacLeod Library, with its revolutionary periodical archive, was built in 1920, just three years later...{clr} {historicalMarkerSeen = true}
 NAME library history dialog
 BG_COLOR [0,0,0]
 MAX_LINES 16
