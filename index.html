@@ -5,6 +5,7 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Banned Together</title>
 
@@ -24853,11 +24854,14 @@ var InputManager = function() {
 
 			touchState.swipeDirection = Direction.None;
 		}
-        
+
 		const mobileHelper = document.getElementById('mobileHelper');
 		if (mobileHelper && tapsBeforeHide > 0) {
 			tapsBeforeHide--;
-			if (tapsBeforeHide == 0) mobileHelper.style.opacity = 0;
+			if (tapsBeforeHide == 0) {
+				mobileHelper.style.opacity = 0;
+				setTimeout(() => mobileHelper.remove(), 2000);
+			}
 		}
 	}
 
@@ -29578,7 +29582,10 @@ b3d.init = function () {
                 <li>Swipe up, down, left, or right to move</li>
                 <li>Tap to advance dialog</li>
                 </ul>`;
-            helperDiv.onclick = () => helperDiv.style.opacity = 0;
+            helperDiv.onclick = () => {
+                helperDiv.style.opacity = 0;
+                setTimeout(() => helperDiv.remove(), 2000);
+            };
 
             const body = document.querySelector('body');
             body.appendChild(helperDiv);
