@@ -15735,7 +15735,7 @@ BG_COLOR [0,0,0]
 DLG 27
 """
 {showLockedMsg = true}Where to?
-Floor # (1-4):{input "nextFloor"}{pg}{
+Floor # (1-4):{input "nextFloor" 1 4}{pg}{
   - nextFloor == currentFloor ?
     Pretty sure I'm already on that floor?
   - nextFloor == 1 ?
@@ -18594,7 +18594,7 @@ BG_COLOR [0,0,0]
 
 DLG 4c
 """
-Which text should I send? (1-3):{input "textCarson"}{pg}{
+Which text should I send? (1-3):{input "textCarson" 1 3}{pg}{
   - textCarson == 1 ?
     Ok, here we go! I wonder if they'll reply...
     {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 1} {exit "lotr" 6 2}
@@ -19088,7 +19088,7 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow:hidden;
-	background:#737373;
+	background:#000000;
 }
 
 #game {
@@ -19100,7 +19100,7 @@ body {
 }
 
 #sceneCanvas {
-	background:#737373;
+	background:#000000;
 }
 
 #transitionMatte {
@@ -20743,10 +20743,36 @@ function userInputFunc(environment, parameters, onReturn) {
 		return onReturn(null);
 	}
 
-	document.addEventListener("keydown", function(e) {
-		environment.SetVariable(variableName, parseInt(e.key));
-		console.debug(`Set ${variableName} to ${e.key}`);
-	}, {once: true});
+	if (isMobileDevice()) {
+		const keyboardOverlay = document.createElement('div');
+		keyboardOverlay.id = 'keyboardOverlay';
+
+		const minInput = parameters[1] || 1;
+		const maxInput = parameters[2] || 9;
+
+		for (let i = minInput; i < maxInput + 1; i++) {
+			const numberOption = document.createElement('div');
+			numberOption.innerHTML = i ;
+			numberOption.classList.add('numKey');
+			numberOption.setAttribute('data-num-key', i);
+			numberOption.onclick = function() {
+				const val = this.getAttribute('data-num-key');
+				environment.SetVariable(variableName, parseInt(val));
+				console.debug(`Set ${variableName} to ${val}`);
+
+				keyboardOverlay.remove();
+				dialogBuffer.Continue();
+			}
+			keyboardOverlay.appendChild(numberOption);
+		}
+
+		document.querySelector('body').appendChild(keyboardOverlay);
+	} else {
+		document.addEventListener("keydown", function(e) {
+			environment.SetVariable(variableName, parseInt(e.key));
+			console.debug(`Set ${variableName} to ${e.key}`);
+		}, {once: true});
+	}
 
 	onReturn(null);
 }
@@ -24346,7 +24372,7 @@ function onready(startWithTitle) {
 
 	  	  // afaik css in js is necessary here to force a fullscreen element
 	  	  touchTrigger.setAttribute(
-	  	    "style","position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden;"
+	  	    "style","position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: 1;"
 	  	  );
 	  	  document.body.appendChild(touchTrigger);
 
@@ -24815,6 +24841,7 @@ var InputManager = function() {
 		ignored[event.keyCode] = false;
 	}
 
+	let tapsBeforeHide = 3;
 	this.ontouchstart = function(event) {
 		event.preventDefault();
 
@@ -24825,6 +24852,12 @@ var InputManager = function() {
 			touchState.startY = touchState.curY = event.changedTouches[0].clientY;
 
 			touchState.swipeDirection = Direction.None;
+		}
+        
+		const mobileHelper = document.getElementById('mobileHelper');
+		if (mobileHelper && tapsBeforeHide > 0) {
+			tapsBeforeHide--;
+			if (tapsBeforeHide == 0) mobileHelper.style.opacity = 0;
 		}
 	}
 
@@ -26561,6 +26594,15 @@ var scriptInterpreter = scriptModule.CreateInterpreter();
 var scriptUtils = scriptModule.CreateUtils(); // TODO: move to editor.js?
 // scriptInterpreter.SetDialogBuffer( dialogBuffer );
 
+function isMobileDevice() {
+    return (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+    ) ? true : false
+}
 </script>
 
 <!-- store default font in separate script tag for back compat-->
@@ -29442,7 +29484,71 @@ b3d.init = function () {
             background: none;
             pointer-events: none;
             transition: backdrop-filter .5s;
-        }`;
+        }
+        #keyboardOverlay {
+            z-index: 2;
+            position: absolute;
+            font-size: 5em;
+            font-family: 'Pixelify Sans', monospace;
+            display: flex;
+            justify-content: center;
+        }
+        #keyboardOverlay .numKey {
+            border-radius: 50%;
+            border: .1em solid black;
+            background-color: white;
+            color: black;
+            text-align: center;
+            line-height: 1.3em;
+            width: 1.3em;
+            margin: 0 .25em;
+        }
+        #keyboardOverlay .numKey:hover {
+            background-color: yellow;
+        }
+        #mobileHelper {
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            white-space: nowrap;
+            color: white;
+            background-color: rgba(100, 100, 100, .7);
+            font-family: 'Pixelify Sans', monospace;
+            padding: 0 1em;
+            border-radius: 1em;
+            transition: opacity 2s;
+            letter-spacing: .05em;
+        }
+        @media (orientation: portrait) {
+            #keyboardOverlay {
+                bottom: 9%;
+                width: 100%;
+            }
+            #mobileHelper {
+                bottom: 7%;
+                font-size: 2.1em;
+                line-height: 1.2em;
+            }
+        }
+        @media (orientation: landscape) {
+            #keyboardOverlay {
+                flex-wrap: wrap;
+                width: 24%;
+                font-size: 2.5em;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #keyboardOverlay .numKey {
+                margin: .3em .25em;
+            }
+            #mobileHelper {
+                font-size: 1.1em;
+                bottom: 5%;
+            }
+        }
+        `;
         var sheet = document.createElement('style');
         sheet.textContent = style;
         document.head.appendChild(sheet);
@@ -29463,6 +29569,20 @@ b3d.init = function () {
         b3d.transitionMatte = document.createElement('div');
         b3d.transitionMatte.id = 'transitionMatte';
         gameContainer.appendChild(b3d.transitionMatte);
+
+        if (bitsy.isMobileDevice()) {
+            const helperDiv = document.createElement('div');
+            helperDiv.id = 'mobileHelper';
+            helperDiv.innerHTML = `
+                <ul>
+                <li>Swipe up, down, left, or right to move</li>
+                <li>Tap to advance dialog</li>
+                </ul>`;
+            helperDiv.onclick = () => helperDiv.style.opacity = 0;
+
+            const body = document.querySelector('body');
+            body.appendChild(helperDiv);
+        }
     }
 
     b3d.engine = new BABYLON.Engine(b3d.sceneCanvas, false);
@@ -30763,6 +30883,11 @@ b3d.cameraStateSnapshot = {
 };
 
 </script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 
 </head>
 
