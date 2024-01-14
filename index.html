@@ -18917,7 +18917,8 @@ DLG 5h
 }{pg}I think I know the poem I want to write now...{music "credits_music.mp3"}{pg}{end}{borderClr 16}{center}A game by {clr 25}Elana Bell Bogdan{clr} and {clr 26}Nat Mesnard{clr} {pg}{center}with special thanks to our supportive partners {clr 21}Rye{clr} & {clr 22}Oat{clr}{pg}{center}additional invaluable playtesting by{br}
 {clr 26}Emily D,{clr}{br}
 {clr 27}Anna W,{clr}{br}
-& {clr 13}Annie T{clr}{pg}{center}music by
+{clr 13}Annie T,{clr}{br}
+& {clr 21}Sungwon M{clr}{pg}{center}music by
 {clr 1}Kevin MacLeod{clr} (who else!){br}
 {clr 27}Oleksii Kaplunskyi{clr}{br}
 & {clr 19}Denys Kyshchuk {clr}{pg}{center}Thank {rbw}YOU{rbw}for playing and helping {rbw}keep our stories alive!{rbw}{pg}{clr 29}built with a variant of Bitsy 3D {br}
@@ -20574,6 +20575,10 @@ function endFunc(environment,parameters,onReturn) {
 	isEnding = true;
 	isNarrating = true;
 	dialogRenderer.SetCentered(true);
+
+	b3d.transitionMatte.style.backgroundColor = 'black';
+	b3d.transitionMatte.style.opacity = 1;
+
 	onReturn(null);
 }
 
@@ -20680,6 +20685,9 @@ function musicFunc(environment, parameters, onReturn) {
 
 	const playMusic = () => {
 		player2.pause();
+		if (isMobileDevice()) {
+			player1.pause(); // TODO: better fix for mobile audio issues
+		}
 
 		if (player1.paused || !player1.currentTime) {
 			player1.src = src;
@@ -24141,6 +24149,14 @@ var playerId = "A";
 var titleDialogId = "title";
 function getTitle() {
 	return dialog[titleDialogId].src;
+}
+function getTrimmedTitle() {
+	return (getTitle() || "")
+		.split("{pg}")[0]
+		.replace(/{.*?}|"""/gs, "") // remove code tags and extra quotes
+		.split("\n")
+		.filter((line) => line.length)
+		.join(' ');
 }
 function getTitleSettings() {
 	const titleDlg = dialog[titleDialogId];
@@ -29502,9 +29518,8 @@ b3d.init = function () {
             background-color: white;
             color: black;
             text-align: center;
-            line-height: 1.3em;
-            width: 1.3em;
-            margin: 0 .25em;
+            line-height: 40px;
+            width: 40px;
         }
         #keyboardOverlay .numKey:hover {
             background-color: yellow;
@@ -29530,6 +29545,9 @@ b3d.init = function () {
                 width: 100%;
                 font-size: 26px;
             }
+            #keyboardOverlay .numKey {
+                margin: 0 8px;
+            }
             #mobileHelper {
                 bottom: 7%;
                 font-size: 13px;
@@ -29539,13 +29557,14 @@ b3d.init = function () {
         @media (orientation: landscape) {
             #keyboardOverlay {
                 flex-wrap: wrap;
-                width: 24%;
+                width: 150px;
                 font-size: 30px;
                 top: 50%;
+                left: 3%;
                 transform: translateY(-50%);
             }
             #keyboardOverlay .numKey {
-                margin: .3em .25em;
+                margin: 10px;
             }
             #mobileHelper {
                 font-size: 12px;
