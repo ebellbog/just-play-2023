@@ -23275,9 +23275,14 @@ var DialogBuffer = function() {
 		}
 		else {
 			console.debug("END DIALOG!");
+
+			if (isStarting) {
+				isStarting = false;
+				b3d.transitionMatte.style.opacity = 0;
+			}
+
 			dialogRenderer.SetDialogStyle();
-			//end dialog mode
-			this.EndDialog();
+			this.EndDialog(); //end dialog mode
 			return false; /* hasMoreDialog */
 		}
 	};
@@ -24404,6 +24409,16 @@ function onready(startWithTitle) {
 	update_interval = setInterval(update,16);
 
 	if(startWithTitle && !doSkipTitle) { // used by editor
+		isStarting = true;
+
+		setTimeout(() => {
+			const transitionMatte = document.getElementById('transitionMatte');
+			if (transitionMatte) {
+				transitionMatte.style.backgroundColor = 'black';
+				transitionMatte.style.opacity = 1;
+			}
+		}, 0);
+
 		startNarrating(getTitle(), null, getTitleSettings());
 	}
 }
@@ -29484,9 +29499,11 @@ b3d.init = function () {
         canvas:focus {
             outline: none;
         }
+        #game {
+            display: inline-grid; /*to prevent it from growing a few pixels taller than sceneCanvas*/
+        }
         #game, #gameContainer {
             position: absolute;
-            display: inline-grid; /*to prevent it from growing a few pixels taller than sceneCanvas*/
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -29498,6 +29515,7 @@ b3d.init = function () {
             max-height: 100vh;
         }
         #textCanvas {
+            z-index: 2;
             position: absolute;
             object-fit: contain;
             top: 0;
