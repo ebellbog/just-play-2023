@@ -15637,6 +15637,8 @@ BG_COLOR [216,216,216]
 DLG 20
 """
 {
+  - f2book_seen == 1 ?
+    Gosh, I'm really hoping this book is on a return cart... Best bet is somewhere on this floor, soon to be reshelved?
   - f3_done == 1 ?
     That's weird. The book should be here, but it's missing. {pg} Was it {shk}banned{shk} from MacLeod Library? {pg} ... {pg} Okay, maybe I'm being a little dramatic. {pg} Someone could have checked it out, I guess. My only hope is that the book is on a return cart somewhere waiting to be reshelved... {replace "f1 cart 3" "cart 3 carson"} {f2book_seen = 1}
   - else ?
