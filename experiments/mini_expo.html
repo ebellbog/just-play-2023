@@ -15,7 +15,7 @@
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -75,6 +75,11 @@ NAME interior
 145,255,12
 12,203,2
 214,2,112
+222,216,218
+234,221,182
+201,183,150
+229,201,255
+196,185,194
 
 PAL 1
 NAME exterior
@@ -879,46 +884,49 @@ FOG_START 0
 FOG_END 9
 
 ROOM losx
-0,lost-a,o,lost-a,0,0,0,lost-a,0,lost-a,lost-a,lost-a,o,lou12,lost-a,0
-lost-a,lotr,lot2,lou1c,lost-a,lou1b,lost-a,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,losv,lost-a
-lost-a,lotr,lot2,lot2,lou3w,lou1b,lou1a,lot2,lot2,lot2,lost-a,lou1c,lot2,lot2,losv,o
-lou12,lot2,lot2,lot2,lost-a,lou1b,lost-a,lou1c,lot2,lou1c,lost-a,lou1c,lot2,lot2,losv,lost-a
-lost-a,losv,lot2,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,lot2,lost-a,0
-0,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
-lost-a,lou1c,lot2,lost-a,lost-a,lost-a,lost-a,lou15,lost-a,lost-a,lou45,lost-a,lost-a,lost-a,lot2,lost-a
-lost-a,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lou1c,lotm,lotm,lotm,lot2,lot2,lot2,lost-a
-o,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
-lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lou1c,lot2,lou1c,lost-a
-0,lost-a,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lou15,lost-a,0
-lost-a,lot2,lot2,lot2,lot2,lou45,lot2,lot2,lot2,lou1c,lost-a,lou1c,lot2,lot2,lou1c,lost-a
-o,lot2,lot2,lost-a,lot2,lou45,lou1c,lot2,lot2,losv,lost-a,lot2,lot2,lot2,0,lost-a
-lost-a,lot2,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lot2,lost-a,lost-a,lot2,lot2,lot2,lou1c,lou18
-o,lotr,lotr,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lost-a
-0,lots,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
+0,lost-a,o,lost-a,0,0,0,lost-a,0,lost-a,lost-a,0,0,0,0,0
+lost-a,losv,lotr,lou1c,lost-a,lou1b,lost-a,lot2,lot2,lou1c,lost-a,0,0,0,0,0
+lost-a,losv,lot2,lot2,lou3w,lou1b,lou1a,lot2,lot2,lot2,lost-a,0,0,lou1c,0,0
+lou12,lot2,lot2,lot2,lost-a,lou1b,lost-a,lou1c,lot2,lou1c,lost-a,0,0,0,0,0
+o,lot2,lot2,lot2,lou1c,lost-a,lost-a,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,0,0,0
+lou18,lot2,lot2,lot2,lot2,lou18,0,0,0,lost-a,lot2,lot2,lot2,lou18,lost-a,o
+lost-a,lou45,lou45,lou15,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lot2,lot2,lot2,lost-a
+lost-a,lot2,lot2,lot2,lot2,lost-a,lou1c,lotm,lou1c,lot2,lot2,lou45,lot2,lou1c,lot2,lou15
+lost-a,lou1c,lot2,lost-a,lou18,lost-a,lou1c,lot2,lot2,lot2,lot2,lou45,lou1c,lot2,lot2,lost-a
+0,losv,lot2,lost-a,0,lost-a,lou1c,lot2,lot2,lot2,lot2,lou18,lost-a,lou12,lot2,lost-a
+lost-a,losv,lot2,lou12,lost-a,lost-a,lost-a,lost-a,lou15,lot2,lost-a,lot2,lot2,lot2,lot2,lou18
+lost-a,losv,lot2,lot2,lou1c,lou45,lou1c,lou1c,lot2,lot2,lou18,lot2,lost-a,lou18,lost-a,lost-a
+o,losv,lot2,lot2,lot2,lou45,lot2,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,0,lost-a
+lost-a,losv,lot2,lot2,lot2,lost-a,lot2,lost-a,o,lost-a,lost-a,lot2,lot2,lot2,lou1c,lou18
+o,losv,lotr,lotr,lot2,lot2,lot2,lou18,0,0,lost-a,lou1c,lou1c,lou1c,lou1c,lost-a
+0,0,lost-a,lots,o,lost-a,o,lost-a,0,0,o,lost-a,o,lost-a,o,0
 NAME floor 4
-ITM lotm2 10,9
 ITM wesbencl 3,1
 ITM lotm2 9,1
-ITM lotm8 6,12
-ITM wesbencl 14,9
-ITM lotm2 12,9
-ITM pinktrites 10,7
 ITM pinktritfa 14,14
-ITM pinktritfc 11,11
 ITM wesbencp 14,13
-ITM lotm8 11,2
-ITM pinktritfe 5,11
-ITM pinktritfe 5,12
-ITM wesbencl 11,3
-ITM pinktritff 10,6
-ITM wesbencl 9,11
-ITM pinktritf3 11,9
 ITM lotm2 9,3
 ITM wesbencp 13,14
-ITM pinktritfa 14,11
-ITM wesbencl 8,7
-ITM pinktritfq 1,6
 ITM wesbencl 7,3
+ITM pinktritfq 1,8
+ITM pinktritff 2,6
+ITM pinktritff 1,6
+ITM pinktritfe 5,12
+ITM lotm2 6,9
+ITM pinktritf3 6,8
+ITM lotm2 6,7
+ITM pinktrites 7,7
+ITM pinktritfe 5,11
+ITM pinktritfe 11,7
+ITM pinktritfe 11,8
+ITM wesbencl 12,8
+ITM wesbencp 11,14
+ITM pinktritfa 12,14
+ITM pinktritg0 7,11
+ITM pinktritg1 13,7
+ITM wesbencl 9,12
+ITM wesbencl 4,4
+ITM wesbencl 4,11
 EXT 6,2 losx 3,2 FX fade_b DLG 29
 EXT 4,2 losx 7,2 FX fade_b DLG 29
 EXT 7,2 losx 5,0 DLG 3t
@@ -1686,10 +1694,6 @@ ROOM lotp
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME floor 4 - office doors
-ITM pinktritet 13,4
-ITM pinktritet 2,8
-ITM pinktritet 8,13
-ITM pinktriteu 2,11
 PAL 0
 
 ROOM lotq
@@ -3124,16 +3128,16 @@ COL 1
 
 TIL lou12
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,15,16,16,16,16,16,15,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,18,18,16,16,4,4,4
-4,4,4,4,16,16,10,10,10,18,18,16,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,15,16,16,16,16,16,15,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,51,47,47,47,47,47,51,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,50,50,47,47,4,4,4
+4,4,4,4,47,47,49,49,49,50,50,47,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,51,47,47,47,47,47,51,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -3189,14 +3193,14 @@ TIL lou15
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,12,12,12,12,12,12,12,12,12,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,18,18,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,18,18,16,33,33,33,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,33,16,33,33,33,33,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,33,16,33,33,19,19,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,50,50,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,50,50,47,49,49,49,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,49,47,49,49,49,49,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,51,51,51,51,51,51,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
 4,4,4,12,12,12,12,12,12,12,12,12,12,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -3209,16 +3213,16 @@ COL 1
 TIL lou16
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
-4,4,4,5,16,16,16,16,16,16,16,16,0,4,4,4
-4,4,4,16,16,14,16,14,16,16,18,18,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,18,18,16,4,4,4
-4,4,4,16,16,14,14,14,16,16,18,18,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,16,16,16,4,4,4
-4,4,4,16,16,14,14,14,16,16,16,17,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,17,17,16,4,4,4
-4,4,4,16,16,16,14,16,16,17,17,16,16,4,4,4
-4,4,4,16,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,0,16,16,16,16,16,16,16,16,0,4,4,4
+4,4,4,51,47,47,47,47,47,47,47,47,51,4,4,4
+4,4,4,47,47,49,47,49,47,47,50,50,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,50,50,47,4,4,4
+4,4,4,47,47,49,49,49,47,47,50,50,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,47,47,47,4,4,4
+4,4,4,47,47,49,49,49,47,47,47,48,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,48,48,47,4,4,4
+4,4,4,47,47,47,49,47,47,48,48,47,47,4,4,4
+4,4,4,47,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,51,47,47,47,47,47,47,47,47,51,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
@@ -12294,7 +12298,7 @@ SPR wthrfz
 12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
 NAME fridge
 DLG 4x
-POS losx 5,7
+POS losx 9,7
 COL 2
 
 SPR wthrg0
@@ -12624,7 +12628,7 @@ SPR wthrgc
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 1
 DLG 4u
-POS losx 11,1
+POS losx 1,7
 COL 2
 
 SPR wthrgd
@@ -12663,7 +12667,7 @@ SPR wthrgd
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 2
 DLG 4v
-POS losx 2,6
+POS losx 6,11
 COL 2
 
 SPR wthrge
@@ -12702,7 +12706,7 @@ SPR wthrge
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 3
 DLG 4w
-POS losx 6,11
+POS losx 12,7
 COL 2
 
 SPR wthrgf
@@ -13608,7 +13612,7 @@ SPR wthrh5
 35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35
 NAME watercooler sprite
 DLG 4z
-POS losx 6,7
+POS losx 8,7
 COL 2
 
 SPR wthrh6
@@ -13917,6 +13921,43 @@ SPR wthrhg
 NAME East Wing interior ladder
 DLG 67
 POS lot4 10,12
+COL 2
+
+SPR wthrhh
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,31,16,31,31,16,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,16,31,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,19,19,19,19,19,19,0,19,19,0,0,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+>
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,16,31,31,19,0,0,0,0,0
+0,0,0,19,31,16,31,31,16,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,19,19,19,19,19,19,0,19,19,0,0,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+NAME f4 big computer
 COL 2
 
 ITM 2
@@ -15612,6 +15653,46 @@ NAME hyperfocus thought 2
 DLG 66
 COL 2
 
+ITM pinktritg0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,11,11,11,11,33,33,33,33,0,0,0
+0,0,0,0,0,11,0,11,11,11,11,11,11,0,0,0
+0,0,0,0,0,11,0,11,0,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,11,33,33,33,33,33,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,19,0,0,19,0,0,0,0,0
+0,0,0,0,0,0,19,0,0,0,0,19,0,0,0,0
+NAME f4 tech chair 1
+COL 2
+
+ITM pinktritg1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,33,33,0,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,11,11,11,11,0,0,0,0,0
+0,0,0,11,11,11,11,11,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,0,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,33,11,33,33,33,0,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,19,0,0,19,0,0,0,0,0,0,0
+0,0,0,0,19,0,0,0,0,19,0,0,0,0,0,0
+NAME f4 tech chair 2
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -15727,7 +15808,7 @@ DLG 23
 East Wing
 700 Special Collection
 
-4th Floor
+4th Floor (KEYCARD ACCESS ONLY)
 Offices{clr}
 """
 NAME Dewey library guide
@@ -17079,7 +17160,7 @@ DLG DATA3D
     },
     "SPR_wthrh5": {
       "type": "table",
-      "transform": "0.3,1,0.3,0,0,0,-0.2,0.4,0"
+      "transform": "0.3,1,0.3,0,0,0,0.2,0.4,0"
     },
     "SPR_wthrh6": {
       "transform": "0.5,0.5,0.5,0,0,0,0,-0.25,0"
@@ -17114,6 +17195,9 @@ DLG DATA3D
     "SPR_wthrhg": {
       "type": "plane",
       "transform": "1,2,1,0,90,0,0,0.1,0"
+    },
+    "SPR_wthrhh": {
+      "transform": "0.75,0.75,0.75,0,0,0,0,-0.2,0"
     },
     "ITM_2": {
       "type": "billboard",
@@ -17344,7 +17428,7 @@ DLG DATA3D
       "alpha": 0.6
     },
     "ITM_pinktritff": {
-      "transform": "1,1,1,0,0,0,0,-0.01,-0.4",
+      "transform": "1,1,1,0,0,0,0,-0.01,0.4",
       "alpha": 0.6
     },
     "ITM_pinktritfg": {
@@ -17387,7 +17471,7 @@ DLG DATA3D
     },
     "ITM_pinktritfq": {
       "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,0.3,-0.2,0"
+      "transform": "0.5,0.5,0.5,0,0,0,0,-0.2,0.2"
     },
     "ITM_pinktritfr": {
       "type": "billboard",
@@ -17433,6 +17517,14 @@ DLG DATA3D
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
+    },
+    "ITM_pinktritg0": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
+    },
+    "ITM_pinktritg1": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
     }
   },
   "stack": {
