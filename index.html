@@ -15,7 +15,7 @@
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -75,6 +75,11 @@ NAME interior
 145,255,12
 12,203,2
 214,2,112
+222,216,218
+234,221,182
+201,183,150
+229,201,255
+196,185,194
 
 PAL 1
 NAME exterior
@@ -828,9 +833,9 @@ lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
 lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
 o,losx,losx,lou13,lou13,losx,losx,losx,lotm,losx,losx,losv,losx,losv,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
-0,losv,losv,losv,losv,0,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
+0,losv,losv,losv,0,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
 lost-a,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
-0,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losv,losv,0
+0,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,0,losv,losv,0
 0,losv,losv,losv,losx,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
 o,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
 0,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
@@ -851,7 +856,7 @@ ROOM losw
 0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lost-a,o,lost-a,o,lost-a,0
 lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lost-a
 o,lot1,losv,losv,lot1,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a
-0,losv,losv,lot1,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,0
+0,losv,losv,lot1,losv,losv,lot1,lot1,lot1,lot1,lot1,losv,0,losv,losv,0
 lost-a,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,losv,losv,lot1,losv,0
 lost-a,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
 0,losv,losv,lot1,losv,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,lot1,losv,0
@@ -879,46 +884,47 @@ FOG_START 0
 FOG_END 9
 
 ROOM losx
-0,lost-a,o,lost-a,0,0,0,lost-a,0,lost-a,lost-a,lost-a,o,lou12,lost-a,0
-lost-a,lotr,lot2,lou1c,lost-a,lou1b,lost-a,lot2,lot2,lou1c,lost-a,lot2,lot2,lot2,losv,lost-a
-lost-a,lotr,lot2,lot2,lou3w,lou1b,lou1a,lot2,lot2,lot2,lost-a,lou1c,lot2,lot2,losv,o
-lou12,lot2,lot2,lot2,lost-a,lou1b,lost-a,lou1c,lot2,lou1c,lost-a,lou1c,lot2,lot2,losv,lost-a
-lost-a,losv,lot2,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,lot2,lost-a,0
-0,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
-lost-a,lou1c,lot2,lost-a,lost-a,lost-a,lost-a,lou15,lost-a,lost-a,lou45,lost-a,lost-a,lost-a,lot2,lost-a
-lost-a,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lou1c,lotm,lotm,lotm,lot2,lot2,lot2,lost-a
-o,lot2,lot2,lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,o
-lost-a,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lou1c,lot2,lou1c,lost-a
-0,lost-a,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lost-a,lou15,lost-a,0
-lost-a,lot2,lot2,lot2,lot2,lou45,lot2,lot2,lot2,lou1c,lost-a,lou1c,lot2,lot2,lou1c,lost-a
-o,lot2,lot2,lost-a,lot2,lou45,lou1c,lot2,lot2,losv,lost-a,lot2,lot2,lot2,0,lost-a
-lost-a,lot2,lot2,lost-a,lot2,lost-a,lost-a,lost-a,lot2,lost-a,lost-a,lot2,lot2,lot2,lou1c,lou18
-o,lotr,lotr,lost-a,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lot2,lou1c,lou1c,lost-a
-0,lots,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,lost-a,o,0
+0,lost-a,o,lost-a,0,0,0,lost-a,0,lost-a,0,0,0,0,0,0
+lost-a,losv,lotr,lou1c,lost-a,lou1b,lost-a,lot2,lot2,lou1c,lost-a,0,0,0,0,0
+lou18,losv,lot2,lot2,lou3w,lou1b,lou1a,lot2,lot2,lou1c,lost-a,0,0,lou1c,0,0
+lost-a,lot2,lot2,lot2,lost-a,lou1b,lost-a,lou1c,lot2,lou1c,lost-a,0,0,0,0,0
+o,lot2,lot2,lot2,lot2,lou12,0,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,0,0,0
+lost-a,lou1c,lot2,lot2,lot2,lost-a,0,0,0,lost-a,lot2,lot2,lot2,lou18,lost-a,0
+lost-a,lou45,lou45,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lot2,lot2,lot2,lost-a
+lost-a,lot2,lot2,lot2,lot2,lost-a,lot2,lotm,lou1c,lot2,lot2,lou45,lot2,lou1c,lot2,lou15
+lost-a,lou1c,lot2,lost-a,lou18,lost-a,lou1c,lot2,lot2,lot2,lot2,lou45,lou1c,lot2,lot2,lost-a
+0,losv,lot2,lost-a,0,lost-a,lou1c,lot2,lot2,lot2,lot2,lou18,lost-a,lou12,lot2,lost-a
+0,losv,lot2,lou12,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lot2,lot2,lot2,lot2,lou18
+0,losv,lot2,lot2,lou1c,lou45,lot2,lou1c,lot2,lot2,lou18,lot2,lost-a,lou18,lost-a,lost-a
+0,losv,lot2,lot2,lot2,lou45,lot2,lot2,lot2,lot2,lou15,lot2,lot2,lot2,0,lost-a
+0,losv,lot2,lot2,lot2,lost-a,lot2,lost-a,o,lost-a,lost-a,lot2,lot2,lot2,lou1c,lost-a
+0,losv,lotr,lotr,lot2,lot2,lot2,lou18,0,0,lost-a,lou1c,lot2,lou1c,lou1c,lost-a
+0,0,lost-a,lost-a,o,lost-a,o,0,0,0,0,lost-a,o,lost-a,o,0
 NAME floor 4
-ITM lotm2 10,9
 ITM wesbencl 3,1
 ITM lotm2 9,1
-ITM lotm8 6,12
-ITM wesbencl 14,9
-ITM lotm2 12,9
-ITM pinktrites 10,7
 ITM pinktritfa 14,14
-ITM pinktritfc 11,11
 ITM wesbencp 14,13
-ITM lotm8 11,2
-ITM pinktritfe 5,11
-ITM pinktritfe 5,12
-ITM wesbencl 11,3
-ITM pinktritff 10,6
-ITM wesbencl 9,11
-ITM pinktritf3 11,9
 ITM lotm2 9,3
 ITM wesbencp 13,14
-ITM pinktritfa 14,11
-ITM wesbencl 8,7
-ITM pinktritfq 1,6
 ITM wesbencl 7,3
+ITM pinktritfq 1,8
+ITM pinktritff 2,6
+ITM pinktritff 1,6
+ITM pinktritfe 5,12
+ITM lotm2 6,9
+ITM pinktritf3 6,8
+ITM pinktrites 7,7
+ITM pinktritfe 5,11
+ITM pinktritfe 11,7
+ITM pinktritfe 11,8
+ITM wesbencl 12,8
+ITM pinktritg0 7,11
+ITM pinktritg1 13,7
+ITM wesbencl 4,11
+ITM lotm2 1,5
+ITM wesbencp 11,14
+ITM pinktritf3 9,2
 EXT 6,2 losx 3,2 FX fade_b DLG 29
 EXT 4,2 losx 7,2 FX fade_b DLG 29
 EXT 7,2 losx 5,0 DLG 3t
@@ -1001,7 +1007,6 @@ ROOM lost-4
 0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
 0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
 NAME lost woods - 3
-ITM wesbencr1 8,8
 EXT 3,13 lost-5 8,14
 EXT 9,2 lost-2 3,2
 EXT 3,3 lost-2 2,8
@@ -1013,9 +1018,9 @@ FOG_END 4
 ROOM lost-5
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
-0,0,o,losx,losx,losx,losx,losx,losx,o,0,lost-a,lost-12,lost-12,o,0
-0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,lost-a,losx,losx,losx,losx,o
-0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,lost-a,lost-12,lost-12,losx,lost-12
+0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
+0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losx,losx,losx,losx,losx,o
+0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12
 0,0,lost-12,losx,lost-12,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
 0,0,o,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,losx,lost-12
@@ -1028,10 +1033,11 @@ ROOM lost-5
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 4
-ITM pinktriteq 12,3
+ITM wesbencr1 8,8
 EXT 9,14 lost-4 3,14
 EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
+EXT 14,7 loty 14,13
 PAL c
 FOG_START 0
 FOG_END 4
@@ -1478,12 +1484,12 @@ lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,l
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,b,b,b,b,b,b,b,b,lost-a,lost-a,lou1d,lost-a
-lost-a,lou1d,lou4h,lost-a,b,b,lou4d,lou4d,lou4d,lou4d,b,b,lost-a,lou4i,lou1d,lost-a
-o,lou1d,lost-a,lost-a,b,lou4d,lou57,lou55,lou5a,lou4d,lou4d,b,lost-a,lost-a,lou1d,o
-lost-a,lou1d,lou1d,lou3j,b,lou4d,lou56,lou4d,lou4d,lou57,lou55,lou55,lou1d,lou1d,lou1d,lost-a
-lost-a,lou1d,lou1d,lou3j,b,lou4d,lou56,lou4d,lou4d,lou56,lou4d,b,lou1d,lou1d,lou1d,lost-a
-o,lou1d,lost-a,lost-a,b,lou4d,lou58,lou55,lou55,lou59,lou4d,b,lost-a,lost-a,lou1d,o
-lost-a,lou1d,lou4h,lost-a,b,b,lou4d,lou4d,lou4d,lou4d,b,b,lost-a,lou4i,lou1d,lost-a
+lost-a,lou1d,lou4h,lost-a,b,b,b,lou4d,lou4d,b,b,b,lost-a,lou4i,lou1d,lost-a
+o,lou1d,lost-a,lost-a,b,b,lou4d,lou57,lou5a,lou4d,lou4d,b,lost-a,lost-a,lou1d,o
+lost-a,lou1d,lou1d,lou3j,b,lou4d,lou4d,lou56,lou4d,lou57,lou55,lou55,lou1d,lou1d,lou1d,lost-a
+lost-a,lou1d,lou1d,lou3j,b,lou4d,lou4d,lou58,lou55,lou59,lou4d,b,lou1d,lou1d,lou1d,lost-a
+o,lou1d,lost-a,lost-a,b,b,lou4d,lou4d,lou4d,lou4d,b,b,lost-a,lost-a,lou1d,o
+lost-a,lou1d,lou4h,lost-a,b,b,b,lou4d,lou4d,b,b,b,lost-a,lou4i,lou1d,lost-a
 lost-a,lou1d,lost-a,lost-a,b,b,b,b,b,b,b,b,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4j,lost-a,lou1d,lou1d,lost-a,lou4j,lost-a,lost-a,lost-a,lou1d,lost-a
@@ -1499,7 +1505,7 @@ ITM wesbenco 8,12
 ITM pinktritfn 13,7
 ITM pinktritfn 13,8
 ITM popeitem 8,6
-ITM pinktritfr 9,9
+ITM pinktritfr 9,8
 EXT 13,1 lot3 14,1
 EXT 13,14 lotj 14,14
 PAL b
@@ -1513,7 +1519,7 @@ lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,l
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lou39,lou39,lou39,lou39,lou39,lou39,lou39,lou39,lost-a,lost-a,lou1d,lost-a
 lost-a,lou1d,lou4h,lost-a,lou39,lou39,lou39,lou39,lou4l,lou39,lou39,lou39,lost-a,lou4i,lou1d,lost-a
-o,lou1d,lost-a,lost-a,lou39,lou39,lou4l,lou39,lou39,lou4l,lou39,lou39,lost-a,lost-a,lou1d,o
+o,lou1d,lost-a,lost-a,lou39,lou39,lou39,lou39,lou39,lou4l,lou39,lou39,lost-a,lost-a,lou1d,o
 lost-a,lou1d,lou1d,lou3j,lou39,lou4l,lou39,lou39,lou39,lou39,lou4l,lou39,lou3j,lou1d,lou1d,lost-a
 lost-a,lou1d,lou1d,lou3j,lou39,lou4l,lou39,lou39,lou39,lou39,lou4l,lou39,lou3j,lou1d,lou1d,lost-a
 o,lou1d,lost-a,lost-a,lou39,lou39,lou4l,lou39,lou39,lou4l,lou39,lou39,lost-a,lost-a,lou1d,o
@@ -1530,7 +1536,6 @@ ITM wesbencn 8,3
 ITM wesbenco 7,3
 ITM wesbenco 12,8
 ITM wesbencn 12,7
-ITM pinktritfl 6,6
 ITM pinktritfl 9,6
 ITM pinktritfl 8,10
 ITM pinktritfl 5,8
@@ -1541,9 +1546,9 @@ ITM pinktriten 5,7
 ITM pinktriten 7,10
 ITM pinktriten 10,7
 ITM pinktriten 9,9
-ITM pinktritem 8,9
 ITM pinktritfn 8,13
 ITM pinktritfn 7,13
+ITM pinktritem 8,8
 EXT 14,13 loti 14,14
 EXT 1,13 lotk 1,14
 PAL b
@@ -1556,12 +1561,12 @@ lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,l
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lou38,lou38,lou38,lou38,lou38,lou38,lou38,lou38,lost-a,lost-a,lou1d,lost-a
-lost-a,lou1d,lou4h,lost-a,lou38,lou38,lou4e,lou4e,lou4e,lou4e,lou38,lou38,lost-a,lou4i,lou1d,lost-a
-o,lou1d,lost-a,lost-a,lou38,lou4e,lou4e,lou4e,lou4e,lou4e,lou4e,lou38,lost-a,lost-a,lou1d,o
-lost-a,lou1d,lou1d,lou1d,lou38,lou38,lou38,lou38,lou38,lou4g,lou4e,lou38,lou3j,lou1d,lou1d,lost-a
-lost-a,lou1d,lou1d,lou1d,lou38,lou4e,lou38,lou4x,lou38,lou4f,lou4e,lou38,lou3j,lou1d,lou1d,lost-a
-o,lou1d,lost-a,lost-a,lou38,lou4e,lou4y,lou38,lou38,lou4g,lou4e,lou38,lost-a,lost-a,lou1d,o
-lost-a,lou1d,lou4h,lost-a,lou38,lou38,lou4e,lou4e,lou4e,lou4e,lou38,lou38,lost-a,lou4i,lou1d,lost-a
+lost-a,lou1d,lou4h,lost-a,lou38,lou38,lou38,lou4e,lou4e,lou38,lou38,lou38,lost-a,lou4i,lou1d,lost-a
+o,lou1d,lost-a,lost-a,lou38,lou38,lou4e,lou38,lou4x,lou4e,lou38,lou38,lost-a,lost-a,lou1d,o
+lost-a,lou1d,lou1d,lou1d,lou38,lou38,lou38,lou4y,lou38,lou4g,lou4e,lou38,lou3j,lou1d,lou1d,lost-a
+lost-a,lou1d,lou1d,lou1d,lou38,lou38,lou4e,lou38,lou38,lou4f,lou4e,lou38,lou3j,lou1d,lou1d,lost-a
+o,lou1d,lost-a,lost-a,lou38,lou38,lou4e,lou4e,lou4f,lou4e,lou38,lou38,lost-a,lost-a,lou1d,o
+lost-a,lou1d,lou4h,lost-a,lou38,lou38,lou38,lou4e,lou4e,lou38,lou38,lou38,lost-a,lou4i,lou1d,lost-a
 lost-a,lou1d,lost-a,lost-a,lou38,lou38,lou38,lou38,lou38,lou38,lou38,lou38,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou3j,lou3j,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4j,lost-a,lou1d,lou1d,lost-a,lou4j,lost-a,lost-a,lost-a,lou1d,lost-a
@@ -1647,27 +1652,6 @@ NAME phone (texting carson)
 PAL 2
 RENDER 2D
 
-ROOM loto
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,b,b,b,b,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME end room test
-PAL 0
-RENDER 2D
-
 ROOM lotp
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1686,10 +1670,12 @@ ROOM lotp
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME floor 4 - office doors
-ITM pinktritet 13,4
-ITM pinktritet 2,8
-ITM pinktritet 8,13
-ITM pinktriteu 2,11
+ITM pinktritg2 6,11
+ITM pinktritg2 6,12
+ITM pinktritg2 12,7
+ITM pinktritg2 12,8
+ITM pinktritg3 2,7
+ITM pinktritg3 1,7
 PAL 0
 
 ROOM lotq
@@ -1906,6 +1892,32 @@ ITM pinktritey 11,0
 PAL d
 FOG_START 2
 FOG_END 6
+
+ROOM loty
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
+0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
+0,o,losx,losx,losx,losx,losx,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,0
+0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0
+0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,0
+0,lost-12,losx,lost-12,0,0,0,lost-a,losx,lost-a,0,0,lost-12,losx,lost-12,0
+0,lost-12,losx,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,o,0
+0,o,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
+0,0,o,lost-12,lost-12,lost-12,lost-a,losx,losx,losx,lost-a,lost-12,lost-12,lost-12,losx,lost-12
+0,0,0,losx,0,0,0,lost-a,losx,lost-a,0,0,0,lost-12,losx,lost-12
+0,0,lost-a,losx,lost-a,0,0,lost-12,losx,lost-12,0,0,0,lost-12,losx,lost-12
+0,0,lost-12,losx,lost-12,0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,lost-12,losx,lost-12
+0,0,lost-12,losx,lost-12,lost-12,lost-12,lost-12,losx,lost-12,losx,losx,losx,losx,losx,o
+0,0,o,losx,losx,losx,losx,losx,losx,o,lost-12,lost-12,lost-12,lost-12,o,0
+0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0,0,0,0,0,0
+NAME lost woods - 5
+ITM pinktriteq 3,13
+EXT 9,2 lost-2 3,2
+EXT 3,3 lost-2 2,8
+EXT 13,13 lost-5 14,8
+PAL c
+FOG_START 0
+FOG_END 4
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -3100,16 +3112,16 @@ COL 1
 
 TIL lou12
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,15,16,16,16,16,16,15,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,16,16,16,16,4,4,4
-4,4,4,4,16,16,14,14,14,18,18,16,16,4,4,4
-4,4,4,4,16,16,10,10,10,18,18,16,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,4,16,15,16,16,16,16,16,15,16,4,4,4
-4,4,4,4,16,16,16,16,16,16,16,16,16,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,51,47,47,47,47,47,51,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,47,47,47,47,4,4,4
+4,4,4,4,47,47,48,48,48,50,50,47,47,4,4,4
+4,4,4,4,47,47,49,49,49,50,50,47,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,4,47,51,47,47,47,47,47,51,47,4,4,4
+4,4,4,4,47,47,47,47,47,47,47,47,47,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -3165,14 +3177,14 @@ TIL lou15
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,12,12,12,12,12,12,12,12,12,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,18,18,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,18,18,16,33,33,33,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,33,16,33,33,33,33,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
-4,4,4,12,16,33,16,33,33,19,19,16,12,4,4,4
-4,4,4,12,16,16,16,16,16,16,16,16,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,50,50,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,50,50,47,49,49,49,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,49,47,49,49,49,49,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
+4,4,4,12,47,51,51,51,51,51,51,47,12,4,4,4
+4,4,4,12,47,47,47,47,47,47,47,47,12,4,4,4
 4,4,4,12,12,12,12,12,12,12,12,12,12,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -3185,16 +3197,16 @@ COL 1
 TIL lou16
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
-4,4,4,5,16,16,16,16,16,16,16,16,0,4,4,4
-4,4,4,16,16,14,16,14,16,16,18,18,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,18,18,16,4,4,4
-4,4,4,16,16,14,14,14,16,16,18,18,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,16,16,16,4,4,4
-4,4,4,16,16,14,14,14,16,16,16,17,16,4,4,4
-4,4,4,16,14,14,14,14,14,16,17,17,16,4,4,4
-4,4,4,16,16,16,14,16,16,17,17,16,16,4,4,4
-4,4,4,16,16,16,16,16,16,16,16,16,16,4,4,4
-4,4,4,0,16,16,16,16,16,16,16,16,0,4,4,4
+4,4,4,51,47,47,47,47,47,47,47,47,51,4,4,4
+4,4,4,47,47,49,47,49,47,47,50,50,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,50,50,47,4,4,4
+4,4,4,47,47,49,49,49,47,47,50,50,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,47,47,47,4,4,4
+4,4,4,47,47,49,49,49,47,47,47,48,47,4,4,4
+4,4,4,47,49,49,49,49,49,47,48,48,47,4,4,4
+4,4,4,47,47,47,49,47,47,48,48,47,47,4,4,4
+4,4,4,47,47,47,47,47,47,47,47,47,47,4,4,4
+4,4,4,51,47,47,47,47,47,47,47,47,51,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
@@ -8069,7 +8081,7 @@ SPR louh
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 2c
 DLG 3q
-POS losv 11,12
+POS losv 12,12
 COL 2
 
 SPR loui
@@ -8263,7 +8275,7 @@ SPR loum
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 3d
 DLG 3q
-POS losv 5,10
+POS losv 4,10
 COL 2
 
 SPR loun
@@ -10499,7 +10511,7 @@ SPR pbrovr
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f2 w 2b
 DLG 3q
-POS losw 11,3
+POS losw 12,3
 COL 2
 
 SPR pbrovs
@@ -12248,7 +12260,7 @@ SPR wthrfy
 6,5,12,12,12,12,12,11,11,12,12,12,12,12,5,6
 NAME elevator (lost woods)
 DLG 27
-POS lost-5 10,3
+POS loty 3,10
 COL 2
 
 SPR wthrfz
@@ -12270,7 +12282,7 @@ SPR wthrfz
 12,16,16,16,16,16,16,16,16,16,16,16,16,16,16,12
 NAME fridge
 DLG 4x
-POS losx 5,7
+POS losx 9,7
 COL 2
 
 SPR wthrg0
@@ -12600,7 +12612,7 @@ SPR wthrgc
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 1
 DLG 4u
-POS losx 11,1
+POS losx 1,7
 COL 2
 
 SPR wthrgd
@@ -12639,7 +12651,7 @@ SPR wthrgd
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 2
 DLG 4v
-POS losx 2,6
+POS losx 6,11
 COL 2
 
 SPR wthrge
@@ -12678,7 +12690,7 @@ SPR wthrge
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 NAME f4 computer 3
 DLG 4w
-POS losx 6,11
+POS losx 12,7
 COL 2
 
 SPR wthrgf
@@ -12872,7 +12884,7 @@ SPR wthrgj
 0,0,0,5,5,5,5,5,5,5,0,0,0,5,0,0
 NAME burned book pile 2
 DLG 52
-POS lotj 9,8
+POS lotj 7,6
 COL 2
 
 SPR wthrgk
@@ -13418,7 +13430,7 @@ SPR wthrgz
 0,0,42,42,42,42,42,42,42,42,42,42,42,0,0,0
 NAME chest sprite
 DLG 5l
-POS lotk 6,8
+POS lotk 7,6
 COL 2
 
 SPR wthrh0
@@ -13584,7 +13596,7 @@ SPR wthrh5
 35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35
 NAME watercooler sprite
 DLG 4z
-POS losx 6,7
+POS losx 8,7
 COL 2
 
 SPR wthrh6
@@ -13623,7 +13635,7 @@ SPR wthrh6
 0,0,0,5,5,5,5,5,5,5,0,0,0,5,0,0
 NAME burned book pile 3
 DLG 52
-POS lotj 7,9
+POS lotj 6,8
 COL 2
 
 SPR wthrh7
@@ -13893,6 +13905,131 @@ SPR wthrhg
 NAME East Wing interior ladder
 DLG 67
 POS lot4 10,12
+COL 2
+
+SPR wthrhh
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,31,16,31,31,16,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,16,31,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,19,19,19,19,19,19,0,19,19,0,0,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+>
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,16,31,31,19,0,0,0,0,0
+0,0,0,19,31,16,31,31,16,31,19,0,0,0,0,0
+0,0,0,19,31,31,31,31,31,31,19,0,0,0,0,0
+0,0,0,19,19,19,19,19,19,19,19,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,19,19,19,19,19,19,0,19,19,0,0,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
+NAME f4 big computer
+COL 2
+
+SPR wthrhi
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,11,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,0,0,0,0
+NAME sign 5-N
+DLG 69
+POS loty 9,7
+COL 2
+
+SPR wthrhj
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,11,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,0,0,0,0
+NAME sign 5-E
+DLG 6a
+POS loty 9,9
+COL 2
+
+SPR wthrhk
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,11,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,0,0,0,0
+NAME sign 5-S
+DLG 6b
+POS loty 7,9
+COL 2
+
+SPR wthrhl
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,11,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,11,12,12,12,12,12,12,12,12,13,0,0
+0,13,12,12,12,12,12,5,12,5,5,5,12,13,0,0
+0,13,12,12,12,12,12,12,12,12,12,12,12,13,0,0
+0,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,21,21,0,0,0,0,0,0,0
+0,0,0,0,21,21,21,21,21,21,21,21,0,0,0,0
+NAME sign 5-W
+DLG 6c
+POS loty 7,7
 COL 2
 
 ITM 2
@@ -15588,6 +15725,86 @@ NAME hyperfocus thought 2
 DLG 66
 COL 2
 
+ITM pinktritg0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,11,11,11,11,33,33,33,33,0,0,0
+0,0,0,0,0,11,0,11,11,11,11,11,11,0,0,0
+0,0,0,0,0,11,0,11,0,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,11,33,33,33,33,33,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,19,0,0,19,0,0,0,0,0
+0,0,0,0,0,0,19,0,0,0,0,19,0,0,0,0
+NAME f4 tech chair 1
+COL 2
+
+ITM pinktritg1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,33,33,0,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,11,11,11,11,0,0,0,0,0
+0,0,0,11,11,11,11,11,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,0,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,33,11,33,33,33,0,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,19,0,0,19,0,0,0,0,0,0,0
+0,0,0,0,19,0,0,0,0,19,0,0,0,0,0,0
+NAME f4 tech chair 2
+COL 2
+
+ITM pinktritg2
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+NAME 4th floor glass 1b
+COL 2
+
+ITM pinktritg3
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+NAME 4th floor glass 2b
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -15972,6 +16189,7 @@ DLG 52
   - These books are still {clr 10}smoldering,{clr} surrounded by the scorched remains of former shelves... {pg} The smell isn't so different from a wood fire, but it catches in my throat and makes me want to {shk}puke.{shk}
   - The Nazis obliterated one of the world's largest collections of queer & trans literature - the Instute of Sexology. {pg} Sometimes we forget just how much we - humanity - used to know about people like me, before it was all erased.
   - We cannot let this happen again, and we cannot turn a blind eye to the fact that the obliteration of people and culture is {shk}still{shk} happening on a large scale today - {pg} like in Palestine.
+  - 
 }
 """
 NAME burned pile dialog
@@ -16082,6 +16300,24 @@ BG_COLOR [0,0,0]
 DLG 68
 Poor Jax... I hate making them worry :( {pg} I'll have to let them know I'm ok as soon as I get out of here!
 NAME exit narration 8
+
+DLG 69
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+Fe_tu_ed _uth_rs:
+- A_n_ Fr__k
+- _ack Lo__on
+- Ch_rl__ _ick_ns
+{clr}{pg}{
+  - lwLvl5Seen == true ?
+
+  - else ?
+    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+}
+"""
+NAME sign 5-N dialog
+BG_COLOR [0,0,0]
+MAX_LINES 4
 
 DLG DATA3D
 """
@@ -17033,7 +17269,7 @@ DLG DATA3D
       "transform": "0.8,0.8,0.8,0,0,0,0,-0.06,0"
     },
     "SPR_wthrgz": {
-      "transform": "0.7,0.6,0.7,0,0,0,0,-0.2,0"
+      "transform": "0.7,0.6,0.7,0,0,0,0,-0.2,0.1"
     },
     "SPR_wthrh0": {
       "type": "box",
@@ -17055,7 +17291,7 @@ DLG DATA3D
     },
     "SPR_wthrh5": {
       "type": "table",
-      "transform": "0.3,1,0.3,0,0,0,-0.2,0.4,0"
+      "transform": "0.3,1,0.3,0,0,0,0.2,0.4,0"
     },
     "SPR_wthrh6": {
       "transform": "0.5,0.5,0.5,0,0,0,0,-0.25,0"
@@ -17090,6 +17326,25 @@ DLG DATA3D
     "SPR_wthrhg": {
       "type": "plane",
       "transform": "1,2,1,0,90,0,0,0.1,0"
+    },
+    "SPR_wthrhh": {
+      "transform": "0.75,0.75,0.75,0,0,0,0,-0.2,0"
+    },
+    "SPR_wthrhi": {
+      "type": "plane",
+      "transform": "0.6,0.6,0.6,0,34,0,-0.24,-0.19,0.06"
+    },
+    "SPR_wthrhj": {
+      "type": "plane",
+      "transform": "0.6,0.6,0.6,0,126,0,0.06,-0.19,0.24"
+    },
+    "SPR_wthrhk": {
+      "type": "plane",
+      "transform": "0.6,0.6,0.6,0,-144,0,0.24,-0.19,-0.06"
+    },
+    "SPR_wthrhl": {
+      "type": "plane",
+      "transform": "0.6,0.6,0.6,0,-56,0,-0.06,-0.19,-0.24"
     },
     "ITM_2": {
       "type": "billboard",
@@ -17317,11 +17572,11 @@ DLG DATA3D
     },
     "ITM_pinktritfe": {
       "transform": "1,1,1,0,90,0,-0.4,-0.01,0",
-      "alpha": 0.6
+      "alpha": 0.4
     },
     "ITM_pinktritff": {
-      "transform": "1,1,1,0,0,0,0,-0.01,-0.4",
-      "alpha": 0.6
+      "transform": "1,1,1,0,0,0,0,-0.01,0.4",
+      "alpha": 0.4
     },
     "ITM_pinktritfg": {
       "type": "table",
@@ -17363,7 +17618,7 @@ DLG DATA3D
     },
     "ITM_pinktritfq": {
       "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,0.3,-0.2,0"
+      "transform": "0.5,0.5,0.5,0,0,0,0,-0.2,0.2"
     },
     "ITM_pinktritfr": {
       "type": "billboard",
@@ -17409,6 +17664,22 @@ DLG DATA3D
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
+    },
+    "ITM_pinktritg0": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
+    },
+    "ITM_pinktritg1": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
+    },
+    "ITM_pinktritg2": {
+      "transform": "1,1,1,0,90,0,-0.52,-2,0",
+      "alpha": 0.4
+    },
+    "ITM_pinktritg3": {
+      "transform": "1,1,1,0,0,0,0,-2,0.52",
+      "alpha": 0.4
     }
   },
   "stack": {
@@ -17459,6 +17730,16 @@ DLG DATA3D
     "lost-d": [
       {
         "id": "lost-5",
+        "pos": 0
+      },
+      {
+        "id": "lost-1",
+        "pos": 1
+      }
+    ],
+    "lost-e": [
+      {
+        "id": "loty",
         "pos": 0
       },
       {
@@ -17621,154 +17902,224 @@ DLG c
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
+- Hans Christian Andersen
 - Emily Dickinson
-- Federico Garcia Lorca 
-- Virginia Woolf
+- Walt Whitman
+{clr}{queerAuthorsSeen = true}{pg}I know these classic authors... Early 19th century, I think? More importantly: {rbw}ALL GAY.{rbw}{pg}{sequence
+  - {clr 11}(that TV show "Dickinson" is honestly pretty hot){clr}
+  - 
+}
 """
 NAME sign 1-N dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG d
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Langston Hughes
-- Audre Lorde
+- Marcel Proust
 - Oscar Wilde
+- Virginia Woolf
+{clr}{queerAuthorsSeen = true}{pg}{sequence
+  - Who's afraid of Virginia Woolf? More like... {pg} {wvy}...who's afraid of {rbw}gay authors?{rbw}{wvy} {pg} Personally, I welcome these gay ghosts to come haunt us from... the late 19th century, maybe?
+  - Personally, I welcome these gay ghosts to come haunt us from... the late 19th century, maybe?
+}
 """
 NAME sign 1-E dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG g
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- James Baldwin
-- Toni Morrison
-- Walt Whitman
+- Emily Dickinson
+- Carmen Maria Machado
+- Oscar Wilde
+{clr}{pg}{
+  - queerAuthorsSeen == true ?
+    {sequence
+      - Feeling deja vu with some of these authors...
+      - 
+    }
+  - else ?
+    {sequence
+      - Well there's a nice cross-section of queer authors from the past couple centuries!
+      - 
+    }
+}
 """
 NAME sign 2-N dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG h
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Anne Frank
-- Arthur Conan Doyle
-- Edgar Allan Poe
+- Ayn Rand
+- J. K. Rowling
+- Orson Scott Card
+{clr}{pg}{sequence
+  - Um... {pg} {clr 11}{shk}eww{shk}{clr}
+  - 
+}
 """
 NAME sign 2-E dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG i
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Pearl S. Buck
-- Frank Herbert
-- Arthur Miller
+- Nathaniel Hawthorne
+- Aldous Huxley
+- Beatrix Potter
+{clr}{pg}{sequence
+  - I'm... not recognizing these authors as easily. {pg} Sometimes I feel like my knowledge is an archipelago, with islands of extreme nerdiness... {pg} ...and complete ignorance in between.
+  - 
+}
 """
 NAME sign 2-S dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG j
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Agatha Christie
-- Aldous Huxley
-- Haruki Murakami
+- K. A. Applegate
+- Ursula K. Le Guin
+- Taylor Jenkins Reid
+{clr}{pg}{sequence
+  - You know, authors like these really prove you don't need to be gay or trans to be a solid {pg} ally and promote good representation in your work!
+  - 
+}
 """
 NAME sign 2-W dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG k
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Elif Batuman
-- Alice Walker
-- Tennessee Williams
+- Juno Dawson
+- George M. Johnson
+- Maia Kobabe
+{clr}{pg}{
+  - lwLvl3Seen == true ?
+
+  - else ?
+    Have I... been here before? {pg} {wvy}Everything's blurring together...{wvy} {lwLvl3Seen = true}
+}
 """
 NAME sign 3-S dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG l
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Margaret Atwood
-- Stephen King
+- Ernest Hemingway
+- Haruki Murakami
 - Kurt Vonnegut
+{clr}{pg}{
+  - lwLvl3Seen == true ?
+
+  - else ?
+    Oh joy, {wvy}even more{wvy} authors... {lwLvl3Seen = true}
+}
 """
 NAME sign 3-N dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG m
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Samuel Beckett
-- Joyce Carol Oates
-- Robert Louis Stevenson
+- Margaret Atwood
+- Ta-Nehisi Coates
+- Stephen King
+{clr}{pg}{
+  - lwLvl3Seen == true ?
+
+  - else ?
+    Oh joy, {wvy}even more{wvy} authors... {lwLvl3Seen = true}
+}
 """
 NAME sign 3-E dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG n
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Nathaniel Hawthorne
-- P.D. James
-- Jack London
+- Arthur Conan Doyle
+- F. Scott Fitzgerald
+- Joyce Carol Oates
+{clr}{pg}{
+  - lwLvl3Seen == true ?
+
+  - else ?
+    Oh joy, {wvy}even more{wvy} authors... {lwLvl3Seen = true}
+}
 """
 NAME sign 3-W dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG o
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- C. S. Lewis
-- James Patterson
-- Beatrix Potter
+- Isaac Asimov
+- Frank Herbert
+- Madeleine L'Engle
 """
 NAME sign 4-N dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG p
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Leslie Feinberg
+- James Baldwin
 - Roxane Gay
-- Carmen Maria Machado
+- Audre Lorde
 """
 NAME sign 4-E dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG q
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- K. A. Applegate
-- Madeleine L'Engle
-- J. R. R. Tolkien
+- Agatha Christie
+- George Orwell
+- Edgar Allan Poe
 """
 NAME sign 4-S dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG r
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Isaac Asimov
-- Philip Pullman
-- Ayn Rand
+- P. D. James
+- C. S. Lewis
+- J. R. R. Tolkien
 """
 NAME sign 4-W dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG t
@@ -18546,7 +18897,7 @@ DLG 3t
     }
   - else ?
     {sequence
-      - The offices up here are locked. I guess I shouldn't be surprised...
+      - Hm, the offices up here are locked... {pg} Looks like they require some kind of keycard? {pg} Guess I shouldn't be surprised...
       - 
     }
 }
@@ -18555,7 +18906,7 @@ NAME floor 4 entrance
 BG_COLOR [0,0,0]
 
 DLG 3u
-East Wing, here we come! Let's do some {rbw}crimes...{rbw}{pg}{exit "loth" 5 9 "fade_b"}Wow, I gotta admit: I always kinda wanted to sneak onto the roof of some campus building!
+Aah! Fingers crossed that this leads to the East Wing...{pg}Let's {wvy}do some {rbw}gay crimes!{rbw}{wvy}{pg}{exit "loth" 5 9 "fade_b"}Wow, I gotta admit: I always kinda wanted to sneak onto the roof of some campus building!
 NAME 4th floor ladder dialog
 BG_COLOR [0,0,0]
 
@@ -18639,22 +18990,29 @@ DLG 4d
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- Hans Christian Andersen
-- Marcel Proust
-- William Shakespeare
+- Elif Batuman
+- Roxane Gay
+- Carmen Maria Machado
+{clr}{queerAuthorsSeen = true}{pg}Gen X and millenial gays of the {wvy}late 20th century!{wvy}{pg}{sequence
+  - {clr 11}(er, you know what I mean - modern authors. their books are allll over Barnes & Nobles){clr}
+  - 
+}
 """
 NAME sign 1-W dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG 4e
 """
 {center}{borderClr 13}{bgClr 1}{clr 5 true}
 Featured authors:
-- F. Scott Fitzgerald
-- Ernest Hemingway
-- George Orwell
+- Leslie Feinberg
+- Federico Garcia Lorca
+- Audre Lorde
+{clr}{pg}Audre Lorde. What a legend. The 20th century was truly blessed with some OG gay writers!
 """
 NAME sign 1-S dialog
+BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG 4f
@@ -18667,7 +19025,7 @@ DLG 4g
 {property locked true}{
   - lostWoodsCircles > 4 ?
     {sequence
-      - There must be some kind of trick to navigating this place... Are there {rbw}authors{rbw} I can turn to for guidance?
+      - There must be some kind of trick to navigating this place... Are there {rbw}kindred authors{rbw} I can turn to for guidance?
       - 
     }
   - lostWoodsCircles > 0 ?
@@ -18867,10 +19225,15 @@ NAME fridge dialog
 BG_COLOR [0,0,0]
 
 DLG 4y
-{center}{bgClr 16}{clr 5 true}Has anyone seen a missing keycard? If you find it, put it back in the drawer where it belongs.
+"""
+{center}{bgClr 16}{clr 5 true}Has anyone seen a missing keycard? If you find it, kindly put it back in the drawer where it belongs.{clr}{pg}{sequence
+  - {wvy}HMMM...{wvy} {pg} {clr 11}(nah, no thanks, don't think I will!){clr}
+  - 
+}
+"""
 NAME missing keycard dlg
 BG_COLOR [0,0,0]
-MAX_LINES 3
+MAX_LINES 6
 
 DLG 4z
 """
@@ -18943,9 +19306,10 @@ DLG 5h
 
 }{pg}I think I know the poem I want to write now...{music "credits_music.mp3"}{pg}{end}{borderClr 16}{center}A game by {clr 25}Elana Bell Bogdan{clr} and {clr 26}Nat Mesnard{clr} {pg}{center}with special thanks to our supportive partners {clr 21}Rye{clr} & {clr 22}Oat{clr}{pg}{center}additional invaluable playtesting by{br}
 {clr 26}Emily D,{clr}{br}
-{clr 27}Anna W,{clr}{br}
-{clr 13}Annie T,{clr}{br}
-& {clr 21}Sungwon M{clr}{pg}{center}music by
+{clr 19}Anna W,{clr}{br}
+{clr 27}Annie T,{clr}{br}
+{clr 21}Sungwon M,{clr}{br}
+& {clr 13}Andi B{clr}{pg}{center}music by
 {clr 1}Kevin MacLeod{clr} (who else!){br}
 {clr 27}Oleksii Kaplunskyi{clr}{br}
 & {clr 19}Denys Kyshchuk {clr}{pg}{center}Thank {rbw}YOU{rbw}for playing and helping {rbw}keep our stories alive!{rbw}{pg}{clr 29}built with a variant of Bitsy 3D {br}
@@ -19103,6 +19467,60 @@ DLG 5z
 Hell yeah. My phone is finally charged!{pg}{exit "phone (charged)" 6 2 "fade_b"}
 NAME outlet charged dialog
 BG_COLOR [0,0,0]
+
+DLG 6a
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+_ea_ure_ a_tho_s:
+- Jam__ _atter_on
+- Z_d__ Sm__h 
+- D_nn_ T__tt
+{clr}{pg}{
+  - lwLvl5Seen == true ?
+
+  - else ?
+    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+}
+"""
+NAME sign 5-E dialog
+BG_COLOR [0,0,0]
+MAX_LINES 4
+
+DLG 6b
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+F_atu_ed _utho_s:
+- E__ly Di_ki_so_
+- Au_re L___de
+- Ge__ge _ Jo__so_
+{clr}{pg}{
+  - lwLvl5Seen == true ?
+
+  - else ?
+    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+}
+"""
+NAME sign 5-S dialog
+BG_COLOR [0,0,0]
+MAX_LINES 4
+
+DLG 6c
+"""
+{center}{borderClr 13}{bgClr 1}{clr 5 true}
+Feat_r_d aut_ors:
+- S_mu_l Beck___
+- _rth_r _ill_r
+- J__n St_inb__k
+{clr}{pg}{
+  - lwLvl5Seen == true ?
+
+  - else ?
+    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+}
+"""
+NAME sign 5-W dialog
+BG_COLOR [0,0,0]
+MAX_LINES 4
 
 
 </script>
@@ -25021,7 +25439,17 @@ function movePlayer(direction) {
 		return; // player room is missing or invalid.. can't move them!
 	}
 
-	var spr = null;
+	let spr = null, obstacleCount = 0;
+
+	function getDiagonalObstacles (xDir, yDir) {
+		const yObstacles = (yDir === 'up') ?
+			getSpriteUp() || isWallUp() :
+			getSpriteDown() || isWallDown();
+		const xObstacles = (xDir === 'left') ?
+			getSpriteLeft() || isWallLeft() :
+			getSpriteRight() || isWallRight();
+		return Boolean(yObstacles) + Boolean(xObstacles);
+	}
 
 	let didMove = true;
 	if ( curPlayerDirection == Direction.Left && !(spr = getSpriteLeft()) && !isWallLeft() ) {
@@ -25036,37 +25464,41 @@ function movePlayer(direction) {
 	else if ( curPlayerDirection == Direction.Down && !(spr = getSpriteDown()) && !isWallDown() ) {
 		player().y += 1;
 	}
-	else if ( curPlayerDirection == Direction.Northwest && !(
-		(spr = getSpriteNW()) || isWallNW() ||
-		getSpriteUp() || isWallUp() ||
-		getSpriteLeft() || isWallLeft()
+	else if ( curPlayerDirection == Direction.Northwest ) {
+		obstacleCount = getDiagonalObstacles('left', 'up');
+		if (!(
+			(spr = getSpriteNW()) || isWallNW() || obstacleCount
 	)) {
 		player().x -= 1;
 		player().y -= 1;
 	}
-	else if ( curPlayerDirection == Direction.Northeast && !(
-		(spr = getSpriteNE()) || isWallNE() ||
-		getSpriteUp() || isWallUp() ||
-		getSpriteRight() || isWallRight()
+	}
+	else if ( curPlayerDirection == Direction.Northeast ) {
+		obstacleCount = getDiagonalObstacles('right', 'up')
+		if (!(
+			(spr = getSpriteNE()) || isWallNE() || obstacleCount
 	)) {
 		player().x += 1;
 		player().y -= 1;
 	}
-	else if ( curPlayerDirection == Direction.Southwest && !(
-		(spr = getSpriteSW()) || isWallSW() ||
-		getSpriteDown() || isWallDown() ||
-		getSpriteLeft() || isWallLeft()
+	}
+	else if ( curPlayerDirection == Direction.Southwest ) {
+		obstacleCount = getDiagonalObstacles('left', 'down')
+		if (!(
+			(spr = getSpriteSW()) || isWallSW() || obstacleCount
 	)) {
 		player().x -= 1;
 		player().y += 1;
 	}
-	else if ( curPlayerDirection == Direction.Southeast && !(
-		(spr = getSpriteSE()) || isWallSE() ||
-		getSpriteDown() || isWallDown() ||
-		getSpriteRight() || isWallRight()
+	}
+	else if ( curPlayerDirection == Direction.Southeast ) {
+		obstacleCount = getDiagonalObstacles('right', 'down')
+		if (!(
+			(spr = getSpriteSE()) || isWallSE() || obstacleCount
 	)) {
 		player().x += 1;
 		player().y += 1;
+		}
 	}
 	else {
 		didMove = false;
@@ -25107,8 +25539,9 @@ function movePlayer(direction) {
 		movePlayerThroughExit(ext);
 	}
 	else if (spr &&
-		(curRoomRenderMode() === '2D' || b3d.rawDirection === 0) // only support interaction when moving forwards
-	) { // TODO: only if not entirely blocked in
+		(curRoomRenderMode() === '2D' || b3d.rawDirection === 0) && // only support interaction when moving forwards
+		obstacleCount < 2 // only if not entirely blocked in
+	) {
 		startSpriteDialog(spr /*spriteId*/);
 	}
 }
