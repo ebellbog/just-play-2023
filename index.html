@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Banned Together - a story of queer love & erasure</title>
+<title>Banned Together</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
@@ -16675,7 +16675,7 @@ DLG DATA3D
     "lowerBetaLimit": 0.3141592653589793,
     "rotationTweenFunction": "linear",
     "rotationTweenTime": 250,
-    "rotationTweenTimeWithDiagonals": 200,
+    "rotationTweenTimeWithDiagonals": 240,
     "target": {
       "x": 7.5,
       "y": 0,
@@ -16697,10 +16697,10 @@ DLG DATA3D
     "fogEnd": 22,
     "positionDialogBoxAtTheTop": false,
     "tweenDistance": 1,
-    "tweenDuration": 150,
+    "tweenDuration": 215,
     "tweenFunction": "linear",
-    "movementHoldInterval": 150,
-    "movementSecondStepInterval": 150
+    "movementHoldInterval": 215,
+    "movementSecondStepInterval": 215
   },
   "mesh": {
     "TIL_11": {
@@ -25246,6 +25246,8 @@ var key = {
 	a : 65,
 	s : 83,
 	d : 68,
+	q : 81,
+	e : 69,
 	r : 82,
 	shift : 16,
 	ctrl : 17,
@@ -25624,10 +25626,10 @@ function updateInput() {
 		/* WALK */
 		var prevPlayerDirection = curPlayerDirection;
 
-		if ( input.isKeyDown( key.left ) || input.isKeyDown( key.a ) || input.swipeLeft() ) {
+		if ( input.isKeyDown( key.left ) || input.isKeyDown( key.a ) || input.isKeyDown( key.q ) || input.swipeLeft() ) {
 			curPlayerDirection = Direction.Left;
 		}
-		else if ( input.isKeyDown( key.right ) || input.isKeyDown( key.d ) || input.swipeRight() ) {
+		else if ( input.isKeyDown( key.right ) || input.isKeyDown( key.d ) || input.isKeyDown( key.e ) || input.swipeRight() ) {
 			curPlayerDirection = Direction.Right;
 		}
 		else if ( input.isKeyDown( key.up ) || input.isKeyDown( key.w ) || input.swipeUp() ) {
@@ -25781,7 +25783,7 @@ var InputManager = function() {
 	}
 
 	function isModifierKeyDown() {
-		return ( self.isKeyDown(key.shift) || self.isKeyDown(key.ctrl) || self.isKeyDown(key.alt) || self.isKeyDown(key.cmd) );
+		return ( self.isKeyDown(key.ctrl) || self.isKeyDown(key.alt) || self.isKeyDown(key.cmd) );
 	}
 
 	this.ignoreHeldKeys = function() {
@@ -30279,6 +30281,8 @@ b3d.cameraDataModel = {
                 var thisCamera = this;
                 b3d.patch(bitsy, 'movePlayer', function () {
                     if (curRoomRenderMode() === '2D') return;
+                    if (input.isKeyDown( key.q ) || input.isKeyDown( key.e ) || input.isKeyDown( key.shift )) return; // support strafing
+
                     if (thisCamera.rotationState.isTweening) {
                         // prevent any movement by resetting bitsy direction when camera is rotating
                         bitsy.curPlayerDirection = bitsy.Direction.None;
