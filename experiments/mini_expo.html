@@ -15,7 +15,7 @@
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}{lostWoodsProgress = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -80,6 +80,8 @@ NAME interior
 201,183,150
 229,201,255
 196,185,194
+65,62,142
+42,42,42
 
 PAL 1
 NAME exterior
@@ -773,12 +775,12 @@ NAME ceiling
 PAL 0
 
 ROOM losu
-0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lost-a,o,lou18,o,lou18,0
-lost-a,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-12,lou14,lou14,lou14,lou14,lou18
-o,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-u,lost-u,lost-u,lou14,o
+0,lou18,lost-a,lou18,lost-a,o,lost-a,lou18,0,lou18,lost-a,o,lou18,o,lou18,0
+lost-a,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lou14,lou14,lou14,lou14,lou18
+o,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-u,lost-u,lost-u,lou14,o
 lost-a,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou18
-lou18,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
-lost-a,lou14,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12
+o,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
+lost-a,lou14,lou14,lou14,lou14,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12
 0,lost-12,lost-12,lost-12,lost-12,lost-12,lost-u,lotm,lotm,lotm,lost-u,lost-12,lost-12,lost-12,lost-12,0
 lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12
 0,lost-12,lost-12,lost-12,lost-12,lost-12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
@@ -794,12 +796,6 @@ ITM lotm9 6,14
 ITM lotm9 6,13
 ITM lotm9 6,12
 ITM lotm2 13,1
-ITM lotm8 1,2
-ITM lotm8 2,2
-ITM lotm8 3,2
-ITM lotm8 4,2
-ITM lotm1 5,1
-ITM lotm1 4,1
 ITM lotm1 3,1
 ITM lotm1 2,1
 ITM lotm1 1,1
@@ -807,46 +803,44 @@ ITM pinktritf3 12,1
 ITM lotm1 1,5
 ITM lotm1 2,5
 ITM lotm1 3,5
-ITM lotm1 4,5
-ITM pinktritfp 1,4
-ITM pinktritfp 2,4
-ITM pinktritfp 3,4
-ITM pinktritfp 4,4
 ITM pinktritf3 14,2
 ITM wesbencl 14,1
 ITM lotm2 11,1
 ITM wesbencl 14,14
+ITM lotm1 4,1
+ITM lotm1 4,5
 EXT 8,15 2 8,2 FX fade_b DLG 29
 EXT 15,11 lot4 1,11 FX fade_b DLG 2c
 EXT 8,14 lot8 8,2 FX fade_b DLG 2q
 PAL 0
 
 ROOM losv
-0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lou15,o,lost-a,o,lost-a,0
-o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
-lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
-0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losv,losx,losv,0
-0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou12
-lou18,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
-lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
-lost-a,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
-o,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
+0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lost-a,lost-a,lost-a,lost-a,lost-a,0
+o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
+lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
+0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
-0,losv,losv,losv,0,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
-lost-a,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losx,0
-0,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,0,losv,losv,0
-0,losv,losv,losv,losx,losv,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
-o,lou13,losx,losx,losx,losx,losx,losx,lotm,losx,losx,losx,losx,losx,losx,lou18
+lou18,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou12
+lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
+lou18,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
+lost-a,lou13,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,o
+0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
+0,losv,losv,losv,0,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
+lost-a,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lost-a
+0,losv,losx,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
+0,losv,losv,losv,losx,losv,losx,losx,losx,losx,losx,losv,losx,losv,losv,0
+o,lou13,losx,losx,losx,losx,losx,losx,lotm,losx,losx,losx,losx,losx,losx,lost-a
 0,lost-a,o,lost-a,o,lost-a,lost-a,0,lost-a,0,lost-a,lost-a,o,lost-a,o,0
 NAME floor 2
 ITM lotm2 2,1
-ITM wesbencl 1,14
 ITM wesbencp 1,1
 ITM pinktritf5 1,2
 ITM pinktritfg 4,5
 ITM pinktritf1 4,8
 ITM pinktritf2 3,8
 ITM pinktritf4 3,5
+ITM wesbencl 1,14
+ITM pinktritg7 1,8
 PAL 0
 FOG_START 0
 FOG_END 9
@@ -854,7 +848,7 @@ FOG_END 9
 ROOM losw
 0,o,lost-a,o,lost-a,o,lost-a,lou18,0,lou18,lost-a,o,lost-a,o,lost-a,0
 lost-a,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lost-a
-o,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a
+lou18,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a
 0,losv,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,losv,0,losv,losv,0
 lost-a,losv,losv,lot1,losv,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,lot1,losv,0
 lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
@@ -863,18 +857,18 @@ lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
 o,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lou1x,lou1x,lost-a
 0,0,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou18
 0,losv,lot1,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lotm,lost-a
-lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lost-a
+lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou18
 0,losv,losv,losv,lot1,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,losv,0
 0,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,lot1,losv,losv,lot1,losv,0
 o,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou12
-0,lost-a,o,lost-a,o,lost-a,lost-a,lou18,lost-a,lou18,lost-a,o,lost-a,o,lost-a,0
+lou1x,lost-a,o,lost-a,o,lost-a,lost-a,lou18,lost-a,lou18,lost-a,o,lost-a,o,lost-a,0
 NAME floor 3
 ITM lotm2 14,8
 ITM wesbencl 14,1
 ITM pinktritf3 13,8
-ITM wesbencl 14,11
-ITM lotm2 1,1
 ITM lotm2 12,8
+ITM lotm2 1,2
+ITM pinktritg7 1,1
 PAL 0
 FOG_START 0
 FOG_END 9
@@ -887,13 +881,13 @@ lost-a,lot2,lot2,lot2,lost-a,lou1b,lost-a,lou1c,lot2,lou1c,lost-a,0,0,0,0,0
 o,lot2,lot2,lot2,lot2,lou12,0,lost-a,lost-a,lost-a,lou12,lost-a,lost-a,0,0,0
 lost-a,lou1c,lot2,lot2,lot2,lost-a,0,0,0,lost-a,lot2,lot2,lot2,lou18,lost-a,0
 lost-a,lou45,lou45,lost-a,lot2,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lot2,lot2,lot2,lost-a
-lost-a,lot2,lot2,lot2,lot2,lost-a,lot2,lotm,lou1c,lot2,lot2,lou45,lot2,lou1c,lot2,lou15
+lost-a,lot2,lot2,lot2,lot2,lost-a,lot2,lotm,lou1c,lot2,lot2,lou45,lot2,lot2,lot2,lou15
 lost-a,lou1c,lot2,lost-a,lou18,lost-a,lou1c,lot2,lot2,lot2,lot2,lou45,lou1c,lot2,lot2,lost-a
-0,losv,lot2,lost-a,0,lost-a,lou1c,lot2,lot2,lot2,lot2,lou18,lost-a,lou12,lot2,lost-a
+0,losv,lot2,lost-a,0,lost-a,lou1c,lot2,lot2,lot2,lot2,lou18,lost-a,lost-a,lot2,lost-a
 0,losv,lot2,lou12,lost-a,lost-a,lost-a,lost-a,lost-a,lot2,lost-a,lot2,lot2,lot2,lot2,lou18
-0,losv,lot2,lot2,lou1c,lou45,lot2,lou1c,lot2,lot2,lou18,lot2,lost-a,lou18,lost-a,lost-a
+0,losv,lot2,lot2,lou1c,lou45,lot2,lot2,lot2,lot2,lou18,lot2,lost-a,lou18,lost-a,lost-a
 0,losv,lot2,lot2,lot2,lou45,lot2,lot2,lot2,lot2,lou15,lot2,lot2,lot2,0,lost-a
-0,losv,lot2,lot2,lot2,lost-a,lot2,lost-a,o,lost-a,lost-a,lot2,lot2,lot2,lou1c,lost-a
+0,losv,lot2,lot2,lot2,lost-a,lot2,lost-a,lou18,lost-a,lost-a,lot2,lot2,lot2,lou1c,lost-a
 0,losv,lotr,lotr,lot2,lot2,lot2,lou18,0,0,lost-a,lou1c,lot2,lou1c,lou1c,lost-a
 0,0,lost-a,lost-a,o,lost-a,o,0,0,0,0,lost-a,o,lost-a,o,0
 NAME floor 4
@@ -910,17 +904,14 @@ ITM pinktritff 1,6
 ITM pinktritfe 5,12
 ITM lotm2 6,9
 ITM pinktritf3 6,8
-ITM pinktrites 7,7
 ITM pinktritfe 5,11
 ITM pinktritfe 11,7
 ITM pinktritfe 11,8
 ITM wesbencl 12,8
-ITM pinktritg0 7,11
-ITM pinktritg1 13,7
 ITM wesbencl 4,11
-ITM lotm2 1,5
 ITM wesbencp 11,14
 ITM pinktritf3 9,2
+ITM pinktritg7 1,5
 EXT 6,2 losx 3,2 FX fade_b DLG 29
 EXT 4,2 losx 7,2 FX fade_b DLG 29
 EXT 7,2 losx 5,0 DLG 3t
@@ -1008,6 +999,7 @@ EXT 3,13 lost-5 8,14
 EXT 9,2 lost-2 3,2
 EXT 3,3 lost-2 2,8
 EXT 13,13 lost-2 14,8
+EXT 8,8 lost-4 15,0 DLG 6m
 PAL c
 FOG_START 0
 FOG_END 4
@@ -1030,11 +1022,12 @@ ROOM lost-5
 0,0,o,lost-12,lost-12,lost-12,lost-12,o,losx,losx,losx,losx,losx,losx,o,0
 0,0,0,0,0,0,0,0,o,lost-12,lost-12,lost-12,lost-12,o,0,0
 NAME lost woods - 4
-ITM wesbencr1 8,8
+ITM wesbencr1 8,10
 EXT 9,14 lost-4 3,14
 EXT 3,3 lost-0 8,2
 EXT 3,13 lost-0 2,8
 EXT 14,7 loty 14,13
+EXT 8,8 lost-5 15,15 DLG 6n
 PAL c
 FOG_START 0
 FOG_END 4
@@ -1045,19 +1038,25 @@ ROOM losy
 0,0,0,lotf,lote,lotf,lotf,lotf,lotf,lotf,lotf,lou1n,lotf,0,0,0
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lotd,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lot6,lot6,lotc,lotc,lou5d,lotc,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lotc,lotc,lotc,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lotc,lou5d,lotc,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lotd,lotd,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lotd,lotd,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (dorm)
 EXT 4,2 2 8,8 FX fade_b DLG 16
+EXT 11,2 losy 15,2 DLG 6j
+EXT 5,5 losy 0,5 DLG 17
+EXT 10,7 losy 15,7 DLG 18
+EXT 5,10 losy 0,10 DLG 19
+EXT 10,12 losy 15,12 DLG 1a
+EXT 5,14 losy 0,14 DLG 1b
 PAL 2
 RENDER 2D
 
@@ -1259,6 +1258,7 @@ ROOM lot8
 0,0,0,lou1p,lou1w,lou1w,lou1w,lou1w,lou1w,lou1w,lou1w,lou1w,lou1o,0,0,0
 NAME phone (no battery)
 EXT 4,2 losu 8,14 FX fade_b DLG 2g
+EXT 11,2 lot8 15,15 DLG 6i
 PAL 2
 RENDER 2D
 
@@ -1592,7 +1592,7 @@ ROOM lotl
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lou3l,lou3p,lou3p,lou3p,lot6,lot6,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lou3l,lou3p,lou3p,lou5e,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lou3n,lou3p,lou3p,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
@@ -1603,6 +1603,8 @@ ROOM lotl
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (charged)
+EXT 11,2 lotl 15,2 DLG 6k
+EXT 7,6 lotm 5,2 DLG 41
 PAL 2
 RENDER 2D
 
@@ -1612,19 +1614,23 @@ ROOM lotm
 0,0,0,lotf,lote,lotf,lotf,lotf,lotf,lotf,lotf,lou3k,lotf,0,0,0
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lotd,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (charged jax)
-EXT 4,2 lotl 6,2 DLG 68
+EXT 4,2 lotl 5,2 DLG 68
+EXT 11,2 lotm 15,2 DLG 6k
+EXT 5,5 lotm 0,5 DLG 40
+EXT 5,7 lotm 0,7 DLG 44
+EXT 5,10 lotm 0,10 DLG 45
 PAL 2
 RENDER 2D
 
@@ -1635,17 +1641,21 @@ ROOM lotn
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lou3r,lou3s,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
+0,0,0,lot6,lot6,lou3r,lou5f,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,loti,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lou3r,lou3s,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
+0,0,0,lot6,lot6,lou3r,lou5f,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,loti,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lou3r,lou3s,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
+0,0,0,lot6,lot6,lou3r,lou5f,lou3s,lou3s,lou3s,lou3t,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,loti,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (texting carson)
+EXT 11,2 lotn 15,2 DLG 6k
+EXT 6,6 lotn 0,6 DLG 49
+EXT 6,9 lotn 0,9 DLG 4a
+EXT 6,12 lotn 0,12 DLG 4b
 PAL 2
 RENDER 2D
 
@@ -1666,13 +1676,16 @@ ROOM lotp
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME floor 4 - office doors
+NAME floor 4 - items
 ITM pinktritg2 6,11
 ITM pinktritg2 6,12
 ITM pinktritg2 12,7
 ITM pinktritg2 12,8
 ITM pinktritg3 2,7
 ITM pinktritg3 1,7
+ITM pinktritg1 13,7
+ITM pinktritg8 10,9
+ITM pinktritg0 7,11
 PAL 0
 
 ROOM lotq
@@ -1719,7 +1732,7 @@ ROOM lotr
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lotc,lotc,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lou5d,lotc,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
@@ -1730,6 +1743,8 @@ ROOM lotr
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (carson texted)
+EXT 11,2 lotr 15,2 DLG 6k
+EXT 10,6 lotr 15,6 DLG 5j
 PAL 2
 RENDER 2D
 
@@ -1801,9 +1816,9 @@ ROOM lotw
 0,0,0,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,lotf,0,0,0
 0,0,0,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,lotg,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
-0,0,0,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lotc,lotc,lot6,0,0,0
+0,0,0,lot6,lot6,lot6,lotc,lotc,lotc,lotc,lou5d,lotc,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lou3u,lot6,0,0,0
-0,0,0,lot6,lotd,lotd,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
+0,0,0,lot6,lotd,lou5c,lotd,lotd,lotd,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,loth,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
@@ -1812,6 +1827,9 @@ ROOM lotw
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 0,0,0,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,lot6,0,0,0
 NAME phone (carson texted back)
+EXT 11,2 lotw 15,2 DLG 6k
+EXT 10,6 lotw 15,6 DLG 5j
+EXT 5,8 lotw 0,8 DLG 5h
 PAL 2
 RENDER 2D
 
@@ -1912,9 +1930,40 @@ ITM pinktriteq 3,13
 EXT 9,2 lost-2 3,2
 EXT 3,3 lost-2 2,8
 EXT 13,13 lost-5 14,8
+EXT 8,8 loty 15,15 DLG 6o
 PAL c
 FOG_START 0
 FOG_END 4
+
+ROOM lotz
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME floor 1 items
+ITM pinktritg5 1,4
+ITM pinktritg5 2,4
+ITM pinktritg5 3,4
+ITM pinktritg5 4,4
+ITM pinktritg5 5,4
+ITM pinktritg6 1,2
+ITM pinktritg6 2,2
+ITM pinktritg6 3,2
+ITM pinktritg6 4,2
+ITM pinktritg6 5,2
+PAL 0
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -6297,6 +6346,154 @@ TIL lou5b
 NAME white floor
 COL 1
 
+TIL lou5c
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,7,7,7,23,7,7,7,23,7,7,7,23,23,23
+23,23,7,7,7,23,7,7,7,23,7,7,7,23,23,23
+23,23,7,7,7,23,7,7,7,23,7,7,7,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+>
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,7,7,7,23,7,7,7,23,7,7,7,23,23
+23,23,23,7,7,7,23,7,7,7,23,7,7,7,23,23
+23,23,23,7,7,7,23,7,7,7,23,7,7,7,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+NAME phone dots gray
+COL 1
+
+TIL lou5d
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,7,7,7,22,7,7,7,22,7,7,7,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+>
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,7,7,7,22,7,7,7,22,7,7,7,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
+NAME phone dots green
+COL 1
+
+TIL lou5e
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,7,7,7,16,7,7,7,16,7,7,7,16,16,16
+16,16,7,7,7,16,7,7,7,16,7,7,7,16,16,16
+16,16,7,7,7,16,7,7,7,16,7,7,7,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+>
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,7,7,7,16,7,7,7,16,7,7,7,16,16
+16,16,16,7,7,7,16,7,7,7,16,7,7,7,16,16
+16,16,16,7,7,7,16,7,7,7,16,7,7,7,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+NAME phone dots white
+COL 1
+
+TIL lou5f
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,22,22,22,16,22,22,22,16,22,22,22,16,16,16
+16,16,22,22,22,16,22,22,22,16,22,22,22,16,16,16
+16,16,22,22,22,16,22,22,22,16,22,22,22,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
+>
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,22,22,22,16,22,22,22,16,22,22,22,16,16
+16,16,16,22,22,22,16,22,22,22,16,22,22,22,16,16
+16,16,16,22,22,22,16,22,22,22,16,22,22,22,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
+NAME phone dots selection
+COL 1
+
 SPR wthrex
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
@@ -7182,9 +7379,9 @@ SPR lotl
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME religion
+NAME religion (allow diag)
 DLG 1i
-POS losv 10,2
+POS losv 10,3
 COL 2
 
 SPR lotm
@@ -7259,9 +7456,9 @@ SPR lotq
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME culture
+NAME culture (allow diag)
 DLG 1k
-POS losv 10,5
+POS losv 10,6
 COL 2
 
 SPR lotr
@@ -7298,9 +7495,9 @@ SPR lotr
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME poly sci
+NAME poly sci (allow diag)
 DLG 1l
-POS losv 10,6
+POS losv 10,7
 COL 2
 
 SPR loty
@@ -7337,9 +7534,9 @@ SPR loty
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME linguistics
+NAME linguistics (allow diag)
 DLG 1m
-POS losv 10,9
+POS losv 10,10
 COL 2
 
 SPR lotz
@@ -7414,7 +7611,7 @@ SPR lou0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME math
+NAME math (allow diag)
 DLG 1o
 POS losv 6,13
 COL 2
@@ -7453,7 +7650,7 @@ SPR lou1
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME chem
+NAME chem (allow diag)
 DLG 1p
 POS losv 6,10
 COL 2
@@ -7492,7 +7689,7 @@ SPR lou2
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME plants
+NAME plants (allow diag)
 DLG 1q
 POS losv 6,4
 COL 2
@@ -7533,7 +7730,7 @@ SPR lou3
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 1a
 DLG 3q
-POS losv 12,2
+POS losv 12,3
 COL 2
 
 SPR lou4
@@ -7570,9 +7767,9 @@ SPR lou4
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME bible
+NAME bible (allow diag)
 DLG 1r
-POS losv 10,3
+POS losv 10,4
 COL 2
 
 SPR lou5
@@ -7647,9 +7844,9 @@ SPR lou6
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME education
+NAME education (allow diag)
 DLG 1t
-POS losv 10,8
+POS losv 10,9
 COL 2
 
 SPR lou7
@@ -7686,9 +7883,9 @@ SPR lou7
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME French
+NAME French (allow diag)
 DLG 1u
-POS losv 10,11
+POS losv 10,12
 COL 2
 
 SPR lou8
@@ -7725,9 +7922,9 @@ SPR lou8
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME Greek
+NAME Greek (allow diag)
 DLG 1v
-POS losv 10,12
+POS losv 10,13
 COL 2
 
 SPR lou9
@@ -7764,7 +7961,7 @@ SPR lou9
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME astronomy
+NAME astronomy (allow diag)
 DLG 1w
 POS losv 6,12
 COL 2
@@ -7803,7 +8000,7 @@ SPR loua
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME earth
+NAME earth (allow diag)
 DLG 1x
 POS losv 6,9
 COL 2
@@ -7842,7 +8039,7 @@ SPR loub
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME zoo
+NAME zoo (allow diag)
 DLG 1y
 POS losv 6,3
 COL 2
@@ -7961,7 +8158,7 @@ SPR loue
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 1d
 DLG 3q
-POS losv 13,9
+POS losv 13,10
 COL 2
 
 SPR louf
@@ -8000,7 +8197,7 @@ SPR louf
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 2a
 DLG 3q
-POS losv 13,6
+POS losv 13,7
 COL 2
 
 SPR loug
@@ -8078,7 +8275,7 @@ SPR louh
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 2c
 DLG 3q
-POS losv 12,12
+POS losv 12,13
 COL 2
 
 SPR loui
@@ -8194,7 +8391,7 @@ SPR louk
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 3b
 DLG 3q
-POS losv 14,11
+POS losv 14,12
 COL 2
 
 SPR loul
@@ -8311,7 +8508,7 @@ SPR loun
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 4a
 DLG 3q
-POS losv 13,3
+POS losv 13,4
 COL 2
 
 SPR louo
@@ -8350,7 +8547,6 @@ SPR louo
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 4b
 DLG 3q
-POS losv 11,3
 COL 2
 
 SPR loup
@@ -8389,7 +8585,7 @@ SPR loup
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 4c
 DLG 3q
-POS losv 12,8
+POS losv 12,9
 COL 2
 
 SPR louq
@@ -8428,7 +8624,7 @@ SPR louq
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 correct
 DLG 20
-POS losv 14,5
+POS losv 14,6
 COL 2
 
 SPR lour
@@ -8465,7 +8661,7 @@ SPR lour
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME dewey fl 1
+NAME dewey fl 1 (allow diag)
 DLG 23
 POS losu 7,1
 COL 2
@@ -8504,7 +8700,7 @@ SPR lous
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME f1 guide
+NAME f1 guide (allow diag)
 DLG 24
 POS losu 8,10
 COL 2
@@ -8688,7 +8884,6 @@ SPR louz
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax 1
 DLG 17
-POS losy 5,5
 COL 2
 
 SPR lov0
@@ -8727,7 +8922,6 @@ SPR lov0
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
 NAME ruby 1
 DLG 18
-POS losy 10,7
 COL 2
 
 SPR lov1
@@ -8766,7 +8960,6 @@ SPR lov1
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax 2
 DLG 19
-POS losy 5,10
 COL 2
 
 SPR lov2
@@ -8805,7 +8998,6 @@ SPR lov2
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax 3
 DLG 1b
-POS losy 5,14
 COL 2
 
 SPR lov3
@@ -8844,7 +9036,6 @@ SPR lov3
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
 NAME ruby 2
 DLG 1a
-POS losy 10,12
 COL 2
 
 SPR lov4
@@ -9547,9 +9738,9 @@ SPR pbrov0
 0,0,15,19,19,0,0,0,0,0,15,19,19,0,0,0
 0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME f1 cart 1
-DLG 31
-POS losv 14,1
+NAME f1 cart 1 (allow diag)
+DLG 6l
+POS losv 10,1
 COL 2
 
 SPR pbrov1
@@ -9570,7 +9761,7 @@ SPR pbrov1
 0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME f1 cart 2
-DLG 31
+DLG 6l
 POS losv 1,11
 COL 2
 
@@ -9592,8 +9783,8 @@ SPR pbrov2
 0,19,19,0,0,0,0,0,0,19,19,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME f1 cart 3
-DLG 31
-POS losv 14,13
+DLG 6l
+POS losv 14,14
 COL 2
 
 SPR pbrov3
@@ -9651,7 +9842,7 @@ SPR pbrov4
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME technology
+NAME technology (allow diag)
 DLG 33
 POS losw 10,3
 COL 2
@@ -9728,7 +9919,7 @@ SPR pbrov6
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME agriculture
+NAME agriculture (allow diag)
 DLG 35
 POS losw 10,4
 COL 2
@@ -9767,7 +9958,7 @@ SPR pbrov7
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME management
+NAME management (allow diag)
 DLG 36
 POS losw 10,6
 COL 2
@@ -9806,7 +9997,7 @@ SPR pbrov8
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME chemical engineering
+NAME chemical engineering (allow diag)
 DLG 37
 POS losw 10,7
 COL 2
@@ -9845,7 +10036,7 @@ SPR pbrov9
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME manufacturing
+NAME manufacturing (allow diag)
 DLG 55
 POS losw 10,12
 COL 2
@@ -9884,7 +10075,7 @@ SPR pbrova
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME literature
+NAME literature (allow diag)
 DLG 39
 POS losw 10,13
 COL 2
@@ -9923,7 +10114,7 @@ SPR pbrovb
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME French literature
+NAME French literature (allow diag)
 DLG 3a
 POS losw 6,13
 COL 2
@@ -10000,7 +10191,7 @@ SPR pbrovd
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME Latin literature
+NAME Latin literature (allow diag)
 DLG 3c
 POS losw 6,12
 COL 2
@@ -10039,7 +10230,7 @@ SPR pbrove
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME history
+NAME history (allow diag)
 DLG 3d
 POS losw 6,10
 COL 2
@@ -10078,7 +10269,7 @@ SPR pbrovg
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME memoir
+NAME memoir (allow diag)
 DLG 3e
 POS losw 6,9
 COL 2
@@ -10117,7 +10308,7 @@ SPR pbrovh
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME European history
+NAME European history (allow diag)
 DLG 3f
 POS losw 6,7
 COL 2
@@ -10156,7 +10347,7 @@ SPR pbrovi
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME Asian history
+NAME Asian history (allow diag)
 DLG 3g
 POS losw 6,6
 COL 2
@@ -10195,7 +10386,7 @@ SPR pbrovj
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME African history
+NAME African history (allow diag)
 DLG 3h
 POS losw 6,4
 COL 2
@@ -10234,7 +10425,7 @@ SPR pbrovk
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME South American history
+NAME South American history (allow diag)
 DLG 3i
 POS losw 6,3
 COL 2
@@ -11838,8 +12029,8 @@ SPR wthrfk
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16
+NAME jax notifications
 DLG 41
-POS lotl 7,6
 COL 2
 
 SPR wthrfl
@@ -11878,7 +12069,6 @@ SPR wthrfl
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax endgame 1
 DLG 40
-POS lotm 5,5
 COL 2
 
 SPR wthrfm
@@ -11917,7 +12107,6 @@ SPR wthrfm
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax endgame 2
 DLG 44
-POS lotm 5,7
 COL 2
 
 SPR wthrfn
@@ -11956,7 +12145,6 @@ SPR wthrfn
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME jax endgame 3
 DLG 45
-POS lotm 5,10
 COL 2
 
 SPR wthrfo
@@ -12137,7 +12325,6 @@ SPR wthrfu
 22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
 NAME text carson 1
 DLG 49
-POS lotn 6,6
 COL 2
 
 SPR wthrfv
@@ -12176,7 +12363,6 @@ SPR wthrfv
 22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
 NAME text carson 2
 DLG 4a
-POS lotn 6,9
 COL 2
 
 SPR wthrfw
@@ -12215,7 +12401,6 @@ SPR wthrfw
 22,22,16,16,22,22,16,16,22,22,16,16,22,22,16,16
 NAME text carson 3
 DLG 4b
-POS lotn 6,12
 COL 2
 
 SPR wthrfx
@@ -12685,7 +12870,7 @@ SPR wthrge
 6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
-NAME f4 computer 3
+NAME f4 computer 3 (allow diag)
 DLG 4w
 POS losx 12,7
 COL 2
@@ -13328,7 +13513,6 @@ SPR wthrgw
 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
 NAME carson endgame
 DLG 5h
-POS lotw 5,8
 COL 2
 
 SPR wthrgx
@@ -13388,7 +13572,6 @@ SPR wthrgy
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
 NAME ruby end
 DLG 5j
-POS lotw 10,6
 COL 2
 
 SPR wthrgz
@@ -13469,7 +13652,7 @@ SPR wthrh1
 6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
-NAME f1 computer 1
+NAME f1 computer 1 (allow diag)
 DLG 5p
 POS losu 5,5
 COL 2
@@ -13491,7 +13674,7 @@ SPR wthrh2
 6,6,0,6,6,0,0,0,0,0,6,6,0,6,6,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
 6,6,0,0,0,0,0,0,0,0,6,6,0,0,0,0
-NAME f1 computer 2
+NAME f1 computer 2 (allow diag)
 DLG 5p
 POS losu 5,1
 COL 2
@@ -13530,7 +13713,7 @@ SPR wthrh3
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME dewey guide 2
+NAME dewey guide 2 (allow diag)
 DLG 23
 POS losv 7,1
 COL 2
@@ -13569,7 +13752,7 @@ SPR wthrh4
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME dewey guide 3
+NAME dewey guide 3 (allow diag)
 DLG 23
 POS losw 7,1
 COL 2
@@ -13671,7 +13854,6 @@ SPR wthrh7
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22
 NAME ruby before carson
 DLG 5j
-POS lotr 10,6
 COL 2
 
 SPR wthrh8
@@ -13810,7 +13992,7 @@ SPR wthrhc
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
-NAME f1 guide flipped
+NAME f1 guide flipped (allow diag)
 DLG 61
 POS losu 8,9
 COL 2
@@ -14026,6 +14208,69 @@ SPR wthrhl
 NAME sign 5-W
 DLG 6c
 POS loty 7,7
+COL 2
+
+SPR wthrhm
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,14,14,0,0,0,0,0,0,0,9,9,0,0,0,0
+0,14,14,14,0,0,0,0,0,38,38,0,0,0,0,0
+0,0,14,14,14,14,0,0,38,38,38,38,0,0,0,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,40,40,40,40,40,40,40,40,40,40,40,40,40,40,0
+0,0,16,16,16,16,16,16,16,16,16,16,16,16,0,0
+0,0,0,16,16,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME fruit sprite
+DLG 6g
+POS losx 7,7
+COL 2
+
+SPR wthrhn
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,9,9,0,0,0,0
+0,0,0,0,0,0,0,0,0,38,38,0,0,0,0,0
+0,0,0,0,0,0,0,0,38,38,38,38,0,0,0,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,40,40,40,40,40,40,40,40,40,40,40,40,40,40,0
+0,0,16,16,16,16,16,16,16,16,16,16,16,16,0,0
+0,0,0,16,16,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME less fruit sprite
+DLG 6h
+COL 2
+
+SPR wthrho
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,16,16,16,16,16,16,16,16,16,16,16,16,16,16,0
+0,40,40,40,40,40,40,40,40,40,40,40,40,40,40,0
+0,0,16,16,16,16,16,16,16,16,16,16,16,16,0,0
+0,0,0,16,16,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,0,0,16,16,16,16,16,16,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME least fruit sprite
 COL 2
 
 ITM 2
@@ -15814,6 +16059,86 @@ NAME lost woods - wrong way
 DLG 6d
 COL 2
 
+ITM pinktritg5
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,0,0,0,0,33,33,33,33,0,0,0
+0,0,0,0,0,11,11,11,11,33,33,33,33,0,0,0
+0,0,0,0,0,11,0,11,11,11,11,11,11,0,0,0
+0,0,0,0,0,11,0,11,0,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,11,33,33,33,33,33,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0
+0,0,0,0,0,0,0,19,0,0,19,0,0,0,0,0
+0,0,0,0,0,0,19,0,0,0,0,19,0,0,0,0
+NAME f1 tech chair flipped
+COL 2
+
+ITM pinktritg6
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,33,33,0,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,0,0,0,0,0,0,0,0,0
+0,0,0,33,33,33,33,11,11,11,11,0,0,0,0,0
+0,0,0,11,11,11,11,11,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,0,11,0,11,0,0,0,0,0
+0,0,0,33,33,33,33,33,11,33,33,33,0,0,0,0
+0,0,0,33,33,33,33,33,33,33,33,33,33,0,0,0
+0,0,0,0,33,33,33,33,33,33,33,33,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0
+0,0,0,0,0,19,0,0,19,0,0,0,0,0,0,0
+0,0,0,0,19,0,0,0,0,19,0,0,0,0,0,0
+NAME f1 tech chair
+COL 2
+
+ITM pinktritg7
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,52,52,52,52,52,52,52,52,52,52,52,52,0,0
+0,52,21,21,21,21,21,21,21,21,21,21,21,21,52,0
+0,52,21,21,53,53,53,53,53,53,53,53,21,21,52,0
+0,52,52,53,53,53,53,53,53,53,53,53,53,52,52,0
+0,52,31,52,52,52,52,52,52,52,52,52,52,31,52,0
+0,52,31,31,31,31,31,31,31,31,31,31,31,31,52,0
+0,0,52,31,31,31,31,16,16,31,31,31,31,52,0,0
+0,0,52,31,31,31,16,31,31,16,31,31,31,52,0,0
+0,0,52,31,31,31,31,31,31,31,31,31,31,52,0,0
+0,0,52,31,31,16,31,31,31,31,16,31,31,52,0,0
+0,0,0,52,31,16,31,31,31,31,16,31,52,0,0,0
+0,0,0,52,31,31,16,31,31,16,31,31,52,0,0,0
+0,0,0,52,31,31,31,31,31,31,31,31,52,0,0,0
+0,0,0,52,31,31,31,31,31,31,31,31,52,0,0,0
+0,0,0,0,52,52,52,52,52,52,52,52,0,0,0,0
+NAME recycling bin
+COL 2
+
+ITM pinktritg8
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,53,53,53,53,53,53,53,53,53,53,0,0,0
+0,0,53,21,21,21,21,21,21,21,21,21,21,53,0,0
+0,53,21,21,5,5,5,5,5,5,5,5,21,21,53,0
+0,53,53,5,5,5,5,5,5,5,5,5,5,53,53,0
+0,53,11,53,53,53,53,53,53,53,53,53,53,12,53,0
+0,53,12,11,12,11,12,11,12,11,12,11,12,11,53,0
+0,0,53,12,11,12,11,12,11,12,11,12,11,53,0,0
+0,0,53,11,12,11,12,11,12,11,12,11,12,53,0,0
+0,0,53,12,11,12,11,12,11,12,11,12,11,53,0,0
+0,0,53,11,12,11,12,11,12,11,12,11,12,53,0,0
+0,0,0,53,11,12,11,12,11,12,11,12,53,0,0,0
+0,0,0,53,12,11,12,11,12,11,12,11,53,0,0,0
+0,0,0,53,11,12,11,12,11,12,11,12,53,0,0,0
+0,0,0,53,12,11,12,11,12,11,12,11,53,0,0,0
+0,0,0,0,53,53,53,53,53,53,53,53,0,0,0,0
+NAME trash can
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -15859,7 +16184,7 @@ BG_COLOR [0,0,0]
 DLG 17
 """
 {clr 7 true}hey, ruby! you coming to the protest tonight? 8pm.{clr}
-{cell = cell + 1}
+{cell = cell + 1}{property locked true}
 """
 NAME cell f1 dialog
 BG_COLOR [216,216,216]
@@ -15867,7 +16192,7 @@ BG_COLOR [216,216,216]
 DLG 18
 """
 {clr 7 true}aargh! no, i gotta hit the library. literally imma fail my poetry workshop if i don't turn something in this week.{clr}
-{cell = cell + 1}
+{cell = cell + 1}{property locked true}
 """
 NAME cell ruby 1 dialog
 BG_COLOR [57,255,90]
@@ -15875,7 +16200,7 @@ BG_COLOR [57,255,90]
 DLG 19
 """
 {clr 7 true}aw bb! well when u get done u know where to find us. can't stop won't stop.{clr}
-{cell = cell + 1}
+{cell = cell + 1}{property locked true}
 """
 NAME cell f2 dialog
 BG_COLOR [216,216,216]
@@ -15984,7 +16309,8 @@ BG_COLOR [0,0,0]
 DLG 27
 """
 {showLockedMsg = true}Where to?
-Floor # (1-4):{input "nextFloor" 1 4}{pg}{
+Floor # (1-4):{clr 11}<type a number>{clr}
+{input "nextFloor" 1 4}{pg}{
   - nextFloor == currentFloor ?
     Pretty sure I'm already on that floor?
   - nextFloor == 1 ?
@@ -16101,13 +16427,13 @@ NAME sprite pbrova dialog
 BG_COLOR [0,0,0]
 
 DLG 40
-{clr 7 true}ruby, where are you?!
-NAME sprite wthrfl dialog
+{clr 7 true}ruby, where are you?!{property locked true}
+NAME jax endgame dlg 1
 BG_COLOR [216,216,216]
 
 DLG 41
-Damn, Jax has been texting me all evening...{exit "lotm" 6 2}
-NAME sprite wthrfk dialog
+Damn, Jax has been texting me all evening...
+NAME jax notifications dlg
 BG_COLOR [0,0,0]
 
 DLG 42
@@ -16135,12 +16461,12 @@ NAME locked exit 5
 BG_COLOR [0,0,0]
 
 DLG 44
-{clr 7 true}poem done yet?
-NAME sprite wthrfm dialog
+{clr 7 true}poem done yet?{property locked true}
+NAME jax endgame dlg 2
 BG_COLOR [216,216,216]
 
 DLG 45
-{clr 7 true}it's almost over. we might have even made a difference?{clr}{pg}{clr 7 true}it was a start, at least.{clr}{pg}{clr 7 true}but it wasn't the same without you. hope everything is ok...{clr}
+{clr 7 true}it's almost over. we might have even made a difference?{clr}{pg}{clr 7 true}it was a start, at least.{clr}{pg}{clr 7 true}but it wasn't the same without you. hope everything is ok...{clr}{property locked true}
 NAME jax endgame 3 dialog
 BG_COLOR [216,216,216]
 
@@ -16172,7 +16498,7 @@ NAME back button dialog
 BG_COLOR [0,0,0]
 
 DLG 49
-I could say something about Carson's personal situation. Solidarity. You matter. That kind of thing.
+I could say something about Carson's personal situation. Solidarity. You matter. That kind of thing.{property locked true}
 NAME text carson 1 dialog
 BG_COLOR [0,0,0]
 
@@ -16349,7 +16675,7 @@ DLG DATA3D
     "lowerBetaLimit": 0.3141592653589793,
     "rotationTweenFunction": "linear",
     "rotationTweenTime": 250,
-    "rotationTweenTimeWithDiagonals": 175,
+    "rotationTweenTimeWithDiagonals": 200,
     "target": {
       "x": 7.5,
       "y": 0,
@@ -17355,6 +17681,15 @@ DLG DATA3D
       "type": "plane",
       "transform": "0.6,0.6,0.6,0,-56,0,-0.06,-0.19,-0.24"
     },
+    "SPR_wthrhm": {
+      "transform": "0.5,0.5,0.5,0,0,0,0,0.02,0"
+    },
+    "SPR_wthrhn": {
+      "transform": "0.5,0.5,0.5,0,0,0,0,0.02,0"
+    },
+    "SPR_wthrho": {
+      "transform": "0.5,0.5,0.5,0,0,0,0,0.02,0"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -17676,11 +18011,11 @@ DLG DATA3D
     },
     "ITM_pinktritg0": {
       "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
+      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-2.2,0.1"
     },
     "ITM_pinktritg1": {
       "type": "billboard",
-      "transform": "0.5,0.5,0.5,0,0,0,-0.4,-0.2,0.1"
+      "transform": "0.5,0.5,0.5,0,0,0,-0.35,-2.2,0"
     },
     "ITM_pinktritg2": {
       "transform": "1,1,1,0,90,0,-0.52,-2,0",
@@ -17694,6 +18029,21 @@ DLG DATA3D
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
       "hidden": true
+    },
+    "ITM_pinktritg5": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,-2.2,-0.4"
+    },
+    "ITM_pinktritg6": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,-2.2,0.4"
+    },
+    "ITM_pinktritg7": {
+      "type": "billboard",
+      "transform": "0.4,0.4,0.4,0,0,0,0,-0.3,0"
+    },
+    "ITM_pinktritg8": {
+      "transform": "0.4,0.4,0.4,0,-45,0,0.2,-2.3,-0.2"
     }
   },
   "stack": {
@@ -17769,6 +18119,10 @@ DLG DATA3D
       {
         "id": "lost-1",
         "pos": 1
+      },
+      {
+        "id": "lotz",
+        "pos": 2
       }
     ],
     "c": [
@@ -18170,7 +18524,7 @@ BG_COLOR [140,140,140]
 DLG 1a
 """
 {clr 7 true}i'm sorry, jax... i'll try to make it!{clr}
-{cell = cell + 1}
+{cell = cell + 1}{property locked true}
 """
 NAME cell ruby 2 dialog
 BG_COLOR [57,255,90]
@@ -18178,7 +18532,7 @@ BG_COLOR [57,255,90]
 DLG 1b
 """
 {clr 7 true}say hi to that cute librarian for me ;) {clr}
-{cell = cell + 1}
+{cell = cell + 1}{property locked true}
 """
 NAME cell f3 dialog
 BG_COLOR [216,216,216]
@@ -18859,13 +19213,8 @@ DLG 3p
 {cycle
   - Well that was a bore... And no note from the library queer :( 
   - I... don't think I absorbed much of that :( No wonder the library queer didn't choose this book!
-  - Ugh, why do some books feel like such  {shk}tedious mazes{shk} to navigate? I really hope I find the *right* book next time!
-}{music "library_closed_music2.mp3"}{pg}{
-  - currentFloor == 2 ?
-    {exit "floor 2" 8 2 "fade_w"}
-  - else ?
-    {exit "floor 3" 8 2 "fade_w"}
-}
+  - Ugh, why do some books feel like such {shk}tedious mazes{shk} to navigate? I really hope I find the *right* book next time!
+}{music "library_closed_music2.mp3"}{return "fade_w"}
 """
 NAME wrong book exit
 BG_COLOR [0,0,0]
@@ -18972,18 +19321,19 @@ NAME cart 3 carson done dialog
 BG_COLOR [0,0,0]
 
 DLG 4a
-I could say something about standing up and fighting together. Carson and I will not be erased!
+I could say something about standing up and fighting together. Carson and I will not be erased!{property locked true}
 NAME text carson 2 dialog
 BG_COLOR [0,0,0]
 
 DLG 4b
-I could try just to connect as people. Not gonna lie, tonight was weird, but I'm kinda in love?
+I could try just to connect as people. Not gonna lie, tonight was weird, but I'm kinda in love?{property locked true}
 NAME text carson 3 dialog
 BG_COLOR [0,0,0]
 
 DLG 4c
 """
-Which text should I send? (1-3):{input "textCarson" 1 3}{pg}{
+Which text should I send? (1-3):{clr 29}<type a number>{clr}
+{input "textCarson" 1 3}{pg}{
   - textCarson == 1 ?
     Ok, here we go! I wonder if they'll reply...
     {replace "new text" "text deactivated"} {carson_texted = 1} {end_dialog = 1} {exit "lotr" 6 2}
@@ -19037,6 +19387,9 @@ BG_COLOR [0,0,0]
 DLG 4g
 """
 {property locked true}{
+  - lostWoodsProgress > 1 ?
+    {sfx "dark_stinger1.mp3" 0.45}
+}{
   - lostWoodsCircles > 4 ?
     {sequence
       - There must be some kind of trick to navigating this place... Are there {rbw}kindred authors{rbw} I can turn to for guidance?
@@ -19052,7 +19405,7 @@ DLG 4g
       - Oh gosh, what fresh hell is this... {pg} Another lovely {wvy}mind dungeon{wvy} for me to explore? {ambient "[0.6, 0.6, 0.9]"}
       - 
     }
-}
+}{lostWoodsProgress = 1}
 """
 NAME lost woods thoughts
 BG_COLOR [0,0,0]
@@ -19063,12 +19416,17 @@ NAME exit narration 7
 
 DLG 4i
 """
-{property locked true}{lostWoodsCircles = lostWoodsCircles + 1}{
-  - lostWoodsCircles == 1 ?
+{property locked true}{
+  - lostWoodsProgress > 2 ?
+    {sfx "dark_stinger1.mp3" 0.45}
+  - lostWoodsProgress < 2 ?
+    {sfx "sparkle1.mp3" 0.5}
+}{
+  - lostWoodsCircles == 0 ?
      Am I... am I right back where I started? Or somewhere new?
   - else ?
 
-}
+}{lostWoodsProgress = 2}{lostWoodsCircles = lostWoodsCircles + 1}
 """
 NAME lost circles counter
 BG_COLOR [0,0,0]
@@ -19077,7 +19435,7 @@ DLG 4j
 """
 {paper}text me. you know, if you want.
 
-555-3465
+555-4681
 
 -Carson
 """
@@ -19087,7 +19445,7 @@ DLG 4k
 """
 {paper}text me. you know, if you want.
 
-555-3465
+555-4681
 
 -Carson
 {replace "east wing book" "east wing book replacement"}{pg}{bgClr 0}{clr 41 true}I want to open myself up{music "end_music.mp3"}{clr}{pg}{exit "lot4" 7 14 "fade_w"}{ambient "[0.6, 0.6, 0.9]"}
@@ -19348,7 +19706,7 @@ NAME sprite wthrgx dialog
 
 DLG 5j
 """
-{
+{property locked true}{
   - end_dialog == 1 ?
     {bgClr 22} {clr 6 true}hey Carson... i hope it's ok to text late at night. my name is Ruby and I go by they/them. I know you're back home with your family now and have no idea who i am, but... ok, so i found your scavenger hunt, and i just wanna say how fucked up it is that you lost your work-study job and had to drop out of school. i'm always so distracted with fighting for injustice in the world outside, but... how can we fight the fight if our own school won't ensure financial access for everyone here? basically... you matter, your story matters, and i'm here for you. let's talk?{clr}
   - end_dialog == 2 ?
@@ -19562,6 +19920,96 @@ Featured authors:
 NAME sign 2-E new
 BG_COLOR [0,0,0]
 MAX_LINES 4
+
+DLG 6f
+"""
+{property locked true}{borderClr 10}{bgClr 14}{center}{clr 6 true}
+^ Elevator
+East Wing >
+< Checkout Desk
+{clr}
+"""
+NAME locked exit 6
+BG_COLOR [0,0,0]
+
+DLG 6g
+"""
+{sequence
+  - This beautiful bowl of fruit is practically a still life... {pg} Would be a shame if {wvy}anything happened{wvy} to that perfect fruit.
+  - {replace "fruit sprite" "less fruit sprite" "floor 4"} *snag*
+  - 
+}
+"""
+NAME fruit sprite dialog
+BG_COLOR [0,0,0]
+
+DLG 6h
+{replace "less fruit sprite" "least fruit sprite" "floor 4"} *om nom nom*
+NAME less fruit sprite dialog
+
+DLG 6i
+{property locked true}{center}{bgClr 1}{clr 16}{shk}0% charged{shk}{clr}
+NAME no battery msg
+BG_COLOR [0,0,0]
+
+DLG 6j
+{property locked true}{center}{bgClr 1}{clr 16}9% charged{clr}
+NAME low battery msg
+BG_COLOR [0,0,0]
+
+DLG 6k
+{property locked true}{center}{bgClr 10}{clr 3 true}82% charged{clr}
+NAME charged battery msg
+BG_COLOR [0,0,0]
+
+DLG 6l
+"""
+{
+  - f2book_seen == 0 ?
+    {shuffle
+      - Returned books waiting to be reshelved.
+      - Reshelving books seems like it would be a fun work-study job...
+    }
+  - else ?
+    Don't see it on this cart... But I think I saw one or two other carts on this floor?
+}
+"""
+NAME cart fl2 dlg
+BG_COLOR [0,0,0]
+
+DLG 6m
+"""
+{property locked true}{
+  - lostWoodsProgress > 3 ?
+    {sfx "dark_stinger1.mp3" 0.45}
+  - lostWoodsProgress < 3 ?
+    {sfx "sparkle2.mp3" 0.4}
+}{lostWoodsProgress = 3}
+"""
+NAME lost woods lvl 3
+BG_COLOR [0,0,0]
+
+DLG 6n
+"""
+{property locked true}{
+  - lostWoodsProgress > 4 ?
+    {sfx "dark_stinger1.mp3" 0.45}
+  - lostWoodsProgress < 4 ?
+    {sfx "sparkle3.mp3" 0.3}
+}{lostWoodsProgress = 4}
+"""
+NAME lost woods lvl 4
+BG_COLOR [0,0,0]
+
+DLG 6o
+"""
+{property locked true}{
+  - lostWoodsProgress < 5 ?
+    {sfx "sparkle4.mp3" 0.3}
+}{lostWoodsProgress = 5}
+"""
+NAME lost woods lvl 5
+BG_COLOR [0,0,0]
 
 
 </script>
@@ -21068,6 +21516,7 @@ function endFunc(environment,parameters,onReturn) {
 	onReturn(null);
 }
 
+let prevLocation;
 function exitFunc(environment,parameters,onReturn) {
 	var destRoom = parameters[0];
 
@@ -21080,9 +21529,12 @@ function exitFunc(environment,parameters,onReturn) {
 	var destY = parseInt(parameters[2]);
 
 	const updatePosition = () => {
+		prevLocation = [curRoom, player().x, player().y];
+
 		player().room = destRoom;
 		player().x = destX;
 		player().y = destY;
+
 		curRoom = destRoom;
 		initRoom(curRoom);
 	}
@@ -21105,6 +21557,16 @@ function exitFunc(environment,parameters,onReturn) {
 	}
 
 	onReturn(null);
+}
+
+function returnFunc(environment,parameters,onReturn) {
+	if (!prevLocation) return;
+
+	const transitionEffect = parameters[0];
+	if (transitionEffect) prevLocation.push(transitionEffect);
+
+	exitFunc(environment, prevLocation, onReturn);
+	prevLocation = null;
 }
 
 function getMusicPlayer(playerId, doLoop) {
@@ -21214,6 +21676,7 @@ function sfxFunc(environment, parameters, onReturn) {
 		const src = getMusicSrc(parameters);
 		sfxPlayer.currentTime = 0;
 		sfxPlayer.src = src;
+		sfxPlayer.volume = parameters[1] || 1;
 		sfxPlayer.play();
 	}
 
@@ -21533,6 +21996,7 @@ var Environment = function() {
 	functionMap.set("debugOnlyPrintFont", printFontFunc); // DEBUG ONLY
 	functionMap.set("end", endFunc);
 	functionMap.set("exit", exitFunc);
+	functionMap.set("return", returnFunc); // TODO: expose in UI
 	functionMap.set("pg", pagebreakFunc);
 	functionMap.set("property", propertyFunc);
 	functionMap.set("music", musicFunc);
@@ -24952,6 +25416,7 @@ function stopGame() {
 
 	document.getElementById('music-player-1')?.pause();
 	document.getElementById('music-player-2')?.pause();
+	document.getElementById('sfx-player')?.pause();
 
 	 // TODO: find a better place for this?
 	 // (and ideally prevent the need for setTimeout)
@@ -25483,12 +25948,15 @@ function movePlayer(direction) {
 	let spr = null, obstacleCount = 0;
 
 	function getDiagonalObstacles (xDir, yDir) {
+		// TODO: implement less janky solution for allowing diagonal movement past specific sprites
+		const allowDiag = (spriteId) => (spriteId) ? !sprite[spriteId].name?.includes('allow diag') : false;
+
 		const yObstacles = (yDir === 'up') ?
-			getSpriteUp() || isWallUp() :
-			getSpriteDown() || isWallDown();
+			allowDiag(getSpriteUp()) || isWallUp() :
+			allowDiag(getSpriteDown()) || isWallDown();
 		const xObstacles = (xDir === 'left') ?
-			getSpriteLeft() || isWallLeft() :
-			getSpriteRight() || isWallRight();
+			allowDiag(getSpriteLeft()) || isWallLeft() :
+			allowDiag(getSpriteRight()) || isWallRight();
 		return Boolean(yObstacles) + Boolean(xObstacles);
 	}
 
@@ -29718,7 +30186,7 @@ b3d.cameraDataModel = {
                 lowerBetaLimit: 0,
                 rotationTweenFunction: 'linear',
                 rotationTweenTime: 250,
-                rotationTweenTimeWithDiagonals: 175,
+                rotationTweenTimeWithDiagonals: 200,
             },
             vector3: { target: {x: 7.5, z: 7.5, y: 0} },
             trait: {
