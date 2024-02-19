@@ -623,6 +623,40 @@ NAME flag book
 156,89,209
 44,44,44
 
+PAL f
+NAME endgame
+0,0,0
+255,49,0
+71,0,26
+0,84,23
+181,181,0
+255,27,153
+0,0,0
+0,0,0
+237,237,237
+216,150,91
+35,255,149
+248,15,0
+18,12,255
+240,62,255
+255,248,205
+103,255,155
+255,255,255
+29,255,180
+64,0,93
+255,238,93
+59,26,255
+33,138,255
+57,255,90
+0,0,0
+31,188,28
+175,35,243
+4,225,185
+250,147,4
+40,231,197
+168,168,168
+110,110,110
+
 ROOM 2
 a,p,p,p,lou47,lot4,lot4,lot4,lot4,lot4,lot4,lot4,lou47,lou46,lou46,lou46
 a,p,p,p,lou46,lou47,lou46,lou46,11,lou46,lou46,lou47,lou46,p,p,p
@@ -1532,7 +1566,6 @@ ITM wesbencn 12,7
 ITM pinktritfl 9,6
 ITM pinktritfl 8,10
 ITM pinktritfl 5,8
-ITM pinktritfm 8,5
 ITM pinktritfm 10,8
 ITM pinktritfm 6,9
 ITM pinktriten 5,7
@@ -1542,6 +1575,7 @@ ITM pinktriten 9,9
 ITM pinktritfn 8,13
 ITM pinktritfn 7,13
 ITM pinktritem 8,8
+ITM pinktritga 8,5
 EXT 14,13 loti 14,14
 EXT 1,13 lotk 1,14
 PAL b
@@ -1959,6 +1993,27 @@ ITM pinktritg6 3,2
 ITM pinktritg6 4,2
 ITM pinktritg6 5,2
 PAL 0
+
+ROOM lou0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME endgame
+PAL f
+RENDER 2D
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -13039,7 +13094,7 @@ SPR wthrgi
 0,0,0,0,0,11,11,11,11,11,11,11,5,5,43,0
 0,0,0,43,43,5,5,5,5,5,0,0,5,5,5,0
 0,0,0,5,5,5,5,5,5,5,0,0,0,5,0,0
-NAME burned book pile
+NAME burned book pile (allow diag)
 DLG 52
 POS lotj 8,7
 COL 2
@@ -13827,7 +13882,7 @@ SPR wthrh6
 0,0,0,0,0,11,11,11,11,11,11,11,5,5,43,0
 0,0,0,43,43,5,5,5,5,5,0,0,5,5,5,0
 0,0,0,5,5,5,5,5,5,5,0,0,0,5,0,0
-NAME burned book pile 3
+NAME burned book pile 3 (allow diagonal)
 DLG 52
 POS lotj 6,8
 COL 2
@@ -16366,6 +16421,26 @@ ITM pinktritg9
 NAME trash can
 COL 2
 
+ITM pinktritga
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+4,4,4,5,0,0,5,5,6,35,35,4,4,4,4,6
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+6,35,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+35,35,4,4,4,4,4,4,4,0,0,0,5,5,6,6
+35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+4,4,4,4,4,4,35,35,6,6,5,6,35,4,4,4
+NAME destroyed bookshelf 3b
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -17808,7 +17883,7 @@ DLG DATA3D
       "transform": "0.5,0.5,0.5,0,0,0,0,-0.25,0"
     },
     "SPR_wthrgj": {
-      "transform": "0.5,0.5,0.5,0,0,0,0,-0.25,0"
+      "transform": "0.5,0.5,0.5,0,0,0,-0.15,-0.25,0"
     },
     "SPR_wthrgk": {
       "type": "box"
@@ -18076,7 +18151,7 @@ DLG DATA3D
     },
     "ITM_pinktriten": {
       "type": "box",
-      "transform": "0.6,0.6,0.6,45,0,0,0,-0.35,0"
+      "transform": "0.7,0.7,0.7,45,-10,0,-0.08,-0.35,0"
     },
     "ITM_pinktriteo": {
       "transform": "1,1,1,0,0,0,0,0,-0.5"
@@ -18192,11 +18267,11 @@ DLG DATA3D
     },
     "ITM_pinktritfl": {
       "type": "box",
-      "transform": "0.6,0.6,0.6,33,24,0,0,-0.32,0"
+      "transform": "0.7,0.7,0.7,33,24,0,0,-0.32,-0.1"
     },
     "ITM_pinktritfm": {
       "type": "box",
-      "transform": "0.6,0.6,0.6,40,170,30,0,-0.4,0"
+      "transform": "0.7,0.7,0.7,40,170,30,0,-0.4,-0.1"
     },
     "ITM_pinktritfn": {
       "type": "billboard",
@@ -18300,6 +18375,10 @@ DLG DATA3D
     "ITM_pinktritg9": {
       "type": "billboard",
       "transform": "0.4,0.4,0.4,0,0,0,0,-0.3,0"
+    },
+    "ITM_pinktritga": {
+      "type": "box",
+      "transform": "0.7,0.7,0.7,40,170,30,-0.13,-0.4,-0.25"
     }
   },
   "stack": {
@@ -19939,18 +20018,18 @@ DLG 5h
     {bgClr 23} {clr 6 true}library queer! i love it. thanks for texting me, ruby. i can't believe you actually did my weird little scavenger hunt? and let's be honest... anyone who would think of *that* as a first date is someone i'd like to meet. if you're serious about that book club idea, i'm game. coffee? bubble tea? tell me your drink of choice, and we'll write that epilogue, maybe...{clr} 
   - else ?
 
-}{pg}I think I know the poem I want to write now...{music "credits_music.mp3"}{pg}{end}{borderClr 16}{center}A game by {clr 25}Elana Bell Bogdan{clr} and {clr 26}Nat Mesnard{clr} {pg}{center}with special thanks to our supportive partners {clr 21}Rye{clr} & {clr 22}Oat{clr}{pg}{center}additional invaluable playtesting by{br}
+}{pg}{exit "lou0" 5 8 "fade_b"}{bgClr 30}I think I know the poem I want to write now...{pg}{music "credits_music.mp3"}{clr 0}...{clr}{pg}{end}{borderClr 16}{center}A game by {clr 25}Elana Bell Bogdan{clr} and {clr 26}Nat Mesnard{clr} {pg}{center}with special thanks to our supportive partners {clr 21}Rye{clr} & {clr 22}Oat{clr}{pg}{center}additional invaluable playtesting by{br}
 {clr 26}Emily D,{clr}{br}
 {clr 19}Anna W,{clr}{br}
 {clr 27}Annie T,{clr}{br}
 {clr 21}Sungwon M,{clr}{br}
 {clr 13}Andi B,{clr}{br}
 {clr 1}Alexa L,{clr}{br}
-& {clr 9}Kieran T{clr}{pg}{center}music by
+& {clr 9}Kieran T{clr}{pg}{center}music by{br}
 {clr 1}Kevin MacLeod{clr} (who else!){br}
 {clr 27}Oleksii Kaplunskyi{clr}{br}
 & {clr 19}Denys Kyshchuk {clr}{pg}{center}Thank {rbw}YOU{rbw}for playing and helping {rbw}keep our stories alive!{rbw}{pg}{clr 29}built with a variant of Bitsy 3D {br}
-(we forked the forked fork){clr}
+(we forked the forked fork){clr}{pg}{clr 0}the end{clr}
 """
 NAME carson endgame dialog
 BG_COLOR [0,0,0]
