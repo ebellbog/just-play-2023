@@ -853,7 +853,7 @@ ROOM losv
 o,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
 lou18,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou15
 0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
-0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
+0,losv,losv,losv,losv,losv,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
 lou18,losx,losx,lou13,lou13,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,lou12
 lost-a,lotm,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losv,losv,0
 lou18,losx,losx,losx,losx,losx,losx,losx,losx,losx,losx,losv,losv,losx,losv,0
@@ -8190,7 +8190,7 @@ SPR loud
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 1c
 DLG 3q
-POS losv 2,4
+POS losv 1,4
 COL 2
 
 SPR loue
@@ -8579,7 +8579,7 @@ SPR loun
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 w 4a
 DLG 3q
-POS losv 13,4
+POS losv 14,4
 COL 2
 
 SPR louo
@@ -8695,7 +8695,7 @@ SPR louq
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f1 correct
 DLG 20
-POS losv 14,6
+POS losv 13,6
 COL 2
 
 SPR lour
@@ -19514,7 +19514,7 @@ MAX_LINES 16
 
 DLG 3k
 """
-Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend (can i call you that?) if you're still with me, and down for another little trivia puzzle to prove it, let's reunite again at a different banished title...{pg}{paper}
+{historicalMarkerSeen = true}Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one! Honestly? I'm kind of obsessed with this.{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}It literally makes me want to punch a hole in the wall. Stop taking books from kids, you {shk}assholes!{shk}{pg}{paper}friend (can i call you that?) if you're still with me, and down for another little trivia puzzle to prove it, let's reunite again at a different banished title...{pg}{paper}
 the first digit of this dewey decimal is the number of stripes on the bi flag.
 
 the second digit is the number of people I've dated. (sorry, that was an inside joke between me & my shy self. it's 0.)
@@ -19551,6 +19551,23 @@ DLG 3p
   - Well that was a bore... And no note from the library queer :( 
   - I... don't think I absorbed much of that :( No wonder the library queer didn't choose this book!
   - Ugh, why do some books feel like such {shk}tedious mazes{shk} to navigate? I really hope I find the *right* book next time!
+}{
+  - historicalMarkerSeen == false ?
+    {sequence
+      - 
+      - 
+      - 
+      - {pg} This would {wvy}probably{wvy} be easier if I found that historical marker, instead of just... guessing.
+    }
+  - pedCount == 0 ?
+
+  - f2book_seen == 1 ?
+
+  - else ?
+    {sequence
+      - 
+      - {pg} Maybe I don't know my pride flags as well as I thought I did... I guess I can always check the ones hanging in that exhibit? Or reread the clue in All Boys Aren't Blue?
+    }
 }{music "library_closed_music2.mp3"}{return "fade_w"}
 """
 NAME wrong book exit
