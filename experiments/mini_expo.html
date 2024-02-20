@@ -16510,6 +16510,10 @@ BG_COLOR [216,216,216]
 DLG 20
 """
 {
+  - {item "key"} == 1 ?
+    So relieved this book turned up nearby after all! {pg} Then again, if I can't find my way into the East Wing... {pg} There's still a very really chance I might never find out how this treasure hunt ends.
+  - carson_cart_seen == 1 ?
+     So relieved this book turned up nearby after all! 
   - f2book_seen == 1 ?
     Gosh, I'm really hoping this book is on a return cart... Best bet is somewhere on this floor, soon to be reshelved?
   - f3_done == 1 ?
@@ -19829,7 +19833,7 @@ NAME back button carson text 2 dialog
 DLG 4o
 """
 {sequence
-  - More banned books here!                    {pg}                    This one's a list of Banned Books week events. Ha! No way! "Each year, The Washington, D.C. Public Library holds a scavenger hunt of banned books, with titles hidden in locations across the city."                    {pg}                     D.C. ...and Birchwood College. Nerdy as {wvy}hell.{wvy}
+  - More banned books here! {pg} This one's a list of Banned Books week events. Ha! No way! "Each year, The Washington, D.C. Public Library holds a scavenger hunt of banned books, with titles hidden in locations across the city." {pg} D.C. ...and Birchwood College. Nerdy as {wvy}hell.{wvy}
   - 
 }
 """
@@ -19839,7 +19843,7 @@ BG_COLOR [0,0,0]
 DLG 4p
 """
 {sequence
-  - More banned books here!                            {pg}                It says that books have been banned and burned throughout history, even ones we regard today as classics...                            {pg}         "In A.D. 8 Ovid was banished from Rome for writing Ars Amatoria (The Art of Love)."            {pg}         The Art of Love, eh? {wvy}Spicy.{wvy}
+  - More banned books here! {pg} It says that books have been banned and burned throughout history, even ones we regard today as classics... {pg} "In A.D. 8 Ovid was banished from Rome for writing Ars Amatoria (The Art of Love)." {pg} The Art of Love, eh? {wvy}Spicy.{wvy}
   - 
 }
 """
