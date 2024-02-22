@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Banned Together</title>
+<title>Banned Together - a story of queer love & erasure</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
@@ -15,7 +15,7 @@
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}{lostWoodsProgress = 0}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{courtyardComplete = false}{historicalMarkerSeen = false}{computerEmail = 0}{lostWoodsProgress = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -25,6 +25,8 @@ BG_COLOR [0,0,0]
 ! DRAW_FORMAT 1
 
 AUDIO_URL https://github.com/ebellbog/just-play-2023/raw/main/audio
+
+MUTE_AUDIO true
 
 PAL 0
 NAME interior
@@ -482,6 +484,7 @@ NAME courtyard
 96,85,69
 155,63,21
 68,68,68
+68,75,119
 
 PAL c
 NAME lost woods
@@ -2014,6 +2017,31 @@ ROOM lou0
 NAME endgame
 PAL f
 RENDER 2D
+
+ROOM lou1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME courtyard pedestal deactivation
+ITM pinktritgb 0,0
+ITM pinktritgc 4,4
+ITM pinktritgc 4,11
+ITM pinktritgc 11,11
+ITM pinktritgc 11,4
+PAL b
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -6764,7 +6792,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS lot3 8,2
 ITM b 1
 COL 2
 
@@ -14535,6 +14563,45 @@ DLG 4s
 POS losw 11,0
 COL 2
 
+SPR wthrhx
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,45,45,15,15,15,15,15,15,45,45,4,4,4
+4,4,4,45,12,12,12,12,12,12,12,12,45,4,4,4
+4,4,4,15,12,21,21,12,21,12,21,12,15,4,4,4
+4,4,4,15,12,12,12,12,12,12,12,12,15,4,4,4
+4,4,4,15,12,21,21,21,12,21,21,12,15,4,4,4
+4,4,4,45,12,12,12,12,12,12,12,12,45,4,4,4
+4,4,4,45,45,15,15,15,15,15,15,45,45,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+>
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,45,45,15,15,15,15,15,15,45,45,4,4,4
+4,4,4,45,40,40,40,40,40,40,40,40,45,4,4,4
+4,4,4,15,40,21,21,40,21,40,21,40,15,4,4,4
+4,4,4,15,40,40,40,40,40,40,40,40,15,4,4,4
+4,4,4,15,40,21,21,21,40,21,21,40,15,4,4,4
+4,4,4,45,40,40,40,40,40,40,40,40,45,4,4,4
+4,4,4,45,45,15,15,15,15,15,15,45,45,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME courtyard plaque
+DLG 6r
+POS lot3 9,0
+COL 2
+
 ITM 2
 0,0,0,0,0,0,0,0
 0,0,0,16,16,16,0,0
@@ -16441,6 +16508,46 @@ ITM pinktritga
 NAME destroyed bookshelf 3b
 COL 2
 
+ITM pinktritgb
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,21,21,21,16,12,11,12,16,12
+11,12,16,12,11,12,21,9,9,9,21,12,11,12,16,12
+11,12,16,12,11,12,21,9,9,9,21,12,11,12,16,12
+11,12,16,12,11,12,16,21,21,21,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+NAME pedestal (inactive)
+COL 2
+
+ITM pinktritgc
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,9,0,0,0,0,9,0,0,0,0,0
+0,0,0,0,0,0,9,0,0,9,0,0,0,0,0,0
+0,0,0,0,0,0,0,9,9,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,9,9,0,0,0,0,0,0,0
+0,0,0,0,0,0,9,0,0,9,0,0,0,0,0,0
+0,0,0,0,0,9,0,0,0,0,9,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME pedestal deactivator
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -18023,6 +18130,9 @@ DLG DATA3D
     "SPR_wthrhw": {
       "type": "box"
     },
+    "SPR_wthrhx": {
+      "type": "box"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -18385,6 +18495,14 @@ DLG DATA3D
     "ITM_pinktritga": {
       "type": "box",
       "transform": "0.7,0.7,0.7,40,170,30,-0.13,-0.4,-0.25"
+    },
+    "ITM_pinktritgb": {
+      "type": "table",
+      "transform": "0.401,1,0.401,0,0,0,0,-2.8,0"
+    },
+    "ITM_pinktritgc": {
+      "transform": "0.3,0.3,0.3,0,0,0,0,-3.2,0",
+      "hidden": true
     }
   },
   "stack": {
@@ -18532,6 +18650,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "i": [
@@ -18570,6 +18692,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "l": [
@@ -18584,6 +18710,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "m": [
@@ -18598,6 +18728,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ]
   }
@@ -19154,13 +19288,13 @@ BG_COLOR [0,0,0]
 DLG 2l
 """
 {
+  - courtyardComplete == true ?
+    It doesn't "boop" anymore... Am I finally free to leave now??
   - courtyardItemsCollected == 4 ?
     Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
+  - courtyardItemsCollected >= 6 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "pink triangle"} == 1 ?
     {sequence
@@ -19184,13 +19318,13 @@ MAX_LINES 3
 DLG 2m
 """
 {
+  - courtyardComplete == true ?
+    It doesn't "boop" anymore... Am I finally free to leave now??
   - courtyardItemsCollected == 4 ?
     Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
+  - courtyardItemsCollected >= 6 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "pope hat"} == 1 ?
     {sequence
@@ -19213,14 +19347,32 @@ MAX_LINES 3
 
 DLG 2n
 """
-{
+{pedC = pedCount}{pedCount = pedCount + 1}{seqLength = 0}{
+  - pedC > pedA ?
+    {seqLength = seqLength + 1}
+}{
+  - pedA > pedB ?
+    {seqLength = seqLength + 1}
+}{
+  - pedB > pedD ?
+    {seqLength = seqLength + 1}
+}{
+  - seqLength >= 3 ?
+    {
+      - courtyardComplete == false ?
+        {courtyardComplete = true} {replace "pedestal deactivator" "pedestal (inactive)" "courtyard pedestal deactivation"} 
+    }
+}{
+  - courtyardComplete == true ?
+    {sequence
+      - Wait did I... did I crack the code? I think that might have worked! {pg} {clr 11}(please tell me the elevator will actually work for me now??){clr}
+      - It doesn't "boop" anymore, so... Am I finally free to leave this mind dungeon??
+    }
   - courtyardItemsCollected == 4 ?
     Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
+  - courtyardItemsCollected >= 6 ?
     {wvy}Boop!{wvy} I press the button. 
   - {item "MAGA hat"} == 1 ?
     {sequence
@@ -19235,7 +19387,7 @@ DLG 2n
      Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
     {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
-}{pedC = pedCount}{pedCount = pedCount + 1}
+}
 """
 NAME pedestal C dlg
 BG_COLOR [0,0,0]
@@ -19244,13 +19396,13 @@ MAX_LINES 3
 DLG 2o
 """
 {
+  - courtyardComplete == true ?
+    It doesn't "boop" anymore... Am I finally free to leave now??
   - courtyardItemsCollected == 4 ?
     Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
     Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
+  - courtyardItemsCollected >= 6 ?
      {wvy}Boop!{wvy} I press the button. 
   - {item "papyrus burning"} == 1 ?
     {sequence
@@ -19273,22 +19425,13 @@ MAX_LINES 3
 
 DLG 2p
 """
-{property locked true}{seqLength = 0}{
-  - pedC > pedA ?
-    {seqLength = seqLength + 1}
-}{
-  - pedA > pedB ?
-    {seqLength = seqLength + 1}
-}{
-  - pedB > pedD ?
-    {seqLength = seqLength + 1}
-}{
-  - seqLength >= 3 ?
-    Please, for the love of... I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
-    {pg} Now kindly just let me get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} I... I think it {shk}actually worked??{shk} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"} {pg} Gosh, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that scavenger hunt now? {pg} Dewey decimals and stripes on flags, or something like that?
+{property locked true}{
+  - courtyardComplete == true ?
+    Alright, I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
+    {pg} Now, time to get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"} {pg} Gosh, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that scavenger hunt now? {pg} Dewey decimals and stripes on flags, or something like that?
   - courtyardItemsCollected >= 4 ?
     {sequence
-      - Hm, I'm pretty sure I've found everything I need to escape from here, but... The stony silence of this cruel elevator is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
+      - Hm, I'm pretty sure I've found all the missing items, but... The stony silence of this cruel elevator is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
       - Nothing... Maybe I still just need to press those pedestal buttons in the right order?
     }
   - else ?
@@ -20404,6 +20547,17 @@ DLG 6q
 """
 NAME trash sprite dialog
 BG_COLOR [0,0,0]
+
+DLG 6r
+"""
+{center}{borderClr 15}{bgClr 16}{clr 21 true} TO PROTECT THE FUTURE, A PRUDENT STUDENT FREQUENTS THE PAST.{clr}{pg}{center}{borderClr 15}{bgClr 16}{clr 21 true} UNDERSTAND EACH PEDESTAL, THEN VISIT IN SEQUENCE - FIRST TO LAST.{clr}{pg}{sequence
+  - Nice. Cryptic. Love/hate it.
+  - 
+}
+"""
+NAME courtyard plaque dialog
+BG_COLOR [0,0,0]
+MAX_LINES 3
 
 
 </script>
@@ -22232,48 +22386,66 @@ function ambientFunc(environment, parameters, onReturn) {
 	onReturn(null);
 }
 
-function replaceTileFunc(environment, parameters, onReturn) {
-	const oldTileName = parameters[0];
-	const newTileName = parameters[1];
+function replaceElementFunc(environment, parameters, onReturn) {
+	const oldEntityName = parameters[0];
+	const newEntityName = parameters[1];
 	const roomName = parameters[2];
 
-	let isSprite = false;
-	const findTileOrSprite = (entityName) => {
+	let entityType;
+	const findEntity = (entityName) => {
 		let entityId;
 		if (names.tile.has(entityName)) {
 			entityId = names.tile.get(entityName);
+			entityType = 'tile';
 		} else if (names.sprite.has(entityName)) {
 			entityId = names.sprite.get(entityName);
-			isSprite = true;
+			entityType = 'sprite';
+		} else if (names.item.has(entityName)) {
+			entityId = names.item.get(entityName);
+			entityType = 'item';
 		}
 		return entityId;
 	}
 
-	const oldTileId = findTileOrSprite(oldTileName);
-	const newTileId = findTileOrSprite(newTileName);
+	const oldEntityId = findEntity(oldEntityName);
+	const newEntityId = findEntity(newEntityName);
 
-	let roomData;
-	if (!isSprite && names.room.has(roomName)) {
-		const roomId = names.room.get(roomName);
-		roomData = room[roomId];
+	if (!(oldEntityId && newEntityId)) {
+		console.error('Error (replace command): One or more of the specified game elements could not be found');
+		return;
 	}
 
-	if (isSprite && oldTileId && newTileId) {
-		const oldSpriteData = sprite[oldTileId];
-		const newSpriteData = sprite[newTileId];
+	let roomData;
+	if (entityType !== 'sprite') {
+		const roomId = names.room.get(roomName);
+		roomData = room[roomId];
+
+		if (!roomData) {
+			console.error('Error (replace command): Please specify a valid room');
+			return;
+		}
+	}
+
+	if (entityType === 'sprite') {
+		const oldSpriteData = sprite[oldEntityId];
+		const newSpriteData = sprite[newEntityId];
 
 		['room', 'x', 'y'].forEach((prop) => {
 			newSpriteData[prop] = oldSpriteData[prop];
 			oldSpriteData[prop] = null;
 		});
-	} else if (roomData && oldTileId && newTileId) {
+	} else if (entityType === 'item') {
+		roomData.items.forEach((item) => {
+			if (item.id === oldEntityId) item.id = newEntityId;
+		});
+	} else if (entityType === 'tile') {
 		roomData.tilemap.forEach((row) => {
 			row.forEach((col, idx) => {
-				if (row[idx] === oldTileId) row[idx] = newTileId;
+				if (row[idx] === oldEntityId) row[idx] = newEntityId;
 			});
 		});
 	} else {
-		console.error(`Unable to replace tile ${oldTileName} with tile ${newTileName} for room ${roomName}`);
+		console.error(`Error (replace command): Unable to replace element ${oldEntityName} with element ${newEntityName} for room ${roomName}`);
 	}
 
 	onReturn(null);
@@ -22400,7 +22572,7 @@ var Environment = function() {
 	functionMap.set("input", userInputFunc);
 	functionMap.set("ambient", ambientFunc);
 	functionMap.set("fog", fogFunc);
-	functionMap.set("replace", replaceTileFunc);
+	functionMap.set("replace", replaceElementFunc);
 
 	this.HasFunction = function(name) { return functionMap.has(name); };
 	this.EvalFunction = function(name,parameters,onReturn,env) {
