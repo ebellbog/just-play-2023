@@ -7,15 +7,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Banned Together</title>
+<title>Banned Together - a story of queer love & erasure</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
-{music "dorm_music2.mp3"}{bgClr 3}{borderClr 28}Banned Together - a story of queer love & erasure{clr 28 true}{clr}{pg}Birchwood College
+{music "courtyard_music.mp3"}{bgClr 3}{borderClr 28}Banned Together - a story of queer love & erasure{clr 28 true}{clr}{pg}Birchwood College
 October, 2023{pg}{shk}*bzzt!*{shk}
 {sfx "phone_buzz.wav"}
 {pg}{shk}*bzzt!*{shk}
-{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{historicalMarkerSeen = false}{computerEmail = 0}{lostWoodsProgress = 0}
+{sfx "phone_buzz.wav"}{pg}Where's my darn phone?{enteredLibrary = 0}{project_seen = 0}{entered_eastwing = 0}{bannedbooks_seen = 0}{libraryClosed = false}{deadPhoneSeen = false}{pedCount = 0}{pedA = 0}{pedB = 0}{pedC = 0}{pedD = 0}{genderqueer_seen = 0}{f3_done = 0}{currentFloor = 1}{carson_cart_seen = 0}{eastwing_done = 0}{carson_texted = 0}{end_dialog = 0}{lostWoodsCircles = 0}{eastwingbook_read = 0}{f2book_seen = 0}{courtyardItemsCollected = 0}{courtyardComplete = false}{historicalMarkerSeen = false}{computerEmail = 0}{lostWoodsProgress = 0}
 """
 BG_COLOR [0,0,0]
 
@@ -482,6 +482,9 @@ NAME courtyard
 96,85,69
 155,63,21
 68,68,68
+68,75,119
+242,194,205
+176,201,216
 
 PAL c
 NAME lost woods
@@ -824,7 +827,7 @@ lou12,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost
 lost-a,lost-u,lost-u,lost-u,lotm,lotm,lotm,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lost-a
 lost-a,lost-12,lost-u,lost-u,lotm,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-12,lost-12,lost-12,lost-12,0
 lost-a,lost-12,lou14,lost-u,lost-u,lost-u,lou14,lotm,lost-u,lost-u,lost-u,lost-u,lost-u,lost-u,lou14,lost-a
-lou14,lost-a,o,lost-a,o,lost-a,o,lost-a,losw,lost-a,o,lost-a,o,lost-a,o,0
+0,lost-a,o,lost-a,o,lost-a,o,lost-a,losw,lost-a,o,lost-a,o,lost-a,o,0
 NAME floor 1
 ITM lotm9 6,14
 ITM lotm9 6,13
@@ -1180,7 +1183,7 @@ NAME bedroom ceiling
 PAL 0
 
 ROOM lot3
-0,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,0,lost-a,lost-a,lost-a,o,lost-a,lost-a,0
+0,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,lou5h,lost-a,lost-a,lost-a,o,lost-a,lost-a,0
 lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lost-a
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou1d,lou1d,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
@@ -1210,6 +1213,7 @@ ITM pinktritfo 2,1
 ITM pinktritfo 13,1
 EXT 14,2 loti 14,1
 EXT 1,2 lotk 1,1
+EXT 8,0 lou2 8,8 FX fade_b DLG 6s
 PAL b
 FOG_START 1
 FOG_END 6
@@ -2014,6 +2018,55 @@ ROOM lou0
 NAME endgame
 PAL f
 RENDER 2D
+
+ROOM lou1
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME courtyard pedestal deactivation
+ITM pinktritgb 0,0
+ITM pinktritgc 4,4
+ITM pinktritgc 4,11
+ITM pinktritgc 11,11
+ITM pinktritgc 11,4
+PAL b
+
+ROOM lou2
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,lou18,0,lou18,0,0,0,0,0,0
+0,0,0,0,0,0,lou4j,lou1d,lou1d,lou1d,lou4k,0,0,0,0,0
+0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
+0,0,0,0,0,0,lou4i,lou1d,lou1d,lou1d,lou4h,0,0,0,0,0
+0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
+0,0,0,0,0,0,lou4h,lou1d,lou1d,lou1d,lou4i,0,0,0,0,0
+0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
+0,0,0,0,0,0,0,lou4k,lou5h,lou4j,0,0,0,0,0,0
+0,0,0,0,0,0,0,lou1b,lou1b,lou1b,0,0,0,0,0,0
+0,0,0,0,0,0,0,lou1b,lou1b,lou1b,0,0,0,0,0,0
+0,0,0,0,0,0,0,lou1b,lou1b,lou1b,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME impossible courtyard anteroom
+ITM pinktritgd 8,6
+EXT 8,9 lot3 8,1 FX fade_b DLG 29
+PAL b
+FOG_START 1
+FOG_END 6
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -3318,7 +3371,7 @@ TIL lou18
 4,4,4,4,4,14,2,14,14,2,14,4,4,4,4,4
 4,4,4,4,4,14,14,2,2,14,14,4,4,4,4,4
 4,4,4,4,4,4,14,14,14,14,4,4,4,4,4,4
-4,4,4,4,4,4,4,0,0,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,5,5,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
@@ -6565,6 +6618,48 @@ NAME indie game tile
 WAL true
 COL 1
 
+TIL lou5h
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,45,45,45,45,45,45,45,45,45,45,45,45,45,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,45,45,45,45,47,45,45,47,45,45,45,45,45,4
+4,45,15,15,15,15,47,45,45,47,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+6,21,15,15,15,15,15,45,45,15,15,15,15,15,21,6
+6,45,45,45,45,45,45,45,45,45,45,45,45,45,45,6
+NAME blue door (open)
+WAL false
+COL 1
+
+TIL lou5i
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,45,45,45,45,45,45,45,45,45,45,45,45,45,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,45,45,45,45,47,45,45,47,45,45,45,45,45,4
+4,45,15,15,15,15,47,45,45,47,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+6,21,15,15,15,15,15,45,45,15,15,15,15,15,21,6
+6,45,45,45,45,45,45,45,45,45,45,45,45,45,45,6
+NAME blue door (closed)
+WAL true
+COL 1
+
 SPR wthrex
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
@@ -6764,7 +6859,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losz 7,4
+POS lou2 8,7
 ITM b 1
 COL 2
 
@@ -9475,8 +9570,8 @@ SPR lovk
 6,5,12,12,12,12,12,11,11,12,12,12,12,12,5,6
 6,5,12,12,12,12,12,11,11,12,12,12,12,12,5,6
 NAME el court 1
-DLG 2p
-POS lot3 8,0
+DLG 6t
+POS lou2 8,2
 COL 2
 
 SPR lovl
@@ -9513,7 +9608,7 @@ SPR lovl
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal A1
+NAME pedestal A1 (allow diag)
 DLG 2l
 POS lot3 4,4
 COL 2
@@ -9552,7 +9647,7 @@ SPR lovm
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal B1
+NAME pedestal B1 (allow diag)
 DLG 2m
 POS lot3 11,4
 COL 2
@@ -9591,7 +9686,7 @@ SPR lovn
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal C
+NAME pedestal C (allow diag)
 DLG 2n
 POS lot3 11,11
 COL 2
@@ -9630,7 +9725,7 @@ SPR lovo
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal D1
+NAME pedestal D1 (allow diag)
 DLG 2o
 POS lot3 4,11
 COL 2
@@ -11630,7 +11725,7 @@ SPR wthrf8
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal A2
+NAME pedestal A2 (allow diag)
 DLG 2l
 POS loti 4,4
 COL 2
@@ -11669,7 +11764,7 @@ SPR wthrf9
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal A3
+NAME pedestal A3 (allow diag)
 DLG 2l
 POS lotj 4,4
 COL 2
@@ -11708,7 +11803,7 @@ SPR wthrfa
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal A4
+NAME pedestal A4 (allow diag)
 DLG 2l
 POS lotk 4,4
 COL 2
@@ -11747,7 +11842,7 @@ SPR wthrfb
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal B2
+NAME pedestal B2 (allow diag)
 DLG 2m
 POS loti 11,4
 COL 2
@@ -11786,7 +11881,7 @@ SPR wthrfc
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal B3
+NAME pedestal B3 (allow diag)
 DLG 2m
 POS lotj 11,4
 COL 2
@@ -11825,7 +11920,7 @@ SPR wthrfd
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal B4
+NAME pedestal B4 (allow diag)
 DLG 2m
 POS lotk 11,4
 COL 2
@@ -11864,7 +11959,7 @@ SPR wthrfe
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal C2
+NAME pedestal C2 (allow diag)
 DLG 2n
 POS loti 11,11
 COL 2
@@ -11903,7 +11998,7 @@ SPR wthrff
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal C3
+NAME pedestal C3 (allow diag)
 DLG 2n
 POS lotj 11,11
 COL 2
@@ -11942,7 +12037,7 @@ SPR wthrfg
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal C4
+NAME pedestal C4 (allow diag)
 DLG 2n
 POS lotk 11,11
 COL 2
@@ -11981,7 +12076,7 @@ SPR wthrfh
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal D2
+NAME pedestal D2 (allow diag)
 DLG 2o
 POS loti 4,11
 COL 2
@@ -12020,7 +12115,7 @@ SPR wthrfi
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal D3
+NAME pedestal D3 (allow diag)
 DLG 2o
 POS lotj 4,11
 COL 2
@@ -12059,7 +12154,7 @@ SPR wthrfj
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
 11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
-NAME pedestal D4
+NAME pedestal D4 (allow diag)
 DLG 2o
 POS lotk 4,11
 COL 2
@@ -13791,8 +13886,8 @@ SPR wthrh4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
-0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
-0,10,14,14,14,14,14,14,14,14,14,22,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,0,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,0,14,14,10,0
 0,10,14,14,14,14,14,14,14,14,11,14,14,14,10,0
 0,10,14,14,14,14,14,14,14,11,14,14,14,14,10,0
 0,10,14,14,14,22,14,14,14,14,14,14,14,14,10,0
@@ -14533,6 +14628,127 @@ SPR wthrhw
 NAME indie game poster (allow diag)
 DLG 4s
 POS losw 11,0
+COL 2
+
+SPR wthrhx
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,41,22,22,22,22,22,22,22,22,41,4,4,4
+4,4,4,22,12,12,12,12,12,12,12,12,22,4,4,4
+4,4,4,22,12,21,21,12,21,12,21,12,22,4,4,4
+4,4,4,22,12,12,12,12,12,12,12,12,22,4,4,4
+4,4,4,22,12,21,21,21,12,21,21,12,22,4,4,4
+4,4,4,22,12,12,12,12,12,12,12,12,22,4,4,4
+4,4,4,41,22,22,22,22,22,22,22,22,41,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+>
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,41,22,22,22,22,22,22,22,22,41,4,4,4
+4,4,4,22,40,40,40,40,40,40,40,40,22,4,4,4
+4,4,4,22,40,21,21,40,21,40,21,40,22,4,4,4
+4,4,4,22,40,40,40,40,40,40,40,40,22,4,4,4
+4,4,4,22,40,21,21,21,40,21,21,40,22,4,4,4
+4,4,4,22,40,40,40,40,40,40,40,40,22,4,4,4
+4,4,4,41,22,22,22,22,22,22,22,22,41,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME courtyard plaque
+DLG 6r
+POS lot3 9,0
+COL 2
+
+SPR wthrhy
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,45,45,45,45,45,45,45,45,45,45,45,45,45,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,45,45,45,45,47,45,45,47,45,45,45,45,45,4
+4,45,15,15,15,15,47,45,45,47,15,15,15,15,45,4
+4,45,15,15,15,47,47,45,45,47,47,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,45,15,15,15,15,15,45,45,15,15,15,15,15,45,4
+4,21,15,15,15,15,15,45,45,15,15,15,15,15,21,4
+6,21,15,15,15,15,15,45,45,15,15,15,15,15,21,6
+6,45,45,45,45,45,45,45,45,45,45,45,45,45,45,6
+NAME blue door (sprite)
+DLG 2p
+POS lot3 8,0
+COL 2
+
+SPR wthrhz
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,22,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,22,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,22,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,22,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,22,14,14,14,10,0
+0,10,14,14,14,14,22,14,14,22,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,22,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+NAME dewey  guide (courtyard, allow diag)
+DLG 23
+POS lou2 7,3
+COL 2
+
+SPR wthri0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,45,0,45,0,45,0,45,45,0,45,0,45,0,45,0
+0,21,0,0,0,0,0,0,0,0,0,0,0,0,21,0
+0,0,0,0,0,0,0,45,45,0,0,0,0,0,0,0
+0,45,0,0,0,0,0,0,0,0,0,0,0,0,45,0
+0,0,0,0,0,0,0,45,45,0,0,0,0,0,0,0
+0,45,0,0,0,0,0,0,0,0,0,0,0,0,45,0
+0,0,0,0,0,47,47,45,45,47,47,0,0,0,0,0
+0,45,0,45,0,45,47,0,0,47,45,0,45,0,45,0
+0,0,0,0,0,0,47,45,45,47,0,0,0,0,0,0
+0,45,0,0,0,47,47,0,0,47,47,0,0,0,45,0
+0,0,0,0,0,0,0,45,45,0,0,0,0,0,0,0
+0,45,0,0,0,0,0,0,0,0,0,0,0,0,45,0
+0,0,0,0,0,0,0,45,45,0,0,0,0,0,0,0
+0,21,0,0,0,0,0,0,0,0,0,0,0,0,21,0
+0,0,45,0,45,0,45,0,0,45,0,45,0,45,0,0
+NAME blue door (placeholder)
+POS lot3 0,0
 COL 2
 
 ITM 2
@@ -16441,6 +16657,67 @@ ITM pinktritga
 NAME destroyed bookshelf 3b
 COL 2
 
+ITM pinktritgb
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,21,21,21,16,12,11,12,16,12
+11,12,16,12,11,12,21,9,9,9,21,12,11,12,16,12
+11,12,16,12,11,12,21,9,9,9,21,12,11,12,16,12
+11,12,16,12,11,12,16,21,21,21,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+11,12,16,12,11,12,16,12,11,12,16,12,11,12,16,12
+NAME pedestal (inactive)
+COL 2
+
+ITM pinktritgc
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,9,0,0,0,0,9,0,0,0,0,0
+0,0,0,0,0,0,9,0,0,9,0,0,0,0,0,0
+0,0,0,0,0,0,0,9,9,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,9,9,0,0,0,0,0,0,0
+0,0,0,0,0,0,9,0,0,9,0,0,0,0,0,0
+0,0,0,0,0,9,0,0,0,0,9,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME pedestal deactivator
+COL 2
+
+ITM pinktritgd
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,16,46,16,16,16,16,16,40,0,0,0,0,0
+0,0,0,16,46,16,16,16,16,16,40,16,0,0,0,0
+0,0,0,47,47,47,47,47,47,47,40,40,40,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,47,47,47,47,47,47,47,47,47,47,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,47,47,47,47,47,47,47,47,47,47,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,47,47,47,47,47,47,47,47,47,47,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,47,47,47,47,47,47,47,47,47,47,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,47,47,47,47,47,47,47,47,47,47,0,0,0
+0,0,0,16,46,16,16,16,16,16,16,16,16,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME courtyard note
+DLG 6u
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -17262,6 +17539,9 @@ DLG DATA3D
     "TIL_lou4l": {
       "type": "floor"
     },
+    "TIL_lou5h": {
+      "type": "box"
+    },
     "SPR_outl": {
       "type": "box"
     },
@@ -18023,6 +18303,19 @@ DLG DATA3D
     "SPR_wthrhw": {
       "type": "box"
     },
+    "SPR_wthrhx": {
+      "type": "box"
+    },
+    "SPR_wthrhy": {
+      "type": "box"
+    },
+    "SPR_wthrhz": {
+      "type": "plane",
+      "transform": "1,1,1,0,-45,0,0,-0.16,0"
+    },
+    "SPR_wthri0": {
+      "type": "box"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -18385,6 +18678,18 @@ DLG DATA3D
     "ITM_pinktritga": {
       "type": "box",
       "transform": "0.7,0.7,0.7,40,170,30,-0.13,-0.4,-0.25"
+    },
+    "ITM_pinktritgb": {
+      "type": "table",
+      "transform": "0.401,1,0.401,0,0,0,0,-2.8,0"
+    },
+    "ITM_pinktritgc": {
+      "transform": "0.3,0.3,0.3,0,0,0,0,-3.2,0",
+      "hidden": true
+    },
+    "ITM_pinktritgd": {
+      "type": "billboard",
+      "transform": "0.45,0.45,0.45,0,0,0,0,-0.06,0"
     }
   },
   "stack": {
@@ -18532,6 +18837,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "i": [
@@ -18570,6 +18879,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "l": [
@@ -18584,6 +18897,10 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
       }
     ],
     "m": [
@@ -18598,6 +18915,20 @@ DLG DATA3D
       {
         "id": "lot9",
         "pos": 2
+      },
+      {
+        "id": "lou1",
+        "pos": 3
+      }
+    ],
+    "n": [
+      {
+        "id": "lou2",
+        "pos": 0
+      },
+      {
+        "id": "lost-1",
+        "pos": 1
       }
     ]
   }
@@ -19154,126 +19485,100 @@ BG_COLOR [0,0,0]
 DLG 2l
 """
 {
+  - courtyardComplete == false ?
+    {sfx "button_press.mp3" 0.3} {
+      - pedCount == 0 ?
+         I press the {clr 38}button{clr} on the side of the stone pedestal.
+      - else ?
+        {wvy}*boop*{wvy}
+    } {pg}
+  - else ?
+
+}{
+  - courtyardComplete == true ?
+    The button won't press anymore... Am I finally free to leave this mind dungeon??
   - courtyardItemsCollected == 4 ?
-    Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
+    Now that I've collected all the symbols, these pedestals are beginning to make more sense... But pressing any single button still doesn't seem to do much on its own? {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
-    Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
-     {wvy}Boop!{wvy} I press the button. 
+    {
+      - courtyardPlaqueSeen == true ?
+        Prudent student... Trying to be a prudent student... Ok, I think I got this! {courtyardItemsCollected = courtyardItemsCollected + 1}
+      - else ?
+        {sequence
+          - 
+          - 
+          - Is there, like, a hint or something that I missed??
+        }
+    }
   - {item "pink triangle"} == 1 ?
     {sequence
-      - Oh look, this pedestal seems connected to the queer triangle I found!
-      - I press the button, but nothing happens... {pg} Maybe I should look for more missing items first?
+      - Huh, look at that - this pedestal seems connected to the queer triangle I found!
+      - Still not much happening here... {pg} Maybe I should search for whatever's missing from the other pedestals, too?
+      - 
     }
   - pedCount == 0 ?
-    Huh, this stone pedestal looks like it's missing something that used to sit on top of it... {pg} It also has a glowing {clr 38}red button{clr} on the side.
+    Hard to tell what the point of this thing is... {clr 11} {pg} (other than confusing me){clr} {pg} Looks like maybe there's something missing that used to sit on top of it?
   - pedCount == 1 ?
-    I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+    Not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
   - pedCount == 2 ?
-     Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
+     Ok, fun as this is, pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
+
 }{pedA = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal A dlg
 BG_COLOR [0,0,0]
-MAX_LINES 3
 
 DLG 2m
 """
 {
+  - courtyardComplete == false ?
+    {sfx "button_press.mp3" 0.3} {
+      - pedCount == 0 ?
+         I press the {clr 38}button{clr} on the side of the stone pedestal.
+      - else ?
+        {wvy}*boop*{wvy}
+    } {pg}
+  - else ?
+
+}{
+  - courtyardComplete == true ?
+    The button won't press anymore... Am I finally free to leave this mind dungeon??
   - courtyardItemsCollected == 4 ?
-    Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
+    Now that I've collected all the symbols, these pedestals are beginning to make more sense... But pressing any single button still doesn't seem to do much on its own? {courtyardItemsCollected = courtyardItemsCollected + 1}
   - courtyardItemsCollected == 5 ?
-    Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
-     {wvy}Boop!{wvy} I press the button. 
+    {
+      - courtyardPlaqueSeen == true ?
+        Prudent student... Trying to be a prudent student... Ok, I think I got this! {courtyardItemsCollected = courtyardItemsCollected + 1}
+      - else ?
+        {sequence
+          - 
+          - 
+          - Is there, like, a hint or something that I missed??
+        }
+    }
   - {item "pope hat"} == 1 ?
     {sequence
-      - Oh look, this pedestal seems connected to the {wvy}papal regalia{wvy} I found!
-      - I press the button, but nothing happens... {pg} Maybe I should look for more missing items first?
+      - Huh, look at that - this pedestal seems connected to the {wvy}papal regalia{wvy} I found!
+      - Still not much happening here... {pg} Maybe I should search for whatever's missing from the other pedestals, too?
+      - 
     }
   - pedCount == 0 ?
-    Huh, this stone pedestal looks like it's missing something that used to sit on top of it... {pg} It also has a glowing {clr 38}red button{clr} on the side.
+    Hard to tell what the point of this thing is... {clr 11} {pg} (other than confusing me){clr} {pg} Looks like maybe there's something missing that used to sit on top of it?
   - pedCount == 1 ?
-    I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+    Not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
   - pedCount == 2 ?
-     Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
+     Ok, fun as this is, pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
   - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
+
 }{pedB = pedCount}{pedCount = pedCount + 1}
 """
 NAME pedestal B dlg
 BG_COLOR [0,0,0]
-MAX_LINES 3
 
 DLG 2n
 """
-{
-  - courtyardItemsCollected == 4 ?
-    Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 5 ?
-    Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
-    {wvy}Boop!{wvy} I press the button. 
-  - {item "MAGA hat"} == 1 ?
-    {sequence
-      - Oh look, this pedestal seems connected to the MAGA hat I found!
-      - I press the button, but nothing happens... {pg} Maybe I should look for more missing items first?
-    }
-  - pedCount == 0 ?
-    Huh, this stone pedestal looks like it's missing something that used to sit on top of it... {pg} It also has a glowing {clr 38}red button{clr} on the side.
-  - pedCount == 1 ?
-    I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
-  - pedCount == 2 ?
-     Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
-  - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
-}{pedC = pedCount}{pedCount = pedCount + 1}
-"""
-NAME pedestal C dlg
-BG_COLOR [0,0,0]
-MAX_LINES 3
-
-DLG 2o
-"""
-{
-  - courtyardItemsCollected == 4 ?
-    Now that I've collected all the symbols, these pedestals are beginning to make more sense! But a single button press still doesn't seem to do anything by itself... {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 5 ?
-    Ok, yeah, so maybe if I keep pressing these buttons in {clr 2}some kind of sequence...{clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected == 6 ?
-    {wvy}Boop!{wvy} I press the button. {pg} {clr 11}(once I think I have it right, I should probably go check the elevator again...){clr} {courtyardItemsCollected = courtyardItemsCollected + 1}
-  - courtyardItemsCollected >= 7 ?
-     {wvy}Boop!{wvy} I press the button. 
-  - {item "papyrus burning"} == 1 ?
-    {sequence
-      - Oh look, this pedestal seems connected to the burning papyrus scroll I found!
-      - I press the button, but nothing happens... {pg} Maybe I should look for more missing items first?
-    }
-  - pedCount == 0 ?
-    Huh, this stone pedestal looks like it's missing something that used to sit on top of it... {pg} It also has a glowing {clr 38}red button{clr} on the side.
-  - pedCount == 1 ?
-    I'm not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
-  - pedCount == 2 ?
-     Ok pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
-  - else ?
-    {wvy}Boop!{wvy} I stubbornly press the button on the empty pedestal.
-}{pedD = pedCount}{pedCount = pedCount + 1}
-"""
-NAME pedestal D dlg
-BG_COLOR [0,0,0]
-MAX_LINES 3
-
-DLG 2p
-"""
-{property locked true}{seqLength = 0}{
+{pedC = pedCount}{pedCount = pedCount + 1}{seqLength = 3}{
   - pedC > pedA ?
     {seqLength = seqLength + 1}
 }{
@@ -19284,15 +19589,118 @@ DLG 2p
     {seqLength = seqLength + 1}
 }{
   - seqLength >= 3 ?
-    Please, for the love of... I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
-    {pg} Now kindly just let me get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} I... I think it {shk}actually worked??{shk} {replace "f2 correct" "f2 correct replacement"} {f3_done = 1} {exit "losw" 8 1 "fade_w"} {pg} Gosh, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that scavenger hunt now? {pg} Dewey decimals and stripes on flags, or something like that?
+    {
+      - courtyardComplete == false ?
+        {courtyardComplete = true} {sfx "button_press.mp3" 0.3} {wvy}*boop*{wvy} {replace "pedestal deactivator" "pedestal (inactive)" "courtyard pedestal deactivation"} {pg}
+    }
+}{
+  - courtyardComplete == false ?
+    {sfx "button_press.mp3" 0.3} {
+      - pedCount == 0 ?
+         I press the {clr 38}button{clr} on the side of the stone pedestal.
+      - else ?
+        {wvy}*boop*{wvy}
+    } {pg}
+  - else ?
+
+}{
+  - courtyardComplete == true ?
+    {sequence
+      - {sfx "puzzle_solved.mp3" 0.4} Wait did I... did I {wvy}crack the code?{wvy} I think that might have worked! {replace "blue door (placeholder)" "blue door (sprite)" "impossible courtyard 1"} {pg} {clr 11}(please tell me the doors will actually open for me now??){clr}
+      - The button won't press anymore... Am I finally free to leave this mind dungeon??
+    }
+  - courtyardItemsCollected == 4 ?
+    Now that I've collected all the symbols, these pedestals are beginning to make more sense... But pressing any single button still doesn't seem to do much on its own? {courtyardItemsCollected = courtyardItemsCollected + 1}
+  - courtyardItemsCollected == 5 ?
+    {
+      - courtyardPlaqueSeen == true ?
+        Prudent student... Trying to be a prudent student... Ok, I think I got this! {courtyardItemsCollected = courtyardItemsCollected + 1}
+      - else ?
+        {sequence
+          - 
+          - 
+          - Is there, like, a hint or something that I missed??
+        }
+    }
+  - {item "MAGA hat"} == 1 ?
+    {sequence
+      - Huh, look at that - this pedestal seems connected to the MAGA hat I found!
+      - Still not much happening here... {pg} Maybe I should search for whatever's missing from the other pedestals, too?
+      - 
+    }
+  - pedCount == 1 ?
+    Hard to tell what the point of this thing is... {clr 11} {pg} (other than confusing me){clr} {pg} Looks like maybe there's something missing that used to sit on top of it?
+  - pedCount == 2 ?
+    Not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+  - pedCount == 3 ?
+     Ok, fun as this is, pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
+  - else ?
+
+}
+"""
+NAME pedestal C dlg
+BG_COLOR [0,0,0]
+
+DLG 2o
+"""
+{
+  - courtyardComplete == false ?
+    {sfx "button_press.mp3" 0.3} {
+      - pedCount == 0 ?
+         I press the {clr 38}button{clr} on the side of the stone pedestal.
+      - else ?
+        {wvy}*boop*{wvy}
+    } {pg}
+  - else ?
+
+}{
+  - courtyardComplete == true ?
+    The button won't press anymore... Am I finally free to leave this mind dungeon??
+  - courtyardItemsCollected == 4 ?
+    Now that I've collected all the symbols, these pedestals are beginning to make more sense... But pressing any single button still doesn't seem to do much on its own? {courtyardItemsCollected = courtyardItemsCollected + 1}
+  - courtyardItemsCollected == 5 ?
+    {
+      - courtyardPlaqueSeen == true ?
+        Prudent student... Trying to be a prudent student... Ok, I think I got this! {courtyardItemsCollected = courtyardItemsCollected + 1}
+      - else ?
+        {sequence
+          - 
+          - 
+          - Is there, like, a hint or something that I missed??
+        }
+    }
+  - {item "papyrus burning"} == 1 ?
+    {sequence
+      - Huh, look at that - this pedestal seems connected to the burning papyrus scroll I found!
+      - Still not much happening here... {pg} Maybe I should search for whatever's missing from the other pedestals, too?
+      - 
+    }
+  - pedCount == 0 ?
+    Hard to tell what the point of this thing is... {clr 11} {pg} (other than confusing me){clr} {pg} Looks like maybe there's something missing that used to sit on top of it?
+  - pedCount == 1 ?
+    Not sure why I keep touching these pedestals, but... If I were a character in a graphic novel, this would definitely be some kind of puzzle! Gotta push the {clr 38}Big Red Button,{clr} right?
+  - pedCount == 2 ?
+     Ok, fun as this is, pushing buttons isn't geting me anywhere. Maybe time to hunt for the missing items instead?
+  - else ?
+
+}{pedD = pedCount}{pedCount = pedCount + 1}
+"""
+NAME pedestal D dlg
+BG_COLOR [0,0,0]
+
+DLG 2p
+"""
+{property locked true}{
+  - courtyardComplete == true ?
+    Alright, I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
+    {pg} Now, time to get back to {rbw}fighting for the future?{rbw} {pg} {music "library_closed_music2.mp3"} {replace "f2 correct" "f2 correct replacement"} {currentFloor = 0} {f3_done = 1} {exit "lou2" 8 8 "fade_b"}
   - courtyardItemsCollected >= 4 ?
     {sequence
-      - Hm, I'm pretty sure I've found everything I need to escape from here, but... The stony silence of this cruel elevator is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, ELEVATOR!{shk}
+      - Hm, I'm pretty sure I've found all the missing items, but... The stony silence of this cruel door is telling me I still need to prove what I've learned. {pg} {shk}STOP LOOKING AT ME THAT WAY, DOOR!{shk}
       - Nothing... Maybe I still just need to press those pedestal buttons in the right order?
     }
   - else ?
-    The elevator won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
+    The door won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
 }
 """
 NAME pedestal puzzle
@@ -20403,6 +20811,76 @@ DLG 6q
 }
 """
 NAME trash sprite dialog
+BG_COLOR [0,0,0]
+
+DLG 6r
+"""
+{center}{borderClr 22}{bgClr 16}{clr 21 true} TO PROTECT THE FUTURE, A PRUDENT STUDENT FREQUENTS THE PAST.{clr}{pg}{center}{borderClr 22}{bgClr 16}{clr 21 true} UNDERSTAND EACH PEDESTAL, THEN VISIT IN SEQUENCE - FIRST TO LAST.{clr}{pg}{sequence
+  - Nice. Cryptic. Love/hate it.
+  - 
+}{courtyardPlaqueSeen = true}
+"""
+NAME courtyard plaque dialog
+BG_COLOR [0,0,0]
+MAX_LINES 3
+
+DLG 6s
+"""
+{property locked true}{sfx "door_open.wav"}{
+  - f3_done == 0 ?
+    {exit "lou2" 8 11 "fade_b"} I'm freeeee! {f3_done = 1} {pg} {clr 11} (or... almost free?) {clr} {exit "lou2" 8 8 "fade_b"}
+  - else ?
+    {property locked false}
+}
+"""
+NAME exit courtyard
+BG_COLOR [0,0,0]
+
+DLG 6t
+"""
+{elevatorError = false}{
+  - {item "courtyard note"} == 1 ?
+    {sequence
+      - Alright, I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
+            {pg} Now, time to get back to {rbw}fighting for the future?{rbw} {pg}
+      - 
+    } {nextFloor = 0} So! Where to next?{br}Floor # (1-4):{clr 11}<type a number>{clr} {input "nextFloor" 1 4} {pg}
+  - else ?
+    {nextFloor = -1} {elevatorError = true}
+}{
+  - nextFloor == 1 ?
+    {currentFloor = 1} 1st floor it is! {sfx "elevator_ding.mp3"} {exit "floor 1" 8 1 "fade_w"}
+  - nextFloor == 2 ?
+    {currentFloor = 2} 2nd floor it is! {sfx "elevator_ding.mp3"} {exit "floor 2" 8 1 "fade_w"}
+  - nextFloor == 3 ?
+    {currentFloor = 3} 3rd floor it is! {sfx "elevator_ding.mp3"} {exit "floor 3" 8 1 "fade_w"}
+  - nextFloor == 4 ?
+    {currentFloor = 4} 4th floor it is! {sfx "elevator_ding.mp3"} {exit "floor 4" 8 1 "fade_w"}
+  - nextFloor == -1 ?
+    As much as I want to get out of here, I can't let myself leave without reading that note... It could be from the library queer!
+  - else ?
+    Guess I need to pick an existing floor number. {elevatorError = true}
+}{
+  - elevatorError == false ?
+    {replace "f2 correct" "f2 correct replacement"} {music "library_closed_music2.mp3"} {pg} Geez, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that treasure hunt now?
+}
+"""
+NAME courtyard elevator dlg
+BG_COLOR [0,0,0]
+
+DLG 6u
+"""
+{paper}friend (can i call you that?) if you're still with me, and down for another little trivia puzzle to prove it, let's reunite again at a different banished title...{pg}{paper}
+the first digit of this dewey decimal is the number of stripes on the bi flag.
+
+the second digit is the number of people I've dated. (sorry, that was an inside joke between me & my shy self. it's 0.)
+{pg}{paper}
+
+the third and final digit is the number of stripes on the gay pride flag (the common one - there are so many variants lol).
+
+see you there?{pg}Honestly, after that whole ordeal, finding another note from the library queer feels like... a desperately needed return to normalcy? A homecoming, almost?{pg}{clr 11}(oh gosh, I'm such a romantic. {shk}so freaking embarrassing.{shk}){clr}
+"""
+NAME courtyard note dialog
 BG_COLOR [0,0,0]
 
 
@@ -22232,48 +22710,66 @@ function ambientFunc(environment, parameters, onReturn) {
 	onReturn(null);
 }
 
-function replaceTileFunc(environment, parameters, onReturn) {
-	const oldTileName = parameters[0];
-	const newTileName = parameters[1];
+function replaceElementFunc(environment, parameters, onReturn) {
+	const oldEntityName = parameters[0];
+	const newEntityName = parameters[1];
 	const roomName = parameters[2];
 
-	let isSprite = false;
-	const findTileOrSprite = (entityName) => {
+	let entityType;
+	const findEntity = (entityName) => {
 		let entityId;
 		if (names.tile.has(entityName)) {
 			entityId = names.tile.get(entityName);
+			entityType = 'tile';
 		} else if (names.sprite.has(entityName)) {
 			entityId = names.sprite.get(entityName);
-			isSprite = true;
+			entityType = 'sprite';
+		} else if (names.item.has(entityName)) {
+			entityId = names.item.get(entityName);
+			entityType = 'item';
 		}
 		return entityId;
 	}
 
-	const oldTileId = findTileOrSprite(oldTileName);
-	const newTileId = findTileOrSprite(newTileName);
+	const oldEntityId = findEntity(oldEntityName);
+	const newEntityId = findEntity(newEntityName);
 
-	let roomData;
-	if (!isSprite && names.room.has(roomName)) {
-		const roomId = names.room.get(roomName);
-		roomData = room[roomId];
+	if (!(oldEntityId && newEntityId)) {
+		console.error('Error (replace command): One or more of the specified game elements could not be found');
+		return;
 	}
 
-	if (isSprite && oldTileId && newTileId) {
-		const oldSpriteData = sprite[oldTileId];
-		const newSpriteData = sprite[newTileId];
+	let roomData;
+	if (entityType !== 'sprite') {
+		const roomId = names.room.get(roomName);
+		roomData = room[roomId];
+
+		if (!roomData) {
+			console.error('Error (replace command): Please specify a valid room');
+			return;
+		}
+	}
+
+	if (entityType === 'sprite') {
+		const oldSpriteData = sprite[oldEntityId];
+		const newSpriteData = sprite[newEntityId];
 
 		['room', 'x', 'y'].forEach((prop) => {
 			newSpriteData[prop] = oldSpriteData[prop];
 			oldSpriteData[prop] = null;
 		});
-	} else if (roomData && oldTileId && newTileId) {
+	} else if (entityType === 'item') {
+		roomData.items.forEach((item) => {
+			if (item.id === oldEntityId) item.id = newEntityId;
+		});
+	} else if (entityType === 'tile') {
 		roomData.tilemap.forEach((row) => {
 			row.forEach((col, idx) => {
-				if (row[idx] === oldTileId) row[idx] = newTileId;
+				if (row[idx] === oldEntityId) row[idx] = newEntityId;
 			});
 		});
 	} else {
-		console.error(`Unable to replace tile ${oldTileName} with tile ${newTileName} for room ${roomName}`);
+		console.error(`Error (replace command): Unable to replace element ${oldEntityName} with element ${newEntityName} for room ${roomName}`);
 	}
 
 	onReturn(null);
@@ -22400,7 +22896,7 @@ var Environment = function() {
 	functionMap.set("input", userInputFunc);
 	functionMap.set("ambient", ambientFunc);
 	functionMap.set("fog", fogFunc);
-	functionMap.set("replace", replaceTileFunc);
+	functionMap.set("replace", replaceElementFunc);
 
 	this.HasFunction = function(name) { return functionMap.has(name); };
 	this.EvalFunction = function(name,parameters,onReturn,env) {
