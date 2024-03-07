@@ -896,13 +896,15 @@ lou18,lou1x,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
 0,losv,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lou18
 0,0,losv,losv,lot1,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,losv,0
 0,losv,losv,losv,losv,losv,lot1,lot1,lot1,lot1,lot1,losv,losv,losv,losv,0
-lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,o
-lou1x,lost-a,o,lost-a,o,lost-a,lost-a,lou18,lost-a,lou18,lost-a,lost-a,o,lost-a,lost-a,0
+lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lou1x,lot1,lou1x,lot1,lot1,lot1,lot1,lot1,o
+lou1x,lost-a,o,lost-a,o,lost-a,lou18,lou5k,lou5j,lou5l,lou18,lost-a,o,lost-a,lost-a,0
 NAME floor 3
 ITM lotm2 14,8
 ITM pinktritf3 13,8
 ITM lotm2 12,8
 ITM lotm2 1,2
+ITM wesbencp 9,14
+ITM wesbencp 7,14
 PAL 0
 FOG_START 0
 FOG_END 9
@@ -975,6 +977,7 @@ ROOM lost-0
 NAME lost woods - 1
 ITM pinktritf6 3,11
 ITM pinktritg4 3,12
+ITM pinktritgf 8,12
 EXT 13,3 lost-2 14,3
 EXT 13,13 lost-2 13,14
 EXT 3,3 lost-2 2,8
@@ -1184,7 +1187,7 @@ PAL 0
 
 ROOM lot3
 0,lost-a,lost-a,o,lost-a,lost-a,o,lost-a,lou5h,lost-a,lost-a,lost-a,o,lost-a,lost-a,0
-lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lost-a
+lost-a,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou1d,lou3j,lou1d,lou1d,lou1d,lost-a
 lost-a,lou1d,lost-a,lost-a,lost-a,lou4k,lost-a,lou1d,lou1d,lost-a,lou4k,lost-a,lost-a,lost-a,lou1d,lost-a
 o,lou1d,lost-a,0,lost-a,lost-a,lost-a,lou1d,lou1d,lost-a,lost-a,lost-a,0,lost-a,lou1d,o
 lost-a,lou1d,lost-a,lost-a,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lot1,lost-a,lost-a,lou1d,lost-a
@@ -1207,10 +1210,7 @@ ITM wesbencn 3,8
 ITM wesbenco 3,7
 ITM wesbencn 12,7
 ITM wesbenco 12,8
-ITM pinktritep 10,6
-ITM pinktritep 6,6
-ITM pinktritfo 2,1
-ITM pinktritfo 13,1
+ITM wesbencp 11,1
 EXT 14,2 loti 14,1
 EXT 1,2 lotk 1,1
 EXT 8,0 lou2 8,8 FX fade_b DLG 6s
@@ -1533,10 +1533,10 @@ ITM wesbenco 3,7
 ITM wesbencn 3,8
 ITM wesbencn 7,12
 ITM wesbenco 8,12
-ITM pinktritfn 13,7
 ITM pinktritfn 13,8
 ITM popeitem 8,6
 ITM pinktritfr 9,8
+ITM pinktritfn 13,7
 EXT 13,1 lot3 14,1
 EXT 13,14 lotj 14,14
 PAL b
@@ -2048,7 +2048,7 @@ ROOM lou2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,lou18,0,lou18,0,0,0,0,0,0
-0,0,0,0,0,0,lou4j,lou1d,lou1d,lou1d,lou4k,0,0,0,0,0
+0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
 0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
 0,0,0,0,0,0,lou4i,lou1d,lou1d,lou1d,lou4h,0,0,0,0,0
 0,0,0,0,0,0,lost-a,lou1d,lou1d,lou1d,lost-a,0,0,0,0,0
@@ -2062,11 +2062,11 @@ ROOM lou2
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME impossible courtyard anteroom
-ITM pinktritgd 8,6
+ITM pinktritge 8,5
 EXT 8,9 lot3 8,1 FX fade_b DLG 29
 PAL b
 FOG_START 1
-FOG_END 6
+FOG_END 10
 
 TIL 10
 12,11,11,12,11,11,12,12,12,12,11,11,12,12,12,12
@@ -6660,6 +6660,86 @@ NAME blue door (closed)
 WAL true
 COL 1
 
+TIL lou5j
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+35,4,35,35,4,35,35,4,35,35,4,35,35,4,35,35
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,35,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,35,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,35,23,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,23,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+35,4,35,35,4,35,35,4,35,35,4,35,35,4,35,35
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+>
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+35,4,35,35,4,35,35,4,35,35,4,35,35,4,35,35
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,35,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,35,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,35,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,23,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,23,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+35,4,35,35,4,35,35,4,35,35,4,35,35,4,35,35
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME missing sign
+WAL true
+COL 1
+
+TIL lou5k
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,35,35,4,35,35,4,35,35,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,23,4,4,4,35,4,4,4,4,4
+4,4,4,4,4,4,23,4,4,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,35,35,4,35,35,4,35,35,4,35,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME missing sign right
+WAL true
+COL 1
+
+TIL lou5l
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,35,4,35,35,4,35,35,4,35,35,4,35
+4,4,4,4,35,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,35,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,35,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,35,4,4,4,23,4,4,4,4,4,4,4
+4,4,4,4,35,4,4,4,23,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,35,4,35,35,4,35,35,4,35,35,4,35
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+NAME missing sign left
+WAL true
+COL 1
+
 SPR wthrex
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
 31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31
@@ -6859,7 +6939,7 @@ SPR A
 0,0,0,23,6,6,0,23,6,0,6,6,23,0,0,0
 0,0,0,0,23,23,0,23,6,0,23,23,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-POS losw 3,8
+POS losz 7,4
 ITM b 1
 COL 2
 
@@ -11290,7 +11370,6 @@ SPR pbrow2
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 NAME f2 correct
 DLG 3k
-POS losw 3,9
 COL 2
 
 SPR pbrow3
@@ -13600,7 +13679,6 @@ SPR wthrgu
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 NAME plaque
 DLG 5d
-POS losw 8,15
 COL 2
 
 SPR wthrgv
@@ -14666,7 +14744,6 @@ SPR wthrhx
 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 NAME courtyard plaque
 DLG 6r
-POS lot3 9,0
 COL 2
 
 SPR wthrhy
@@ -14749,6 +14826,125 @@ SPR wthri0
 0,0,45,0,45,0,45,0,0,45,0,45,0,45,0,0
 NAME blue door (placeholder)
 POS lot3 0,0
+COL 2
+
+SPR wthri1
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,35,4,4,4,4,4,4,4,4,4,4,35,4,4
+4,4,4,35,35,35,35,35,35,35,35,35,35,4,4,4
+4,4,4,35,12,35,12,12,12,12,12,12,35,4,4,4
+4,4,4,35,35,35,35,35,35,35,35,35,35,4,4,4
+4,4,4,35,12,35,12,12,12,12,12,12,35,4,4,4
+4,4,4,35,35,35,35,35,35,35,35,35,35,4,4,4
+4,4,4,35,12,35,12,12,12,12,12,12,35,4,4,4
+4,4,4,35,35,35,35,35,35,35,35,35,35,4,4,4
+4,4,35,4,4,4,4,4,4,4,4,4,4,35,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+NAME new plaque
+COL 2
+
+SPR wthri2
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME missing sign thought
+DLG 6v
+POS losw 8,15
+COL 2
+
+SPR wthri3
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,22,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,22,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,22,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,22,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,22,14,14,14,10,0
+0,10,14,14,14,14,22,14,14,22,14,14,14,14,10,0
+0,10,14,14,14,22,14,14,22,14,14,14,14,14,10,0
+0,10,14,14,22,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,14,14,14,14,14,14,14,14,14,14,14,14,10,0
+0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,10,0,0,0,0,0,0,0
+DLG 6r
+POS lot3 7,2
+COL 2
+
+SPR wthri4
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+>
+4,7,8,10,15,13,7,9,17,10,15,9,8,9,3,4
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,7,8,10,15,13,7,9,17,10,15,9,8,9,3,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,18,15,23
+23,17,15,3,9,10,7,17,8,15,17,10,3,2,15,23
+23,23,23,23,23,4,23,23,23,23,23,23,23,23,23,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,7,13,8,10,3,10,15,7,3,9,15,17,8,7,23
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,23
+23,9,8,17,3,9,15,3,10,17,15,10,15,8,9,4
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+NAME f2 incorrect
+DLG 3q
+POS losw 3,9
 COL 2
 
 ITM 2
@@ -16718,6 +16914,57 @@ NAME courtyard note
 DLG 6u
 COL 2
 
+ITM pinktritge
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0
+0,2,2,14,14,14,14,14,14,14,14,14,14,2,2,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,2,2,14,14,14,14,14,14,14,14,14,14,2,2,0
+0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0
+0,2,2,14,14,14,14,14,14,14,14,14,14,2,2,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,2,2,14,2,2,2,2,2,2,2,14,0,0
+0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,0
+0,2,2,14,14,14,14,14,14,14,14,14,14,2,2,0
+0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME courtyard sign
+DLG 6x
+COL 2
+
+ITM pinktritgf
+0,0,0,0,0,0,0,0
+0,0,0,16,16,16,0,0
+0,16,16,16,16,16,16,16
+0,16,16,16,16,16,16,16
+0,16,12,16,12,16,12,16
+0,16,16,16,16,16,16,16
+0,0,16,16,16,16,16,0
+0,16,0,0,0,0,0,0
+NAME lost woods remembering
+DLG 6y
+COL 2
+
 DLG 3
 MacLeod library. I haven't been here all semester. Too busy dealing with the school's "budget cuts." We {shk}must{shk} stand firm.{enteredLibrary = 0}
 NAME exterior 1
@@ -17098,7 +17345,7 @@ NAME barrier dialog 1
 BG_COLOR [0,0,0]
 
 DLG 51
-Oh Birchwood College... So patriotic!{pg}I'm grateful the politically motivated book banning happening all around the country isn't directly affecting our private campus, but...{pg}Honestly, the impact of all the budget cuts here isn't that different.
+Oh Birchwood College... So patriotic!{pg}I'm glad the book banning happening all around the country isn't directly affecting our private campus, but...{pg}Honestly, the impact of all the budget cuts here isn't that different.
 NAME American flag dialog
 BG_COLOR [0,0,0]
 MAX_LINES 3
@@ -17106,8 +17353,8 @@ MAX_LINES 3
 DLG 52
 """
 {sequence
-  - These books are still {clr 10}smoldering,{clr} surrounded by the scorched remains of former shelves... {pg} The smell isn't so different from a wood fire, but it catches in my throat and makes me want to {shk}puke.{shk}
-  - The Nazis obliterated one of the world's largest collections of queer & trans literature - the Instute of Sexology. {pg} Sometimes we forget just how much we - humanity - used to know about people like me, before it was all erased.
+  - Smoldering books, surrounded by the scorched remains of former shelves... {pg} The smell isn't so different from a wood fire, but it catches in my throat and makes me want to {shk}puke.{shk}
+  - Right. Gender studies. In the 1930s, the Nazis obliterated one of the world's largest collections of queer & trans literature - the Instute of Sexology. {pg} Sometimes we forget just how much we - humanity - used to know about people like me, before it was all erased.
   - We cannot let this happen again, and we cannot turn a blind eye to the fact that the obliteration of people and culture is {shk}still{shk} happening on a large scale today - {pg} like in Palestine.
   - 
 }
@@ -17232,7 +17479,7 @@ Fe_tu_ed _uth_rs:
   - lwLvl5Seen == true ?
 
   - else ?
-    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+    Sometimes I feel like my sense of what's true is disintegrating... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
 }
 """
 NAME sign 5-N dialog
@@ -18316,6 +18563,12 @@ DLG DATA3D
     "SPR_wthri0": {
       "type": "box"
     },
+    "SPR_wthri3": {
+      "transform": "1,1,1,0,0,0,0,-0.1,0"
+    },
+    "SPR_wthri4": {
+      "type": "box"
+    },
     "ITM_2": {
       "type": "billboard",
       "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
@@ -18690,6 +18943,14 @@ DLG DATA3D
     "ITM_pinktritgd": {
       "type": "billboard",
       "transform": "0.45,0.45,0.45,0,0,0,0,-0.06,0"
+    },
+    "ITM_pinktritge": {
+      "transform": "0.75,0.75,0.75,0,0,0,0,-0.1,0"
+    },
+    "ITM_pinktritgf": {
+      "type": "billboard",
+      "transform": "0.5,0.5,0.5,0,0,0,0,0,0",
+      "hidden": true
     }
   },
   "stack": {
@@ -19003,7 +19264,7 @@ Featured authors:
 - Orson Scott Card
 {clr}{pg}{sequence
   - Um... {pg} {clr 11}{shk}eww{shk}{clr}
-  - Yeahhh I don't need this in my life
+  - Yeahhh I don't need this in my life.
 }
 """
 NAME sign 2-E dialog
@@ -19700,7 +19961,7 @@ DLG 2p
       - Nothing... Maybe I still just need to press those pedestal buttons in the right order?
     }
   - else ?
-    The door won't let me through... I feel like it's telling me I have {wvy}unfinished business{wvy} here.
+    The door won't let me through yet... What do I need to do to unlock it?
 }
 """
 NAME pedestal puzzle
@@ -19735,7 +19996,7 @@ BG_COLOR [0,0,0]
 
 DLG 2r
 """
-I'll collect this symbol if it helps me get the hell out of here, but... Sometimes I wonder whether queers can really salvage it from such a dark history.
+I'll collect this symbol if it helps me unlock this mind mystery, but... Sometimes I wonder whether queers can really salvage it from such a dark history.
 {replace "pink outline" "pink triangle" "courtyard items"}{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME pink tri dialog
@@ -19752,7 +20013,7 @@ MAX_LINES 3
 
 DLG 2t
 """
-Ah. THAT'S what's going on here. I thought I was getting {wvy}Vatican{wvy} vibes!{pg}For over 400 years, the church's {wvy}Index Librorum Prohibitorum{wvy} basically called all the shots about which texts could be printed or read in Europe.{pg}So I guess the pope was kinda the OG book banner?{pg}Gotta admit tho: nice hat! Would it be too sacrilegious if I tried wearing the {wvy}papal regalia{wvy} on my little non-denominational, agnostic head?
+Aha! The Vatican. Western World Lit.{pg}(Who taught that again? Dr. Auclair?){pg} Starting in 1560, the church's {wvy}Index Librorum Prohibitorum{wvy} called the shots about which texts could be printed or read in Europe for 400 years!{pg}So I guess the pope was kinda the OG book banner?{pg}Gotta admit tho: nice hat! Would it be too sacrilegious if I tried wearing the {wvy}papal regalia{wvy} on my little non-denominational, agnostic head?
 {replace "pope outline" "pope hat" "courtyard items"}{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME pope hat dialog
@@ -19760,7 +20021,7 @@ BG_COLOR [0,0,0]
 
 DLG 2u
 """
-Geez, who left a MAGA hat lying in the library? It's scary seeing these guys come back out of the woodwork, with the election coming up so soon...
+Ugh, a MAGA hat! It's scary seeing these guys come back out of the woodwork, with the election coming up so soon. It's like a repeat of 2016.
 {replace "MAGA outline" "MAGA hat" "courtyard items"}{pg}Might as well take it with me to {wvy}clean up the trash.{wvy}{courtyardItemsCollected = courtyardItemsCollected + 1}
 """
 NAME MAGA hat dialog
@@ -19770,7 +20031,7 @@ DLG 2v
 """
 {
   - deadPhoneSeen == true ?
-    {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {pg} Option 1: Write my damn poem. But we all know my brain is... {wvy}unlikely...{wvy} to do that right now. {pg} Option 2: Keep chasing down strange notes in banned books?? {pg} ... {pg} Yep, that's settled: time for some sleuthing! {pg} Now let's figure out when this library was built... {pg} Pretty sure I've seen a historical marker on one of the upper floors? {replace "closed elevator" "elevator - fl 1"} {phoneCharging = true}
+    {replace "outlet" "outlet charging" "floor 1"} Okay, phone is charging. Sigh. I can't believe I'm missing the protest. Damn. {wvy}Now what?{wvy} {pg} Option 1: Write my damn poem. But we all know my brain is... {wvy}unlikely...{wvy} to do that right now. {pg} Option 2: Keep chasing down strange notes in banned books?? {pg} ... {pg} Yep, that's settled: time for some sleuthing! {pg} Now let's figure out when this library was built... {pg} Maybe it would be somewhere in that "Guide to MacLeod Library's History" exibit I've seen on the wall on one of the upper floors? {replace "closed elevator" "elevator - fl 1"} {phoneCharging = true}
   - else ?
     The library's kinda lousy on the whole outlet situation, but sometimes this one by the computer alcove is free...
 }
@@ -19925,7 +20186,17 @@ BG_COLOR [0,0,0]
 MAX_LINES 16
 
 DLG 3k
-{historicalMarkerSeen = true}Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one!{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}Oh man, it's right here in the introduction. Johnson says, "This book, which you are currently reading, is the second-most banned book in the United States as I write this. This book, which has never taken a life. Never caused harm."{pg}It literally makes me want to punch a hole in the wall. Stop taking books from us, you {shk}assholes!{shk}{pg}"Since writing this book, I have learned how history is made."{pg}Yeah.{pg}And that's why we {shk}have{shk} to speak up, to protest. We have to remake the future if we want to escape the past...{pg}{exit "lot3" 8 6 "fade_w"}Wait, where... where did all those books go??{pg}Is this some kind of {shk}punishment?{shk}{pg}Why does everything just keep getting So. Much. {shk}WORSE?!{shk}
+"""
+{historicalMarkerSeen = true}Okay. This must be it: {rbw}920.93.{rbw} It's {clr 27}All Boys Aren't Blue by George M. Johnson.{clr 27} A "memoir manifesto." I wonder if there's another note in here...{pg}Aha! There {shk}is{shk} one!{pg}{paper}another day, another banned book. did you like reading gender queer? all boys aren't blue has been pulled from almost as many schools.{pg}Oh man, it's right here in the introduction. Johnson says, "This book, which you are currently reading, is the second-most banned book in the United States as I write this. This book, which has never taken a life. Never caused harm."{pg}That is so real. {pg} {paper}friend (can i call you that?) if you're still with me, and down for another little trivia puzzle to prove it, let's reunite again at a different banished title...{pg}Honestly? I'm kind of obsessed with this.{pg}{paper}
+the first digit of this dewey decimal is the number of stripes on the bi flag.
+
+the second digit is the number of people I've dated. (sorry, that was an inside joke between me & my shy self. it's 0.)
+{pg}{paper}
+
+the third and final digit is the number of stripes on the gay pride flag (the common one - there are so many variants lol).
+
+see you there?{replace "f2 correct" "f2 correct replacement"}
+"""
 NAME f2 correct dialog
 BG_COLOR [0,0,0]
 
@@ -20006,7 +20277,7 @@ BG_COLOR [0,0,0]
 DLG 3s
 """
 {replace "office door (locked)" "office door (open)" "floor 4"}
-Huh, an {clr 2}office keycard{clr}?{pg}Honestly... If this school's staff are gonna lock me into their library, while also restricting and compromising my access to queer content...{pg}{shk}They better watch where they leave these things lying around!{shk}{pg}Now I just need to find my way out of... {pg}{wvy}...whatever this place is...{wvy}{pg}But I must be close by now, right? Time to trust my gut??
+Oh yeah, I remember now! It was Blue, back when she did work-study at MacLeod freshman year. I saw it on the back of her staff badge: PASSCODE > 1234. Hah!{pg} Maybe the passcode hasn't changed since then?{pg}Time to find my way out of the "dungeon" and back to reality... If I can just disengage from these thoughts I've been having about authors.{pg} Sometimes there are writers whose work {shk}I'd like to ban...{shk}
 """
 NAME keycard dialog
 BG_COLOR [0,0,0]
@@ -20016,13 +20287,13 @@ DLG 3t
 {property locked true}{
   - {item "key"} == 1 ?
     {sequence
-      - The keycard worked! Maybe I can find a way to climb down into the East Wing from here...
+      - Wow. I kind of don't believe this. The passcode worked! Maybe I can find a way to climb down into the East Wing from here...
       - 
     }
   - else ?
     {sequence
-      - Hm, the offices up here are locked... {pg} Looks like they require some kind of keycard? 
-      - Still locked... Maybe if I can find a keycard...
+      - Hm, the offices up here are locked... {pg} Looks like they require some kind of passcode on this keypad? 
+      - Still locked... Maybe if I can find a passcode...
     }
 }
 """
@@ -20118,8 +20389,8 @@ Featured authors:
 - Elif Batuman
 - Roxane Gay
 - Carmen Maria Machado
-{clr}{queerAuthorsSeen = true}{pg}Gen X and millenial gays of the {wvy}late 1900s!{wvy}{pg}{sequence
-  - {clr 11}(er, you know what I mean - modern authors. their books are allll over Barnes & Nobles){clr}
+{clr}{queerAuthorsSeen = true}{pg}Ah, the contemporary Gen X and millenial gays!{wvy}{pg}{sequence
+  - {clr 11}Their books are allll over Barnes & Noble.{clr}
   - 
 }
 """
@@ -20141,7 +20412,7 @@ BG_COLOR [0,0,0]
 MAX_LINES 4
 
 DLG 4f
-{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}{music "exit_woods_music.mp3"}Now, if I can just put this {clr 2}keycard{clr} to good use, maybe it's not too late for me to turn this night around? There has {shk}got {shk}to be some way to access the East Wing from another floor...
+{currentFloor = 0}Oh thank god - I don't think I've ever been happier to see an elevator in my life!{pg}Really I should be thanking the {rbw}GAY AUTHORS{rbw} who helped me find my way...{pg}{music "exit_woods_music.mp3"}Now, are there any {wvy}locked doors{wvy} I can break into? There has {shk}got {shk}to be some way to access the East Wing from another floor...
 NAME lost woods finale dialog
 BG_COLOR [0,0,0]
 
@@ -20153,17 +20424,17 @@ DLG 4g
 }{
   - lostWoodsCircles > 4 ?
     {sequence
-      - There must be some kind of trick to navigating this place... Are there {rbw}kindred authors{rbw} I can turn to for guidance?
+      - There must be some kind of trick to navigating this dungeon... Are there {rbw}kindred authors{rbw} I can turn to for guidance?
       - 
     }
   - lostWoodsCircles > 0 ?
     {sequence
-      - Why is this library so {shk}labyrinthine{shk}? Every hallway looks IDENTICAL... I have GOT to find some rhyme or reason here before I become {wvy}COMPLETELY DISORIENTED.{wvy}
+      - Every hallway looks IDENTICAL... I have GOT to find some rhyme or reason before I become {wvy}COMPLETELY DISORIENTED.{wvy}
       - 
     }
   - else ?
     {sequence
-      - Oh gosh, what fresh hell is this... {pg} Another lovely {wvy}mind dungeon{wvy} for me to explore? {ambient "[0.6, 0.6, 0.9]"}
+      - So many hallways, cluttered with the names of authors I've read, others I've meant to... {pg} And the ones to avoid... {ambient "[0.6, 0.6, 0.9]"}
       - 
     }
 }{lostWoodsProgress = 1}
@@ -20496,11 +20767,11 @@ DLG 5l
   - {item "papyrus burning"} == 1 ?
 
   - else ?
-    Those papyrus scrolls... The fire... This place must be Alexandria? {pg} But the empty coffer here is new to me... Did they get robbed or something lol?
-}{pg}Shoot, that's right... The fire wasn't ever the problem, was it. Julius Caesar actually burned the place by accident!{pg}{clr 11}{wvy}oops!{wvy} lol {clr}{pg}He had other agenda; THIS part was just pure careleness. 
-{pg}And that's the thing. The Library of Alexandria fell not because of any one, willful act of destruction, but because... {pg}Idk, people basically stopped caring enough to fix it.
+    Those papyrus scrolls... The fire... Ah. The Library of Alexandria. {pg} But the empty coffer... I'm trying to remember what that was about.
+}{pg}Shoot, that's right... The fire wasn't ever the problem, was it. I remember this from my Ancient History class. Julius Caesar actually burned the place by accident!{pg}{clr 11}{wvy}oops!{wvy} lol {clr}{pg}He had other agenda; THIS part was just pure careleness. 
+{pg}I wrote a paper about this, actually. The Library of Alexandria fell not because of any one, willful act of destruction, but because... {pg}Idk, people basically stopped caring enough to fix it.
 {pg}Society moved on, and time (and the violent chaos of "progress") took its toll.
-{pg}Damn that feels {wvy}awfully familiar{wvy} right about now...
+{pg}Feels {wvy}awfully familiar{wvy} right about now, doesn't it...
 """
 NAME chest sprite dialog
 BG_COLOR [0,0,0]
@@ -20509,7 +20780,7 @@ MAX_LINES 5
 DLG 5m
 """
 {sequence
-  - I... What... {pg} Isn't that the central courtyard I just came from? {pg} So... why does {shk}nothing{shk}look familiar? {pg} Seriously, {shk}WHERE AM I?{shk} {pg} {clr 11}(or... when?){clr}
+  - I... What... {pg} Isn't that the central courtyard I just came from? {pg} So... why does {shk}nothing{shk}look familiar?
   - 
 }
 """
@@ -20568,7 +20839,7 @@ NAME east wing exit
 BG_COLOR [0,0,0]
 
 DLG 5r
-So many books under lock and key... What's going on here?
+So many books under lock and key... What was going on here?
 NAME vatican thought dialog
 
 DLG 5s
@@ -20619,7 +20890,7 @@ _ea_ure_ a_tho_s:
   - lwLvl5Seen == true ?
 
   - else ?
-    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+    Sometimes I feel like my sense of what's true is disintegrating... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
 }
 """
 NAME sign 5-E dialog
@@ -20637,7 +20908,7 @@ F_atu_ed _utho_s:
   - lwLvl5Seen == true ?
 
   - else ?
-    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+    Sometimes I feel like my sense of what's true is disintegrating... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
 }
 """
 NAME sign 5-S dialog
@@ -20655,7 +20926,7 @@ Feat_r_d aut_ors:
   - lwLvl5Seen == true ?
 
   - else ?
-    Oh you've got to be kidding me... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
+    Sometimes I feel like my sense of what's true is disintegrating... {pg} {clr 11}(if this is really a mind dungeon, I guess I have only myself to blame for the disrepair...){clr} {lwLvl5Seen = true}
 }
 """
 NAME sign 5-W dialog
@@ -20806,7 +21077,7 @@ BG_COLOR [0,0,0]
 DLG 6r
 """
 {center}{borderClr 22}{bgClr 16}{clr 21 true} TO PROTECT THE FUTURE, A PRUDENT STUDENT FREQUENTS THE PAST.{clr}{pg}{center}{borderClr 22}{bgClr 16}{clr 21 true} UNDERSTAND EACH PEDESTAL, THEN VISIT IN SEQUENCE - FIRST TO LAST.{clr}{pg}{sequence
-  - Nice. Cryptic. Love/hate it.
+  - Sigh. Welcome to my mind palace! {pg} More like a mind dungeon.
   - 
 }{courtyardPlaqueSeen = true}
 """
@@ -20829,12 +21100,11 @@ BG_COLOR [0,0,0]
 DLG 6t
 """
 {elevatorError = false}{
-  - {item "courtyard note"} == 1 ?
+  - {item "courtyard sign"} == 1 ?
     {sequence
-      - Alright, I've learned my history. I get that we're doomed to keep repeating ourselves if we don't... {pg} ...fine, I'll say it: keep our collective memories alive with {wvy}silly, performative events{wvy} like Banned Books Week. {pg} {clr 11}(maybe I judged the library staff a little harshly, ok?){clr}
-            {pg} Now, time to get back to {rbw}fighting for the future?{rbw} {pg}
+      - Now, what was I doing? {pg} Right! What did the library queer's note say again? {pg} I could head back to the first floor to check it out. {pg} Or, I could just try to find the next book... {pg}
       - 
-    } {nextFloor = 0} So! Where to next?{br}Floor # (1-4):{clr 11}<type a number>{clr} {input "nextFloor" 1 4} {pg}
+    } {nextFloor = 0} Where to next?{br}Floor # (1-4):{clr 11}<type a number>{clr} {input "nextFloor" 1 4} {pg}
   - else ?
     {nextFloor = -1} {elevatorError = true}
 }{
@@ -20852,7 +21122,7 @@ DLG 6t
     Guess I need to pick an existing floor number. {elevatorError = true}
 }{
   - elevatorError == false ?
-    {replace "f2 correct" "f2 correct replacement"} {music "library_closed_music2.mp3"} {pg} Geez, what a {wvy}draining{wvy} mental detour... {pg} But I guess I can *actually* get back to that treasure hunt now?
+                 {music "library_closed_music2.mp3"} 
 }
 """
 NAME courtyard elevator dlg
@@ -20872,6 +21142,28 @@ see you there?{pg}Honestly, after that whole ordeal, finding another note from t
 """
 NAME courtyard note dialog
 BG_COLOR [0,0,0]
+
+DLG 6v
+"""
+{sequence
+  - What the hell? This exhibit was where I first learned about the revolutionary history of MacLeod Library! {pg} {shk}Why would they take it down? {shk} {pg} It truly feels like the library is out to get me. Or someone is. {pg} Well, screw you, {shk}assholes!{shk} I bet I can {wvy} remember{wvy} the year the library was built. I just have to close my eyes... {pg} {exit "lot3" 10 1 "fade_w"} Go back in time...
+}
+"""
+NAME missing sign thought dialog
+BG_COLOR [0,0,0]
+
+DLG 6w
+
+NAME sprite wthri3 dialog
+
+DLG 6x
+I remember! I remember!{pg}{clr 10 true}{bgClr 14}{borderClr 10}Founded by John James MacLeod, Birchwood College has long been an enclave of liberal thought and supported some of our nation's great thinkers and poets early in their careers. MacLeod Library, with its revolutionary periodical archive, was built in{clr} {clr 18}1920,{clr} {clr 10 true}just three years later...{clr} {historicalMarkerSeen = true}{replace "f2 incorrect" "f2 correct"}
+NAME item pinktritge dialog
+BG_COLOR [0,0,0]
+
+DLG 6y
+There has to be another way to get into the east wing.{pg} Someone once told me the security in this library is a sham. But who was it? If I can just remember...
+NAME lost woods remembering dialog
 
 
 </script>
